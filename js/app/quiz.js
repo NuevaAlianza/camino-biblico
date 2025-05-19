@@ -1,188 +1,167 @@
-let bloqueSeleccionado = "";
-let datos = {};
 let preguntas = [];
-let indiceActual = 0;
-let aciertosLibro = 0;
-let aciertosCapitulo = 0;
+let preguntasFiltradas = [];
+let indice = 0;
+let tiempo = 58;
+let timer;
+let respuestasCorrectas = 0;
 
-const inicioContainer = document.getElementById("inicio");
-const cuestionarioContainer = document.getElementById("cuestionario");
-const finalContainer = document.getElementById("final");
+// Cargar sonidos con rutas correctas
+const sonidoCorrecto = new Audio('assets/sonidos/correcto.mp3');
+const sonidoIncorrecto = new Audio('assets/sonidos/incorrecto.mp3');
+const sonidoClick = new Audio('assets/sonidos/click.mp3');
 
-const bloqueSelect = document.getElementById("bloque");
-const iniciarBtn = document.getElementById("iniciarBtn");
-const preguntaTexto = document.getElementById("pregunta");
-const opcionesLibro = document.getElementById("opciones-libro");
-const opcionesCapitulo = document.getElementById("opciones-capitulo");
-const siguienteBtn = document.getElementById("siguienteBtn");
-const resultadoTexto = document.getElementById("resultado");
-const reiniciarBtn = document.getElementById("reiniciarBtn");
-const volverBtn = document.getElementById("volverBtn");
+async function cargarDatos() {
+  const version = Date.now();
+  const res = await fetch(`datos/quiz.json?v=${version}`);
+  preguntas = await res.json();
 
-const correctoSound = new Audio("assets/sonidos/correcto.mp3");
-const incorrectoSound = new Audio("assets/sonidos/incorrecto.mp3");
+  const temasUnicos = [...new Set(preguntas.map(p => p.tema))];
+  const listaTemas = document.getElementById("listaTemas");
+  listaTemas.innerHTML = "";
 
-fetch("datos/citas.json")
-  .then((res) => res.json())
-  .then((data) => {
-    datos = data;
-    Object.keys(datos).forEach((bloque) => {
-      const option = document.createElement("option");
-      option.value = bloque;
-      option.textContent = bloque;
-      bloqueSelect.appendChild(option);
-    });
+  temasUnicos.forEach(tema => {
+    const btn = document.createElement("button");
+    btn.textContent = tema;
+    btn.onclick = () => {
+      sonidoClick.play();
+      seleccionarTema(tema);
+    };
+    listaTemas.appendChild(btn);
   });
 
-iniciarBtn.addEventListener("click", () => {
-  bloqueSeleccionado = bloqueSelect.value;
-  if (!bloqueSeleccionado) return;
-  preguntas = [...datos[bloqueSeleccionado]];
-  preguntas = preguntas.sort(() => Math.random() - 0.5).slice(0, 10); // o 15
-  indiceActual = 0;
-  aciertosLibro = 0;
-  aciertosCapitulo = 0;
-  inicioContainer.classList.add("hidden");
-  cuestionarioContainer.classList.remove("hidden");
+  document.getElementById("inicioBtn").classList.add("oculto");
+}
+
+function seleccionarTema(tema) {
+  preguntasFiltradas = preguntas.filter(p => p.tema === tema);
+  indice = 0;
+  respuestasCorrectas = 0;
+  document.getElementById("temas").classList.add("oculto");
+  document.getElementById("resultadoFinal").classList.add("oculto");
+  document.getElementById("quiz").classList.remove("oculto");
   mostrarPregunta();
-});
+}
 
 function mostrarPregunta() {
-  if (indiceActual >= preguntas.length) {
-    mostrarPantallaFinal();
-    return;
-  }
+  clearInterval(timer);
+  tiempo = 58;
+  actualizarBarra();
 
-  const actual = preguntas[indiceActual];
-  preguntaTexto.textContent = actual.cita;
+  const p = preguntasFiltradas[indice];
+  document.getElementById("textoPregunta").textContent = p.pregunta;
+  document.getElementById("contador").textContent = `Pregunta ${indice + 1} de ${preguntasFiltradas.length}`;
 
-  opcionesLibro.innerHTML = "";
-  opcionesCapitulo.innerHTML = "";
+  const opciones = [p.respuesta, p.opcion_1, p.opcion_2, p.opcion_3];
+  const mezcladas = opciones.sort(() => Math.random() - 0.5);
 
-  [...actual.opciones_libro].forEach((libro) => {
+  const contenedor = document.getElementById("opciones");
+  contenedor.innerHTML = "";
+  document.getElementById("comentario").classList.add("oculto");
+  document.getElementById("siguienteBtn").classList.add("oculto");
+  document.getElementById("resultadoFinal").classList.add("oculto");
+
+  mezcladas.forEach(opcion => {
     const btn = document.createElement("button");
-    btn.textContent = libro;
     btn.className = "opcion";
-    btn.addEventListener("click", () =>
-      seleccionarLibro(btn, libro === actual.libro)
-    );
-    opcionesLibro.appendChild(btn);
+    btn.textContent = opcion;
+    btn.onclick = () => evaluarRespuesta(btn, opcion === p.respuesta, p.cita_biblica);
+    contenedor.appendChild(btn);
   });
 
-  [...actual.opciones_capitulo].forEach((cap) => {
-    const btn = document.createElement("button");
-    btn.textContent = cap;
-    btn.className = "opcion";
-    btn.addEventListener("click", () =>
-      seleccionarCapitulo(btn, parseInt(cap) === actual.capitulo)
-    );
-    opcionesCapitulo.appendChild(btn);
-  });
-
-  siguienteBtn.disabled = true;
-  siguienteBtn.classList.add("opacity-50", "cursor-not-allowed");
+  timer = setInterval(() => {
+    tiempo--;
+    actualizarBarra();
+    if (tiempo <= 0) {
+      clearInterval(timer);
+      mostrarComentario(p.cita_biblica);
+      document.querySelectorAll(".opcion").forEach(btn => {
+        if (btn.textContent === p.respuesta) btn.classList.add("correcta");
+        else btn.classList.add("incorrecta");
+        btn.disabled = true;
+      });
+      document.getElementById("siguienteBtn").classList.remove("oculto");
+    }
+  }, 1000);
 }
 
-let libroSeleccionado = false;
-let capituloSeleccionado = false;
-
-function seleccionarLibro(btn, esCorrecto) {
-  if (libroSeleccionado) return;
-  libroSeleccionado = true;
-
-  if (esCorrecto) {
-    btn.classList.add("bg-green-500", "text-white");
-    correctoSound.play();
-    aciertosLibro++;
-  } else {
-    btn.classList.add("bg-red-500", "text-white");
-    incorrectoSound.play();
-    marcarCorrecto(opcionesLibro, preguntas[indiceActual].libro);
-  }
-
-  verificarAmbasSeleccionadas();
+function actualizarBarra() {
+  const barra = document.getElementById("barra");
+  barra.style.width = (tiempo / 58 * 100) + "%";
+  if (tiempo > 20) barra.style.backgroundColor = "#22c55e";
+  else if (tiempo > 10) barra.style.backgroundColor = "#facc15";
+  else barra.style.backgroundColor = "#ef4444";
 }
 
-function seleccionarCapitulo(btn, esCorrecto) {
-  if (capituloSeleccionado) return;
-  capituloSeleccionado = true;
-
-  if (esCorrecto) {
-    btn.classList.add("bg-green-500", "text-white");
-    correctoSound.play();
-    aciertosCapitulo++;
-  } else {
-    btn.classList.add("bg-red-500", "text-white");
-    incorrectoSound.play();
-    marcarCorrecto(
-      opcionesCapitulo,
-      preguntas[indiceActual].capitulo.toString()
-    );
-  }
-
-  verificarAmbasSeleccionadas();
-}
-
-function marcarCorrecto(contenedor, valorCorrecto) {
-  Array.from(contenedor.children).forEach((btn) => {
-    if (btn.textContent === valorCorrecto) {
-      btn.classList.add("bg-green-500", "text-white");
+function evaluarRespuesta(btn, esCorrecta, comentario) {
+  clearInterval(timer);
+  document.querySelectorAll(".opcion").forEach(b => {
+    b.disabled = true;
+    if (b.textContent === preguntasFiltradas[indice].respuesta) {
+      b.classList.add("correcta");
+    } else if (b === btn && !esCorrecta) {
+      b.classList.add("incorrecta");
     }
   });
-}
 
-function verificarAmbasSeleccionadas() {
-  if (libroSeleccionado && capituloSeleccionado) {
-    siguienteBtn.disabled = false;
-    siguienteBtn.classList.remove("opacity-50", "cursor-not-allowed");
+  if (esCorrecta) {
+    respuestasCorrectas++;
+    sonidoCorrecto.play();
+  } else {
+    sonidoIncorrecto.play();
   }
+
+  mostrarComentario(comentario);
+  document.getElementById("siguienteBtn").classList.remove("oculto");
 }
 
-siguienteBtn.addEventListener("click", mostrarSiguientePregunta);
-reiniciarBtn.addEventListener("click", reiniciarCuestionario);
-volverBtn.addEventListener("click", () => {
-  finalContainer.classList.add("hidden");
-  inicioContainer.classList.remove("hidden");
-});
-
-function mostrarSiguientePregunta() {
-  libroSeleccionado = false;
-  capituloSeleccionado = false;
-  indiceActual++;
-  mostrarPregunta();
+function mostrarComentario(texto) {
+  const comentario = document.getElementById("comentario");
+  comentario.textContent = texto;
+  comentario.classList.remove("oculto");
 }
 
-function reiniciarCuestionario() {
-  finalContainer.classList.add("hidden");
-  inicioContainer.classList.remove("hidden");
-}
+document.getElementById("siguienteBtn").onclick = () => {
+  sonidoClick.play();
+  indice++;
+  if (indice < preguntasFiltradas.length) {
+    mostrarPregunta();
+  } else {
+    mostrarResultadoFinal();
+  }
+};
 
-function mostrarPantallaFinal() {
-  cuestionarioContainer.classList.add("hidden");
-  finalContainer.classList.remove("hidden");
-
-  const porcentajeLibro = Math.round((aciertosLibro / preguntas.length) * 100);
-  const porcentajeCapitulo = Math.round(
-    (aciertosCapitulo / preguntas.length) * 100
-  );
+function mostrarResultadoFinal() {
+  document.getElementById("quiz").classList.add("oculto");
+  const resultados = document.getElementById("resultadoFinal");
+  const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
 
   let mensaje = "";
-  const promedio = (porcentajeLibro + porcentajeCapitulo) / 2;
+  if (porcentaje === 100) mensaje = "¡Perfecto! Conoces muy bien el tema.";
+  else if (porcentaje >= 80) mensaje = "¡Muy bien! Tienes buen conocimiento.";
+  else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
+  else mensaje = "Te recomendamos repasar este tema.";
 
-  if (promedio === 100) {
-    mensaje = "¡Perfecto! Has acertado todas las citas. Excelente conocimiento bíblico.";
-  } else if (promedio >= 80) {
-    mensaje = "¡Muy bien! Tienes un gran conocimiento de la Biblia.";
-  } else if (promedio >= 60) {
-    mensaje = "¡Bien hecho! Aunque podrías repasar algunas citas.";
-  } else {
-    mensaje = "Sigue practicando. ¡La Palabra de Dios siempre tiene algo nuevo para ti!";
-  }
-
-  resultadoTexto.innerHTML = `
-    <p>Aciertos en <strong>libros</strong>: ${porcentajeLibro}%</p>
-    <p>Aciertos en <strong>capítulos</strong>: ${porcentajeCapitulo}%</p>
-    <p class="mt-4 font-semibold">${mensaje}</p>
-  `;
+  resultados.textContent = `Tu resultado: ${porcentaje}% - ${mensaje}`;
+  resultados.classList.remove("oculto");
+  document.getElementById("temas").classList.remove("oculto");
+  document.getElementById("inicioBtn").classList.remove("oculto");
 }
+
+document.getElementById("volverBtn").onclick = () => {
+  sonidoClick.play();
+  document.getElementById("quiz").classList.add("oculto");
+  document.getElementById("temas").classList.remove("oculto");
+  document.getElementById("comentario").classList.add("oculto");
+  document.getElementById("siguienteBtn").classList.add("oculto");
+  clearInterval(timer);
+};
+
+document.getElementById("inicioBtn").onclick = () => {
+  sonidoClick.play();
+  document.getElementById("resultadoFinal").classList.add("oculto");
+  document.getElementById("temas").classList.remove("oculto");
+  document.getElementById("inicioBtn").classList.add("oculto");
+};
+
+cargarDatos();
 
