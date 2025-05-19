@@ -1,63 +1,53 @@
+let datos = {};
+let preguntasActuales = [];
+let indiceActual = 0;
+
 document.addEventListener('DOMContentLoaded', async () => {
-  const contenedor = document.querySelector('#contenedor');
-  const titulo = document.querySelector('h2');
+  const select = document.getElementById('tema-select');
+  const contenedor = document.getElementById('pregunta-container');
+  const preguntaTexto = document.getElementById('pregunta-texto');
+  const btnSiguiente = document.getElementById('btn-siguiente');
 
   try {
     const res = await fetch('datos/reflexion.json');
-    const datos = await res.json();
+    datos = await res.json();
 
-    // Mostrar los temas disponibles
-    const temas = Object.keys(datos);
-    titulo.textContent = 'Elige un tema de reflexión:';
+    // Rellenar opciones del <select>
+    select.innerHTML = '<option value="">-- Elige un tema --</option>';
+    for (const tema in datos) {
+      const option = document.createElement('option');
+      option.value = tema;
+      option.textContent = tema.charAt(0).toUpperCase() + tema.slice(1);
+      select.appendChild(option);
+    }
 
-    const listaTemas = document.createElement('ul');
-    listaTemas.classList.add('lista-temas');
-
-    temas.forEach(tema => {
-      const btn = document.createElement('button');
-      btn.textContent = tema;
-      btn.classList.add('tema-btn');
-      btn.onclick = () => mostrarPreguntas(tema, datos[tema]);
-      listaTemas.appendChild(btn);
+    select.addEventListener('change', () => {
+      const temaSeleccionado = select.value;
+      if (temaSeleccionado && datos[temaSeleccionado]) {
+        preguntasActuales = datos[temaSeleccionado];
+        indiceActual = 0;
+        mostrarPregunta(preguntaTexto, contenedor);
+      } else {
+        contenedor.style.display = 'none';
+      }
     });
 
-    contenedor.innerHTML = '';
-    contenedor.appendChild(listaTemas);
+    btnSiguiente.addEventListener('click', () => {
+      indiceActual++;
+      mostrarPregunta(preguntaTexto, contenedor);
+    });
+
   } catch (error) {
-    contenedor.innerHTML = '<p>Error al cargar las preguntas.</p>';
-    console.error('Error cargando reflexión.json:', error);
+    console.error('Error cargando reflexion.json:', error);
   }
 });
 
-function mostrarPreguntas(tema, preguntas) {
-  const contenedor = document.querySelector('#contenedor');
-  const titulo = document.querySelector('h2');
-  titulo.textContent = `Reflexión: ${tema}`;
-
-  const lista = document.createElement('ul');
-  lista.classList.add('preguntas-lista');
-
-  preguntas.forEach((item, i) => {
-    const li = document.createElement('li');
-    const pregunta = document.createElement('p');
-    pregunta.textContent = `${i + 1}. ${item.pregunta}`;
-    li.appendChild(pregunta);
-
-    if (item.cita) {
-      const cita = document.createElement('blockquote');
-      cita.textContent = item.cita;
-      cita.classList.add('cita-biblica');
-      li.appendChild(cita);
-    }
-
-    lista.appendChild(li);
-  });
-
-  const volverBtn = document.createElement('button');
-  volverBtn.textContent = '⬅ Volver a los temas';
-  volverBtn.onclick = () => location.reload();
-
-  contenedor.innerHTML = '';
-  contenedor.appendChild(lista);
-  contenedor.appendChild(volverBtn);
+function mostrarPregunta(preguntaTexto, contenedor) {
+  if (indiceActual < preguntasActuales.length) {
+    const pregunta = preguntasActuales[indiceActual];
+    preguntaTexto.textContent = `${indiceActual + 1}. ${pregunta.pregunta}`;
+    contenedor.style.display = 'block';
+  } else {
+    preguntaTexto.textContent = '¡Has terminado todas las preguntas!';
+  }
 }
