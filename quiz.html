@@ -25,7 +25,6 @@
       background: #f1f5f9;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: all 0.3s ease-in-out;
     }
 
     button {
@@ -162,8 +161,6 @@
     let indice = 0;
     let tiempo = 58;
     let timer;
-
-    // Variables para calcular resultado final
     let respuestasCorrectas = 0;
 
     // Cargar sonidos
@@ -190,7 +187,6 @@
         listaTemas.appendChild(btn);
       });
 
-      // Ocultar botón volver al inicio al cargar temas
       document.getElementById("inicioBtn").classList.add("oculto");
     }
 
@@ -305,8 +301,7 @@
 
       resultados.textContent = `Tu resultado: ${porcentaje}% - ${mensaje}`;
       resultados.classList.remove("oculto");
-
-      // Mostrar botón volver al inicio
+      document.getElementById("temas").classList.remove("oculto");
       document.getElementById("inicioBtn").classList.remove("oculto");
     }
 
@@ -326,7 +321,6 @@
       document.getElementById("inicioBtn").classList.add("oculto");
     };
 
-    // Carga inicial
     cargarDatos();
   </script>
 </body>
