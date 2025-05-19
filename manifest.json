@@ -1,0 +1,9 @@
+{
+  "name": "App Bíblica",
+  "short_name": "BibliaApp",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f4a261",
+  "icons": []
+}

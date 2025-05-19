@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4a261" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <title>App Bíblica</title>
+</head>
+<body>
+  <main class="menu">
+    <h1>app bíblica</h1>
+    <p>elige una modalidad:</p>
+    <button onclick="location.href='reflexion.html'">🧘 reflexión por temas</button>
+    <button onclick="location.href='quiz-comentado.html'">🧠 quiz comentado</button>
+    <button onclick="location.href='citas.html'">📖 citas bíblicas</button>
+    <button onclick="location.href='progreso.html'">📊 revisión de progreso</button>
+    <button onclick="location.href='config.html'">⚙️ configuración / acerca de</button>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('SW registrado:', reg))
+          .catch(err => console.log('SW fallo:', err));
+      });
+    }
+  </script>
+</body>
+</html>
