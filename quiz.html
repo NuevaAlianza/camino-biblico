@@ -288,37 +288,63 @@
     };
 
     function mostrarResultadoFinal() {
-      document.getElementById("quiz").classList.add("oculto");
-      const resultados = document.getElementById("resultadoFinal");
-      const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
+  // Ocultar controles internos del quiz
+  document.getElementById("contador").classList.add("oculto");
+  document.getElementById("temporizador").classList.add("oculto");
+  document.getElementById("textoPregunta").classList.add("oculto");
+  document.getElementById("opciones").classList.add("oculto");
+  document.getElementById("comentario").classList.add("oculto");
+  document.getElementById("siguienteBtn").classList.add("oculto");
+  document.getElementById("volverBtn").classList.add("oculto");
 
-      let mensaje = "";
-      if (porcentaje === 100) mensaje = "¡Perfecto! Conoces muy bien el tema.";
-      else if (porcentaje >= 80) mensaje = "¡Muy bien! Tienes buen conocimiento.";
-      else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
-      else mensaje = "Te recomendamos repasar este tema.";
+  // Calcular resultado y mostrar mensaje
+  const resultados = document.getElementById("resultadoFinal");
+  const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
 
-      resultados.textContent = `Tu resultado: ${porcentaje}% - ${mensaje}`;
-      resultados.classList.remove("oculto");
-      document.getElementById("temas").classList.remove("oculto");
-      document.getElementById("inicioBtn").classList.remove("oculto");
-    }
+  let mensaje = "";
+  if (porcentaje === 100) mensaje = "¡Perfecto! Conoces muy bien el tema.";
+  else if (porcentaje >= 80) mensaje = "¡Muy bien! Tienes buen conocimiento.";
+  else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
+  else mensaje = "Te recomendamos repasar este tema.";
 
-    document.getElementById("volverBtn").onclick = () => {
-      sonidoClick.play();
-      document.getElementById("quiz").classList.add("oculto");
-      document.getElementById("temas").classList.remove("oculto");
-      document.getElementById("comentario").classList.add("oculto");
-      document.getElementById("siguienteBtn").classList.add("oculto");
-      clearInterval(timer);
-    };
+  resultados.textContent = `Tu resultado: ${porcentaje}% - ${mensaje}`;
+  resultados.classList.remove("oculto");
 
-    document.getElementById("inicioBtn").onclick = () => {
-      sonidoClick.play();
-      document.getElementById("resultadoFinal").classList.add("oculto");
-      document.getElementById("temas").classList.remove("oculto");
-      document.getElementById("inicioBtn").classList.add("oculto");
-    };
+  // Mostrar el contenedor quiz (donde está el resultado)
+  document.getElementById("quiz").classList.remove("oculto");
+
+  // Mostrar botón para volver a inicio (selección de temas)
+  document.getElementById("inicioBtn").classList.remove("oculto");
+  // Ocultar listado de temas
+  document.getElementById("temas").classList.add("oculto");
+}
+
+// Evento botón "Volver al inicio"
+document.getElementById("inicioBtn").onclick = () => {
+  sonidoClick.play();
+
+  // Ocultar resultado final
+  document.getElementById("resultadoFinal").classList.add("oculto");
+
+  // Mostrar controles quiz para iniciar nuevo intento
+  document.getElementById("contador").classList.remove("oculto");
+  document.getElementById("temporizador").classList.remove("oculto");
+  document.getElementById("textoPregunta").classList.remove("oculto");
+  document.getElementById("opciones").classList.remove("oculto");
+  document.getElementById("comentario").classList.remove("oculto");
+  document.getElementById("siguienteBtn").classList.remove("oculto");
+  document.getElementById("volverBtn").classList.remove("oculto");
+
+  // Ocultar quiz y botón inicio, mostrar listado de temas
+  document.getElementById("quiz").classList.add("oculto");
+  document.getElementById("inicioBtn").classList.add("oculto");
+  document.getElementById("temas").classList.remove("oculto");
+
+  // Reiniciar variables para nuevo quiz, por ejemplo:
+  respuestasCorrectas = 0;
+  preguntaActual = 0;
+  // Cargar nuevamente preguntas si hace falta, o dejar que la función que inicia el quiz se encargue
+};
 
     window.onload = cargarDatos;
   </script>
