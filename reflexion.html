@@ -63,7 +63,6 @@
     #volverBtn:hover {
       background-color: #6c757d;
     }
-    /* Botón para volver al inicio */
     #inicioBtn {
       background-color: #6a994e;
       margin-top: 1rem;
@@ -79,7 +78,6 @@
   <div id="temas" class="fade-in">
     <h2>Elige un tema:</h2>
     <div id="listaTemas"></div>
-    <!-- Botón para volver al inicio (index.html) -->
     <button id="inicioBtn">← Volver al inicio</button>
   </div>
 
@@ -92,70 +90,65 @@
     <button id="volverBtn">← Volver a temas</button>
   </div>
 
-  <script>
-    let preguntas = [];           // Array con todas las preguntas
-    let preguntasFiltradas = [];  // Preguntas filtradas por tema seleccionado
-    let indice = 0;               // Índice de la pregunta actual
+  <!-- Audio para clic -->
+  <audio id="sonidoClick" src="assets/sonidos/click.mp3" preload="auto"></audio>
 
-    // Función para cargar datos JSON y mostrar temas únicos
+  <script>
+    let preguntas = [];
+    let preguntasFiltradas = [];
+    let indice = 0;
+
+    function reproducirClick() {
+      const sonido = document.getElementById("sonidoClick");
+      sonido.currentTime = 0;
+      sonido.play();
+    }
+
     async function cargarDatos() {
-      const version = Date.now(); // Evitar cache con parámetro ?v=
+      const version = Date.now();
       const res = await fetch(`datos/reflexion.json?v=${version}`);
       preguntas = await res.json();
 
-      // Extraemos temas únicos con Set
       const temasUnicos = [...new Set(preguntas.map(p => p.tema))];
-
-      // Mostrar los temas como botones
       const listaTemas = document.getElementById("listaTemas");
-      listaTemas.innerHTML = ""; // Limpiar antes de agregar
+      listaTemas.innerHTML = "";
+
       temasUnicos.forEach(tema => {
         const btn = document.createElement("button");
         btn.textContent = tema;
-        btn.onclick = () => seleccionarTema(tema);
+        btn.onclick = () => {
+          reproducirClick();
+          seleccionarTema(tema);
+        };
         listaTemas.appendChild(btn);
       });
     }
 
-    // Cuando el usuario selecciona un tema
     function seleccionarTema(tema) {
-      // Filtramos preguntas por tema
       preguntasFiltradas = preguntas.filter(p => p.tema === tema);
-      indice = 0; // Reiniciamos índice
-
-      // Ocultamos listado de temas y mostramos pregunta
+      indice = 0;
       document.getElementById("temas").classList.add("oculto");
       document.getElementById("pregunta").classList.remove("oculto");
-
       mostrarPregunta();
     }
 
-    // Mostrar la pregunta actual y resetear vista de cita
     function mostrarPregunta() {
       const preguntaActual = preguntasFiltradas[indice];
-
-      // Mostrar texto de la pregunta
       document.getElementById("textoPregunta").textContent = preguntaActual.pregunta;
-
-      // Preparar la cita para mostrarla al pedirla
       document.getElementById("textoCita").textContent = preguntaActual.cita;
       document.getElementById("textoCita").classList.add("oculto");
-
-      // Mostrar botón para ver cita
       document.getElementById("verCitaBtn").classList.remove("oculto");
-
-      // Mostrar contador de preguntas
       document.getElementById("contador").textContent = `Pregunta ${indice + 1} de ${preguntasFiltradas.length}`;
     }
 
-    // Evento para mostrar la cita cuando se clickea el botón
     document.getElementById("verCitaBtn").onclick = () => {
+      reproducirClick();
       document.getElementById("textoCita").classList.remove("oculto");
       document.getElementById("verCitaBtn").classList.add("oculto");
     };
 
-    // Evento para pasar a la siguiente pregunta
     document.getElementById("siguienteBtn").onclick = () => {
+      reproducirClick();
       indice++;
       if (indice < preguntasFiltradas.length) {
         mostrarPregunta();
@@ -165,21 +158,21 @@
       }
     };
 
-    // Evento para volver al listado de temas
-    document.getElementById("volverBtn").onclick = volverATemas;
+    document.getElementById("volverBtn").onclick = () => {
+      reproducirClick();
+      volverATemas();
+    };
 
-    // Evento para volver a la página principal (index.html)
     document.getElementById("inicioBtn").onclick = () => {
+      reproducirClick();
       window.location.href = "index.html";
     };
 
-    // Función para mostrar temas y ocultar preguntas
     function volverATemas() {
       document.getElementById("temas").classList.remove("oculto");
       document.getElementById("pregunta").classList.add("oculto");
     }
 
-    // Cargar datos al iniciar la página
     cargarDatos();
   </script>
 </body>
