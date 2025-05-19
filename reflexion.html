@@ -3,18 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f4a261" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="css/estilos.css" />
   <title>Reflexión por temas</title>
+  <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
   <main class="reflexion">
     <h1>Reflexión por temas</h1>
-    <button onclick="location.href='index.html'">← Volver al menú</button>
-    <!-- Aquí irá el contenido dinámico -->
+    <p>Selecciona un tema para comenzar:</p>
+
+    <select id="tema-select">
+      <option value="">-- Elige un tema --</option>
+      <option value="amor">Amor</option>
+      <option value="fe">Fe</option>
+      <option value="esperanza">Esperanza</option>
+      <!-- Aquí más opciones según datos futuros -->
+    </select>
+
+    <section id="pregunta-container" style="display:none;">
+      <h2 id="pregunta-texto"></h2>
+      <button id="btn-siguiente">Siguiente pregunta</button>
+    </section>
+
+    <button onclick="location.href='index.html'">← Volver al menú principal</button>
   </main>
+
   <script src="js/app/reflexion.js"></script>
 </body>
 </html>
-<!-- Página para reflexión por temas -->
