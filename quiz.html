@@ -126,6 +126,13 @@
     #siguienteBtn:hover {
       background-color: #0284c7;
     }
+
+    #resultadoFinal {
+      text-align: center;
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      color: #3b0764;
+    }
   </style>
 </head>
 <body>
@@ -145,6 +152,7 @@
     <div id="comentario" class="oculto"></div>
     <button id="siguienteBtn" class="oculto">Siguiente pregunta</button>
     <button id="volverBtn">← Volver a temas</button>
+    <div id="resultadoFinal" class="oculto"></div>
   </div>
 
   <script>
@@ -153,6 +161,13 @@
     let indice = 0;
     let tiempo = 58;
     let timer;
+    let correctas = 0;
+
+    // Sonidos
+    const sonidoClick = new Audio('click.mp3');
+    const sonidoCorrecto = new Audio('correct.mp3');
+    const sonidoIncorrecto = new Audio('incorrect.mp3');
+    const sonidoFin = new Audio('fin.mp3');
 
     async function cargarDatos() {
       const version = Date.now();
@@ -166,7 +181,10 @@
       temasUnicos.forEach(tema => {
         const btn = document.createElement("button");
         btn.textContent = tema;
-        btn.onclick = () => seleccionarTema(tema);
+        btn.onclick = () => {
+          sonidoClick.play();
+          seleccionarTema(tema);
+        };
         listaTemas.appendChild(btn);
       });
     }
@@ -174,6 +192,8 @@
     function seleccionarTema(tema) {
       preguntasFiltradas = preguntas.filter(p => p.tema === tema);
       indice = 0;
+      correctas = 0;
+      document.getElementById("resultadoFinal").classList.add("oculto");
       document.getElementById("temas").classList.add("oculto");
       document.getElementById("quiz").classList.remove("oculto");
       mostrarPregunta();
@@ -195,12 +215,16 @@
       contenedor.innerHTML = "";
       document.getElementById("comentario").classList.add("oculto");
       document.getElementById("siguienteBtn").classList.add("oculto");
+      document.getElementById("resultadoFinal").classList.add("oculto");
 
       mezcladas.forEach(opcion => {
         const btn = document.createElement("button");
         btn.className = "opcion";
         btn.textContent = opcion;
-        btn.onclick = () => evaluarRespuesta(btn, opcion === p.respuesta, p.cita_biblica);
+        btn.onclick = () => {
+          sonidoClick.play();
+          evaluarRespuesta(btn, opcion === p.respuesta, p.cita_biblica);
+        };
         contenedor.appendChild(btn);
       });
 
@@ -239,37 +263,78 @@
         }
       });
 
+      if (esCorrecta) {
+        sonidoCorrecto.play();
+        correctas++;
+      } else {
+        sonidoIncorrecto.play();
+      }
+
       mostrarComentario(comentario);
       document.getElementById("siguienteBtn").classList.remove("oculto");
     }
 
-    function mostrarComentario(texto) {
-      const comentario = document.getElementById("comentario");
-      comentario.textContent = texto;
-      comentario.classList.remove("oculto");
-    }
-
     document.getElementById("siguienteBtn").onclick = () => {
+      sonidoClick.play();
       indice++;
       if (indice < preguntasFiltradas.length) {
         mostrarPregunta();
       } else {
-        alert("¡Has terminado el quiz!");
-        volverATemas();
+        mostrarResultadoFinal();
       }
     };
 
-    document.getElementById("volverBtn").onclick = volverATemas;
-    document.getElementById("inicioBtn").onclick = () => window.location.href = "index.html";
+    document.getElementById("volverBtn").onclick = () => {
+      sonidoClick.play();
+      volverATemas();
+    };
+    document.getElementById("inicioBtn").onclick = () => {
+      sonidoClick.play();
+      window.location.href = "index.html";
+    };
 
     function volverATemas() {
       clearInterval(timer);
       document.getElementById("temas").classList.remove("oculto");
       document.getElementById("quiz").classList.add("oculto");
+      document.getElementById("resultadoFinal").classList.add("oculto");
+    }
+
+    function mostrarResultadoFinal() {
+      clearInterval(timer);
+      const total = preguntasFiltradas.length;
+      const porcentaje = Math.round((correctas / total) * 100);
+
+      document.getElementById("contador").textContent = "¡Quiz finalizado!";
+      document.getElementById("textoPregunta").textContent = "";
+      document.getElementById("opciones").innerHTML = "";
+      document.getElementById("comentario").classList.add("oculto");
+      document.getElementById("siguienteBtn").classList.add("oculto");
+
+      const resultadoDiv = document.getElementById("resultadoFinal");
+      resultadoDiv.textContent = `Obtuviste ${correctas} respuestas correctas de ${total} (${porcentaje}%).`;
+
+      // Mensaje personalizado según % aciertos
+      let mensajeFinal = "";
+      if (porcentaje === 100) {
+        mensajeFinal = "¡Perfecto! Eres un experto.";
+      } else if (porcentaje >= 80) {
+        mensajeFinal = "Muy bien hecho.";
+      } else if (porcentaje >= 50) {
+        mensajeFinal = "Buen esfuerzo, sigue practicando.";
+      } else {
+        mensajeFinal = "Necesitas repasar más.";
+      }
+
+      resultadoDiv.textContent += ` ${mensajeFinal}`;
+      resultadoDiv.classList.remove("oculto");
+
+      sonidoFin.play();
     }
 
     cargarDatos();
   </script>
 </body>
 </html>
+
 
