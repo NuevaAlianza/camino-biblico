@@ -241,36 +241,6 @@
       }, 1000);
     }
 
-    function actualizarBarra() {
-      const barra = document.getElementById("barra");
-      barra.style.width = (tiempo / 58 * 100) + "%";
-      if (tiempo > 20) barra.style.backgroundColor = "#22c55e";
-      else if (tiempo > 10) barra.style.backgroundColor = "#facc15";
-      else barra.style.backgroundColor = "#ef4444";
-    }
-
-    function evaluarRespuesta(btn, esCorrecta, comentario) {
-      clearInterval(timer);
-      document.querySelectorAll(".opcion").forEach(b => {
-        b.disabled = true;
-        if (b.textContent === preguntasFiltradas[indice].respuesta) {
-          b.classList.add("correcta");
-        } else if (b === btn && !esCorrecta) {
-          b.classList.add("incorrecta");
-        }
-      });
-
-      if (esCorrecta) {
-        respuestasCorrectas++;
-        sonidoCorrecto.play();
-      } else {
-        sonidoIncorrecto.play();
-      }
-
-      mostrarComentario(comentario);
-      document.getElementById("siguienteBtn").classList.remove("oculto");
-    }
-
     function mostrarResultadoFinal() {
   // Ocultar controles internos del quiz
   document.getElementById("contador").classList.add("oculto");
@@ -291,7 +261,7 @@
   else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
   else mensaje = "Te recomendamos repasar este tema.";
 
-  resultados.textContent = Tu resultado: ${porcentaje}% - ${mensaje};
+  resultados.textContent = `Tu resultado: ${porcentaje}% - ${mensaje}`;
   resultados.classList.remove("oculto");
 
   // Mostrar el contenedor quiz (donde está el resultado)
