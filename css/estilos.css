@@ -1,1 +1,69 @@
+/* css/estilos.css */
+
+:root {
+  --color-fondo: #fff8f0;
+  --color-primario: #f4a261;
+  --color-secundario: #e76f51;
+  --color-texto: #333;
+  --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --radio: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+main.menu {
+  background: white;
+  border-radius: var(--radio);
+  padding: 2rem;
+  box-shadow: var(--sombra);
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+main.menu h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-secundario);
+  text-transform: lowercase;
+}
+
+main.menu p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+main.menu button {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  border-radius: var(--radio);
+  padding: 0.8rem 1.2rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  width: 100%;
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+main.menu button:hover {
+  background-color: var(--color-secundario);
+}
 
