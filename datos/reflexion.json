@@ -1,1 +1,222 @@
-
+[
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Quién fue el líder de los israelitas durante el Éxodo?",
+    "cita": "Moisés"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Qué hizo Moisés con el Mar Rojo?",
+    "cita": "Lo dividió para que los israelitas pudieran cruzar"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Cuál fue la señal de Dios para que Moisés dividiera el Mar Rojo?",
+    "cita": "Levantó su bastón"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Quién fue el hermano de Moisés?",
+    "cita": "Aarón"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Qué nombre recibió el lugar donde Moisés recibió los Diez Mandamientos?",
+    "cita": "Monte Sinaí"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿En qué parte del desierto Moisés recibió las tablas de la ley?",
+    "cita": "En el Monte Sinaí"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Qué le dijo Dios a Moisés sobre la tierra prometida?",
+    "cita": "Que Moisés no la vería"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Qué plaga tocó Egipto primero?",
+    "cita": "Sangre"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Cuántos días estuvo Moisés en el Monte Sinaí?",
+    "cita": "40 días y 40 noches"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Qué hizo Moisés para sacar agua de la roca?",
+    "cita": "Golpeó la roca con su bastón"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Quién le ayudó a Moisés a sostener sus manos durante la batalla contra Amalec?",
+    "cita": "Aarón y Hur"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Qué animales cayeron como plaga sobre Egipto?",
+    "cita": "Ranas"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Qué hizo Moisés con el becerro de oro?",
+    "cita": "Lo destruyó"
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Cuántos mandamientos dio Dios a Moisés?",
+    "cita": 10
+  },
+  {
+    "tema": "Moisés",
+    "pregunta": "¿Quién sucedió a Moisés como líder de los israelitas?",
+    "cita": "Josué"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Qué sacrificio le pidió Dios a Abraham?",
+    "cita": "Sacrificar a su hijo Isaac"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Qué hizo Abraham cuando Dios le pidió que sacrificara a su hijo?",
+    "cita": "Obedeció"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Quién fue el padre de Isaac?",
+    "cita": "Abraham"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Cuál fue el pacto que Dios hizo con Abraham?",
+    "cita": "Sería el padre de una gran nación"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Quién fue la esposa de Abraham?",
+    "cita": "Sara"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Qué ciudad fue destruida por la maldad de sus habitantes",
+    "cita": "en tiempos de Abraham?"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Cuál fue el nombre del sobrino de Abraham que lo acompañó a la tierra prometida?",
+    "cita": "Lot"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Qué ofreció Abraham cuando se encontró con Melquisedec?",
+    "cita": "Pan y vino"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Cuántos hijos tuvo Abraham?",
+    "cita": 2
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Qué nombre dio Dios a la esposa de Abraham?",
+    "cita": "Sara"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Qué edad tenía Abraham cuando nació Isaac?",
+    "cita": "100 años"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Dónde le pidió Dios que sacrificara a su hijo?",
+    "cita": "En el monte Moriah"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Cuántos años vivió Abraham?",
+    "cita": "175 años"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Qué hizo Abraham cuando Dios le dijo que destruyera Sodoma y Gomorra?",
+    "cita": "Rogó por la ciudad"
+  },
+  {
+    "tema": "Abraham",
+    "pregunta": "¿Qué hizo Abraham cuando conoció que Dios destruiría a Sodoma y Gomorra?",
+    "cita": "Intercedió por la ciudad"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Qué ciudad fue destruida por Dios por su maldad según el relato de Jonás?",
+    "cita": "Nínive"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Cuánto tiempo estuvo Jonás dentro del gran pez?",
+    "cita": "Tres días y tres noches"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿A qué ciudad se dirigía Jonás cuando fue tragado por el pez?",
+    "cita": "Nínive"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Por qué Jonás huyó de la misión que Dios le dio?",
+    "cita": "No quería que los habitantes de Nínive se arrepintieran"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Qué mensaje predicó Jonás en Nínive?",
+    "cita": "Arrepentíos de vuestros pecados"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Quién fue el rey de Nínive cuando Jonás les predicó el arrepentimiento?",
+    "cita": "El rey de Nínive"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Cuál fue la reacción del pueblo de Nínive ante el mensaje de Jonás?",
+    "cita": "Se arrepintieron y se vistieron de saco"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Qué le pasó a Jonás cuando huyó de la misión?",
+    "cita": "Fue tragado por un pez"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Cómo terminó la historia de Jonás?",
+    "cita": "La ciudad se arrepintió y fue perdonada"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Qué le dijo Dios a Jonás después de que la ciudad se arrepintió?",
+    "cita": "Que se alegrara por su arrepentimiento"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Cuál fue el nombre del gran pez que tragó a Jonás?",
+    "cita": "No se menciona el nombre"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Qué le pidió Jonás a Dios cuando estuvo dentro del pez?",
+    "cita": "Que lo salvara"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Por qué Jonás no quería ir a Nínive?",
+    "cita": "Porque pensaba que no cambiarían"
+  },
+  {
+    "tema": "Jonás",
+    "pregunta": "¿Qué hizo Jonás después de que el pez lo vomitó?",
+    "cita": "Fue a Nínive a predicar"
+  }
+]
