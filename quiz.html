@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -169,7 +169,7 @@
 
     async function cargarDatos() {
       const version = Date.now();
-      const res = await fetch(`datos/quiz.json?v=${version}`);
+      const res = await fetch(datos/quiz.json?v=${version});
       preguntas = await res.json();
 
       const temasUnicos = [...new Set(preguntas.map(p => p.tema))];
@@ -206,7 +206,7 @@
 
       const p = preguntasFiltradas[indice];
       document.getElementById("textoPregunta").textContent = p.pregunta;
-      document.getElementById("contador").textContent = `Pregunta ${indice + 1} de ${preguntasFiltradas.length}`;
+      document.getElementById("contador").textContent = Pregunta ${indice + 1} de ${preguntasFiltradas.length};
 
       const opciones = [p.respuesta, p.opcion_1, p.opcion_2, p.opcion_3];
       const mezcladas = opciones.sort(() => Math.random() - 0.5);
@@ -241,93 +241,84 @@
       }, 1000);
     }
 
+    function actualizarBarra() {
+      const barra = document.getElementById("barra");
+      barra.style.width = (tiempo / 58 * 100) + "%";
+      if (tiempo > 20) barra.style.backgroundColor = "#22c55e";
+      else if (tiempo > 10) barra.style.backgroundColor = "#facc15";
+      else barra.style.backgroundColor = "#ef4444";
+    }
+
+    function evaluarRespuesta(btn, esCorrecta, comentario) {
+      clearInterval(timer);
+      document.querySelectorAll(".opcion").forEach(b => {
+        b.disabled = true;
+        if (b.textContent === preguntasFiltradas[indice].respuesta) {
+          b.classList.add("correcta");
+        } else if (b === btn && !esCorrecta) {
+          b.classList.add("incorrecta");
+        }
+      });
+
+      if (esCorrecta) {
+        respuestasCorrectas++;
+        sonidoCorrecto.play();
+      } else {
+        sonidoIncorrecto.play();
+      }
+
+      mostrarComentario(comentario);
+      document.getElementById("siguienteBtn").classList.remove("oculto");
+    }
+
+    function mostrarComentario(texto) {
+      const comentario = document.getElementById("comentario");
+      comentario.textContent = texto;
+      comentario.classList.remove("oculto");
+    }
+
+    document.getElementById("siguienteBtn").onclick = () => {
+      sonidoClick.play();
+      indice++;
+      if (indice < preguntasFiltradas.length) {
+        mostrarPregunta();
+      } else {
+        mostrarResultadoFinal();
+      }
+    };
+
     function mostrarResultadoFinal() {
-  // Ocultar controles internos del quiz
-  document.getElementById("contador").classList.add("oculto");
-  document.getElementById("temporizador").classList.add("oculto");
-  document.getElementById("textoPregunta").classList.add("oculto");
-  document.getElementById("opciones").classList.add("oculto");
-  document.getElementById("comentario").classList.add("oculto");
-  document.getElementById("siguienteBtn").classList.add("oculto");
-  document.getElementById("volverBtn").classList.add("oculto");
+      document.getElementById("quiz").classList.add("oculto");
+      const resultados = document.getElementById("resultadoFinal");
+      const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
 
-  // Calcular resultado y mostrar mensaje
-  const resultados = document.getElementById("resultadoFinal");
-  const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
+      let mensaje = "";
+      if (porcentaje === 100) mensaje = "¡Perfecto! Conoces muy bien el tema.";
+      else if (porcentaje >= 80) mensaje = "¡Muy bien! Tienes buen conocimiento.";
+      else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
+      else mensaje = "Te recomendamos repasar este tema.";
 
-  let mensaje = "";
-  if (porcentaje === 100) mensaje = "¡Perfecto! Conoces muy bien el tema.";
-  else if (porcentaje >= 80) mensaje = "¡Muy bien! Tienes buen conocimiento.";
-  else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
-  else mensaje = "Te recomendamos repasar este tema.";
+      resultados.textContent = Tu resultado: ${porcentaje}% - ${mensaje};
+      resultados.classList.remove("oculto");
+      document.getElementById("temas").classList.remove("oculto");
+      document.getElementById("inicioBtn").classList.remove("oculto");
+    }
 
-  resultados.textContent = `Tu resultado: ${porcentaje}% - ${mensaje}`;
-  resultados.classList.remove("oculto");
+    document.getElementById("volverBtn").onclick = () => {
+      sonidoClick.play();
+      document.getElementById("quiz").classList.add("oculto");
+      document.getElementById("temas").classList.remove("oculto");
+      document.getElementById("comentario").classList.add("oculto");
+      document.getElementById("siguienteBtn").classList.add("oculto");
+      clearInterval(timer);
+    };
 
-  // Mostrar el contenedor quiz (donde está el resultado)
-  document.getElementById("quiz").classList.remove("oculto");
-
-  // Mostrar botón para volver a inicio (selección de temas)
-  document.getElementById("inicioBtn").classList.remove("oculto");
-  // Ocultar listado de temas
-  document.getElementById("temas").classList.add("oculto");
-}
-
-// Evento botón "Volver al inicio"
-document.getElementById("inicioBtn").onclick = () => {
-  sonidoClick.play();
-
-  // Ocultar resultado final
-  document.getElementById("resultadoFinal").classList.add("oculto");
-
-  // Mostrar controles quiz para iniciar nuevo intento
-  document.getElementById("contador").classList.remove("oculto");
-  document.getElementById("temporizador").classList.remove("oculto");
-  document.getElementById("textoPregunta").classList.remove("oculto");
-  document.getElementById("opciones").classList.remove("oculto");
-  document.getElementById("comentario").classList.remove("oculto");
-  document.getElementById("siguienteBtn").classList.remove("oculto");
-  document.getElementById("volverBtn").classList.remove("oculto");
-
-  // Ocultar quiz y botón inicio, mostrar listado de temas
-  document.getElementById("quiz").classList.add("oculto");
-  document.getElementById("inicioBtn").classList.add("oculto");
-  document.getElementById("temas").classList.remove("oculto");
-
-  // Reiniciar variables para nuevo quiz, por ejemplo:
-  respuestasCorrectas = 0;
-  preguntaActual = 0;
-  // Cargar nuevamente preguntas si hace falta, o dejar que la función que inicia el quiz se encargue
-
-function mostrarResultadoFinal() {
-  // Ocultar controles internos del quiz
-  document.getElementById("contador").classList.add("oculto");
-  document.getElementById("temporizador").classList.add("oculto");
-  document.getElementById("textoPregunta").classList.add("oculto");
-  document.getElementById("opciones").classList.add("oculto");
-  document.getElementById("comentario").classList.add("oculto");
-  document.getElementById("siguienteBtn").classList.add("oculto");
-  document.getElementById("volverBtn").classList.add("oculto");
-
-  // Mostrar sólo el resultado dentro del quiz
-  const resultados = document.getElementById("resultadoFinal");
-  const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
-
-  let mensaje = "";
-  if (porcentaje === 100) mensaje = "¡Perfecto! Conoces muy bien el tema.";
-  else if (porcentaje >= 80) mensaje = "¡Muy bien! Tienes buen conocimiento.";
-  else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
-  else mensaje = "Te recomendamos repasar este tema.";
-
-  resultados.textContent = `Tu resultado: ${porcentaje}% - ${mensaje}`;
-  resultados.classList.remove("oculto");
-
-  // Mostrar el quiz (porque el resultado está dentro)
-  document.getElementById("quiz").classList.remove("oculto");
-
-  // Mostrar botón para volver a temas
-  document.getElementById("inicioBtn").classList.remove("oculto");
-}
+    document.getElementById("inicioBtn").onclick = () => {
+      sonidoClick.play();
+      document.getElementById("resultadoFinal").classList.add("oculto");
+      document.getElementById("temas").classList.remove("oculto");
+      document.getElementById("inicioBtn").classList.add("oculto");
+    };
 
     window.onload = cargarDatos;
   </script>
