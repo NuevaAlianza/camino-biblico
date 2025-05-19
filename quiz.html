@@ -163,7 +163,6 @@
     let timer;
     let respuestasCorrectas = 0;
 
-    // Cargar sonidos
     const sonidoCorrecto = new Audio('correcto.mp3');
     const sonidoIncorrecto = new Audio('incorrecto.mp3');
     const sonidoClick = new Audio('click.mp3');
@@ -321,7 +320,7 @@
       document.getElementById("inicioBtn").classList.add("oculto");
     };
 
-    cargarDatos();
+    window.onload = cargarDatos;
   </script>
 </body>
 </html>
