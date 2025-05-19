@@ -1,32 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Reflexión por temas</title>
-  <link rel="stylesheet" href="css/estilos.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reflexión por temas - Paso 1</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+  h1 { color: #444; }
+  #temas button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background: #7b5e3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  #temas button:hover {
+    background: #a07b54;
+  }
+</style>
 </head>
 <body>
-  <main class="reflexion">
-    <h1>Reflexión por temas</h1>
-    <p>Selecciona un tema para comenzar:</p>
 
-    <select id="tema-select">
-      <option value="">-- Elige un tema --</option>
-      <option value="amor">Amor</option>
-      <option value="fe">Fe</option>
-      <option value="esperanza">Esperanza</option>
-      <!-- Aquí más opciones según datos futuros -->
-    </select>
+<h1>Reflexión por temas</h1>
+<div id="temas">Cargando temas...</div>
 
-    <section id="pregunta-container" style="display:none;">
-      <h2 id="pregunta-texto"></h2>
-      <button id="btn-siguiente">Siguiente pregunta</button>
-    </section>
+<script>
+  // JSON de ejemplo (reemplaza esto con fetch si cargas desde archivo)
+  const preguntasJSON = [
+    {"tema":"Moisés","pregunta":"¿Quién fue el líder de los israelitas durante el Éxodo?","cita":"Moisés"},
+    {"tema":"Moisés","pregunta":"¿Qué hizo Moisés con el Mar Rojo?","cita":"Lo dividió para que los israelitas pudieran cruzar"},
+    {"tema":"Abraham","pregunta":"¿Qué sacrificio le pidió Dios a Abraham?","cita":"Sacrificar a su hijo Isaac"},
+    {"tema":"Jonás","pregunta":"¿Qué ciudad fue destruida por Dios por su maldad según el relato de Jonás?","cita":"Nínive"}
+    // Agrega todo tu JSON aquí o carga desde archivo externo con fetch
+  ];
 
-    <button onclick="location.href='index.html'">← Volver al menú principal</button>
-  </main>
+  function mostrarTemas() {
+    const temasSet = new Set(preguntasJSON.map(p => p.tema)); // Extrae temas únicos
+    const temasArray = Array.from(temasSet);
+    const contenedor = document.getElementById('temas');
+    contenedor.innerHTML = ''; // Limpia mensaje de carga
 
-  <script src="js/app/reflexion.js"></script>
+    temasArray.forEach((tema) => {
+      const btn = document.createElement('button');
+      btn.textContent = tema;
+      btn.addEventListener('click', () => {
+        cargarPreguntasTema(tema);
+      });
+      contenedor.appendChild(btn);
+    });
+  }
+
+  function cargarPreguntasTema(tema) {
+    // Aquí llamaremos a la Parte 2
+    // Por ahora solo alertamos
+    alert('Elegiste el tema: ' + tema);
+    // En la parte 2 reemplazaremos este alert por mostrar las preguntas
+  }
+
+  mostrarTemas();
+</script>
+
 </body>
 </html>
