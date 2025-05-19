@@ -32,7 +32,7 @@
     button:hover {
       background-color: #e5c79e;
     }
-    #pregunta, #respuesta {
+    #pregunta, #cita {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
     }
@@ -46,8 +46,8 @@
   <div id="contenedor-pregunta" style="display:none;">
     <h2 id="tema-seleccionado"></h2>
     <div id="pregunta"></div>
-    <div id="respuesta" style="display:none;"></div>
-    <button id="ver-respuesta">Ver cita bíblica</button>
+    <div id="cita" style="display:none;"></div>
+    <button id="ver-cita">Ver cita</button>
     <button id="siguiente">Siguiente pregunta</button>
     <button id="volver">Volver a temas</button>
   </div>
@@ -59,11 +59,11 @@
 
     async function cargarDatos() {
       try {
-        const respuesta = await fetch('reflexion.json');
+        const respuesta = await fetch('datos/reflexion.json');
         datos = await respuesta.json();
         mostrarTemasUnicos();
       } catch (error) {
-        console.error("Error al cargar reflexion.json:", error);
+        console.error("Error al cargar datos/reflexion.json:", error);
       }
     }
 
@@ -92,12 +92,12 @@
     function mostrarPreguntaActual() {
       const preguntaActual = preguntasTema[indiceActual];
       document.getElementById('pregunta').textContent = preguntaActual.pregunta;
-      document.getElementById('respuesta').textContent = preguntaActual["cita bíblica"];
-      document.getElementById('respuesta').style.display = 'none';
+      document.getElementById('cita').textContent = preguntaActual.cita;
+      document.getElementById('cita').style.display = 'none';
     }
 
-    document.getElementById('ver-respuesta').onclick = () => {
-      document.getElementById('respuesta').style.display = 'block';
+    document.getElementById('ver-cita').onclick = () => {
+      document.getElementById('cita').style.display = 'block';
     };
 
     document.getElementById('siguiente').onclick = () => {
@@ -120,4 +120,3 @@
   </script>
 </body>
 </html>
-
