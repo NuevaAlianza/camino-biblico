@@ -1,35 +1,58 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <style>
-    .oculto {
-      display: none;
-    }
-  </style>
-  <title>Ejemplo botón inicio</title>
-</head>
+<!-- HTML solo la parte relevante -->
 <body>
+  <h1>Quiz comentado</h1>
 
-  <button id="inicioBtn">Inicio</button>
-
-  <div id="resultadoFinal">
-    <p>Resultado final del quiz</p>
+  <div id="temas" class="fade-in">
+    <h2>Elige un tema:</h2>
+    <div id="listaTemas"></div>
+    <button id="inicioBtn" class="oculto">← Volver al inicio</button>
   </div>
 
-  <div id="temas" class="oculto">
-    <p>Lista de temas</p>
+  <div id="quiz" class="oculto fade-in">
+    <div id="contador"></div>
+    <div id="temporizador"><div id="barra"></div></div>
+    <div id="textoPregunta" style="margin-bottom: 1rem;"></div>
+    <div id="opciones"></div>
+    <div id="comentario" class="oculto"></div>
+    <button id="siguienteBtn" class="oculto">Siguiente pregunta</button>
+    <button id="volverBtn">← Volver a temas</button>
   </div>
+
+  <!-- Mover resultadoFinal fuera de #quiz para que no se oculte -->
+  <div id="resultadoFinal" class="oculto" style="max-width:700px; margin: 2rem auto; padding: 2rem; background: #f1f5f9; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; font-weight: bold; font-size: 1.3rem; color: #3b0764;"></div>
 
   <script>
-    const sonidoClick = new Audio('click.mp3'); // Pon aquí la ruta correcta del sonido
+    // ... tu JS igual, solo cambio mostrarResultadoFinal():
 
+    function mostrarResultadoFinal() {
+      clearInterval(timer);
+      document.getElementById("quiz").classList.add("oculto");
+      document.getElementById("temas").classList.add("oculto");
+
+      const resultados = document.getElementById("resultadoFinal");
+      const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
+
+      let mensaje = "";
+      if (porcentaje === 100) mensaje = "¡Perfecto! Conoces muy bien el tema.";
+      else if (porcentaje >= 80) mensaje = "¡Muy bien! Tienes buen conocimiento.";
+      else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
+      else mensaje = "Te recomendamos repasar este tema.";
+
+      resultados.textContent = `Tu resultado: ${porcentaje}% - ${mensaje}`;
+      resultados.classList.remove("oculto");
+
+      // Mostrar botón para volver al inicio
+      document.getElementById("inicioBtn").classList.remove("oculto");
+    }
+
+    // Ajusta el botón inicioBtn para ocultar el resultadoFinal
     document.getElementById("inicioBtn").onclick = () => {
       sonidoClick.play();
       document.getElementById("resultadoFinal").classList.add("oculto");
       document.getElementById("temas").classList.remove("oculto");
       document.getElementById("inicioBtn").classList.add("oculto");
     };
+
   </script>
 </body>
-</html>
+
