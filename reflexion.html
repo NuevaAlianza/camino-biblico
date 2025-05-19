@@ -3,64 +3,120 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Reflexión por temas - Paso 1</title>
+<title>Reflexión por temas - Paso 2</title>
 <style>
   body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
-  h1 { color: #444; }
-  #temas button {
-    display: block;
-    margin: 10px 0;
-    padding: 10px 15px;
-    background: #7b5e3c;
-    color: white;
-    border: none;
+  #tema-seleccionado {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #7b5e3c;
+  }
+  #pregunta {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+  #cita {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+  }
+  button {
+    margin-right: 10px;
+    padding: 8px 12px;
     border-radius: 6px;
+    border: none;
     cursor: pointer;
   }
-  #temas button:hover {
-    background: #a07b54;
+  #btn-ver-cita {
+    background: #a07b54; color: white;
+  }
+  #btn-siguiente {
+    background: #7b5e3c; color: white;
+  }
+  #btn-volver {
+    background: #ccc; color: #333;
   }
 </style>
 </head>
 <body>
 
-<h1>Reflexión por temas</h1>
-<div id="temas">Cargando temas...</div>
+<div id="tema-seleccionado"></div>
+<div id="pregunta"></div>
+<div id="cita" style="display:none;"></div>
+
+<button id="btn-ver-cita">Ver cita / respuesta</button>
+<button id="btn-siguiente">Siguiente pregunta</button>
+<button id="btn-volver">Volver a temas</button>
 
 <script>
-  // JSON de ejemplo (reemplaza esto con fetch si cargas desde archivo)
+  // Reutilizamos JSON de ejemplo
   const preguntasJSON = [
     {"tema":"Moisés","pregunta":"¿Quién fue el líder de los israelitas durante el Éxodo?","cita":"Moisés"},
     {"tema":"Moisés","pregunta":"¿Qué hizo Moisés con el Mar Rojo?","cita":"Lo dividió para que los israelitas pudieran cruzar"},
     {"tema":"Abraham","pregunta":"¿Qué sacrificio le pidió Dios a Abraham?","cita":"Sacrificar a su hijo Isaac"},
     {"tema":"Jonás","pregunta":"¿Qué ciudad fue destruida por Dios por su maldad según el relato de Jonás?","cita":"Nínive"}
-    // Agrega todo tu JSON aquí o carga desde archivo externo con fetch
+    // Pon todo tu JSON aquí o carga con fetch
   ];
 
-  function mostrarTemas() {
-    const temasSet = new Set(preguntasJSON.map(p => p.tema)); // Extrae temas únicos
-    const temasArray = Array.from(temasSet);
-    const contenedor = document.getElementById('temas');
-    contenedor.innerHTML = ''; // Limpia mensaje de carga
+  let preguntasTema = [];
+  let indicePregunta = 0;
 
-    temasArray.forEach((tema) => {
-      const btn = document.createElement('button');
-      btn.textContent = tema;
-      btn.addEventListener('click', () => {
-        cargarPreguntasTema(tema);
-      });
-      contenedor.appendChild(btn);
-    });
+  const temaSeleccionadoDiv = document.getElementById('tema-seleccionado');
+  const preguntaDiv = document.getElementById('pregunta');
+  const citaDiv = document.getElementById('cita');
+  const btnVerCita = document.getElementById('btn-ver-cita');
+  const btnSiguiente = document.getElementById('btn-siguiente');
+  const btnVolver = document.getElementById('btn-volver');
+
+  function iniciarTema(tema) {
+    preguntasTema = preguntasJSON.filter(p => p.tema === tema);
+    indicePregunta = 0;
+    temaSeleccionadoDiv.textContent = "Tema: " + tema;
+    citaDiv.style.display = 'none';
+    mostrarPregunta();
   }
 
-  function cargarPreguntasTema(tema) {
-    // Aquí llamaremos a la Parte 2
-    // Por ahora solo alertamos
-    alert('Elegiste el tema: ' + tema);
-    // En la parte 2 reemplazaremos este alert por mostrar las preguntas
+  function mostrarPregunta() {
+    citaDiv.style.display = 'none';
+    if (indicePregunta < preguntasTema.length) {
+      preguntaDiv.textContent = preguntasTema[indicePregunta].pregunta;
+      citaDiv.textContent = preguntasTema[indicePregunta].cita;
+    } else {
+      preguntaDiv.textContent = "¡Has terminado todas las preguntas de este tema!";
+      citaDiv.style.display = 'none';
+      btnVerCita.style.display = 'none';
+      btnSiguiente.style.display = 'none';
+    }
   }
 
-  mostrarTemas();
+  btnVerCita.addEventListener('click', () => {
+    if (indicePregunta < preguntasTema.length) {
+      citaDiv.style.display = 'block';
+    }
+  });
+
+  btnSiguiente.addEventListener('click', () => {
+    if (indicePregunta < preguntasTema.length - 1) {
+      indicePregunta++;
+      mostrarPregunta();
+    } else {
+      preguntaDiv.textContent = "¡No hay más preguntas!";
+      citaDiv.style.display = 'none';
+      btnVerCita.style.display = 'none';
+      btnSiguiente.style.display = 'none';
+    }
+  });
+
+  btnVolver.addEventListener('click', () => {
+    // Volvemos a la lista de temas (Parte 1)
+    location.reload(); // para simplicidad, recargamos página para mostrar temas
+  });
+
+  // Para que el código funcione como demo: llama iniciarTema manualmente
+  // iniciarTema('Moisés');
+
+  // Si quieres que esta página solo se muestre tras seleccionar tema en Parte 1,
+  // cambia la lógica para enviar el tema como parámetro o manejar en un solo archivo.
 </script>
 
 </body>
