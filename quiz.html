@@ -298,7 +298,36 @@ document.getElementById("inicioBtn").onclick = () => {
   respuestasCorrectas = 0;
   preguntaActual = 0;
   // Cargar nuevamente preguntas si hace falta, o dejar que la función que inicia el quiz se encargue
-};
+
+function mostrarResultadoFinal() {
+  // Ocultar controles internos del quiz
+  document.getElementById("contador").classList.add("oculto");
+  document.getElementById("temporizador").classList.add("oculto");
+  document.getElementById("textoPregunta").classList.add("oculto");
+  document.getElementById("opciones").classList.add("oculto");
+  document.getElementById("comentario").classList.add("oculto");
+  document.getElementById("siguienteBtn").classList.add("oculto");
+  document.getElementById("volverBtn").classList.add("oculto");
+
+  // Mostrar sólo el resultado dentro del quiz
+  const resultados = document.getElementById("resultadoFinal");
+  const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
+
+  let mensaje = "";
+  if (porcentaje === 100) mensaje = "¡Perfecto! Conoces muy bien el tema.";
+  else if (porcentaje >= 80) mensaje = "¡Muy bien! Tienes buen conocimiento.";
+  else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
+  else mensaje = "Te recomendamos repasar este tema.";
+
+  resultados.textContent = `Tu resultado: ${porcentaje}% - ${mensaje}`;
+  resultados.classList.remove("oculto");
+
+  // Mostrar el quiz (porque el resultado está dentro)
+  document.getElementById("quiz").classList.remove("oculto");
+
+  // Mostrar botón para volver a temas
+  document.getElementById("inicioBtn").classList.remove("oculto");
+}
 
     window.onload = cargarDatos;
   </script>
