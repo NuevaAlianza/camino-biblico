@@ -271,23 +271,18 @@
       document.getElementById("siguienteBtn").classList.remove("oculto");
     }
 
-    function mostrarComentario(texto) {
-      const comentario = document.getElementById("comentario");
-      comentario.textContent = texto;
-      comentario.classList.remove("oculto");
-    }
+    function mostrarResultadoFinal() {
+  // Ocultar controles internos del quiz
+  document.getElementById("contador").classList.add("oculto");
+  document.getElementById("temporizador").classList.add("oculto");
+  document.getElementById("textoPregunta").classList.add("oculto");
+  document.getElementById("opciones").classList.add("oculto");
+  document.getElementById("comentario").classList.add("oculto");
+  document.getElementById("siguienteBtn").classList.add("oculto");
+  document.getElementById("volverBtn").classList.add("oculto");
 
-    document.getElementById("siguienteBtn").onclick = () => {
-      sonidoClick.play();
-      indice++;
-      if (indice < preguntasFiltradas.length) {
-        mostrarPregunta();
-      } else {
-        mostrarResultadoFinal();
-      }
-    };
-
-    // Calcular resultado y mensaje
+  // Calcular resultado y mostrar mensaje
+  const resultados = document.getElementById("resultadoFinal");
   const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
 
   let mensaje = "";
@@ -296,33 +291,44 @@
   else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
   else mensaje = "Te recomendamos repasar este tema.";
 
-  // Insertar resultado y botones en HTML (usamos innerHTML para poder poner botones)
-  document.getElementById("resultadoFinal").innerHTML = `
-    <p>Tu resultado: ${porcentaje}% - ${mensaje}</p>
-    <div style="margin-top: 15px;">
-      <button id="btnInicio" style="margin-right:10px; padding:8px 16px; cursor:pointer;">Inicio</button>
-      <button id="btnTemas" style="padding:8px 16px; cursor:pointer;">Temas +</button>
-    </div>
-  `;
-  document.getElementById("resultadoFinal").classList.remove("oculto");
+  resultados.textContent = Tu resultado: ${porcentaje}% - ${mensaje};
+  resultados.classList.remove("oculto");
 
-  // Mostrar contenedor quiz (con resultado)
+  // Mostrar el contenedor quiz (donde está el resultado)
   document.getElementById("quiz").classList.remove("oculto");
 
-  // Ocultar listado de temas y botón de inicio anterior si existe
+  // Mostrar botón para volver a inicio (selección de temas)
+  document.getElementById("inicioBtn").classList.remove("oculto");
+  // Ocultar listado de temas
   document.getElementById("temas").classList.add("oculto");
-  if(document.getElementById("inicioBtn")) {
-    document.getElementById("inicioBtn").classList.add("oculto");
-  }
-
-  // Asignar eventos a los nuevos botones
-  document.getElementById("btnInicio").onclick = () => {
-    window.location.href = "index.html"; // ir a index.html
-  };
-  document.getElementById("btnTemas").onclick = () => {
-    window.location.href = "quiz.html";  // ir a quiz.html
-  };
 }
+
+// Evento botón "Volver al inicio"
+document.getElementById("inicioBtn").onclick = () => {
+  sonidoClick.play();
+
+  // Ocultar resultado final
+  document.getElementById("resultadoFinal").classList.add("oculto");
+
+  // Mostrar controles quiz para iniciar nuevo intento
+  document.getElementById("contador").classList.remove("oculto");
+  document.getElementById("temporizador").classList.remove("oculto");
+  document.getElementById("textoPregunta").classList.remove("oculto");
+  document.getElementById("opciones").classList.remove("oculto");
+  document.getElementById("comentario").classList.remove("oculto");
+  document.getElementById("siguienteBtn").classList.remove("oculto");
+  document.getElementById("volverBtn").classList.remove("oculto");
+
+  // Ocultar quiz y botón inicio, mostrar listado de temas
+  document.getElementById("quiz").classList.add("oculto");
+  document.getElementById("inicioBtn").classList.add("oculto");
+  document.getElementById("temas").classList.remove("oculto");
+
+  // Reiniciar variables para nuevo quiz, por ejemplo:
+  respuestasCorrectas = 0;
+  preguntaActual = 0;
+  // Cargar nuevamente preguntas si hace falta, o dejar que la función que inicia el quiz se encargue
+};
 
     window.onload = cargarDatos;
   </script>
