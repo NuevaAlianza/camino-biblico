@@ -163,13 +163,13 @@
     let timer;
     let respuestasCorrectas = 0;
 
-    const sonidoCorrecto = new Audio('assets/sonidos/correcto.mp3');
-    const sonidoIncorrecto = new Audio('assets/sonidos/incorrecto.mp3');
-    const sonidoClick = new Audio('assets/sonidos/click.mp3');
+    const sonidoCorrecto = new Audio('correcto.mp3');
+    const sonidoIncorrecto = new Audio('incorrecto.mp3');
+    const sonidoClick = new Audio('click.mp3');
 
     async function cargarDatos() {
       const version = Date.now();
-      const res = await fetch(datos/quiz.json?v=${version});
+      const res = await fetch(`datos/quiz.json?v=${version}`);
       preguntas = await res.json();
 
       const temasUnicos = [...new Set(preguntas.map(p => p.tema))];
@@ -206,7 +206,7 @@
 
       const p = preguntasFiltradas[indice];
       document.getElementById("textoPregunta").textContent = p.pregunta;
-      document.getElementById("contador").textContent = Pregunta ${indice + 1} de ${preguntasFiltradas.length};
+      document.getElementById("contador").textContent = `Pregunta ${indice + 1} de ${preguntasFiltradas.length}`;
 
       const opciones = [p.respuesta, p.opcion_1, p.opcion_2, p.opcion_3];
       const mezcladas = opciones.sort(() => Math.random() - 0.5);
@@ -298,7 +298,7 @@
       else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
       else mensaje = "Te recomendamos repasar este tema.";
 
-      resultados.textContent = Tu resultado: ${porcentaje}% - ${mensaje};
+      resultados.textContent = `Tu resultado: ${porcentaje}% - ${mensaje}`;
       resultados.classList.remove("oculto");
       document.getElementById("temas").classList.remove("oculto");
       document.getElementById("inicioBtn").classList.remove("oculto");
