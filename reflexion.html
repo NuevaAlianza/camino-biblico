@@ -6,115 +6,140 @@
   <title>Reflexión por temas</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #fffaf2;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fef6e4;
+      color: #333;
       margin: 0;
       padding: 2rem;
-      text-align: center;
     }
     h1 {
-      color: #8b5e3c;
+      text-align: center;
+      color: #7f5539;
     }
-    #temas, #contenedor-pregunta {
-      margin-top: 2rem;
+    #temas, #pregunta {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff8f0;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease-in-out;
     }
     button {
-      background-color: #f0d9b5;
-      color: #3e2c1c;
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
       border: none;
-      padding: 1rem 2rem;
-      margin: 0.5rem;
-      font-size: 1rem;
-      border-radius: 10px;
+      border-radius: 12px;
+      background-color: #ffb703;
+      color: #fff;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s;
     }
     button:hover {
-      background-color: #e5c79e;
+      background-color: #fb8500;
     }
-    #pregunta, #cita {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
+    .oculto {
+      display: none;
+    }
+    .fade-in {
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    #contador {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      color: #8d5524;
+    }
+    #volverBtn {
+      background-color: #8d99ae;
+    }
+    #volverBtn:hover {
+      background-color: #6c757d;
     }
   </style>
 </head>
 <body>
   <h1>Reflexión por temas</h1>
 
-  <div id="temas"></div>
+  <div id="temas" class="fade-in">
+    <h2>Elige un tema:</h2>
+    <div id="listaTemas"></div>
+  </div>
 
-  <div id="contenedor-pregunta" style="display:none;">
-    <h2 id="tema-seleccionado"></h2>
-    <div id="pregunta"></div>
-    <div id="cita" style="display:none;"></div>
-    <button id="ver-cita">Ver cita</button>
-    <button id="siguiente">Siguiente pregunta</button>
-    <button id="volver">Volver a temas</button>
+  <div id="pregunta" class="oculto fade-in">
+    <div id="contador"></div>
+    <div id="textoPregunta"></div>
+    <div id="textoCita" class="oculto" style="margin-top:1rem; font-style: italic;"></div>
+    <button id="verCitaBtn">Mostrar respuesta</button>
+    <button id="siguienteBtn">Siguiente pregunta</button>
+    <button id="volverBtn">← Volver a temas</button>
   </div>
 
   <script>
-    let datos = [];
-    let preguntasTema = [];
-    let indiceActual = 0;
+    let preguntas = [];
+    let preguntasFiltradas = [];
+    let indice = 0;
 
     async function cargarDatos() {
-      try {
-        const respuesta = await fetch('datos/reflexion.json');
-        datos = await respuesta.json();
-        mostrarTemasUnicos();
-      } catch (error) {
-        console.error("Error al cargar datos/reflexion.json:", error);
-      }
-    }
-
-    function mostrarTemasUnicos() {
-      const temasContainer = document.getElementById('temas');
-      const temasUnicos = [...new Set(datos.map(p => p.tema))];
-
-      temasContainer.innerHTML = '';
+      const version = Date.now(); // Previene cache
+      const res = await fetch(`datos/reflexion.json?v=${version}`);
+      preguntas = await res.json();
+      const temasUnicos = [...new Set(preguntas.map(p => p.tema))];
+      const listaTemas = document.getElementById("listaTemas");
+      listaTemas.innerHTML = "";
       temasUnicos.forEach(tema => {
-        const btn = document.createElement('button');
+        const btn = document.createElement("button");
         btn.textContent = tema;
         btn.onclick = () => seleccionarTema(tema);
-        temasContainer.appendChild(btn);
+        listaTemas.appendChild(btn);
       });
     }
 
     function seleccionarTema(tema) {
-      preguntasTema = datos.filter(p => p.tema === tema);
-      indiceActual = 0;
-      document.getElementById('tema-seleccionado').textContent = tema;
-      document.getElementById('temas').style.display = 'none';
-      document.getElementById('contenedor-pregunta').style.display = 'block';
-      mostrarPreguntaActual();
+      preguntasFiltradas = preguntas.filter(p => p.tema === tema);
+      indice = 0;
+      document.getElementById("temas").classList.add("oculto");
+      document.getElementById("pregunta").classList.remove("oculto");
+      mostrarPregunta();
     }
 
-    function mostrarPreguntaActual() {
-      const preguntaActual = preguntasTema[indiceActual];
-      document.getElementById('pregunta').textContent = preguntaActual.pregunta;
-      document.getElementById('cita').textContent = preguntaActual.cita;
-      document.getElementById('cita').style.display = 'none';
+    function mostrarPregunta() {
+      const preguntaActual = preguntasFiltradas[indice];
+      document.getElementById("textoPregunta").textContent = preguntaActual.pregunta;
+      document.getElementById("textoCita").textContent = preguntaActual.cita;
+      document.getElementById("textoCita").classList.add("oculto");
+      document.getElementById("verCitaBtn").classList.remove("oculto");
+      document.getElementById("contador").textContent = `Pregunta ${indice + 1} de ${preguntasFiltradas.length}`;
     }
 
-    document.getElementById('ver-cita').onclick = () => {
-      document.getElementById('cita').style.display = 'block';
+    document.getElementById("verCitaBtn").onclick = () => {
+      document.getElementById("textoCita").classList.remove("oculto");
+      document.getElementById("verCitaBtn").classList.add("oculto");
     };
 
-    document.getElementById('siguiente').onclick = () => {
-      indiceActual++;
-      if (indiceActual < preguntasTema.length) {
-        mostrarPreguntaActual();
+    document.getElementById("siguienteBtn").onclick = () => {
+      indice++;
+      if (indice < preguntasFiltradas.length) {
+        mostrarPregunta();
       } else {
-        alert("Has terminado las preguntas de este tema.");
-        document.getElementById('contenedor-pregunta').style.display = 'none';
-        document.getElementById('temas').style.display = 'block';
+        alert("¡Has completado todas las preguntas de este tema!");
+        volverATemas();
       }
     };
 
-    document.getElementById('volver').onclick = () => {
-      document.getElementById('contenedor-pregunta').style.display = 'none';
-      document.getElementById('temas').style.display = 'block';
-    };
+    document.getElementById("volverBtn").onclick = volverATemas;
+
+    function volverATemas() {
+      document.getElementById("temas").classList.remove("oculto");
+      document.getElementById("pregunta").classList.add("oculto");
+    }
 
     cargarDatos();
   </script>
