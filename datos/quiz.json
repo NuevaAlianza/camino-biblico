@@ -1,1 +1,1662 @@
-
+[
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué habilidad especial le dio Dios a Daniel para interpretar sueños?",
+    "respuesta": "Entendimiento y sabiduría",
+    "opcion_1": "Fuerza física",
+    "opcion_2": "Poder militar",
+    "opcion_3": "Gran riqueza",
+    "cita biblica": "Daniel 1,17 “A estos cuatro jóvenes Dios les dio conocimiento y entendimiento en toda clase de letras y sabiduría.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Daniel para no contaminarse con la comida del rey?",
+    "respuesta": "Pidió comer solo vegetales y agua",
+    "opcion_1": "Comió todo lo que le dieron",
+    "opcion_2": "Se negó a comer",
+    "opcion_3": "Comió solo carne",
+    "cita biblica": "Daniel 1,8 “Daniel propuso al jefe de los eunucos no contaminarse con la comida del rey.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿En qué fue lanzado Daniel por orar a Dios contra la orden del rey?",
+    "respuesta": "En el foso de los leones",
+    "opcion_1": "En un pozo con serpientes",
+    "opcion_2": "En una prisión oscura",
+    "opcion_3": "En una cueva",
+    "cita biblica": "Daniel 6,16 “Entonces mandó que metiesen a Daniel en el foso de los leones.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el rey que gobernaba cuando Daniel interpretó el sueño de la estatua?",
+    "respuesta": "Nebucodonosor",
+    "opcion_1": "Baltasar",
+    "opcion_2": "Ciro",
+    "opcion_3": "Dario",
+    "cita biblica": "Daniel 2,1 “El rey Nebucodonosor tuvo sueños...”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo se llamaban los tres amigos de Daniel que también fueron llevados a Babilonia?",
+    "respuesta": "Sadrac, Mesac y Abed-nego",
+    "opcion_1": "José, Moisés y Aarón",
+    "opcion_2": "Samuel, David y Jonatán",
+    "opcion_3": "Gedeón, Sansón y Elías",
+    "cita biblica": "Daniel 1,6 “Entre ellos estaban Daniel, Ananías, Misael y Azarías.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué le sucedió a los tres amigos de Daniel cuando no adoraron la estatua de oro?",
+    "respuesta": "Fueron lanzados al horno de fuego ardiente",
+    "opcion_1": "Murieron en batalla",
+    "opcion_2": "Fueron exiliados",
+    "opcion_3": "Perdieron sus riquezas",
+    "cita biblica": "Daniel 3,19 “Fue arrojados al horno de fuego ardiente.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué visión tuvo Daniel que le reveló el fin de los tiempos?",
+    "respuesta": "La visión de las cuatro bestias",
+    "opcion_1": "La visión del arca de Noé",
+    "opcion_2": "La visión del maná en el desierto",
+    "opcion_3": "La visión de los pastores",
+    "cita biblica": "Daniel 7,2-3 “Vi cuatro grandes bestias que subían del mar.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el ángel que le explicó las visiones a Daniel?",
+    "respuesta": "Gabriel",
+    "opcion_1": "Miguel",
+    "opcion_2": "Rafael",
+    "opcion_3": "Uriel",
+    "cita biblica": "Daniel 8,16 “Se me acercó uno con aspecto humano y me dijo: 'Gabriel, explícame la visión.'”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué nombre babilónico le fue dado a Daniel?",
+    "respuesta": "Beltasar",
+    "opcion_1": "Sadrac",
+    "opcion_2": "Mesac",
+    "opcion_3": "Abed-nego",
+    "cita biblica": "Daniel 1,7 “Al joven Daniel le pusieron por nombre Beltasar.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Por qué Daniel y sus amigos no se contaminaron con la comida del rey?",
+    "respuesta": "Porque querían mantenerse puros según la ley de Dios",
+    "opcion_1": "Porque no tenían hambre",
+    "opcion_2": "Porque no les gustaba la comida",
+    "opcion_3": "Porque estaban en huelga",
+    "cita biblica": "Daniel 1,8 “Daniel propuso al jefe de los eunucos no contaminarse con la comida del rey.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué rey murió después de una noche sin dormir porque no pudo recordar sus sueños?",
+    "respuesta": "Nebucodonosor",
+    "opcion_1": "Ciro",
+    "opcion_2": "Dario",
+    "opcion_3": "Baltasar",
+    "cita biblica": "Daniel 2,3 “El rey no podía dormir por causa de su sueño y llamó a sus sabios.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo respondió Daniel cuando el rey le pidió que interpretara el sueño?",
+    "respuesta": "Con humildad, diciendo que el misterio es de Dios",
+    "opcion_1": "Se negó a interpretar",
+    "opcion_2": "Inventó una historia",
+    "opcion_3": "Dijo que el rey soñó con animales",
+    "cita biblica": "Daniel 2,27 “No hay hombre en la tierra que pueda revelar el misterio, pero Dios ha revelado el sueño a Daniel.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué castigo sufrió el que no interpretara el sueño del rey?",
+    "respuesta": "Sería cortado en pedazos y su casa destruida",
+    "opcion_1": "Destierro",
+    "opcion_2": "Sería encarcelado",
+    "opcion_3": "Sería enviado a la guerra",
+    "cita biblica": "Daniel 2,5 “El que no revele el sueño será cortado en pedazos y su casa convertida en basurero.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué ocurrió cuando Daniel interpretó el sueño?",
+    "respuesta": "El rey lo exaltó y le dio autoridad",
+    "opcion_1": "Daniel fue ignorado",
+    "opcion_2": "El rey se enojó",
+    "opcion_3": "Daniel fue encarcelado",
+    "cita biblica": "Daniel 2,46 “El rey se postró y alabó al Dios de Daniel.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué símbolo representaba el reino de Babilonia en el sueño de la estatua?",
+    "respuesta": "La cabeza de oro",
+    "opcion_1": "El pecho de plata",
+    "opcion_2": "Los pies de hierro",
+    "opcion_3": "La piedra",
+    "cita biblica": "Daniel 2,38 “Tú eres la cabeza de oro.”"
+  },
+  {
+    "tema": "Daniel",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuántos años estuvo Daniel en Babilonia sirviendo a varios reyes?",
+    "respuesta": "Más de 70 años",
+    "opcion_1": "10 años",
+    "opcion_2": "50 años",
+    "opcion_3": "30 años",
+    "cita biblica": "Daniel 10,1 “En el año tercero del rey Darío, estuvo Daniel…”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el esposo de Rut?",
+    "respuesta": "Booz",
+    "opcion_1": "Elimelec",
+    "opcion_2": "Mahlón",
+    "opcion_3": "Noé",
+    "cita biblica": "Rut 4,13 “Booz tomó a Rut y ella fue su esposa.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Por qué Rut decidió quedarse con Noemí?",
+    "respuesta": "Porque amaba a Noemí y a su Dios",
+    "opcion_1": "Porque quería riquezas",
+    "opcion_2": "Porque tenía miedo",
+    "opcion_3": "Porque era la única opción",
+    "cita biblica": "Rut 1,16 “Dondequiera que tú vayas, iré yo; y dondequiera que vivas, viviré.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué profesión tenía Booz?",
+    "respuesta": "Era un hombre rico y dueño de tierras",
+    "opcion_1": "Pastor de ovejas",
+    "opcion_2": "Carpintero",
+    "opcion_3": "Sacerdote",
+    "cita biblica": "Rut 2,1 “Booz era un hombre rico, dueño de tierras en Belén.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿De dónde era originaria Rut?",
+    "respuesta": "De Moab",
+    "opcion_1": "De Jerusalén",
+    "opcion_2": "De Egipto",
+    "opcion_3": "De Canaán",
+    "cita biblica": "Rut 1,4 “Rut, mujer moabita.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué relación tenía Noemí con Rut?",
+    "respuesta": "Suegra",
+    "opcion_1": "Novia",
+    "opcion_2": "Hermana",
+    "opcion_3": "Amiga",
+    "cita biblica": "Rut 1,8 “Ve, vuelve a tu casa, hija mía.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Rut para sostener a Noemí y a ella misma?",
+    "respuesta": "Cogía espigas en el campo de Booz",
+    "opcion_1": "Trabajaba en la tienda",
+    "opcion_2": "Cocinaba para los aldeanos",
+    "opcion_3": "Pastaba ovejas",
+    "cita biblica": "Rut 2,2 “Rut fue a recoger espigas detrás de los segadores.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué actitud mostró Rut hacia Dios?",
+    "respuesta": "Fe y lealtad",
+    "opcion_1": "Duda",
+    "opcion_2": "Indiferencia",
+    "opcion_3": "Ira",
+    "cita biblica": "Rut 1,16 “Tu pueblo será mi pueblo y tu Dios mi Dios.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo describió Booz a Rut cuando la vio?",
+    "respuesta": "Como una mujer virtuosa",
+    "opcion_1": "Y una extranjera",
+    "opcion_2": "Como una esclava",
+    "opcion_3": "Como una forastera",
+    "cita biblica": "Rut 2,11 “Booz respondió a Rut que sabía de su lealtad.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Booz para proteger a Rut mientras recogía espigas?",
+    "respuesta": "Dijo a sus trabajadores que no la molestaran",
+    "opcion_1": "La hizo trabajar más rápido",
+    "opcion_2": "La llevó a la ciudad",
+    "opcion_3": "Le dio una casa",
+    "cita biblica": "Rut 2,8 “No molestes a la joven.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el pariente cercano que tenía derecho de redimir a Rut?",
+    "respuesta": "Un pariente cercano no quiso redimirla",
+    "opcion_1": "Booz",
+    "opcion_2": "Ciro",
+    "opcion_3": "Elimelec",
+    "cita biblica": "Rut 4,3 “¿Quién comprará la parcela de tierra de Elimelec?”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Booz para redimir a Rut?",
+    "respuesta": "Compró la propiedad y se casó con ella",
+    "opcion_1": "La envió lejos",
+    "opcion_2": "Le dio dinero",
+    "opcion_3": "Le dio tierras",
+    "cita biblica": "Rut 4,9 “Booz compró la tierra y tomó a Rut como esposa.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué bendición le dio Booz a Rut y Noemí?",
+    "respuesta": "Que su familia sea famosa en Israel",
+    "opcion_1": "Que tengan riquezas",
+    "opcion_2": "Que tengan poder político",
+    "opcion_3": "Que vivan en el extranjero",
+    "cita biblica": "Rut 4,11 “Que el Señor haga que la mujer que viene a tu casa sea como Raquel y Lea.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el hijo de Rut y Booz?",
+    "respuesta": "Obed",
+    "opcion_1": "Josué",
+    "opcion_2": "David",
+    "opcion_3": "Salomón",
+    "cita biblica": "Rut 4,17 “Rut dio a luz a Obed, abuelo de David.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué valor principal enseña la historia de Rut?",
+    "respuesta": "Lealtad y fe",
+    "opcion_1": "Fuerza física",
+    "opcion_2": "Riquezas",
+    "opcion_3": "Poder",
+    "cita biblica": "Rut 1,16 “Dondequiera que tú vayas, iré yo.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo terminó la historia de Rut?",
+    "respuesta": "Con Rut integrada al pueblo de Israel y ancestro de David",
+    "opcion_1": "Con Rut regresando a Moab",
+    "opcion_2": "Con Rut volviendo sola",
+    "opcion_3": "Con Rut abandonada",
+    "cita biblica": "Rut 4,22 “Obed fue el padre de Isaí, padre de David.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál era el mensaje principal de Juan el Bautista?",
+    "respuesta": "Arrepentirse porque el reino de Dios se acercaba",
+    "opcion_1": "Ser un buen fariseo",
+    "opcion_2": "Construir templos",
+    "opcion_3": "Seguir a los profetas",
+    "cita biblica": "Mateo 3,2 “Arrepentíos, porque el reino de los cielos se ha acercado.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde bautizaba Juan a las personas?",
+    "respuesta": "En el río Jordán",
+    "opcion_1": "En el mar de Galilea",
+    "opcion_2": "En el río Éufrates",
+    "opcion_3": "En un lago",
+    "cita biblica": "Mateo 3,6 “Y eran bautizados por él en el río Jordán.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo se llamaba el padre de Juan el Bautista?",
+    "respuesta": "Zacarías",
+    "opcion_1": "José",
+    "opcion_2": "Simón",
+    "opcion_3": "Elías",
+    "cita biblica": "Lucas 1,5 “Zacarías era sacerdote en Abías.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué relación tenía Juan el Bautista con Jesús?",
+    "respuesta": "Primo",
+    "opcion_1": "Amigo",
+    "opcion_2": "Hermano",
+    "opcion_3": "Discípulo",
+    "cita biblica": "Lucas 1,36 “Tu parienta Isabel ha concebido un hijo en su vejez.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo fue el nacimiento de Juan el Bautista anunciado?",
+    "respuesta": "Por un ángel a Zacarías",
+    "opcion_1": "Por sueños",
+    "opcion_2": "Por profecías",
+    "opcion_3": "Por un milagro",
+    "cita biblica": "Lucas 1,11-13 “El ángel le dijo: Zacarías, tu oración ha sido escuchada.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué vestimenta usaba Juan el Bautista?",
+    "respuesta": "Piel de camello con cinturón de cuero",
+    "opcion_1": "Toga blanca",
+    "opcion_2": "Vestido sacerdotal",
+    "opcion_3": "Ropa de lino",
+    "cita biblica": "Mateo 3.4 “Vestía de pelo de camello y tenía un cinturón de cuero alrededor de su cintura.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué comida comía Juan el Bautista en el desierto?",
+    "respuesta": "Grillos y miel silvestre",
+    "opcion_1": "Pan y vino",
+    "opcion_2": "Frutas",
+    "opcion_3": "Cordero",
+    "cita biblica": "Mateo 3.4 “Su comida era langostas y miel silvestre.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Por qué Juan el Bautista bautizaba a la gente?",
+    "respuesta": "Para arrepentimiento y perdón de pecados",
+    "opcion_1": "Para limpieza física",
+    "opcion_2": "Para iniciación política",
+    "opcion_3": "Para purificación ceremonial",
+    "cita biblica": "Juan 1,33 “Yo os bautizo con agua, pero vendrá uno que bautizará con Espíritu Santo.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién bautizó a Jesús?",
+    "respuesta": "Juan el Bautista",
+    "opcion_1": "Pedro",
+    "opcion_2": "Juan",
+    "opcion_3": "Jesús mismo",
+    "cita biblica": "Mateo 3,13 “Entonces Jesús vino desde Galilea para ser bautizado por Juan.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué dijo Juan sobre Jesús cuando lo vio?",
+    "respuesta": "“Este es el Cordero de Dios que quita el pecado del mundo”",
+    "opcion_1": "“Él es el Mesías”",
+    "opcion_2": "“Él es un profeta”",
+    "opcion_3": "“Él es un rey”",
+    "cita biblica": "Juan 1,29 “He aquí el Cordero de Dios, que quita el pecado del mundo.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo terminó la vida de Juan el Bautista?",
+    "respuesta": "Fue decapitado por orden de Herodes",
+    "opcion_1": "Se murió de viejo",
+    "opcion_2": "Fue exiliado",
+    "opcion_3": "Se convirtió en rey",
+    "cita biblica": "Mateo 14,10 “Herodes mandó decapitar a Juan el Bautista.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Por qué Herodes mandó matar a Juan el Bautista?",
+    "respuesta": "Por denunciar su matrimonio ilícito",
+    "opcion_1": "Porque quería ser rey",
+    "opcion_2": "Porque Juan se rebeló",
+    "opcion_3": "Por celos",
+    "cita biblica": "Mateo 14,4 “Juan le dijo: No te es lícito tener a la mujer de tu hermano.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué profeta se le compara a Juan el Bautista?",
+    "respuesta": "Elías",
+    "opcion_1": "Isaías",
+    "opcion_2": "Jeremías",
+    "opcion_3": "Daniel",
+    "cita biblica": "Mateo 11,14 “Este es Elías, que había de venir.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué lugar visitó Juan para predicar?",
+    "respuesta": "El desierto",
+    "opcion_1": "Las ciudades",
+    "opcion_2": "Los templos",
+    "opcion_3": "Las sinagogas",
+    "cita biblica": "Mateo 3,1 “En aquellos días apareció Juan el Bautista predicando en el desierto de Judea.”"
+  },
+  {
+    "tema": "Juan el Bautista",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo llamó Juan a los fariseos y saduceos que venían a bautizarse?",
+    "respuesta": "Raza de víboras",
+    "opcion_1": "Hijos de Dios",
+    "opcion_2": "Pueblo escogido",
+    "opcion_3": "Justos",
+    "cita biblica": "Mateo 3,7 “Raza de víboras, ¿quién os enseñó a huir de la ira venidera?”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde se encontró Jesús con la mujer samaritana?",
+    "respuesta": "En un pozo en Sicar",
+    "opcion_1": "En una sinagoga",
+    "opcion_2": "En el templo de Jerusalén",
+    "opcion_3": "En el mercado",
+    "cita biblica": "Juan 4,6 “Llegó a un pueblo de Samaria, llamado Sicar, junto al campo que Jacob dio a José.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué le pidió Jesús a la mujer samaritana?",
+    "respuesta": "Que le diera de beber",
+    "opcion_1": "Que orara con él",
+    "opcion_2": "Que lo siguiera",
+    "opcion_3": "Que le contara su historia",
+    "cita biblica": "Juan 4,7 “Dame de beber.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Por qué la mujer samaritana se sorprendió de que Jesús le pidiera agua?",
+    "respuesta": "Porque los judíos no se trataban con samaritanos",
+    "opcion_1": "Porque era muy tarde",
+    "opcion_2": "Porque no conocía a Jesús",
+    "opcion_3": "Porque el agua estaba sucia",
+    "cita biblica": "Juan 4,9 “Los judíos no se tratan con los samaritanos.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué tipo de agua ofreció Jesús a la mujer samaritana?",
+    "respuesta": "Agua viva",
+    "opcion_1": "Eau potable",
+    "opcion_2": "Agua del pozo",
+    "opcion_3": "Agua bendita",
+    "cita biblica": "Juan 4,10 “Si conocieras el don de Dios, y quién es el que te dice: Dame de beber, tú le pedirías, y él te daría agua viva.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué dijo Jesús que pasaría si alguien bebía de su agua?",
+    "respuesta": "Nunca más tendría sed",
+    "opcion_1": "Se enfermaría",
+    "opcion_2": "Se cansaría",
+    "opcion_3": "Estaría siempre sediento",
+    "cita biblica": "Juan 4,14 “El agua que yo le daré será en él una fuente de agua que salte para vida eterna.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué le confesó la mujer samaritana a Jesús?",
+    "respuesta": "Que había tenido cinco maridos",
+    "opcion_1": "Y que era extranjera",
+    "opcion_2": "Que no creía en Dios",
+    "opcion_3": "Que era sacerdotisa",
+    "cita biblica": "Juan 4,17-18 “Has tenido cinco maridos, y el que tienes no es tu marido.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo reaccionó la mujer tras hablar con Jesús?",
+    "respuesta": "Fue a contar a su pueblo sobre Él",
+    "opcion_1": "Se fue llorando",
+    "opcion_2": "Se enojó",
+    "opcion_3": "Se fue sin decir nada",
+    "cita biblica": "Juan 4,28-29 “Dejó su cántaro y fue al pueblo a decir.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué les dijo la mujer a los habitantes de su pueblo?",
+    "respuesta": "Que había encontrado al Mesías",
+    "opcion_1": "Que Jesús era un profeta",
+    "opcion_2": "Que Jesús era un maestro",
+    "opcion_3": "Que Jesús era un sacerdote",
+    "cita biblica": "Juan 4,29 “Venid a ver a un hombre que me ha dicho todo lo que he hecho.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo respondieron los samaritanos a la invitación de la mujer?",
+    "respuesta": "Creyeron en Jesús y lo recibieron",
+    "opcion_1": "No le hicieron caso",
+    "opcion_2": "La expulsaron",
+    "opcion_3": "La ignoraron",
+    "cita biblica": "Juan 4,39-40 “Muchos samaritanos creyeron por causa de sus palabras.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién era el Mesías según la conversación?",
+    "respuesta": "Jesús",
+    "opcion_1": "Elías",
+    "opcion_2": "Moisés",
+    "opcion_3": "David",
+    "cita biblica": "Juan 4,25-26 “Cuando venga el Mesías, él nos lo declarará. Jesús le dijo: Yo soy, el que habla contigo.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué le dijo Jesús a la mujer sobre la adoración verdadera?",
+    "respuesta": "Que se debe adorar en espíritu y en verdad",
+    "opcion_1": "Que solo en Jerusalén se debe adorar",
+    "opcion_2": "Que solo los judíos pueden adorar",
+    "opcion_3": "Que la adoración no es importante",
+    "cita biblica": "Juan 4,23-24 “Dios es espíritu, y es necesario que los que le adoran, le adoren en espíritu y en verdad.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Por qué los judíos y samaritanos tenían conflicto?",
+    "respuesta": "Por diferencias religiosas y culturales",
+    "opcion_1": "Por guerra militar",
+    "opcion_2": "Por disputas económicas",
+    "opcion_3": "Por territorios",
+    "cita biblica": "Juan 4,9 “Los judíos no se tratan con los samaritanos.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué símbolo usó Jesús para explicar el agua viva?",
+    "respuesta": "Una fuente que da vida eterna",
+    "opcion_1": "Un río de oro",
+    "opcion_2": "Un pozo sin agua",
+    "opcion_3": "Un manantial de petróleo",
+    "cita biblica": "Juan 4,14 “Será en él una fuente de agua que salte para vida eterna.”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál fue la primera reacción de la mujer al conocer a Jesús?",
+    "respuesta": "Dudar y cuestionar",
+    "opcion_1": "Creer inmediatamente",
+    "opcion_2": "Reírse",
+    "opcion_3": "Ignorarlo",
+    "cita biblica": "Juan 4,9 “¿Cómo tú, siendo judío, me pides a mí de beber?”"
+  },
+  {
+    "tema": "Mujer samaritana",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué cambio ocurrió en la mujer samaritana tras el encuentro?",
+    "respuesta": "Se convirtió en testigo y evangelizadora",
+    "opcion_1": "Se alejó de su pueblo",
+    "opcion_2": "Se volvió religiosa solo por miedo",
+    "opcion_3": "Se mantuvo igual",
+    "cita biblica": "Juan 4,39 “Muchos creyeron por causa de la mujer.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue Noé?",
+    "respuesta": "Un hombre justo y perfecto en su generación",
+    "opcion_1": "Un profeta",
+    "opcion_2": "Un rey",
+    "opcion_3": "Un sacerdote",
+    "cita biblica": "Génesis 6,9 “Noé era un hombre justo y perfecto en sus generaciones.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué le pidió Dios a Noé que construyera?",
+    "respuesta": "Un arca",
+    "opcion_1": "Una torre",
+    "opcion_2": "Un templo",
+    "opcion_3": "Un altar",
+    "cita biblica": "Génesis 6,14 “Hazte un arca de madera de ciprés.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Por qué Dios decidió enviar el diluvio?",
+    "respuesta": "Porque la maldad humana era grande",
+    "opcion_1": "Porque Noé lo pidió",
+    "opcion_2": "Para castigar a los animales",
+    "opcion_3": "Para salvar a los profetas",
+    "cita biblica": "Génesis 6,5 “La maldad del hombre era mucha en la tierra.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuántos de cada animal debía llevar Noé al arca?",
+    "respuesta": "Un par de cada especie",
+    "opcion_1": "Diez pares",
+    "opcion_2": "Cinco pares",
+    "opcion_3": "Solo animales domésticos",
+    "cita biblica": "Génesis 6,19 “De todo animal de la tierra, de toda carne, dos de cada especie.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quiénes entraron con Noé en el arca?",
+    "respuesta": "Su familia y los animales",
+    "opcion_1": "Solo Noé y su esposa",
+    "opcion_2": "Los profetas",
+    "opcion_3": "Los reyes",
+    "cita biblica": "Génesis 7,7 “Entraron Noé y sus hijos con su esposa en el arca.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuánto tiempo duró el diluvio?",
+    "respuesta": "Cuarenta días y cuarenta noches",
+    "opcion_1": "Dos años",
+    "opcion_2": "Cien días",
+    "opcion_3": "Una semana",
+    "cita biblica": "Génesis 7,12 “Y hubo lluvia sobre la tierra cuarenta días y cuarenta noches.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo supo Noé que había terminado el diluvio?",
+    "respuesta": "Envió una paloma que regresó con una rama",
+    "opcion_1": "Señales en el cielo",
+    "opcion_2": "Lluvia constante",
+    "opcion_3": "La tierra se secó sola",
+    "cita biblica": "Génesis 8,11 “La paloma trajo en el pico una hoja de olivo.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué pacto hizo Dios con Noé después del diluvio?",
+    "respuesta": "No volver a destruir la tierra con agua",
+    "opcion_1": "Le daría riquezas",
+    "opcion_2": "Le daría tierras",
+    "opcion_3": "No destruiría con fuego",
+    "cita biblica": "Génesis 9,11 “No habrá más diluvio para destruir la tierra.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué señal puso Dios para recordar su pacto con Noé?",
+    "respuesta": "El arco iris",
+    "opcion_1": "La paloma",
+    "opcion_2": "La estrella de David",
+    "opcion_3": "La luna llena",
+    "cita biblica": "Génesis 9,13 “He puesto mi arco iris en las nubes.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Noé después de salir del arca?",
+    "respuesta": "Construyó un altar y ofreció sacrificios",
+    "opcion_1": "Huyó de la tierra",
+    "opcion_2": "Se fue a otro país",
+    "opcion_3": "Empezó una guerra",
+    "cita biblica": "Génesis 8,20 “Edificó un altar al Señor.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo reaccionó Noé después de beber vino?",
+    "respuesta": "Se embriagó y se descubrió en su tienda",
+    "opcion_1": "Se volvió profeta",
+    "opcion_2": "Se enojó",
+    "opcion_3": "Se durmió profundamente",
+    "cita biblica": "Génesis 9,21 “Bebió del vino y se embriagó.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quiénes son los hijos de Noé?",
+    "respuesta": "Shem, Cam y Jafet",
+    "opcion_1": "Abraham, Isaac y Jacob",
+    "opcion_2": "Daniel, Moisés y Aarón",
+    "opcion_3": "Pedro, Juan y Santiago",
+    "cita biblica": "Génesis 5,32 “Los hijos de Noé: Sem, Cam y Jafet.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿De dónde provienen todas las naciones según la Biblia?",
+    "respuesta": "De los hijos de Noé",
+    "opcion_1": "De Abraham",
+    "opcion_2": "De Moisés",
+    "opcion_3": "De David",
+    "cita biblica": "Génesis 10,32 “Estas son las familias de los hijos de Noé, por sus naciones.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué le dijo Dios a Noé para bendecirlo y mandarlo?",
+    "respuesta": "“Sed fructíferos y multiplicaos”",
+    "opcion_1": "“Conquista todas las tierras”",
+    "opcion_2": "“Escribe la ley”",
+    "opcion_3": "“Construye ciudades”",
+    "cita biblica": "Génesis 9,1 “Sed fructíferos y multiplicaos.”"
+  },
+  {
+    "tema": "Noé",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Noé para garantizar la supervivencia de la vida?",
+    "respuesta": "Construyó el arca y obedeció a Dios",
+    "opcion_1": "Reunió profetas",
+    "opcion_2": "Huyó del mundo",
+    "opcion_3": "Construyó un templo",
+    "cita biblica": "Génesis 6,22 “Así hizo Noé; hizo conforme a todo lo que Dios le mandó.”"
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién ungió a David como rey por primera vez?",
+    "respuesta": "Samuel",
+    "opcion_1": "Elías",
+    "opcion_2": "Salomón",
+    "opcion_3": "Saadías",
+    "cita biblica": "1 Samuel 16,13: Samuel tomó el cuerno con el aceite y lo ungió en presencia de sus hermanos. A partir de ese día, el espíritu de Yavé vino sobre David."
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué instrumento tocaba David para calmar al rey Saúl?",
+    "respuesta": "El arpa",
+    "opcion_1": "La flauta",
+    "opcion_2": "La lira",
+    "opcion_3": "El tambor",
+    "cita biblica": "1 Samuel 16,23: Cuando el espíritu malo de parte de Dios venía sobre Saúl, David tomaba el arpa y tocaba. Saúl se calmaba y se sentía mejor."
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Contra qué gigante peleó David cuando era joven?",
+    "respuesta": "Goliat",
+    "opcion_1": "Azarel",
+    "opcion_2": "Sisac",
+    "opcion_3": "Sanbalat",
+    "cita biblica": "1 Samuel 17,50: David venció al filisteo con honda y piedra, lo hirió y lo mató sin tener espada en la mano."
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué arma usó David para vencer a Goliat?",
+    "respuesta": "Una honda y una piedra",
+    "opcion_1": "Una espada",
+    "opcion_2": "Una lanza",
+    "opcion_3": "Un arco y flechas",
+    "cita biblica": "1 Samuel 17,49: Metió la mano en la bolsa, tomó una piedra, la tiró con la honda y golpeó al filisteo en la frente."
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuántos hermanos tenía David?",
+    "respuesta": "Siete",
+    "opcion_1": "Cuatro",
+    "opcion_2": "Doce",
+    "opcion_3": "Nueve",
+    "cita biblica": "1 Samuel 16,10-11: Jesé hizo pasar siete hijos suyos delante de Samuel, pero él dijo: \"Yavé no ha elegido a ninguno de ellos.\" Luego preguntó: \"¿Esos son todos tus hijos?\" Jesé respondió: \"Queda el más chico, que cuida las ovejas."
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué oficio tenía David antes de ser rey?",
+    "respuesta": "Pastor de ovejas",
+    "opcion_1": "Sacerdote",
+    "opcion_2": "Carpintero",
+    "opcion_3": "Cazador",
+    "cita biblica": "1 Samuel 16,11: \"Queda el más chico, que cuida las ovejas\", dijo Jesé."
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién era el mejor amigo de David?",
+    "respuesta": "Jonatán",
+    "opcion_1": "Absalón",
+    "opcion_2": "Amnón",
+    "opcion_3": "Benjamín",
+    "cita biblica": "1 Samuel 18,1: Desde ese momento, el alma de Jonatán quedó unida a la de David, y lo amó como a sí mismo."
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo David cuando tuvo la oportunidad de matar a Saúl en la cueva?",
+    "respuesta": "Le perdonó la vida",
+    "opcion_1": "Lo mató",
+    "opcion_2": "Lo tomó prisionero",
+    "opcion_3": "Lo hirió",
+    "cita biblica": "1 Samuel 24,7: David no dejó que sus hombres atacaran a Saúl y les dijo: \"No alzaré mi mano contra mi señor, porque es el ungido de Yavé."
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue la esposa más conocida de David, madre de Salomón?",
+    "respuesta": "Betsabé",
+    "opcion_1": "Mical",
+    "opcion_2": "Abigail",
+    "opcion_3": "Rizpá",
+    "cita biblica": "2 Samuel 12,24: David consoló a Betsabé, su esposa. Se acercó a ella, durmió con ella y dio a luz un hijo, al que llamó Salomón."
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué pecado cometió David con Urías el hitita?",
+    "respuesta": "Lo mandó matar y tomó a su esposa",
+    "opcion_1": "Lo robó",
+    "opcion_2": "Lo desterró",
+    "opcion_3": "Lo acusó falsamente",
+    "cita biblica": "2 Samuel 11,15: “Pongan a Urías al frente donde la lucha sea más dura, y déjenlo solo para que lo hieran y muera.”"
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué profeta confrontó a David por su pecado con Betsabé?",
+    "respuesta": "Natán",
+    "opcion_1": "Samuel",
+    "opcion_2": "Elías",
+    "opcion_3": "Gad",
+    "cita biblica": "2 Samuel 12,7: Entonces Natán dijo a David: “Tú eres ese hombre.”"
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál fue la reacción de David al arrepentirse por su pecado?",
+    "respuesta": "Reconoció su culpa y pidió perdón",
+    "opcion_1": "Negó lo ocurrido",
+    "opcion_2": "Acusó a Natán",
+    "opcion_3": "Escapó del palacio",
+    "cita biblica": "2 Samuel 12,13: David respondió a Natán: \"He pecado contra Yavé.\" Natán le dijo: \"Yavé ha perdonado tu pecado; no morirás."
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue Absalón?",
+    "respuesta": "Hijo de David que se rebeló contra él",
+    "opcion_1": "Hermano de David",
+    "opcion_2": "Sacerdote amigo de David",
+    "opcion_3": "General de Saúl",
+    "cita biblica": "2 Samuel 15,10: Absalón dijo: \"Cuando oigan la trompeta, digan: '¡Absalón reina en Hebrón!'"
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuánto tiempo reinó David sobre Israel?",
+    "respuesta": "Cuarenta años",
+    "opcion_1": "Treinta años",
+    "opcion_2": "Veinte años",
+    "opcion_3": "Cincuenta años",
+    "cita biblica": "1 Reyes 2,11: David reinó cuarenta años en total: siete en Hebrón y treinta y tres en Jerusalén."
+  },
+  {
+    "tema": "David",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde fue sepultado el rey David?",
+    "respuesta": "En la Ciudad de David",
+    "opcion_1": "En Hebrón",
+    "opcion_2": "En Betel",
+    "opcion_3": "En Jericó",
+    "cita biblica": "1 Reyes 2,10: David descansó con sus padres y fue sepultado en la Ciudad de David."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el padre de Salomón?",
+    "respuesta": "David",
+    "opcion_1": "Saúl",
+    "opcion_2": "Abraham",
+    "opcion_3": "Josué",
+    "cita biblica": "1 Reyes 2,12: Salomón se sentó en el trono de su padre David, y su reinado fue firme."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue la madre de Salomón?",
+    "respuesta": "Betsabé",
+    "opcion_1": "Mical",
+    "opcion_2": "Abigail",
+    "opcion_3": "Noemí",
+    "cita biblica": "2 Samuel 12,24: David consoló a Betsabé, su esposa. Ella dio a luz un hijo y le puso por nombre Salomón."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué pidió Salomón a Dios en lugar de riquezas o poder?",
+    "respuesta": "Sabiduría",
+    "opcion_1": "Tiempo de vida",
+    "opcion_2": "Victorias militares",
+    "opcion_3": "Tesoros",
+    "cita biblica": "1 Reyes 3,9: Concede a tu servidor un corazón atento para juzgar a tu pueblo y discernir entre el bien y el mal."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde tuvo Salomón el sueño en el que habló con Dios?",
+    "respuesta": "Gabaón",
+    "opcion_1": "Jerusalén",
+    "opcion_2": "Betel",
+    "opcion_3": "Hebrón",
+    "cita biblica": "1 Reyes 3,5: En Gabaón, Yavé se apareció a Salomón en sueños durante la noche."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Con qué ejemplo mostró Salomón su sabiduría ante el pueblo?",
+    "respuesta": "Con el juicio de las dos madres",
+    "opcion_1": "Construyendo el templo",
+    "opcion_2": "Con una profecía",
+    "opcion_3": "Multiplicando caballos",
+    "cita biblica": "1 Reyes 3,27: Entonces el rey dijo: \"Entréguenle el niño vivo a la primera mujer, no lo maten; ella es su madre."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál fue una de las grandes obras de Salomón?",
+    "respuesta": "La construcción del Templo de Jerusalén",
+    "opcion_1": "La Torre de Babel",
+    "opcion_2": "La reconstrucción del Arca",
+    "opcion_3": "El altar en el monte Carmelo",
+    "cita biblica": "1 Reyes 6,1: En el año cuarto del reinado de Salomón, comenzó la construcción del Templo de Yavé."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿A cuántos años comenzó Salomón la construcción del Templo?",
+    "respuesta": "Cuatro años después de reinar",
+    "opcion_1": "Siete años después",
+    "opcion_2": "Cuando tenía veinte años",
+    "opcion_3": "A los diez años",
+    "cita biblica": "1 Reyes 6,1: En el año cuarto del reinado de Salomón sobre Israel, comenzó la construcción del Templo."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuánto tiempo duró la construcción del Templo?",
+    "respuesta": "Siete años",
+    "opcion_1": "Tres años",
+    "opcion_2": "Diez años",
+    "opcion_3": "Doce años",
+    "cita biblica": "1 Reyes 6,38: En el año undécimo... el Templo fue terminado... Salomón tardó siete años en construirlo."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué reina extranjera visitó a Salomón por su fama?",
+    "respuesta": "La reina de Sabá",
+    "opcion_1": "La reina de Egipto",
+    "opcion_2": "La reina de Persia",
+    "opcion_3": "La reina de Canaán",
+    "cita biblica": "1 Reyes 10,1: La reina de Sabá oyó hablar de la fama de Salomón y vino a ponerlo a prueba con preguntas difíciles."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué llevó la reina de Sabá a Salomón?",
+    "respuesta": "Oro, especias y piedras preciosas",
+    "opcion_1": "Vacas, camellos y trigo",
+    "opcion_2": "Armas y soldados",
+    "opcion_3": "Libros sagrados y ropas",
+    "cita biblica": "1 Reyes 10,2: Llegó a Jerusalén con un gran séquito, camellos cargados de especias, mucho oro y piedras preciosas."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué lo llevó a apartarse de Dios en su vejez?",
+    "respuesta": "Sus mujeres extranjeras",
+    "opcion_1": "Sus riquezas",
+    "opcion_2": "La idolatría de su pueblo",
+    "opcion_3": "La presión de otros reyes",
+    "cita biblica": "1 Reyes 11,4: Cuando Salomón ya era viejo, sus mujeres desviaron su corazón hacia otros dioses."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuántas esposas tuvo Salomón según la Biblia?",
+    "respuesta": "Setecientas",
+    "opcion_1": "Trescientas",
+    "opcion_2": "Cien",
+    "opcion_3": "Doce",
+    "cita biblica": "1 Reyes 11,3: Tuvo setecientas esposas con rango de princesas y trescientas concubinas, y sus mujeres desviaron su corazón."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué castigo anunció Dios por el pecado de Salomón?",
+    "respuesta": "Dividir el reino",
+    "opcion_1": "La muerte inmediata",
+    "opcion_2": "Una peste grande",
+    "opcion_3": "Derrota en batalla",
+    "cita biblica": "1 Reyes 11,11: Como has hecho esto... voy a arrancarte el reino y lo daré a uno de tus servidores."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién sucedió a Salomón como rey?",
+    "respuesta": "Roboam",
+    "opcion_1": "Abías",
+    "opcion_2": "Jeroboam",
+    "opcion_3": "Adonías",
+    "cita biblica": "1 Reyes 11,43: Salomón descansó con sus padres y fue sepultado en la Ciudad de David. Su hijo Roboam reinó en su lugar."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde fue sepultado Salomón?",
+    "respuesta": "En la Ciudad de David",
+    "opcion_1": "En Jerusalén",
+    "opcion_2": "En el Templo",
+    "opcion_3": "En Hebrón",
+    "cita biblica": "1 Reyes 11,43: Fue sepultado en la Ciudad de David, su padre."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál era el nombre original de Pablo?",
+    "respuesta": "Saulo",
+    "opcion_1": "Tadeo",
+    "opcion_2": "Lucas",
+    "opcion_3": "Simón",
+    "cita biblica": "Hechos 13,9: Entonces Saulo, también llamado Pablo, lleno del Espíritu Santo, fijó los ojos en él."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde nació Pablo?",
+    "respuesta": "Tarso",
+    "opcion_1": "Antioquía",
+    "opcion_2": "Jerusalén",
+    "opcion_3": "Cesarea",
+    "cita biblica": "Hechos 22,3: Yo soy judío, nacido en Tarso de Cilicia, pero criado en esta ciudad."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿A qué grupo religioso pertenecía Pablo antes de convertirse?",
+    "respuesta": "Fariseos",
+    "opcion_1": "Saduceos",
+    "opcion_2": "Esenios",
+    "opcion_3": "Herodianos",
+    "cita biblica": "Hechos 23,6: Hermanos, yo soy fariseo, hijo de fariseos..."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué oficio tenía Pablo?",
+    "respuesta": "Hacedor de tiendas",
+    "opcion_1": "Pescador",
+    "opcion_2": "Cobrador de impuestos",
+    "opcion_3": "Carpintero",
+    "cita biblica": "Hechos 18,3: Como tenía el mismo oficio, se quedó con ellos y trabajaban juntos, pues eran fabricantes de tiendas."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién estuvo presente en la conversión de Pablo camino a Damasco?",
+    "respuesta": "Jesús",
+    "opcion_1": "Un ángel",
+    "opcion_2": "Esteban",
+    "opcion_3": "Ananías",
+    "cita biblica": "Hechos 9,4-5: Cayó al suelo y oyó una voz que le decía: \"Saulo, Saulo, ¿por qué me persigues?\" Él respondió: \"¿Quién eres, Señor?\" Y Él: \"Yo soy Jesús, a quien tú persigues."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué le sucedió a Pablo después del encuentro con Jesús?",
+    "respuesta": "Quedó ciego por unos días",
+    "opcion_1": "Se desmayó y murió",
+    "opcion_2": "Recibió estigmas",
+    "opcion_3": "Tuvo fiebre tres días",
+    "cita biblica": "Hechos 9,8-9: Aunque tenía los ojos abiertos, no veía. Lo llevaron de la mano a Damasco, donde estuvo tres días sin ver."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién devolvió la vista a Pablo en Damasco?",
+    "respuesta": "Ananías",
+    "opcion_1": "Bernabé",
+    "opcion_2": "Timoteo",
+    "opcion_3": "Felipe",
+    "cita biblica": "Hechos 9,17: Ananías entró en la casa, le impuso las manos y le dijo: \"Hermano Saulo, el Señor Jesús... me envió para que recobres la vista."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuántos viajes misioneros realizó Pablo?",
+    "respuesta": "Tres",
+    "opcion_1": "Cuatro",
+    "opcion_2": "Dos",
+    "opcion_3": "Seis",
+    "cita biblica": "Hechos (varios): Pablo realizó tres viajes misioneros principales relatados entre los capítulos 13 y 21."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿A quién llevó Pablo como compañero en su primer viaje misionero?",
+    "respuesta": "Bernabé",
+    "opcion_1": "Timoteo",
+    "opcion_2": "Tito",
+    "opcion_3": "Lucas",
+    "cita biblica": "Hechos 13,2: Aparten para mí a Bernabé y a Saulo, para la obra a la que los he llamado."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué joven acompañó a Pablo en su segundo viaje?",
+    "respuesta": "Timoteo",
+    "opcion_1": "Juan Marcos",
+    "opcion_2": "Felipe",
+    "opcion_3": "Tito",
+    "cita biblica": "Hechos 16,1-3: Pablo quiso que Timoteo lo acompañara, y lo tomó consigo."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué ocurrió con Pablo y Silas en Filipos?",
+    "respuesta": "Fueron encarcelados por predicar",
+    "opcion_1": "Fueron apedreados en la sinagoga",
+    "opcion_2": "Fueron expulsados por los comerciantes",
+    "opcion_3": "Se hundió el barco",
+    "cita biblica": "Hechos 16,23-25: Los echaron en la cárcel... pero a medianoche, Pablo y Silas oraban y cantaban himnos a Dios."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Pablo durante su tiempo en prisión?",
+    "respuesta": "Predicó y escribió cartas",
+    "opcion_1": "Guardó silencio",
+    "opcion_2": "Negó su fe",
+    "opcion_3": "Escapó por milagro",
+    "cita biblica": "Filipenses 1,13: Mi situación ha servido más bien para el progreso del Evangelio."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿A quién escribió Pablo sobre el amor como el mayor don?",
+    "respuesta": "A los Corintios",
+    "opcion_1": "A los Efesios",
+    "opcion_2": "A los Hebreos",
+    "opcion_3": "A los Filipenses",
+    "cita biblica": "1 Corintios 13,13: Hay tres cosas que permanecen: la fe, la esperanza y el amor, pero la más excelente es el amor."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿A quién envió Pablo de regreso con una carta de perdón?",
+    "respuesta": "Onésimo",
+    "opcion_1": "Tito",
+    "opcion_2": "Timoteo",
+    "opcion_3": "Marcos",
+    "cita biblica": "Filemón 1,10-12: Te ruego por mi hijo Onésimo, que engendré en la prisión... lo recibas como a mi propio corazón."
+  },
+  {
+    "tema": "Pablo",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde murió Pablo según la tradición?",
+    "respuesta": "Roma",
+    "opcion_1": "Jerusalén",
+    "opcion_2": "Tarso",
+    "opcion_3": "Antioquía",
+    "cita biblica": "2 Timoteo 4,6-7: Estoy a punto de ser ofrecido en sacrificio, y el momento de mi partida ha llegado. He peleado la buena batalla, he acabado la carrera, he guardado la fe."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál era el nombre original de Pedro?",
+    "respuesta": "Simón",
+    "opcion_1": "Jacobo",
+    "opcion_2": "Judas",
+    "opcion_3": "Juan",
+    "cita biblica": "Juan 1,42: Tú eres Simón, hijo de Juan; tú te llamarás Cefas, que quiere decir Pedro."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el hermano de Pedro?",
+    "respuesta": "Andrés",
+    "opcion_1": "Juan",
+    "opcion_2": "Santiago",
+    "opcion_3": "Tomás",
+    "cita biblica": "Juan 1,40: Andrés, hermano de Simón Pedro, era uno de los dos que oyeron a Juan y siguieron a Jesús."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué oficio tenía Pedro antes de seguir a Jesús?",
+    "respuesta": "Pescador",
+    "opcion_1": "Pastor",
+    "opcion_2": "Cobrador de impuestos",
+    "opcion_3": "Carpintero",
+    "cita biblica": "Lucas 5,3: Jesús subió a una barca que era de Simón y le pidió que la apartara un poco... luego enseñó desde allí."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde vivía Pedro?",
+    "respuesta": "Cafarnaúm",
+    "opcion_1": "Nazaret",
+    "opcion_2": "Betsaida",
+    "opcion_3": "Jerusalén",
+    "cita biblica": "Lucas 4,38: Al salir de la sinagoga, entró en casa de Simón."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Jesús con la suegra de Pedro?",
+    "respuesta": "La sanó de fiebre",
+    "opcion_1": "La resucitó",
+    "opcion_2": "Le perdonó sus pecados",
+    "opcion_3": "Le dio pan y vino",
+    "cita biblica": "Lucas 4,39: Jesús se inclinó sobre ella, reprendió la fiebre y la dejó; al instante se levantó y se puso a servirles."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué milagro presenció Pedro en su barca?",
+    "respuesta": "La pesca milagrosa",
+    "opcion_1": "Calmar la tormenta",
+    "opcion_2": "Multiplicación de panes",
+    "opcion_3": "Resucitar a un niño",
+    "cita biblica": "Lucas 5,6-8: Echaron las redes y recogieron tal cantidad de peces que las redes se rompían."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué dijo Pedro cuando Jesús preguntó quién era él para sus discípulos?",
+    "respuesta": "Tú eres el Mesías",
+    "opcion_1": "Elías",
+    "opcion_2": "Un gran profeta",
+    "opcion_3": "El Hijo de David",
+    "cita biblica": "Marcos 8,29: Pedro le respondió: \"Tú eres el Mesías."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿A qué apóstol reprendió Jesús diciendo: “¡Apártate de mí, Satanás!”?",
+    "respuesta": "A Pedro",
+    "opcion_1": "A Judas",
+    "opcion_2": "A Tomás",
+    "opcion_3": "A Santiago",
+    "cita biblica": "Marcos 8,33: Jesús, volviéndose, miró a sus discípulos y reprendió a Pedro: \"¡Apártate de mí, Satanás!"
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Pedro cuando Jesús fue arrestado?",
+    "respuesta": "Cortó la oreja a un siervo",
+    "opcion_1": "Huyó a escondidas",
+    "opcion_2": "Negó conocer a Jesús",
+    "opcion_3": "Se escondió entre la multitud",
+    "cita biblica": "Juan 18,10: Entonces Simón Pedro sacó una espada e hirió al siervo del sumo sacerdote, cortándole la oreja."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuántas veces negó Pedro a Jesús?",
+    "respuesta": "Tres veces",
+    "opcion_1": "Dos veces",
+    "opcion_2": "Una vez",
+    "opcion_3": "Cinco veces",
+    "cita biblica": "Lucas 22,61: Y enseguida, mientras todavía hablaba, cantó un gallo. Entonces el Señor se volvió y miró a Pedro."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Pedro al darse cuenta que había negado a Jesús?",
+    "respuesta": "Lloró amargamente",
+    "opcion_1": "Se fue del país",
+    "opcion_2": "Volvió a pescar",
+    "opcion_3": "Se escondió en el templo",
+    "cita biblica": "Lucas 22,62: Pedro salió afuera y rompió a llorar amargamente."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Jesús tras resucitar para reconciliarse con Pedro?",
+    "respuesta": "Le preguntó tres veces si lo amaba",
+    "opcion_1": "Lo reprendió públicamente",
+    "opcion_2": "Lo llamó aparte y lo abrazó",
+    "opcion_3": "Le dio pan y vino",
+    "cita biblica": "Juan 21,17: Jesús le dijo por tercera vez: “¿Me amas?” Pedro se entristeció... y Jesús le dijo: “Apacienta mis ovejas.”"
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué símbolo le dio Jesús a Pedro como señal de autoridad?",
+    "respuesta": "Las llaves del Reino",
+    "opcion_1": "Una túnica especial",
+    "opcion_2": "Un bastón sagrado",
+    "opcion_3": "Una piedra",
+    "cita biblica": "Juan 21,17: Apacienta mis ovejas. (Mateo 16,19: Te daré las llaves del Reino de los Cielos)."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué dijo Pedro en Pentecostés?",
+    "respuesta": "Que Jesús había resucitado",
+    "opcion_1": "Que todos debían ayunar",
+    "opcion_2": "Que el templo sería destruido",
+    "opcion_3": "Que debían seguir la ley de Moisés",
+    "cita biblica": "Hechos 2,32: A este Jesús, Dios lo resucitó, y todos nosotros somos testigos de ello."
+  },
+  {
+    "tema": "Pedro",
+    "tipo": "quiz comentado",
+    "pregunta": "¿A quién sanó Pedro en la Puerta Hermosa del templo?",
+    "respuesta": "A un paralítico",
+    "opcion_1": "A un ciego",
+    "opcion_2": "A un leproso",
+    "opcion_3": "A un mudo",
+    "cita biblica": "Hechos 3,6: Pedro le dijo: “No tengo oro ni plata, pero lo que tengo te lo doy: en nombre de Jesús... ¡levántate y anda!”"
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿De dónde era originario el profeta Elías?",
+    "respuesta": "Tisbé en Galaad",
+    "opcion_1": "Betsur en Judá",
+    "opcion_2": "Samaria en Israel",
+    "opcion_3": "Ninive en Asiria",
+    "cita biblica": "1 Reyes 17,1: Elías, el tisbita, de Tisbé de Galaad, dijo a Ajab..."
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿En tiempos de qué rey profetizó Elías?",
+    "respuesta": "Ajab",
+    "opcion_1": "Ezequías",
+    "opcion_2": "Josías",
+    "opcion_3": "Roboam",
+    "cita biblica": "1 Reyes 17,1: Elías... dijo a Ajab: “¡Vive el Señor... que no habrá rocío ni lluvia...!”"
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué anunció Elías que no habría en Israel por años?",
+    "respuesta": "Lluvia",
+    "opcion_1": "Viento",
+    "opcion_2": "Fuego",
+    "opcion_3": "Paz",
+    "cita biblica": "1 Reyes 17,1: No habrá rocío ni lluvia durante estos años, hasta que yo lo diga."
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde se refugió Elías tras anunciar la sequía?",
+    "respuesta": "En el torrente de Querit",
+    "opcion_1": "En el desierto de Judá",
+    "opcion_2": "En el monte Sinaí",
+    "opcion_3": "En la casa de una viuda en Sarepta",
+    "cita biblica": "1 Reyes 17,3-4: Escóndete en el torrente de Querit... beberás del torrente."
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién alimentó a Elías junto al torrente?",
+    "respuesta": "Cuernos de gacela",
+    "opcion_1": "Ciervos salvajes",
+    "opcion_2": "Cuervos",
+    "opcion_3": "Ángeles",
+    "cita biblica": "1 Reyes 17,6: Los cuervos le llevaban pan por la mañana y carne por la tarde."
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Con qué viuda se hospedó Elías durante la sequía?",
+    "respuesta": "Viuda de Sarepta",
+    "opcion_1": "Viuda de Betania",
+    "opcion_2": "Viuda de Jericó",
+    "opcion_3": "Viuda de Nain",
+    "cita biblica": "1 Reyes 17,10: Llegó a la puerta de la ciudad y encontró allí a una viuda recogiendo leña."
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué milagro ocurrió con la harina y el aceite de la viuda?",
+    "respuesta": "No se acabaron durante la sequía",
+    "opcion_1": "Fueron multiplicados por tres días",
+    "opcion_2": "Fueron convertidos en vino",
+    "opcion_3": "Desaparecieron al tercer día",
+    "cita biblica": "1 Reyes 17,16: Ni la tinaja de harina se vació, ni la aceitera se agotó..."
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Elías cuando murió el hijo de la viuda?",
+    "respuesta": "Oró y lo resucitó",
+    "opcion_1": "Lo sepultó",
+    "opcion_2": "Lo llevó al templo",
+    "opcion_3": "Lo entregó al profeta Eliseo",
+    "cita biblica": "1 Reyes 17,21-22: Oró al Señor... y el Señor oyó la oración de Elías: el niño volvió a la vida."
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿En qué monte desafió Elías a los profetas de Baal?",
+    "respuesta": "Monte Carmelo",
+    "opcion_1": "Monte Sinaí",
+    "opcion_2": "Monte Tabor",
+    "opcion_3": "Monte Nebo",
+    "cita biblica": "1 Reyes 18,19-20: Reúne a todo Israel en el monte Carmelo..."
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué ocurrió cuando Elías oró en el Monte Carmelo?",
+    "respuesta": "Cayó fuego del cielo",
+    "opcion_1": "Cayó lluvia intensa",
+    "opcion_2": "Tembló la tierra",
+    "opcion_3": "Se abrió el mar",
+    "cita biblica": "1 Reyes 18,38: Cayó fuego del Señor, que consumió el holocausto..."
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo el pueblo tras el milagro del fuego?",
+    "respuesta": "Reconoció al Señor como Dios",
+    "opcion_1": "Corrieron asustados",
+    "opcion_2": "Adoraron a Baal",
+    "opcion_3": "Construyeron un altar nuevo",
+    "cita biblica": "1 Reyes 18,39: El pueblo cayó rostro en tierra y dijo: \"¡El Señor es Dios!"
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue la reina que buscó matar a Elías?",
+    "respuesta": "Jezabel",
+    "opcion_1": "Atalía",
+    "opcion_2": "Rebeca",
+    "opcion_3": "Mical",
+    "cita biblica": "1 Reyes 19,2: Jezabel le mandó un mensaje: “Así me hagan los dioses... si mañana a esta hora no te hago como tú hiciste con ellos.”"
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde se refugió Elías cuando huía de Jezabel?",
+    "respuesta": "En el monte Horeb",
+    "opcion_1": "En el monte Carmelo",
+    "opcion_2": "En el Jordán",
+    "opcion_3": "En Samaria",
+    "cita biblica": "1 Reyes 19,8: Caminó cuarenta días hasta el monte de Dios, el Horeb."
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo se manifestó Dios a Elías en el monte Horeb?",
+    "respuesta": "En un suave murmullo",
+    "opcion_1": "En un terremoto",
+    "opcion_2": "En fuego",
+    "opcion_3": "En un trueno",
+    "cita biblica": "1 Reyes 19,12: Después del fuego, se oyó el murmullo de una brisa suave."
+  },
+  {
+    "tema": "Elías",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el sucesor de Elías como profeta?",
+    "respuesta": "Eliseo",
+    "opcion_1": "Ezequiel",
+    "opcion_2": "Samuel",
+    "opcion_3": "Jeremías",
+    "cita biblica": "1 Reyes 19,19: Elías encontró a Eliseo... y le echó su manto encima."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quiénes fueron los padres de José?",
+    "respuesta": "Jacob y Raquel",
+    "opcion_1": "Jacob y Lía",
+    "opcion_2": "Isaac y Rebeca",
+    "opcion_3": "Abraham y Sara",
+    "cita biblica": "Génesis 30,22-24: Dios se acordó de Raquel... ella concibió y dio a luz un hijo, y le llamó José."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué lugar ocupaba José entre los hijos de Jacob?",
+    "respuesta": "Penúltimo",
+    "opcion_1": "Primogénito",
+    "opcion_2": "Tercero",
+    "opcion_3": "Séptimo",
+    "cita biblica": "Génesis 30,24: Le llamó José... era el undécimo hijo de Jacob."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Por qué sus hermanos envidiaban a José?",
+    "respuesta": "Por los sueños que tenía",
+    "opcion_1": "Porque era el más fuerte",
+    "opcion_2": "Por su herencia",
+    "opcion_3": "Porque tenía más tierras",
+    "cita biblica": "Génesis 37,5: José tuvo un sueño... y sus hermanos le tenían odio."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué prenda especial le dio Jacob a José?",
+    "respuesta": "Una túnica de colores",
+    "opcion_1": "Un anillo de oro",
+    "opcion_2": "Un bastón de mando",
+    "opcion_3": "Un cinturón de lino fino",
+    "cita biblica": "Génesis 37,3: Israel amaba a José... y le hizo una túnica de mangas largas (de colores)."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué soñó José que provocó el enojo de sus hermanos?",
+    "respuesta": "Que ellos se inclinaban ante él",
+    "opcion_1": "Que los vencía en batalla",
+    "opcion_2": "Que él era más sabio",
+    "opcion_3": "Que tendría más hijos",
+    "cita biblica": "Génesis 37,7: Atábamos gavillas... y mi gavilla se levantó... y las de ustedes se inclinaban ante ella."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hicieron sus hermanos con José al principio?",
+    "respuesta": "Lo arrojaron a una cisterna",
+    "opcion_1": "Lo golpearon hasta dejarlo inconsciente",
+    "opcion_2": "Lo dejaron en el desierto",
+    "opcion_3": "Le cortaron la túnica",
+    "cita biblica": "Génesis 37,24: Lo tomaron y lo arrojaron a la cisterna... estaba vacía, sin agua."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿A quién vendieron los hermanos de José?",
+    "respuesta": "A los ismaelitas",
+    "opcion_1": "A los egipcios directamente",
+    "opcion_2": "A los madianitas",
+    "opcion_3": "A unos comerciantes sirios",
+    "cita biblica": "Génesis 37,28: Lo vendieron por veinte monedas de plata a los ismaelitas."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hicieron los hermanos con la túnica de José?",
+    "respuesta": "La mancharon con sangre",
+    "opcion_1": "La enterraron",
+    "opcion_2": "La quemaron",
+    "opcion_3": "La regalaron a otro esclavo",
+    "cita biblica": "Génesis 37,31-33: Tomaron la túnica... la mojaron en sangre... y se la enviaron a su padre."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿A dónde fue llevado José como esclavo?",
+    "respuesta": "A Egipto",
+    "opcion_1": "A Babilonia",
+    "opcion_2": "A Canaán",
+    "opcion_3": "A Siria",
+    "cita biblica": "Génesis 37,36: Los madianitas lo vendieron a Egipto, a Putifar."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién compró a José en Egipto?",
+    "respuesta": "Putifar, oficial del faraón",
+    "opcion_1": "Faraón en persona",
+    "opcion_2": "El sumo sacerdote Unas",
+    "opcion_3": "Un capitán llamado Jetró",
+    "cita biblica": "Génesis 37,36: Lo vendieron a Putifar, oficial del faraón."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Por qué fue encarcelado José injustamente?",
+    "respuesta": "Por rechazar a la esposa de Putifar",
+    "opcion_1": "Por robar del palacio",
+    "opcion_2": "Por desobedecer órdenes",
+    "opcion_3": "Por escapar del trabajo",
+    "cita biblica": "Génesis 39,20: El señor de José lo tomó y lo metió en la cárcel... por acusación falsa."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué habilidad hizo destacar a José en prisión?",
+    "respuesta": "Interpretar sueños",
+    "opcion_1": "Escuchar visiones",
+    "opcion_2": "Tocar el arpa",
+    "opcion_3": "Escribir en varias lenguas",
+    "cita biblica": "Génesis 40,8: ¿No es de Dios la interpretación? Cuéntenme el sueño."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué sueño del faraón interpretó José?",
+    "respuesta": "Sobre vacas y espigas",
+    "opcion_1": "Sobre pirámides y serpientes",
+    "opcion_2": "Sobre los mares y las estrellas",
+    "opcion_3": "Sobre el sol y la luna",
+    "cita biblica": "Génesis 41,17-27: El faraón soñó con siete vacas gordas y siete flacas... José explicó que eran años de abundancia y hambre."
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué puesto recibió José tras interpretar el sueño del faraón?",
+    "respuesta": "Gobernador de Egipto",
+    "opcion_1": "Sacerdote mayor",
+    "opcion_2": "Consejero del templo",
+    "opcion_3": "General del ejército",
+    "cita biblica": "Génesis 41,41: El faraón dijo a José: “Yo te pongo al frente de toda la tierra de Egipto.”"
+  },
+  {
+    "tema": "José – Hijo de Jacob",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo José cuando se reencontró con sus hermanos?",
+    "respuesta": "Los perdonó",
+    "opcion_1": "Los castigó",
+    "opcion_2": "Los rechazó",
+    "opcion_3": "Los envió a prisión",
+    "cita biblica": "Génesis 45,4-5: Yo soy su hermano José... no se aflijan... fue Dios quien me envió delante de ustedes para salvar vidas."
+  }
+]
