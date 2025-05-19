@@ -8,125 +8,116 @@
     body {
       font-family: sans-serif;
       background-color: #fffaf2;
-      color: #333;
-      padding: 1em;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
     }
     h1 {
-      text-align: center;
-      color: #aa6c39;
+      color: #8b5e3c;
     }
-    .boton {
-      display: inline-block;
-      margin: 0.5em;
-      padding: 0.6em 1.2em;
-      background-color: #f4c98b;
-      color: #000;
+    #temas, #contenedor-pregunta {
+      margin-top: 2rem;
+    }
+    button {
+      background-color: #f0d9b5;
+      color: #3e2c1c;
       border: none;
-      border-radius: 8px;
+      padding: 1rem 2rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+      border-radius: 10px;
       cursor: pointer;
-      transition: background-color 0.2s;
+      transition: background-color 0.3s ease;
     }
-    .boton:hover {
-      background-color: #e8b874;
+    button:hover {
+      background-color: #e5c79e;
     }
-    .oculto {
-      display: none;
-    }
-    #tema-lista, #pregunta-container, #controles {
-      text-align: center;
-      margin-top: 2em;
-    }
-    #pregunta {
-      font-size: 1.3em;
-      margin-bottom: 1em;
-    }
-    #respuesta {
-      color: #444;
-      font-style: italic;
-      margin-top: 1em;
+    #pregunta, #respuesta {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
     }
   </style>
 </head>
 <body>
-
   <h1>Reflexión por temas</h1>
 
-  <div id="tema-lista"></div>
+  <div id="temas"></div>
 
-  <div id="pregunta-container" class="oculto">
+  <div id="contenedor-pregunta" style="display:none;">
+    <h2 id="tema-seleccionado"></h2>
     <div id="pregunta"></div>
-    <div id="respuesta" class="oculto"></div>
-  </div>
-
-  <div id="controles" class="oculto">
-    <button id="siguiente" class="boton">Siguiente pregunta</button>
-    <button id="ver-respuesta" class="boton">Ver respuesta</button>
-    <button id="volver-temas" class="boton">Volver a temas</button>
+    <div id="respuesta" style="display:none;"></div>
+    <button id="ver-respuesta">Ver cita bíblica</button>
+    <button id="siguiente">Siguiente pregunta</button>
+    <button id="volver">Volver a temas</button>
   </div>
 
   <script>
-    let preguntas = [];
-    let preguntasFiltradas = [];
+    let datos = [];
+    let preguntasTema = [];
     let indiceActual = 0;
 
     async function cargarDatos() {
-      const response = await fetch('datos.json');
-      preguntas = await response.json();
-      mostrarTemasUnicos();
+      try {
+        const respuesta = await fetch('reflexion.json');
+        datos = await respuesta.json();
+        mostrarTemasUnicos();
+      } catch (error) {
+        console.error("Error al cargar reflexion.json:", error);
+      }
     }
 
     function mostrarTemasUnicos() {
-      const temasUnicos = [...new Set(preguntas.map(p => p.tema))];
-      const lista = document.getElementById('tema-lista');
-      lista.innerHTML = '<h3>Selecciona un tema:</h3>';
+      const temasContainer = document.getElementById('temas');
+      const temasUnicos = [...new Set(datos.map(p => p.tema))];
+
+      temasContainer.innerHTML = '';
       temasUnicos.forEach(tema => {
         const btn = document.createElement('button');
         btn.textContent = tema;
-        btn.className = 'boton';
         btn.onclick = () => seleccionarTema(tema);
-        lista.appendChild(btn);
+        temasContainer.appendChild(btn);
       });
     }
 
-    function seleccionarTema(temaSeleccionado) {
-      preguntasFiltradas = preguntas.filter(p => p.tema === temaSeleccionado);
+    function seleccionarTema(tema) {
+      preguntasTema = datos.filter(p => p.tema === tema);
       indiceActual = 0;
-      document.getElementById('tema-lista').classList.add('oculto');
-      document.getElementById('pregunta-container').classList.remove('oculto');
-      document.getElementById('controles').classList.remove('oculto');
-      mostrarPregunta();
+      document.getElementById('tema-seleccionado').textContent = tema;
+      document.getElementById('temas').style.display = 'none';
+      document.getElementById('contenedor-pregunta').style.display = 'block';
+      mostrarPreguntaActual();
     }
 
-    function mostrarPregunta() {
-      if (indiceActual >= preguntasFiltradas.length) {
-        document.getElementById('pregunta').textContent = "¡Has terminado las preguntas de este tema!";
-        document.getElementById('respuesta').classList.add('oculto');
-        return;
-      }
-      const actual = preguntasFiltradas[indiceActual];
-      document.getElementById('pregunta').textContent = actual.pregunta;
-      document.getElementById('respuesta').textContent = actual["cita biblica"];
-      document.getElementById('respuesta').classList.add('oculto');
+    function mostrarPreguntaActual() {
+      const preguntaActual = preguntasTema[indiceActual];
+      document.getElementById('pregunta').textContent = preguntaActual.pregunta;
+      document.getElementById('respuesta').textContent = preguntaActual["cita bíblica"];
+      document.getElementById('respuesta').style.display = 'none';
     }
+
+    document.getElementById('ver-respuesta').onclick = () => {
+      document.getElementById('respuesta').style.display = 'block';
+    };
 
     document.getElementById('siguiente').onclick = () => {
       indiceActual++;
-      mostrarPregunta();
+      if (indiceActual < preguntasTema.length) {
+        mostrarPreguntaActual();
+      } else {
+        alert("Has terminado las preguntas de este tema.");
+        document.getElementById('contenedor-pregunta').style.display = 'none';
+        document.getElementById('temas').style.display = 'block';
+      }
     };
 
-    document.getElementById('ver-respuesta').onclick = () => {
-      document.getElementById('respuesta').classList.remove('oculto');
-    };
-
-    document.getElementById('volver-temas').onclick = () => {
-      document.getElementById('tema-lista').classList.remove('oculto');
-      document.getElementById('pregunta-container').classList.add('oculto');
-      document.getElementById('controles').classList.add('oculto');
-      indiceActual = 0;
+    document.getElementById('volver').onclick = () => {
+      document.getElementById('contenedor-pregunta').style.display = 'none';
+      document.getElementById('temas').style.display = 'block';
     };
 
     cargarDatos();
   </script>
-
 </body>
 </html>
+
