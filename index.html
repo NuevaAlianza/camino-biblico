@@ -9,21 +9,22 @@
   <title>App Bíblica</title>
 </head>
 <body>
-  <main class="menu">
-    <h1>app bíblica</h1>
-    <p>elige una modalidad:</p>
-    <button onclick="location.href='reflexion.html'">🧘 reflexión por temas</button>
-    <button onclick="location.href='quiz.html'">🧠 quiz comentado</button>
-    <button onclick="location.href='citas.html'">📖 citas bíblicas</button>
-    <button onclick="location.href='progreso.html'">📊 revisión de progreso</button>
-    <button onclick="location.href='config.html'">⚙️ configuración / acerca de</button>
+  <main class="menu-principal">
+    <h1>App Bíblica</h1>
+    <p>Elige una modalidad:</p>
+    <button onclick="location.href='reflexion.html'">🧘 Reflexión por temas</button>
+    <button onclick="location.href='quiz.html'">🧠 Quiz comentado</button>
+    <button onclick="location.href='citas.html'">📖 Citas bíblicas</button>
+    <button onclick="location.href='progreso.html'">📊 Revisión de progreso</button>
+    <button onclick="location.href='config.html'">⚙️ Configuración / Acerca de</button>
   </main>
+
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then(reg => console.log('SW registrado:', reg))
-          .catch(err => console.log('SW fallo:', err));
+          .catch(err => console.log('SW falló:', err));
       });
     }
   </script>
