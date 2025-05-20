@@ -66,6 +66,7 @@ main.menu button {
 main.menu button:hover {
   background-color: var(--color-secundario);
 }
+
 /* Estilos específicos para index.html */
 main.menu-principal {
   background-color: white;
@@ -125,4 +126,5 @@ main.menu-principal button:hover {
     font-size: 1rem;
   }
 }
+
 
