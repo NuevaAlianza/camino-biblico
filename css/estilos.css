@@ -128,3 +128,62 @@ button#volver-inicio-btn:hover {
 .oculto {
   display: none !important;
 }
+/* Ajustes para la pantalla de quiz */
+main.quiz {
+  background: white;
+  border-radius: var(--radio);
+  padding: 2rem;
+  box-shadow: var(--sombra);
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contenedor-pregunta {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-secundario);
+  font-weight: 600;
+}
+
+#contenedor-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#contenedor-opciones button {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  border-radius: var(--radio);
+  padding: 0.8rem;
+  font-size: 1rem;
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contenedor-opciones button:hover {
+  background-color: var(--color-secundario);
+}
+
+#contenedor-botones-final button {
+  background-color: var(--color-secundario);
+  color: white;
+  border: none;
+  border-radius: var(--radio);
+  padding: 0.8rem 1.2rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contenedor-botones-final button:hover {
+  background-color: var(--color-primario);
+}
