@@ -1,117 +1,122 @@
-let bloqueActual = null;
-let citas = [];
+let todasLasCitas = [];
+let citasDelBloque = [];
 let indiceActual = 0;
-let respuestasCorrectasLibro = 0;
-let respuestasCorrectasCapitulo = 0;
-let totalPreguntas = 0;
-let progreso = {};
+let modo = "basico";
+let bloqueSeleccionado = 1;
+let aciertosLibro = 0;
+let aciertosCapitulo = 0;
 
-function cargarCitas(nombreBloque) {
-    fetch('datos/citas.json')
-        .then(response => response.json())
-        .then(data => {
-            bloqueActual = nombreBloque;
-            citas = data[bloqueActual];
-            if (citas) {
-                cargarProgreso(); // Cargar progreso guardado
-                mostrarPregunta();
-            }
-        });
-}
+const nivelSelect = document.getElementById("nivel");
+const bloqueSelect = document.getElementById("bloque");
+const iniciarBtn = document.getElementById("iniciarBtn");
+
+const seccionInicio = document.getElementById("inicio");
+const seccionJuego = document.getElementById("juego");
+const seccionFinal = document.getElementById("final");
+
+const pregunta = document.getElementById("pregunta");
+const opcionesLibro = document.getElementById("opcionesLibro");
+const opcionesCapitulo = document.getElementById("opcionesCapitulo");
+const mensajeFinal = document.getElementById("mensajeFinal");
+
+// Cargar citas desde el archivo
+fetch("datos/citas.json")
+  .then(res => res.json())
+  .then(data => {
+    todasLasCitas = data;
+
+    // Detectar bloques únicos
+    const bloquesUnicos = [...new Set(todasLasCitas.map(c => c.bloque))];
+    bloquesUnicos.sort((a, b) => a - b);
+
+    bloquesUnicos.forEach(bloque => {
+      const option = document.createElement("option");
+      option.value = bloque;
+      option.textContent = `Bloque ${bloque}`;
+      bloqueSelect.appendChild(option);
+    });
+  });
+
+// Al iniciar el quiz
+iniciarBtn.addEventListener("click", () => {
+  modo = nivelSelect.value;
+  bloqueSeleccionado = parseInt(bloqueSelect.value);
+
+  citasDelBloque = todasLasCitas.filter(c => c.bloque === bloqueSeleccionado);
+  indiceActual = 0;
+  aciertosLibro = 0;
+  aciertosCapitulo = 0;
+
+  seccionInicio.classList.add("oculto");
+  seccionJuego.classList.remove("oculto");
+
+  mostrarPregunta();
+});
 
 function mostrarPregunta() {
-    if (indiceActual >= citas.length) {
-        mostrarResultadoFinal();
-        return;
-    }
+  const cita = citasDelBloque[indiceActual];
+  pregunta.textContent = cita.cita;
 
-    const cita = citas[indiceActual];
-    document.getElementById('cita').textContent = cita.cita;
+  // Mostrar opciones de libro
+  opcionesLibro.innerHTML = "";
+  cita.opciones_libro.forEach((libro, i) => {
+    const btn = document.createElement("button");
+    btn.textContent = libro;
+    btn.addEventListener("click", () => validarLibro(libro, cita));
+    opcionesLibro.appendChild(btn);
+  });
 
-    const opcionesLibro = [...cita.opciones_libro];
-    const opcionesCapitulo = [...cita.opciones_capitulo];
-
-    mostrarOpciones('libros', opcionesLibro, cita.libro, true);
-    mostrarOpciones('capitulos', opcionesCapitulo, cita.capitulo, false);
-}
-
-function mostrarOpciones(idContenedor, opciones, correcta, esLibro) {
-    const contenedor = document.getElementById(idContenedor);
-    contenedor.innerHTML = '';
-    opciones.forEach(opcion => {
-        const btn = document.createElement('button');
-        btn.textContent = opcion;
-        btn.onclick = () => verificarRespuesta(opcion, correcta, esLibro, btn);
-        contenedor.appendChild(btn);
+  // Mostrar opciones de capítulo solo si es modo avanzado
+  opcionesCapitulo.innerHTML = "";
+  if (modo === "avanzado") {
+    cita.opciones_capitulo.forEach((cap, i) => {
+      const btn = document.createElement("button");
+      btn.textContent = cap;
+      btn.addEventListener("click", () => validarCapitulo(cap, cita));
+      opcionesCapitulo.appendChild(btn);
     });
+  }
 }
 
-function verificarRespuesta(seleccionada, correcta, esLibro, boton) {
-    const esCorrecta = seleccionada === correcta;
-    boton.classList.add(esCorrecta ? 'correcta' : 'incorrecta');
-    if (esCorrecta) {
-        if (esLibro) {
-            respuestasCorrectasLibro++;
-        } else {
-            respuestasCorrectasCapitulo++;
-        }
-    }
+function validarLibro(libroSeleccionado, cita) {
+  if (libroSeleccionado === cita.libro) {
+    aciertosLibro++;
+  }
 
-    setTimeout(() => {
-        if (!esLibro) {
-            indiceActual++;
-            guardarProgreso();
-            mostrarPregunta();
-        }
-    }, 500);
+  if (modo === "basico") {
+    pasarSiguiente();
+  } else {
+    opcionesLibro.querySelectorAll("button").forEach(b => b.disabled = true);
+  }
 }
 
-function mostrarResultadoFinal() {
-    const porcentajeLibro = Math.round((respuestasCorrectasLibro / citas.length) * 100);
-    const porcentajeCapitulo = Math.round((respuestasCorrectasCapitulo / citas.length) * 100);
+function validarCapitulo(capSeleccionado, cita) {
+  if (parseInt(capSeleccionado) === parseInt(cita.capitulo)) {
+    aciertosCapitulo++;
+  }
 
-    const mensaje = `¡Has terminado el bloque!\n\n
-Aciertos en libros: ${porcentajeLibro}%\n
-Aciertos en capítulos: ${porcentajeCapitulo}%\n\n
-${mensajeSegunDesempeno((porcentajeLibro + porcentajeCapitulo) / 2)}`;
-
-    alert(mensaje);
-    limpiarProgreso();
+  pasarSiguiente();
 }
 
-function mensajeSegunDesempeno(porcentaje) {
-    if (porcentaje === 100) return "¡Perfecto! Conoces muy bien las Escrituras.";
-    if (porcentaje >= 80) return "¡Muy bien! Estás en el camino correcto.";
-    if (porcentaje >= 60) return "¡Bien hecho! Puedes seguir mejorando.";
-    return "Sigue practicando, ¡la Palabra de Dios te espera!";
+function pasarSiguiente() {
+  indiceActual++;
+  if (indiceActual >= citasDelBloque.length) {
+    finalizarQuiz();
+  } else {
+    mostrarPregunta();
+  }
 }
 
-function guardarProgreso() {
-    progreso[bloqueActual] = {
-        indice: indiceActual,
-        correctasLibro: respuestasCorrectasLibro,
-        correctasCapitulo: respuestasCorrectasCapitulo
-    };
-    localStorage.setItem('progresoCitas', JSON.stringify(progreso));
-}
+function finalizarQuiz() {
+  seccionJuego.classList.add("oculto");
+  seccionFinal.classList.remove("oculto");
 
-function cargarProgreso() {
-    const guardado = JSON.parse(localStorage.getItem('progresoCitas'));
-    if (guardado && guardado[bloqueActual]) {
-        const datos = guardado[bloqueActual];
-        if (confirm(`Tienes un progreso guardado en este bloque. ¿Deseas continuar desde la pregunta ${datos.indice + 1}?`)) {
-            indiceActual = datos.indice;
-            respuestasCorrectasLibro = datos.correctasLibro;
-            respuestasCorrectasCapitulo = datos.correctasCapitulo;
-            progreso = guardado;
-        } else {
-            limpiarProgreso(); // Si no desea continuar, limpiar
-        }
-    }
-}
+  const total = citasDelBloque.length;
+  let mensaje = `Acertaste ${aciertosLibro} libros de ${total}.`;
 
-function limpiarProgreso() {
-    const guardado = JSON.parse(localStorage.getItem('progresoCitas')) || {};
-    delete guardado[bloqueActual];
-    localStorage.setItem('progresoCitas', JSON.stringify(guardado));
+  if (modo === "avanzado") {
+    mensaje += ` Y ${aciertosCapitulo} capítulos de ${total}.`;
+  }
+
+  mensajeFinal.textContent = mensaje;
 }
