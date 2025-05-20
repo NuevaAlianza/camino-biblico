@@ -60,6 +60,33 @@
     });
   });
 </script>
+  <script>
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+
+    const banner = document.getElementById('instalar-app');
+    const btn = document.getElementById('btn-instalar');
+    banner.style.display = 'flex';
+
+    btn.addEventListener('click', () => {
+      banner.style.display = 'none';
+      deferredPrompt.prompt();
+
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Usuario aceptó la instalación');
+        } else {
+          console.log('Usuario canceló la instalación');
+        }
+        deferredPrompt = null;
+      });
+    });
+  });
+</script>
+
 <div id="instalar-app" style="display:none;" class="instalar-banner">
   <span>¿Deseas instalar la app?</span>
   <button id="btn-instalar">Instalar</button>
