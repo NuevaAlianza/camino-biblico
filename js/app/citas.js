@@ -1,171 +1,198 @@
 // js/app/citas.js
 
+// Variables globales
 let citas = [];
-let bloqueActual = null;
-let preguntasBloque = [];
-let preguntaIndex = 0;
-let correctasLibro = 0;
-let correctasCapitulo = 0;
-let modo = null; // 'basico' o 'avanzado'
+let preguntasFiltradas = [];
+let indiceActual = 0;
+let nivelSeleccionado = 'basico';
+let bloqueSeleccionado = '1';
+let puntaje = 0;
 
-const selectorModo = document.getElementById('selector-modo');
-const modoBasicoBtn = document.getElementById('modo-basico-btn');
-const modoAvanzadoBtn = document.getElementById('modo-avanzado-btn');
+// Sonidos
+const sonidoClick = new Audio('assets/sonidos/click.mp3');
+const sonidoCorrecto = new Audio('assets/sonidos/correcto.mp3');
 
-const selectorBloque = document.getElementById('selector-bloque');
-const bloqueSelect = document.getElementById('bloque-select');
-const iniciarBtn = document.getElementById('iniciar-btn');
+const pantallaInicio = document.getElementById('pantalla-inicio');
+const pantallaQuiz = document.getElementById('pantalla-quiz');
+const contenedorPregunta = document.getElementById('contenedor-pregunta');
+const contenedorOpciones = document.getElementById('contenedor-opciones');
+const contenedorBotonesFinal = document.getElementById('contenedor-botones-final');
+const btnIniciar = document.getElementById('btn-iniciar');
+const btnReiniciar = document.getElementById('btn-reiniciar');
+const btnVolver = document.getElementById('btn-volver');
+const mensajeFinal = document.getElementById('mensaje-final');
 
-const quizContainer = document.getElementById('quiz-container');
-const citaCard = document.getElementById('cita-card');
-const opcionesLibroDiv = document.getElementById('opciones-libro');
-const opcionesCapituloDiv = document.getElementById('opciones-capitulo');
-const barraProgreso = document.getElementById('barra-progreso');
+const selectNivel = document.getElementById('nivel');
+const selectBloque = document.getElementById('bloque');
 
-const resultadoFinal = document.getElementById('resultado-final');
-const mensajeResultado = document.getElementById('mensaje-resultado');
-const reiniciarBtn = document.getElementById('reiniciar-btn');
-const volverInicioBtn = document.getElementById('volver-inicio-btn');
+// Cargar datos desde JSON
+fetch('datos/citas.json')
+  .then(response => response.json())
+  .then(data => {
+    citas = data;
+  })
+  .catch(err => console.error('Error cargando citas:', err));
 
-// Cargar datos JSON
-async function cargarDatos() {
-  try {
-    const resp = await fetch('datos/citas.json');
-    citas = await resp.json();
-
-    // Obtener bloques únicos
-    const bloques = [...new Set(citas.map(c => c.bloque))];
-    bloques.forEach(b => {
-      const option = document.createElement('option');
-      option.value = b;
-      option.textContent = `Bloque ${b}`;
-      bloqueSelect.appendChild(option);
-    });
-  } catch (error) {
-    alert('Error cargando datos: ' + error);
-  }
-}
-
-// Iniciar el quiz después de seleccionar modo y bloque
+// Función para iniciar quiz
 function iniciarQuiz() {
-  bloqueActual = parseInt(bloqueSelect.value);
-  preguntasBloque = citas.filter(c => c.bloque === bloqueActual);
-  preguntaIndex = 0;
-  correctasLibro = 0;
-  correctasCapitulo = 0;
+  sonidoClick.play();
 
-  selectorModo.classList.add('oculto');
-  selectorBloque.classList.add('oculto');
-  quizContainer.classList.remove('oculto');
-  resultadoFinal.classList.add('oculto');
+  nivelSeleccionado = selectNivel.value;
+  bloqueSeleccionado = selectBloque.value;
+  puntaje = 0;
+  indiceActual = 0;
+
+  // Filtrar preguntas por bloque
+  preguntasFiltradas = citas.filter(c => c.bloque.toString() === bloqueSeleccionado);
+
+  // Mostrar solo preguntas que correspondan al nivel:
+  // Para nivel básico solo usaremos preguntas con opciones de libro (ignorando capítulo)
+  // Para avanzado usamos libro y capítulo
+  if (nivelSeleccionado === 'basico') {
+    // No modificamos las preguntas, pero en el render se ocultan opciones de capítulo
+  }
+
+  // Ocultar pantalla inicio, mostrar quiz
+  pantallaInicio.style.display = 'none';
+  pantallaQuiz.style.display = 'flex';
+  contenedorBotonesFinal.style.display = 'none';
 
   mostrarPregunta();
-  actualizarBarra();
 }
 
-// Mostrar pregunta según el modo
+// Función para mostrar pregunta actual
 function mostrarPregunta() {
-  const pregunta = preguntasBloque[preguntaIndex];
-  citaCard.textContent = `"${pregunta.cita}"`;
+  contenedorPregunta.textContent = '';
+  contenedorOpciones.innerHTML = '';
 
-  // Limpiar opciones previas
-  opcionesLibroDiv.innerHTML = '';
-  opcionesCapituloDiv.innerHTML = '';
+  if (indiceActual >= preguntasFiltradas.length) {
+    // Quiz terminado
+    finalizarQuiz();
+    return;
+  }
 
-  // Mostrar opciones libro
-  pregunta.opciones_libro.forEach(libro => {
-    const btn = document.createElement('button');
-    btn.textContent = libro;
-    btn.onclick = () => manejarRespuestaLibro(libro, pregunta.libro);
-    opcionesLibroDiv.appendChild(btn);
-  });
+  const pregunta = preguntasFiltradas[indiceActual];
 
-  // Mostrar opciones capitulo solo si modo avanzado
-  if (modo === 'avanzado') {
-    opcionesCapituloDiv.classList.remove('oculto');
-    pregunta.opciones_capitulo.forEach(cap => {
+  contenedorPregunta.textContent = `"${pregunta.cita}"`;
+
+  // Mostrar opciones según nivel
+  if (nivelSeleccionado === 'basico') {
+    // Solo opciones de libro
+    pregunta.opciones_libro.forEach(opcion => {
       const btn = document.createElement('button');
-      btn.textContent = cap;
-      btn.onclick = () => manejarRespuestaCapitulo(cap, pregunta.capitulo);
-      opcionesCapituloDiv.appendChild(btn);
+      btn.textContent = opcion;
+      btn.addEventListener('click', () => manejarRespuesta(opcion, pregunta.libro));
+      contenedorOpciones.appendChild(btn);
     });
   } else {
-    opcionesCapituloDiv.classList.add('oculto');
+    // Avanzado: mostrar opciones libro y luego opciones capítulo (dos etapas)
+    if (!pregunta._fase || pregunta._fase === 1) {
+      // Mostrar opciones libro
+      pregunta._fase = 1;
+      pregunta._respuestaCorrecta = pregunta.libro;
+
+      pregunta.opciones_libro.forEach(opcion => {
+        const btn = document.createElement('button');
+        btn.textContent = opcion;
+        btn.addEventListener('click', () => manejarRespuestaAvanzado(opcion, pregunta.libro, pregunta));
+        contenedorOpciones.appendChild(btn);
+      });
+    } else if (pregunta._fase === 2) {
+      // Mostrar opciones capítulo
+      contenedorPregunta.textContent = `¿Cuál es el capítulo correcto de esta cita? "${pregunta.cita}"`;
+      pregunta.opciones_capitulo.forEach(opcion => {
+        const btn = document.createElement('button');
+        btn.textContent = opcion;
+        btn.addEventListener('click', () => manejarRespuestaAvanzado(opcion, pregunta.capitulo, pregunta));
+        contenedorOpciones.appendChild(btn);
+      });
+    }
   }
 }
 
-function manejarRespuestaLibro(seleccion, correcta) {
-  if (seleccion === correcta) correctasLibro++;
-  siguientePregunta();
+// Manejar respuesta nivel básico
+function manejarRespuesta(respuesta, correcta) {
+  sonidoClick.play();
+
+  if (respuesta === correcta) {
+    puntaje++;
+    sonidoCorrecto.play();
+  }
+
+  indiceActual++;
+  mostrarPregunta();
 }
 
-function manejarRespuestaCapitulo(seleccion, correcta) {
-  if (seleccion === correcta) correctasCapitulo++;
-  // No avanzar la pregunta aquí para que se sincronice con libro
-}
+// Manejar respuesta nivel avanzado (dos fases por pregunta)
+function manejarRespuestaAvanzado(respuesta, correcta, pregunta) {
+  sonidoClick.play();
 
-function siguientePregunta() {
-  preguntaIndex++;
-  actualizarBarra();
+  if (!pregunta._fase) pregunta._fase = 1;
 
-  if (preguntaIndex < preguntasBloque.length) {
+  if (respuesta == correcta) {
+    puntaje++;
+    sonidoCorrecto.play();
+  }
+
+  if (pregunta._fase === 1) {
+    // Pasar a fase capítulo
+    pregunta._fase = 2;
     mostrarPregunta();
   } else {
-    mostrarResultado();
+    // Siguiente pregunta
+    indiceActual++;
+    mostrarPregunta();
   }
 }
 
-function actualizarBarra() {
-  const progreso = ((preguntaIndex) / preguntasBloque.length) * 100;
-  barraProgreso.innerHTML = `<div style="width: ${progreso}%;"></div>`;
-}
+// Función para finalizar quiz
+function finalizarQuiz() {
+  contenedorPregunta.textContent = '';
+  contenedorOpciones.innerHTML = '';
+  contenedorBotonesFinal.style.display = 'block';
 
-function mostrarResultado() {
-  quizContainer.classList.add('oculto');
-  resultadoFinal.classList.remove('oculto');
+  // Mostrar mensaje final
+  let totalPreguntas = preguntasFiltradas.length;
+  if (nivelSeleccionado === 'avanzado') {
+    totalPreguntas = totalPreguntas * 2; // dos fases por pregunta
+  }
+  const porcentaje = Math.round((puntaje / totalPreguntas) * 100);
 
-  const totalPreguntas = preguntasBloque.length;
   let mensaje = '';
-
-  if (modo === 'basico') {
-    const porcentaje = Math.round((correctasLibro / totalPreguntas) * 100);
-    mensaje = `Terminaste el modo básico con un ${porcentaje}% de aciertos.`;
+  if (porcentaje === 100) {
+    mensaje = `¡Perfecto! Obtuviste ${porcentaje}% de respuestas correctas.`;
+  } else if (porcentaje >= 70) {
+    mensaje = `Muy bien, obtuviste ${porcentaje}%. Sigue practicando.`;
   } else {
-    const porcentajeLibro = Math.round((correctasLibro / totalPreguntas) * 100);
-    const porcentajeCapitulo = Math.round((correctasCapitulo / totalPreguntas) * 100);
-    mensaje = `Terminaste el modo avanzado. Aciertos en libro: ${porcentajeLibro}%. Aciertos en capítulo: ${porcentajeCapitulo}%.`;
+    mensaje = `Obtuviste ${porcentaje}%. Te recomendamos seguir estudiando.`;
   }
 
-  mensajeResultado.textContent = mensaje;
+  mensajeFinal.textContent = mensaje;
 }
 
-// Botones
-modoBasicoBtn.onclick = () => {
-  modo = 'basico';
-  selectorModo.classList.add('oculto');
-  selectorBloque.classList.remove('oculto');
-};
+// Botones reiniciar y volver
+btnReiniciar.addEventListener('click', () => {
+  sonidoClick.play();
+  // Reiniciar quiz con mismos nivel y bloque
+  preguntasFiltradas.forEach(p => delete p._fase); // reset fases
+  puntaje = 0;
+  indiceActual = 0;
+  contenedorBotonesFinal.style.display = 'none';
+  mostrarPregunta();
+});
 
-modoAvanzadoBtn.onclick = () => {
-  modo = 'avanzado';
-  selectorModo.classList.add('oculto');
-  selectorBloque.classList.remove('oculto');
-};
+btnVolver.addEventListener('click', () => {
+  sonidoClick.play();
+  // Mostrar pantalla inicio y ocultar quiz
+  pantallaQuiz.style.display = 'none';
+  pantallaInicio.style.display = 'block';
+  contenedorBotonesFinal.style.display = 'none';
 
-iniciarBtn.onclick = iniciarQuiz;
-reiniciarBtn.onclick = () => {
-  resultadoFinal.classList.add('oculto');
-  selectorBloque.classList.remove('oculto');
-  preguntaIndex = 0;
-  correctasLibro = 0;
-  correctasCapitulo = 0;
-};
-volverInicioBtn.onclick = () => {
-  resultadoFinal.classList.add('oculto');
-  selectorModo.classList.remove('oculto');
-  preguntaIndex = 0;
-  correctasLibro = 0;
-  correctasCapitulo = 0;
-};
+  // Reset
+  preguntasFiltradas.forEach(p => delete p._fase);
+  puntaje = 0;
+  indiceActual = 0;
+});
 
-window.onload = cargarDatos;
+// Botón iniciar
+btnIniciar.addEventListener('click', iniciarQuiz);
