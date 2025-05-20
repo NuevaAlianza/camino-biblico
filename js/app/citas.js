@@ -10,10 +10,27 @@ let aciertosCapitulo = 0;
 let respondioLibro = false;
 let respondioCapitulo = false;
 
-// Cargar sonidos
+// Cargar sonidos con volumen bajo para evitar molestia
 const sonidoClick = new Audio("assets/sonidos/click.mp3");
 const sonidoCorrecto = new Audio("assets/sonidos/correcto.mp3");
-const sonidoIncorrecto = new Audio("assets/sonidos/incorrecto.mp3"); // Agrega este archivo a assets/sonidos/
+const sonidoIncorrecto = new Audio("assets/sonidos/incorrecto.mp3");
+const sonidoInicio = new Audio("assets/sonidos/inicio.mp3");
+const sonidoFin = new Audio("assets/sonidos/fin.mp3");
+
+// Ajustamos volumen inicial
+[sonidoClick, sonidoCorrecto, sonidoIncorrecto, sonidoInicio, sonidoFin].forEach(sonido => {
+  sonido.volume = 0.3; // Volumen moderado para todos
+});
+
+// Control para que no se solapen sonidos importantes
+function reproducirSonido(sonido) {
+  // Pausar otros sonidos importantes antes de reproducir este
+  [sonidoClick, sonidoCorrecto, sonidoIncorrecto, sonidoInicio, sonidoFin].forEach(s => {
+    if (s !== sonido) s.pause();
+  });
+  sonido.currentTime = 0;
+  sonido.play();
+}
 
 const nivelSelect = document.getElementById("nivel");
 const bloqueSelect = document.getElementById("bloque");
@@ -71,6 +88,7 @@ iniciarBtn.addEventListener("click", () => {
   seccionJuego.classList.remove("oculto");
   seccionFinal.classList.add("oculto");
 
+  reproducirSonido(sonidoInicio); // Sonido de inicio
   mostrarPregunta();
 });
 
@@ -113,16 +131,16 @@ function mostrarPregunta() {
 }
 
 function validarLibro(boton, libroSeleccionado, cita) {
-  sonidoClick.play();
+  reproducirSonido(sonidoClick);
   respondioLibro = true;
 
   const esCorrecto = libroSeleccionado === cita.libro;
   if (esCorrecto) {
     aciertosLibro++;
-    sonidoCorrecto.play();
+    reproducirSonido(sonidoCorrecto);
     boton.classList.add("correcto");
   } else {
-    sonidoIncorrecto.play();
+    reproducirSonido(sonidoIncorrecto);
     boton.classList.add("incorrecto");
   }
 
@@ -134,16 +152,16 @@ function validarLibro(boton, libroSeleccionado, cita) {
 }
 
 function validarCapitulo(boton, capSeleccionado, cita) {
-  sonidoClick.play();
+  reproducirSonido(sonidoClick);
   respondioCapitulo = true;
 
   const esCorrecto = parseInt(capSeleccionado) === parseInt(cita.capitulo);
   if (esCorrecto) {
     aciertosCapitulo++;
-    sonidoCorrecto.play();
+    reproducirSonido(sonidoCorrecto);
     boton.classList.add("correcto");
   } else {
-    sonidoIncorrecto.play();
+    reproducirSonido(sonidoIncorrecto);
     boton.classList.add("incorrecto");
   }
 
@@ -175,6 +193,8 @@ function pasarSiguiente() {
 function finalizarQuiz() {
   seccionJuego.classList.add("oculto");
   seccionFinal.classList.remove("oculto");
+
+  reproducirSonido(sonidoFin); // Sonido de fin
 
   const total = citasDelBloque.length;
   let mensaje = `✔️ Aciertos en libros: ${aciertosLibro} / ${total}`;
