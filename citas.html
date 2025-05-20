@@ -2,42 +2,37 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quiz de Citas Bíblicas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/estilos.css" />
+  <title>Quiz de Citas Bíblicas</title>
 </head>
 <body>
-  <main class="menu" id="pantalla-inicio">
-    <h1>Quiz de Citas Bíblicas</h1>
-    <p>Elige nivel y bloque para comenzar</p>
-
-    <label for="nivel">Nivel:</label>
-    <select id="nivel" aria-label="Seleccionar nivel">
-      <option value="basico" selected>Básico (Solo libro)</option>
-      <option value="avanzado">Avanzado (Libro y capítulo)</option>
+  <main id="inicio" class="menu-citas">
+    <h1>Citas Bíblicas</h1>
+    <label for="nivel">Modo de juego:</label>
+    <select id="nivel">
+      <option value="basico">📘 Básico (libro)</option>
+      <option value="avanzado">📗 Avanzado (libro + capítulo)</option>
     </select>
 
-    <label for="bloque">Bloque:</label>
-    <select id="bloque" aria-label="Seleccionar bloque">
-      <option value="1" selected>Bloque 1</option>
-      <option value="2">Bloque 2</option>
-      <option value="3">Bloque 3</option>
-      <!-- Añade más bloques según tus datos -->
-    </select>
+    <label for="bloque">Selecciona un bloque:</label>
+    <select id="bloque"></select>
 
-    <button id="btn-iniciar">Iniciar Quiz</button>
+    <button id="iniciarBtn">Iniciar Quiz</button>
   </main>
 
-  <main class="quiz" id="pantalla-quiz" style="display:none;">
-    <div id="contenedor-pregunta"></div>
-    <div id="contenedor-opciones"></div>
+  <section id="juego" class="oculto">
+    <div id="pregunta"></div>
+    <div id="opcionesLibro" class="opciones"></div>
+    <div id="opcionesCapitulo" class="opciones"></div>
+    <div id="resultado" class="oculto"></div>
+  </section>
 
-    <div id="contenedor-botones-final" style="display:none; margin-top: 2rem;">
-      <button id="btn-reiniciar">Reiniciar</button>
-      <button id="btn-volver">Volver al inicio</button>
-      <p id="mensaje-final" style="margin-top: 1rem; font-weight: bold;"></p>
-    </div>
-  </main>
+  <section id="final" class="oculto">
+    <h2 id="mensajeFinal"></h2>
+    <button onclick="window.location.reload()">🔄 Reiniciar</button>
+    <button onclick="location.href='index.html'">🏠 Volver al inicio</button>
+  </section>
 
   <script src="js/app/citas.js"></script>
 </body>
