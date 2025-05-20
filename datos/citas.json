@@ -1,1 +1,1902 @@
-
+[
+  {
+    "id": 1,
+    "bloque": 1,
+    "cita": "El Señor es mi pastor, nada me falta.",
+    "libro": "Salmos",
+    "capitulo": 23,
+    "opciones_libro": [
+      "Salmos",
+      "Proverbios",
+      "Isaías",
+      "Mateo"
+    ],
+    "opciones_capitulo": [
+      23,
+      1,
+      91,
+      3
+    ]
+  },
+  {
+    "id": 2,
+    "bloque": 1,
+    "cita": "Porque tanto amó Dios al mundo que dio a su Hijo unigénito...",
+    "libro": "Juan",
+    "capitulo": 3,
+    "opciones_libro": [
+      "Juan",
+      "Mateo",
+      "Romanos",
+      "Génesis"
+    ],
+    "opciones_capitulo": [
+      3,
+      6,
+      1,
+      10
+    ]
+  },
+  {
+    "id": 3,
+    "bloque": 1,
+    "cita": "Yo soy el camino, la verdad y la vida.",
+    "libro": "Juan",
+    "capitulo": 14,
+    "opciones_libro": [
+      "Juan",
+      "Lucas",
+      "Hechos",
+      "Apocalipsis"
+    ],
+    "opciones_capitulo": [
+      14,
+      3,
+      10,
+      21
+    ]
+  },
+  {
+    "id": 4,
+    "bloque": 1,
+    "cita": "No temas, porque yo estoy contigo.",
+    "libro": "Isaías",
+    "capitulo": 41,
+    "opciones_libro": [
+      "Isaías",
+      "Jeremías",
+      "Ezequiel",
+      "Daniel"
+    ],
+    "opciones_capitulo": [
+      41,
+      40,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 5,
+    "bloque": 1,
+    "cita": "En el principio creó Dios los cielos y la tierra.",
+    "libro": "Génesis",
+    "capitulo": 1,
+    "opciones_libro": [
+      "Génesis",
+      "Éxodo",
+      "Levítico",
+      "Números"
+    ],
+    "opciones_capitulo": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": 6,
+    "bloque": 2,
+    "cita": "Bienaventurados los pobres en espíritu...",
+    "libro": "Mateo",
+    "capitulo": 5,
+    "opciones_libro": [
+      "Mateo",
+      "Marcos",
+      "Lucas",
+      "Juan"
+    ],
+    "opciones_capitulo": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "id": 7,
+    "bloque": 2,
+    "cita": "Todo lo puedo en Cristo que me fortalece.",
+    "libro": "Filipenses",
+    "capitulo": 4,
+    "opciones_libro": [
+      "Filipenses",
+      "Colosenses",
+      "Efesios",
+      "Tesalonicenses"
+    ],
+    "opciones_capitulo": [
+      4,
+      3,
+      2,
+      5
+    ]
+  },
+  {
+    "id": 8,
+    "bloque": 2,
+    "cita": "El que habita al abrigo del Altísimo morará bajo la sombra del Omnipotente.",
+    "libro": "Salmos",
+    "capitulo": 91,
+    "opciones_libro": [
+      "Salmos",
+      "Proverbios",
+      "Job",
+      "Isaías"
+    ],
+    "opciones_capitulo": [
+      91,
+      90,
+      92,
+      93
+    ]
+  },
+  {
+    "id": 9,
+    "bloque": 2,
+    "cita": "Porque donde están dos o tres congregados en mi nombre...",
+    "libro": "Mateo",
+    "capitulo": 18,
+    "opciones_libro": [
+      "Mateo",
+      "Marcos",
+      "Hechos",
+      "Romanos"
+    ],
+    "opciones_capitulo": [
+      18,
+      16,
+      20,
+      15
+    ]
+  },
+  {
+    "id": 10,
+    "bloque": 2,
+    "cita": "No os conforméis a este mundo, sino transformaos por la renovación de vuestra mente.",
+    "libro": "Romanos",
+    "capitulo": 12,
+    "opciones_libro": [
+      "Romanos",
+      "Corintios",
+      "Efesios",
+      "Gálatas"
+    ],
+    "opciones_capitulo": [
+      12,
+      13,
+      11,
+      10
+    ]
+  },
+  {
+    "id": 11,
+    "bloque": 3,
+    "cita": "Amarás a tu prójimo como a ti mismo.",
+    "libro": "Mateo",
+    "capitulo": 22,
+    "opciones_libro": [
+      "Mateo",
+      "Levítico",
+      "Deuteronomio",
+      "Números"
+    ],
+    "opciones_capitulo": [
+      22,
+      20,
+      25,
+      23
+    ]
+  },
+  {
+    "id": 12,
+    "bloque": 3,
+    "cita": "El que no ama no conoce a Dios, porque Dios es amor.",
+    "libro": "1 Juan",
+    "capitulo": 4,
+    "opciones_libro": [
+      "1 Juan",
+      "Juan",
+      "Romanos",
+      "Efesios"
+    ],
+    "opciones_capitulo": [
+      4,
+      3,
+      2,
+      5
+    ]
+  },
+  {
+    "id": 13,
+    "bloque": 3,
+    "cita": "Confía en el Señor con todo tu corazón.",
+    "libro": "Proverbios",
+    "capitulo": 3,
+    "opciones_libro": [
+      "Proverbios",
+      "Salmos",
+      "Eclesiastés",
+      "Isaías"
+    ],
+    "opciones_capitulo": [
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "id": 14,
+    "bloque": 3,
+    "cita": "Todo tiene su tiempo, y todo lo que se quiere debajo del cielo su hora.",
+    "libro": "Eclesiastés",
+    "capitulo": 3,
+    "opciones_libro": [
+      "Eclesiastés",
+      "Salmos",
+      "Proverbios",
+      "Job"
+    ],
+    "opciones_capitulo": [
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "id": 15,
+    "bloque": 3,
+    "cita": "El justo florecerá como la palmera.",
+    "libro": "Salmos",
+    "capitulo": 92,
+    "opciones_libro": [
+      "Salmos",
+      "Isaías",
+      "Jeremías",
+      "Job"
+    ],
+    "opciones_capitulo": [
+      92,
+      93,
+      90,
+      91
+    ]
+  },
+  {
+    "id": 16,
+    "bloque": 4,
+    "cita": "La fe es la certeza de lo que se espera.",
+    "libro": "Hebreos",
+    "capitulo": 11,
+    "opciones_libro": [
+      "Hebreos",
+      "Romanos",
+      "Efesios",
+      "Gálatas"
+    ],
+    "opciones_capitulo": [
+      11,
+      10,
+      12,
+      9
+    ]
+  },
+  {
+    "id": 17,
+    "bloque": 4,
+    "cita": "Sed siempre humildes y amables.",
+    "libro": "Efesios",
+    "capitulo": 4,
+    "opciones_libro": [
+      "Efesios",
+      "Filipenses",
+      "Colosenses",
+      "Tesalonicenses"
+    ],
+    "opciones_capitulo": [
+      4,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "id": 18,
+    "bloque": 4,
+    "cita": "No os hagáis tesoros en la tierra.",
+    "libro": "Mateo",
+    "capitulo": 6,
+    "opciones_libro": [
+      "Mateo",
+      "Lucas",
+      "Juan",
+      "Marcos"
+    ],
+    "opciones_capitulo": [
+      6,
+      5,
+      7,
+      4
+    ]
+  },
+  {
+    "id": 19,
+    "bloque": 4,
+    "cita": "Honra a tu padre y a tu madre.",
+    "libro": "Éxodo",
+    "capitulo": 20,
+    "opciones_libro": [
+      "Éxodo",
+      "Levítico",
+      "Deuteronomio",
+      "Números"
+    ],
+    "opciones_capitulo": [
+      20,
+      18,
+      22,
+      21
+    ]
+  },
+  {
+    "id": 20,
+    "bloque": 4,
+    "cita": "El Señor es mi luz y mi salvación; ¿a quién temeré?",
+    "libro": "Salmos",
+    "capitulo": 27,
+    "opciones_libro": [
+      "Salmos",
+      "Isaías",
+      "Jeremías",
+      "Job"
+    ],
+    "opciones_capitulo": [
+      27,
+      26,
+      28,
+      25
+    ]
+  },
+  {
+    "id": 21,
+    "bloque": 5,
+    "cita": "Aquel de ustedes que no tenga pecado, que le tire la primera piedra.",
+    "libro": "Juan",
+    "capitulo": 8,
+    "opciones_libro": [
+      "Juan",
+      "Mateo",
+      "Lucas",
+      "Hechos"
+    ],
+    "opciones_capitulo": [
+      8,
+      7,
+      10,
+      6
+    ]
+  },
+  {
+    "id": 22,
+    "bloque": 5,
+    "cita": "Padre, perdónalos, porque no saben lo que hacen.",
+    "libro": "Lucas",
+    "capitulo": 23,
+    "opciones_libro": [
+      "Lucas",
+      "Marcos",
+      "Mateo",
+      "Juan"
+    ],
+    "opciones_capitulo": [
+      23,
+      22,
+      21,
+      19
+    ]
+  },
+  {
+    "id": 23,
+    "bloque": 5,
+    "cita": "El que cree en mí, vivirá aunque muera.",
+    "libro": "Juan",
+    "capitulo": 11,
+    "opciones_libro": [
+      "Juan",
+      "Romanos",
+      "Hechos",
+      "Lucas"
+    ],
+    "opciones_capitulo": [
+      11,
+      10,
+      12,
+      14
+    ]
+  },
+  {
+    "id": 24,
+    "bloque": 5,
+    "cita": "Jesús se echó a llorar.",
+    "libro": "Juan",
+    "capitulo": 11,
+    "opciones_libro": [
+      "Juan",
+      "Lucas",
+      "Hebreos",
+      "Marcos"
+    ],
+    "opciones_capitulo": [
+      11,
+      10,
+      9,
+      12
+    ]
+  },
+  {
+    "id": 25,
+    "bloque": 5,
+    "cita": "Felices los que creen sin haber visto.",
+    "libro": "Juan",
+    "capitulo": 20,
+    "opciones_libro": [
+      "Juan",
+      "Mateo",
+      "Hechos",
+      "Apocalipsis"
+    ],
+    "opciones_capitulo": [
+      20,
+      19,
+      18,
+      21
+    ]
+  },
+  {
+    "id": 26,
+    "bloque": 6,
+    "cita": "El amor es paciente, es servicial.",
+    "libro": "1 Corintios",
+    "capitulo": 13,
+    "opciones_libro": [
+      "1 Corintios",
+      "Romanos",
+      "Efesios",
+      "Gálatas"
+    ],
+    "opciones_capitulo": [
+      13,
+      12,
+      11,
+      14
+    ]
+  },
+  {
+    "id": 27,
+    "bloque": 6,
+    "cita": "El Padre y yo somos uno.",
+    "libro": "Juan",
+    "capitulo": 10,
+    "opciones_libro": [
+      "Juan",
+      "Mateo",
+      "1 Juan",
+      "Hebreos"
+    ],
+    "opciones_capitulo": [
+      10,
+      9,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 28,
+    "bloque": 6,
+    "cita": "Pon tu vida en las manos del Señor.",
+    "libro": "Salmos",
+    "capitulo": 37,
+    "opciones_libro": [
+      "Salmos",
+      "Proverbios",
+      "Isaías",
+      "Job"
+    ],
+    "opciones_capitulo": [
+      37,
+      36,
+      38,
+      35
+    ]
+  },
+  {
+    "id": 29,
+    "bloque": 6,
+    "cita": "Si Dios está con nosotros, ¿quién podrá estar contra nosotros?",
+    "libro": "Romanos",
+    "capitulo": 8,
+    "opciones_libro": [
+      "Romanos",
+      "Gálatas",
+      "Efesios",
+      "Hebreos"
+    ],
+    "opciones_capitulo": [
+      8,
+      9,
+      10,
+      7
+    ]
+  },
+  {
+    "id": 30,
+    "bloque": 6,
+    "cita": "Yo estaré con ustedes todos los días hasta el fin del mundo.",
+    "libro": "Mateo",
+    "capitulo": 28,
+    "opciones_libro": [
+      "Mateo",
+      "Juan",
+      "Lucas",
+      "Hechos"
+    ],
+    "opciones_capitulo": [
+      28,
+      27,
+      26,
+      24
+    ]
+  },
+  {
+    "id": 31,
+    "bloque": 7,
+    "cita": "Estén siempre alegres en el Señor.",
+    "libro": "Filipenses",
+    "capitulo": 4,
+    "opciones_libro": [
+      "Filipenses",
+      "Colosenses",
+      "Efesios",
+      "Gálatas"
+    ],
+    "opciones_capitulo": [
+      4,
+      3,
+      2,
+      5
+    ]
+  },
+  {
+    "id": 32,
+    "bloque": 7,
+    "cita": "Muéstrame, Señor, el camino que debo seguir.",
+    "libro": "Salmos",
+    "capitulo": 86,
+    "opciones_libro": [
+      "Salmos",
+      "Proverbios",
+      "Isaías",
+      "Deuteronomio"
+    ],
+    "opciones_capitulo": [
+      86,
+      85,
+      87,
+      84
+    ]
+  },
+  {
+    "id": 33,
+    "bloque": 7,
+    "cita": "Llámame y te responderé.",
+    "libro": "Jeremías",
+    "capitulo": 33,
+    "opciones_libro": [
+      "Jeremías",
+      "Isaías",
+      "Ezequiel",
+      "Daniel"
+    ],
+    "opciones_capitulo": [
+      33,
+      32,
+      31,
+      30
+    ]
+  },
+  {
+    "id": 34,
+    "bloque": 7,
+    "cita": "Sean santos, porque yo, el Señor, soy santo.",
+    "libro": "Levítico",
+    "capitulo": 11,
+    "opciones_libro": [
+      "Levítico",
+      "Éxodo",
+      "Números",
+      "Deuteronomio"
+    ],
+    "opciones_capitulo": [
+      11,
+      10,
+      12,
+      13
+    ]
+  },
+  {
+    "id": 35,
+    "bloque": 7,
+    "cita": "Con tu luz, vemos la luz.",
+    "libro": "Salmos",
+    "capitulo": 36,
+    "opciones_libro": [
+      "Salmos",
+      "Isaías",
+      "Proverbios",
+      "Job"
+    ],
+    "opciones_capitulo": [
+      36,
+      35,
+      37,
+      34
+    ]
+  },
+  {
+    "id": 36,
+    "bloque": 8,
+    "cita": "Antes de formarte en el vientre, ya te conocía.",
+    "libro": "Jeremías",
+    "capitulo": 1,
+    "opciones_libro": [
+      "Jeremías",
+      "Isaías",
+      "Salmos",
+      "Génesis"
+    ],
+    "opciones_capitulo": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": 37,
+    "bloque": 8,
+    "cita": "Mi alma canta la grandeza del Señor.",
+    "libro": "Lucas",
+    "capitulo": 1,
+    "opciones_libro": [
+      "Lucas",
+      "Mateo",
+      "Juan",
+      "Hechos"
+    ],
+    "opciones_capitulo": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": 38,
+    "bloque": 8,
+    "cita": "No te dejes vencer por el mal; al contrario, vence el mal haciendo el bien.",
+    "libro": "Romanos",
+    "capitulo": 12,
+    "opciones_libro": [
+      "Romanos",
+      "Efesios",
+      "Colosenses",
+      "Santiago"
+    ],
+    "opciones_capitulo": [
+      12,
+      11,
+      13,
+      10
+    ]
+  },
+  {
+    "id": 39,
+    "bloque": 8,
+    "cita": "Quédate quieto ante el Señor y espera en él.",
+    "libro": "Salmos",
+    "capitulo": 37,
+    "opciones_libro": [
+      "Salmos",
+      "Isaías",
+      "Eclesiastés",
+      "Proverbios"
+    ],
+    "opciones_capitulo": [
+      37,
+      38,
+      39,
+      36
+    ]
+  },
+  {
+    "id": 40,
+    "bloque": 8,
+    "cita": "Vengan a mí todos los que están cansados y agobiados.",
+    "libro": "Mateo",
+    "capitulo": 11,
+    "opciones_libro": [
+      "Mateo",
+      "Lucas",
+      "Juan",
+      "Marcos"
+    ],
+    "opciones_capitulo": [
+      11,
+      10,
+      12,
+      13
+    ]
+  },
+  {
+    "id": 41,
+    "bloque": 9,
+    "cita": "El Señor es mi fuerza y mi canción, él ha sido mi salvación.",
+    "libro": "Éxodo",
+    "capitulo": 15,
+    "opciones_libro": [
+      "Éxodo",
+      "Salmos",
+      "Isaías",
+      "Jueces"
+    ],
+    "opciones_capitulo": [
+      15,
+      14,
+      16,
+      13
+    ]
+  },
+  {
+    "id": 42,
+    "bloque": 9,
+    "cita": "El Espíritu de Dios me ha ungido para anunciar la Buena Noticia.",
+    "libro": "Lucas",
+    "capitulo": 4,
+    "opciones_libro": [
+      "Lucas",
+      "Mateo",
+      "Isaías",
+      "Juan"
+    ],
+    "opciones_capitulo": [
+      4,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "id": 43,
+    "bloque": 9,
+    "cita": "Busquen primero el Reino de Dios y su justicia.",
+    "libro": "Mateo",
+    "capitulo": 6,
+    "opciones_libro": [
+      "Mateo",
+      "Lucas",
+      "Marcos",
+      "Santiago"
+    ],
+    "opciones_capitulo": [
+      6,
+      5,
+      7,
+      8
+    ]
+  },
+  {
+    "id": 44,
+    "bloque": 9,
+    "cita": "Tu Palabra es lámpara para mis pasos.",
+    "libro": "Salmos",
+    "capitulo": 119,
+    "opciones_libro": [
+      "Salmos",
+      "Proverbios",
+      "Isaías",
+      "Eclesiastés"
+    ],
+    "opciones_capitulo": [
+      119,
+      118,
+      120,
+      117
+    ]
+  },
+  {
+    "id": 45,
+    "bloque": 9,
+    "cita": "El que quiera ser el primero, que se haga servidor de todos.",
+    "libro": "Marcos",
+    "capitulo": 10,
+    "opciones_libro": [
+      "Marcos",
+      "Lucas",
+      "Mateo",
+      "Juan"
+    ],
+    "opciones_capitulo": [
+      10,
+      9,
+      8,
+      11
+    ]
+  },
+  {
+    "id": 46,
+    "bloque": 10,
+    "cita": "No se angustien, confíen en Dios y confíen también en mí.",
+    "libro": "Juan",
+    "capitulo": 14,
+    "opciones_libro": [
+      "Juan",
+      "Lucas",
+      "Mateo",
+      "1 Juan"
+    ],
+    "opciones_capitulo": [
+      14,
+      13,
+      12,
+      15
+    ]
+  },
+  {
+    "id": 47,
+    "bloque": 10,
+    "cita": "A quien mucho se le dio, mucho se le exigirá.",
+    "libro": "Lucas",
+    "capitulo": 12,
+    "opciones_libro": [
+      "Lucas",
+      "Mateo",
+      "Marcos",
+      "Hebreos"
+    ],
+    "opciones_capitulo": [
+      12,
+      11,
+      13,
+      14
+    ]
+  },
+  {
+    "id": 48,
+    "bloque": 10,
+    "cita": "Dame, Señor, un corazón limpio.",
+    "libro": "Salmos",
+    "capitulo": 51,
+    "opciones_libro": [
+      "Salmos",
+      "Proverbios",
+      "Isaías",
+      "Ezequiel"
+    ],
+    "opciones_capitulo": [
+      51,
+      50,
+      52,
+      53
+    ]
+  },
+  {
+    "id": 49,
+    "bloque": 10,
+    "cita": "Perdona nuestras ofensas, como también nosotros perdonamos.",
+    "libro": "Mateo",
+    "capitulo": 6,
+    "opciones_libro": [
+      "Mateo",
+      "Lucas",
+      "Juan",
+      "Marcos"
+    ],
+    "opciones_capitulo": [
+      6,
+      5,
+      7,
+      4
+    ]
+  },
+  {
+    "id": 50,
+    "bloque": 10,
+    "cita": "El Señor levanta del polvo al pobre.",
+    "libro": "Salmos",
+    "capitulo": 113,
+    "opciones_libro": [
+      "Salmos",
+      "Proverbios",
+      "Isaías",
+      "Job"
+    ],
+    "opciones_capitulo": [
+      113,
+      112,
+      114,
+      111
+    ]
+  },
+  {
+    "id": 51,
+    "bloque": 11,
+    "cita": "Aunque mi padre y mi madre me abandonen, el Señor me recogerá.",
+    "libro": "Salmos",
+    "capitulo": 27,
+    "opciones_libro": [
+      "Salmos",
+      "Jeremías",
+      "Isaías",
+      "Job"
+    ],
+    "opciones_capitulo": [
+      27,
+      26,
+      28,
+      29
+    ]
+  },
+  {
+    "id": 52,
+    "bloque": 11,
+    "cita": "Yo te he llamado por tu nombre, tú me perteneces.",
+    "libro": "Isaías",
+    "capitulo": 43,
+    "opciones_libro": [
+      "Isaías",
+      "Jeremías",
+      "Éxodo",
+      "Génesis"
+    ],
+    "opciones_capitulo": [
+      43,
+      42,
+      44,
+      45
+    ]
+  },
+  {
+    "id": 53,
+    "bloque": 11,
+    "cita": "Felices los que trabajan por la paz.",
+    "libro": "Mateo",
+    "capitulo": 5,
+    "opciones_libro": [
+      "Mateo",
+      "Lucas",
+      "Juan",
+      "Santiago"
+    ],
+    "opciones_capitulo": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "id": 54,
+    "bloque": 11,
+    "cita": "Estén siempre dispuestos a responder a quien les pida razón de su esperanza.",
+    "libro": "1 Pedro",
+    "capitulo": 3,
+    "opciones_libro": [
+      "1 Pedro",
+      "Santiago",
+      "Hebreos",
+      "Romanos"
+    ],
+    "opciones_capitulo": [
+      3,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "id": 55,
+    "bloque": 11,
+    "cita": "No echen sus perlas a los cerdos.",
+    "libro": "Mateo",
+    "capitulo": 7,
+    "opciones_libro": [
+      "Mateo",
+      "Lucas",
+      "Proverbios",
+      "Hechos"
+    ],
+    "opciones_capitulo": [
+      7,
+      6,
+      8,
+      9
+    ]
+  },
+  {
+    "id": 56,
+    "bloque": 12,
+    "cita": "Te basta mi gracia, porque mi fuerza se manifiesta en la debilidad.",
+    "libro": "2 Corintios",
+    "capitulo": 12,
+    "opciones_libro": [
+      "2 Corintios",
+      "1 Corintios",
+      "Romanos",
+      "Gálatas"
+    ],
+    "opciones_capitulo": [
+      12,
+      11,
+      10,
+      13
+    ]
+  },
+  {
+    "id": 57,
+    "bloque": 12,
+    "cita": "El justo vivirá por la fe.",
+    "libro": "Habacuc",
+    "capitulo": 2,
+    "opciones_libro": [
+      "Habacuc",
+      "Romanos",
+      "Hebreos",
+      "Sofonías"
+    ],
+    "opciones_capitulo": [
+      2,
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "id": 58,
+    "bloque": 12,
+    "cita": "No hay mayor amor que dar la vida por los amigos.",
+    "libro": "Juan",
+    "capitulo": 15,
+    "opciones_libro": [
+      "Juan",
+      "Mateo",
+      "1 Juan",
+      "Efesios"
+    ],
+    "opciones_capitulo": [
+      15,
+      14,
+      13,
+      16
+    ]
+  },
+  {
+    "id": 59,
+    "bloque": 12,
+    "cita": "Hagan todo con amor.",
+    "libro": "1 Corintios",
+    "capitulo": 16,
+    "opciones_libro": [
+      "1 Corintios",
+      "2 Corintios",
+      "Gálatas",
+      "Romanos"
+    ],
+    "opciones_capitulo": [
+      16,
+      15,
+      14,
+      13
+    ]
+  },
+  {
+    "id": 60,
+    "bloque": 12,
+    "cita": "Tu Padre, que ve en lo secreto, te recompensará.",
+    "libro": "Mateo",
+    "capitulo": 6,
+    "opciones_libro": [
+      "Mateo",
+      "Lucas",
+      "Juan",
+      "Hebreos"
+    ],
+    "opciones_capitulo": [
+      6,
+      5,
+      4,
+      7
+    ]
+  },
+  {
+    "id": 61,
+    "bloque": 13,
+    "cita": "No sólo de pan vive el hombre, sino de toda palabra que sale de la boca de Dios.",
+    "libro": "Mateo",
+    "capitulo": 4,
+    "opciones_libro": [
+      "Mateo",
+      "Deuteronomio",
+      "Lucas",
+      "Juan"
+    ],
+    "opciones_capitulo": [
+      4,
+      5,
+      6,
+      3
+    ]
+  },
+  {
+    "id": 62,
+    "bloque": 13,
+    "cita": "Enséñanos a contar bien nuestros días, para que adquiramos un corazón sabio.",
+    "libro": "Salmos",
+    "capitulo": 90,
+    "opciones_libro": [
+      "Salmos",
+      "Proverbios",
+      "Eclesiastés",
+      "Isaías"
+    ],
+    "opciones_capitulo": [
+      90,
+      89,
+      91,
+      92
+    ]
+  },
+  {
+    "id": 63,
+    "bloque": 13,
+    "cita": "Sean santos, porque yo soy santo.",
+    "libro": "Levítico",
+    "capitulo": 19,
+    "opciones_libro": [
+      "Levítico",
+      "Deuteronomio",
+      "Éxodo",
+      "Hebreos"
+    ],
+    "opciones_capitulo": [
+      19,
+      18,
+      20,
+      21
+    ]
+  },
+  {
+    "id": 64,
+    "bloque": 13,
+    "cita": "El Señor está cerca de los que tienen el corazón herido.",
+    "libro": "Salmos",
+    "capitulo": 34,
+    "opciones_libro": [
+      "Salmos",
+      "Isaías",
+      "Proverbios",
+      "Eclesiastés"
+    ],
+    "opciones_capitulo": [
+      34,
+      33,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 65,
+    "bloque": 13,
+    "cita": "El que quiera venir conmigo, que renuncie a sí mismo.",
+    "libro": "Marcos",
+    "capitulo": 8,
+    "opciones_libro": [
+      "Marcos",
+      "Mateo",
+      "Lucas",
+      "Juan"
+    ],
+    "opciones_capitulo": [
+      8,
+      9,
+      10,
+      7
+    ]
+  },
+  {
+    "id": 66,
+    "bloque": 14,
+    "cita": "Yo estaré con ustedes todos los días hasta el fin del mundo.",
+    "libro": "Mateo",
+    "capitulo": 28,
+    "opciones_libro": [
+      "Mateo",
+      "Juan",
+      "Hechos",
+      "Lucas"
+    ],
+    "opciones_capitulo": [
+      28,
+      27,
+      26,
+      25
+    ]
+  },
+  {
+    "id": 67,
+    "bloque": 14,
+    "cita": "Te alabaré, Señor, con todo mi corazón.",
+    "libro": "Salmos",
+    "capitulo": 138,
+    "opciones_libro": [
+      "Salmos",
+      "Proverbios",
+      "Eclesiastés",
+      "Isaías"
+    ],
+    "opciones_capitulo": [
+      138,
+      137,
+      139,
+      140
+    ]
+  },
+  {
+    "id": 68,
+    "bloque": 14,
+    "cita": "El Señor no mira lo que mira el hombre.",
+    "libro": "1 Samuel",
+    "capitulo": 16,
+    "opciones_libro": [
+      "1 Samuel",
+      "2 Samuel",
+      "1 Reyes",
+      "Jueces"
+    ],
+    "opciones_capitulo": [
+      16,
+      15,
+      17,
+      18
+    ]
+  },
+  {
+    "id": 69,
+    "bloque": 14,
+    "cita": "Tu fe te ha salvado.",
+    "libro": "Lucas",
+    "capitulo": 7,
+    "opciones_libro": [
+      "Lucas",
+      "Marcos",
+      "Mateo",
+      "Juan"
+    ],
+    "opciones_capitulo": [
+      7,
+      8,
+      6,
+      9
+    ]
+  },
+  {
+    "id": 70,
+    "bloque": 14,
+    "cita": "Dios es nuestro amparo y fortaleza, siempre pronto en la angustia.",
+    "libro": "Salmos",
+    "capitulo": 46,
+    "opciones_libro": [
+      "Salmos",
+      "Proverbios",
+      "Isaías",
+      "Jeremías"
+    ],
+    "opciones_capitulo": [
+      46,
+      45,
+      47,
+      44
+    ]
+  },
+  {
+    "id": 71,
+    "bloque": 15,
+    "cita": "No hay condenación para los que están en Cristo Jesús.",
+    "libro": "Romanos",
+    "capitulo": 8,
+    "opciones_libro": [
+      "Romanos",
+      "Gálatas",
+      "Efesios",
+      "1 Corintios"
+    ],
+    "opciones_capitulo": [
+      8,
+      7,
+      9,
+      10
+    ]
+  },
+  {
+    "id": 72,
+    "bloque": 15,
+    "cita": "Los que esperan en el Señor renovarán sus fuerzas.",
+    "libro": "Isaías",
+    "capitulo": 40,
+    "opciones_libro": [
+      "Isaías",
+      "Salmos",
+      "Jeremías",
+      "Ezequiel"
+    ],
+    "opciones_capitulo": [
+      40,
+      41,
+      39,
+      42
+    ]
+  },
+  {
+    "id": 73,
+    "bloque": 15,
+    "cita": "Este es el día que hizo el Señor, sea nuestra alegría y nuestro gozo.",
+    "libro": "Salmos",
+    "capitulo": 118,
+    "opciones_libro": [
+      "Salmos",
+      "Isaías",
+      "Proverbios",
+      "Nehemías"
+    ],
+    "opciones_capitulo": [
+      118,
+      117,
+      119,
+      120
+    ]
+  },
+  {
+    "id": 74,
+    "bloque": 15,
+    "cita": "El que comenzó en ustedes la buena obra, la irá completando.",
+    "libro": "Filipenses",
+    "capitulo": 1,
+    "opciones_libro": [
+      "Filipenses",
+      "Efesios",
+      "Colosenses",
+      "Tesalonicenses"
+    ],
+    "opciones_capitulo": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": 75,
+    "bloque": 15,
+    "cita": "Ustedes son la luz del mundo.",
+    "libro": "Mateo",
+    "capitulo": 5,
+    "opciones_libro": [
+      "Mateo",
+      "Juan",
+      "Lucas",
+      "Santiago"
+    ],
+    "opciones_capitulo": [
+      5,
+      4,
+      6,
+      7
+    ]
+  },
+  {
+    "id": 76,
+    "bloque": 16,
+    "cita": "Guarda silencio ante el Señor y espera en él.",
+    "libro": "Salmos",
+    "capitulo": 37,
+    "opciones_libro": [
+      "Salmos",
+      "Isaías",
+      "Jeremías",
+      "Eclesiastés"
+    ],
+    "opciones_capitulo": [
+      37,
+      36,
+      38,
+      39
+    ]
+  },
+  {
+    "id": 77,
+    "bloque": 16,
+    "cita": "Y conocerán la verdad, y la verdad los hará libres.",
+    "libro": "Juan",
+    "capitulo": 8,
+    "opciones_libro": [
+      "Juan",
+      "Lucas",
+      "1 Juan",
+      "Hechos"
+    ],
+    "opciones_capitulo": [
+      8,
+      7,
+      9,
+      10
+    ]
+  },
+  {
+    "id": 78,
+    "bloque": 16,
+    "cita": "El que tiene oídos, que escuche.",
+    "libro": "Marcos",
+    "capitulo": 4,
+    "opciones_libro": [
+      "Marcos",
+      "Lucas",
+      "Mateo",
+      "Apocalipsis"
+    ],
+    "opciones_capitulo": [
+      4,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "id": 79,
+    "bloque": 16,
+    "cita": "Haz la prueba y verás qué bueno es el Señor.",
+    "libro": "Salmos",
+    "capitulo": 34,
+    "opciones_libro": [
+      "Salmos",
+      "Isaías",
+      "Proverbios",
+      "Ezequiel"
+    ],
+    "opciones_capitulo": [
+      34,
+      33,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 80,
+    "bloque": 16,
+    "cita": "No se inquieten por el día de mañana.",
+    "libro": "Mateo",
+    "capitulo": 6,
+    "opciones_libro": [
+      "Mateo",
+      "Lucas",
+      "Juan",
+      "Marcos"
+    ],
+    "opciones_capitulo": [
+      6,
+      5,
+      7,
+      4
+    ]
+  },
+  {
+    "id": 81,
+    "bloque": 17,
+    "cita": "No se turbe su corazón. Crean en Dios y crean también en mí.",
+    "libro": "Juan",
+    "capitulo": 14,
+    "opciones_libro": [
+      "Juan",
+      "Lucas",
+      "Mateo",
+      "Hebreos"
+    ],
+    "opciones_capitulo": [
+      14,
+      13,
+      15,
+      16
+    ]
+  },
+  {
+    "id": 82,
+    "bloque": 17,
+    "cita": "He peleado la buena batalla, he terminado la carrera, he guardado la fe.",
+    "libro": "2 Timoteo",
+    "capitulo": 4,
+    "opciones_libro": [
+      "2 Timoteo",
+      "1 Timoteo",
+      "Tito",
+      "Hebreos"
+    ],
+    "opciones_capitulo": [
+      4,
+      3,
+      2,
+      5
+    ]
+  },
+  {
+    "id": 83,
+    "bloque": 17,
+    "cita": "Aunque camine por cañadas oscuras, nada temo, porque tú vas conmigo.",
+    "libro": "Salmos",
+    "capitulo": 23,
+    "opciones_libro": [
+      "Salmos",
+      "Proverbios",
+      "Job",
+      "Isaías"
+    ],
+    "opciones_capitulo": [
+      23,
+      22,
+      24,
+      21
+    ]
+  },
+  {
+    "id": 84,
+    "bloque": 17,
+    "cita": "Alégrense siempre en el Señor.",
+    "libro": "Filipenses",
+    "capitulo": 4,
+    "opciones_libro": [
+      "Filipenses",
+      "Efesios",
+      "Colosenses",
+      "Tesalonicenses"
+    ],
+    "opciones_capitulo": [
+      4,
+      3,
+      2,
+      5
+    ]
+  },
+  {
+    "id": 85,
+    "bloque": 17,
+    "cita": "La palabra de Dios es viva y eficaz.",
+    "libro": "Hebreos",
+    "capitulo": 4,
+    "opciones_libro": [
+      "Hebreos",
+      "Romanos",
+      "Efesios",
+      "Hechos"
+    ],
+    "opciones_capitulo": [
+      4,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "id": 86,
+    "bloque": 18,
+    "cita": "Estén siempre alegres, oren sin cesar.",
+    "libro": "1 Tesalonicenses",
+    "capitulo": 5,
+    "opciones_libro": [
+      "1 Tesalonicenses",
+      "2 Tesalonicenses",
+      "Filipenses",
+      "Efesios"
+    ],
+    "opciones_capitulo": [
+      5,
+      4,
+      6,
+      3
+    ]
+  },
+  {
+    "id": 87,
+    "bloque": 18,
+    "cita": "Todo lo hizo hermoso en su momento.",
+    "libro": "Eclesiastés",
+    "capitulo": 3,
+    "opciones_libro": [
+      "Eclesiastés",
+      "Proverbios",
+      "Génesis",
+      "Isaías"
+    ],
+    "opciones_capitulo": [
+      3,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "id": 88,
+    "bloque": 18,
+    "cita": "El que siembra escasamente, escasamente cosechará.",
+    "libro": "2 Corintios",
+    "capitulo": 9,
+    "opciones_libro": [
+      "2 Corintios",
+      "1 Corintios",
+      "Gálatas",
+      "Romanos"
+    ],
+    "opciones_capitulo": [
+      9,
+      8,
+      10,
+      7
+    ]
+  },
+  {
+    "id": 89,
+    "bloque": 18,
+    "cita": "El Señor es compasivo y misericordioso.",
+    "libro": "Salmos",
+    "capitulo": 103,
+    "opciones_libro": [
+      "Salmos",
+      "Isaías",
+      "Proverbios",
+      "Eclesiastés"
+    ],
+    "opciones_capitulo": [
+      103,
+      102,
+      104,
+      105
+    ]
+  },
+  {
+    "id": 90,
+    "bloque": 18,
+    "cita": "Dichosos los que escuchan la palabra de Dios y la cumplen.",
+    "libro": "Lucas",
+    "capitulo": 11,
+    "opciones_libro": [
+      "Lucas",
+      "Mateo",
+      "Juan",
+      "Marcos"
+    ],
+    "opciones_capitulo": [
+      11,
+      10,
+      12,
+      13
+    ]
+  },
+  {
+    "id": 91,
+    "bloque": 19,
+    "cita": "Dios es fiel, y no permitirá que sean tentados más allá de sus fuerzas.",
+    "libro": "1 Corintios",
+    "capitulo": 10,
+    "opciones_libro": [
+      "1 Corintios",
+      "2 Corintios",
+      "Romanos",
+      "Efesios"
+    ],
+    "opciones_capitulo": [
+      10,
+      9,
+      11,
+      8
+    ]
+  },
+  {
+    "id": 92,
+    "bloque": 19,
+    "cita": "Jesús lloró.",
+    "libro": "Juan",
+    "capitulo": 11,
+    "opciones_libro": [
+      "Juan",
+      "Lucas",
+      "Marcos",
+      "Hebreos"
+    ],
+    "opciones_capitulo": [
+      11,
+      10,
+      12,
+      13
+    ]
+  },
+  {
+    "id": 93,
+    "bloque": 19,
+    "cita": "Si Dios está con nosotros, ¿quién estará contra nosotros?",
+    "libro": "Romanos",
+    "capitulo": 8,
+    "opciones_libro": [
+      "Romanos",
+      "Efesios",
+      "Hebreos",
+      "Gálatas"
+    ],
+    "opciones_capitulo": [
+      8,
+      7,
+      9,
+      6
+    ]
+  },
+  {
+    "id": 94,
+    "bloque": 19,
+    "cita": "El fruto del Espíritu es amor, alegría, paz…",
+    "libro": "Gálatas",
+    "capitulo": 5,
+    "opciones_libro": [
+      "Gálatas",
+      "Efesios",
+      "Filipenses",
+      "Romanos"
+    ],
+    "opciones_capitulo": [
+      5,
+      4,
+      6,
+      3
+    ]
+  },
+  {
+    "id": 95,
+    "bloque": 19,
+    "cita": "No te apoyes en tu propia inteligencia.",
+    "libro": "Proverbios",
+    "capitulo": 3,
+    "opciones_libro": [
+      "Proverbios",
+      "Eclesiastés",
+      "Salmos",
+      "Isaías"
+    ],
+    "opciones_capitulo": [
+      3,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "id": 96,
+    "bloque": 20,
+    "cita": "Al que llama, se le abrirá.",
+    "libro": "Mateo",
+    "capitulo": 7,
+    "opciones_libro": [
+      "Mateo",
+      "Lucas",
+      "Juan",
+      "Marcos"
+    ],
+    "opciones_capitulo": [
+      7,
+      6,
+      8,
+      5
+    ]
+  },
+  {
+    "id": 97,
+    "bloque": 20,
+    "cita": "Yo soy el buen pastor.",
+    "libro": "Juan",
+    "capitulo": 10,
+    "opciones_libro": [
+      "Juan",
+      "Mateo",
+      "Lucas",
+      "Hebreos"
+    ],
+    "opciones_capitulo": [
+      10,
+      9,
+      11,
+      8
+    ]
+  },
+  {
+    "id": 98,
+    "bloque": 20,
+    "cita": "Sean misericordiosos como su Padre es misericordioso.",
+    "libro": "Lucas",
+    "capitulo": 6,
+    "opciones_libro": [
+      "Lucas",
+      "Mateo",
+      "Juan",
+      "Marcos"
+    ],
+    "opciones_capitulo": [
+      6,
+      5,
+      7,
+      8
+    ]
+  },
+  {
+    "id": 99,
+    "bloque": 20,
+    "cita": "Yo soy la vid, ustedes los sarmientos.",
+    "libro": "Juan",
+    "capitulo": 15,
+    "opciones_libro": [
+      "Juan",
+      "Lucas",
+      "Mateo",
+      "Isaías"
+    ],
+    "opciones_capitulo": [
+      15,
+      14,
+      16,
+      13
+    ]
+  },
+  {
+    "id": 100,
+    "bloque": 20,
+    "cita": "Donde está tu tesoro, allí estará también tu corazón.",
+    "libro": "Mateo",
+    "capitulo": 6,
+    "opciones_libro": [
+      "Mateo",
+      "Lucas",
+      "Marcos",
+      "Juan"
+    ],
+    "opciones_capitulo": [
+      6,
+      5,
+      7,
+      8
+    ]
+  }
+]
