@@ -66,3 +66,63 @@ main.menu button {
 main.menu button:hover {
   background-color: var(--color-secundario);
 }
+/* Estilos específicos para index.html */
+main.menu-principal {
+  background-color: white;
+  border-radius: var(--radio);
+  padding: 2rem;
+  box-shadow: var(--sombra);
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+main.menu-principal h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-secundario);
+  text-transform: none;
+  letter-spacing: 1px;
+}
+
+main.menu-principal p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+main.menu-principal button {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  border-radius: var(--radio);
+  padding: 0.9rem 1.3rem;
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main.menu-principal button:hover {
+  background-color: var(--color-secundario);
+  transform: scale(1.03);
+}
+
+@media (max-width: 480px) {
+  main.menu-principal {
+    padding: 1.5rem;
+  }
+
+  main.menu-principal h1 {
+    font-size: 1.8rem;
+  }
+
+  main.menu-principal button {
+    font-size: 1rem;
+  }
+}
+
