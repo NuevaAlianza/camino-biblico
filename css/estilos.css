@@ -219,16 +219,5 @@ main.menu-principal button:hover {
 .instalar-banner button:hover {
   background-color: #e6ffe6;
 }
-/* Oculta los botones de "Revisión de progreso" y "Configuración" */
-button[href="progreso.html"],
-button[href="config.html"] {
-  display: none;
-}
-
-/* O usando nth-child (más general si el orden no cambia) */
-main button:nth-of-type(5),
-main button:nth-of-type(6) {
-  display: none;
-}
 
 
