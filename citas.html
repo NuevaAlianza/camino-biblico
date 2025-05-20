@@ -2,14 +2,43 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Citas Bíblicas</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz de Citas Bíblicas</title>
+  <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
-  <main>
-    <h1 id="titulo">Citas bíblicas</h1>
-    <div id="contenedor"></div>
+  <main class="menu">
+    <h1 id="titulo">Quiz de Citas Bíblicas</h1>
+
+    <!-- Selector modo -->
+    <section id="selector-modo" class="modo-selector">
+      <p>Elige el modo de juego:</p>
+      <button id="modo-basico-btn" class="btn-modo">Básico (Sólo libro)</button>
+      <button id="modo-avanzado-btn" class="btn-modo">Avanzado (Libro y capítulo)</button>
+    </section>
+
+    <!-- Selector bloque -->
+    <section id="selector-bloque" class="bloque-selector oculto">
+      <p>Selecciona el bloque de citas:</p>
+      <select id="bloque-select"></select>
+      <button id="iniciar-btn">Iniciar Quiz</button>
+    </section>
+
+    <!-- Contenedor de preguntas -->
+    <section id="quiz-container" class="oculto">
+      <div id="cita-card" class="cita-card"></div>
+      <div id="opciones-libro" class="opciones"></div>
+      <div id="opciones-capitulo" class="opciones oculto"></div>
+      <div id="barra-progreso" class="barra-progreso"></div>
+    </section>
+
+    <!-- Resultado final -->
+    <section id="resultado-final" class="resultado oculto">
+      <h2>Resultado</h2>
+      <p id="mensaje-resultado"></p>
+      <button id="reiniciar-btn">Reiniciar</button>
+      <button id="volver-inicio-btn">Volver a inicio</button>
+    </section>
   </main>
 
   <script src="js/app/citas.js"></script>
