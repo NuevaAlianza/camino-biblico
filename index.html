@@ -15,6 +15,8 @@
     <button onclick="location.href='reflexion.html'">🧘 Reflexión por temas</button>
     <button onclick="location.href='quiz.html'">🧠 Quiz comentado</button>
     <button onclick="location.href='citas.html'">📖 Citas bíblicas</button>
+    <button id="btn-instalar" style="display:none;">Instalar app</button>
+
     <button onclick="location.href='progreso.html'">📊 Revisión de progreso</button>
     <button onclick="location.href='config.html'">⚙️ Configuración / Acerca de</button>
   </main>
@@ -27,6 +29,38 @@
           .catch(err => console.log('SW falló:', err));
       });
     }
-  </script>
+
+        </script>
+      <script>
+      
+  let deferredPrompt;
+
+  // Escucha el evento que indica que puede instalarse
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Previene que aparezca el banner automático
+    e.preventDefault();
+    deferredPrompt = e;
+    
+    // Muestra el botón
+    const installBtn = document.getElementById('btn-instalar');
+    installBtn.style.display = 'inline-block';
+
+    installBtn.addEventListener('click', () => {
+      installBtn.style.display = 'none';
+      deferredPrompt.prompt();
+
+      deferredPrompt.userChoice.then(choiceResult => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Usuario aceptó la instalación');
+        } else {
+          console.log('Usuario canceló la instalación');
+        }
+        deferredPrompt = null;
+      });
+    });
+  });
+</script>
+
+
 </body>
 </html>
