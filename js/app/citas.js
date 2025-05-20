@@ -1,21 +1,19 @@
 let todasLasCitas = [];
 let citasDelBloque = [];
 let indiceActual = 0;
-let modo = "";
-let bloqueSeleccionado = null;
+let modo = "basico";
+let bloqueSeleccionado = 1;
 let aciertosLibro = 0;
 let aciertosCapitulo = 0;
-let preguntaRespondida = false; // Para evitar múltiples respuestas
+
+// Variables para modo avanzado
+let respondioLibro = false;
+let respondioCapitulo = false;
 
 // Cargar sonidos
 const sonidoClick = new Audio("assets/sonidos/click.mp3");
 const sonidoCorrecto = new Audio("assets/sonidos/correcto.mp3");
-const sonidoIncorrecto = new Audio("assets/sonidos/incorrecto.mp3");
-const sonidoInicio = new Audio("assets/sonidos/inicio.mp3");
-const sonidoFin = new Audio("assets/sonidos/fin.mp3");
-
-// Controlar volumen (opcional, ajústalo)
-[sonidoClick, sonidoCorrecto, sonidoIncorrecto, sonidoInicio, sonidoFin].forEach(s => s.volume = 0.4);
+const sonidoIncorrecto = new Audio("assets/sonidos/incorrecto.mp3"); // Agrega este archivo a assets/sonidos/
 
 const nivelSelect = document.getElementById("nivel");
 const bloqueSelect = document.getElementById("bloque");
@@ -43,25 +41,19 @@ fetch("datos/citas.json")
       option.textContent = `Bloque ${bloque}`;
       bloqueSelect.appendChild(option);
     });
-
-    // Restaurar progreso guardado si hay
-    const modoGuardado = localStorage.getItem("modoQuiz");
-    const bloqueGuardado = localStorage.getItem("bloqueQuiz");
-    if (modoGuardado) nivelSelect.value = modoGuardado;
-    if (bloqueGuardado) bloqueSelect.value = bloqueGuardado;
   });
 
 iniciarBtn.addEventListener("click", () => {
   modo = nivelSelect.value;
-  bloqueSeleccionado = bloqueSelect.value ? parseInt(bloqueSelect.value) : null;
+  bloqueSeleccionado = parseInt(bloqueSelect.value);
 
-  // Validaciones antes de empezar
+  // Validar selección de bloque y modo
   if (!modo) {
     alert("Por favor, selecciona un modo de juego.");
     return;
   }
-  if (!bloqueSeleccionado) {
-    alert("Por favor, selecciona un bloque.");
+  if (!bloqueSeleccionado || isNaN(bloqueSeleccionado)) {
+    alert("Por favor, selecciona un bloque válido.");
     return;
   }
 
@@ -71,30 +63,25 @@ iniciarBtn.addEventListener("click", () => {
     return;
   }
 
-  // Guardar progreso en localStorage
-  localStorage.setItem("modoQuiz", modo);
-  localStorage.setItem("bloqueQuiz", bloqueSeleccionado);
-
   indiceActual = 0;
   aciertosLibro = 0;
   aciertosCapitulo = 0;
 
   seccionInicio.classList.add("oculto");
-  seccionFinal.classList.add("oculto");
   seccionJuego.classList.remove("oculto");
-
-  sonidoInicio.play();
+  seccionFinal.classList.add("oculto");
 
   mostrarPregunta();
 });
 
 function mostrarPregunta() {
-  preguntaRespondida = false;
+  respondioLibro = false;
+  respondioCapitulo = false;
 
   const cita = citasDelBloque[indiceActual];
   pregunta.textContent = cita.cita;
 
-  // Mezclar y mostrar libros
+  // Mostrar opciones libro
   opcionesLibro.innerHTML = "";
   mezclarArray([...cita.opciones_libro]).forEach(libro => {
     const btn = document.createElement("button");
@@ -102,13 +89,13 @@ function mostrarPregunta() {
     btn.disabled = false;
     btn.className = "";
     btn.addEventListener("click", () => {
-      if (preguntaRespondida) return;
+      if (respondioLibro) return; // evitar doble click
       validarLibro(btn, libro, cita);
     });
     opcionesLibro.appendChild(btn);
   });
 
-  // Mezclar y mostrar capítulos si es avanzado
+  // Mostrar opciones capítulo solo en avanzado
   opcionesCapitulo.innerHTML = "";
   if (modo === "avanzado") {
     mezclarArray([...cita.opciones_capitulo]).forEach(cap => {
@@ -117,7 +104,7 @@ function mostrarPregunta() {
       btn.disabled = false;
       btn.className = "";
       btn.addEventListener("click", () => {
-        if (preguntaRespondida) return;
+        if (respondioCapitulo) return; // evitar doble click
         validarCapitulo(btn, cap, cita);
       });
       opcionesCapitulo.appendChild(btn);
@@ -127,7 +114,7 @@ function mostrarPregunta() {
 
 function validarLibro(boton, libroSeleccionado, cita) {
   sonidoClick.play();
-  preguntaRespondida = true;
+  respondioLibro = true;
 
   const esCorrecto = libroSeleccionado === cita.libro;
   if (esCorrecto) {
@@ -141,14 +128,14 @@ function validarLibro(boton, libroSeleccionado, cita) {
 
   bloquearBotones(opcionesLibro, cita.libro);
 
-  if (modo === "basico") {
+  if (modo === "basico" || respondioCapitulo) {
     setTimeout(pasarSiguiente, 1000);
   }
 }
 
 function validarCapitulo(boton, capSeleccionado, cita) {
   sonidoClick.play();
-  preguntaRespondida = true;
+  respondioCapitulo = true;
 
   const esCorrecto = parseInt(capSeleccionado) === parseInt(cita.capitulo);
   if (esCorrecto) {
@@ -162,7 +149,9 @@ function validarCapitulo(boton, capSeleccionado, cita) {
 
   bloquearBotones(opcionesCapitulo, cita.capitulo);
 
-  setTimeout(pasarSiguiente, 1000);
+  if (respondioLibro) {
+    setTimeout(pasarSiguiente, 1000);
+  }
 }
 
 function bloquearBotones(contenedor, respuestaCorrecta) {
@@ -193,8 +182,6 @@ function finalizarQuiz() {
     mensaje += `\n✔️ Aciertos en capítulos: ${aciertosCapitulo} / ${total}`;
   }
   mensajeFinal.textContent = mensaje;
-
-  sonidoFin.play();
 }
 
 function mezclarArray(array) {
