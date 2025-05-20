@@ -23,6 +23,7 @@ const opcionesLibro = document.getElementById("opcionesLibro");
 const opcionesCapitulo = document.getElementById("opcionesCapitulo");
 const mensajeFinal = document.getElementById("mensajeFinal");
 
+// Cargar JSON y llenar opciones de bloque
 fetch("datos/citas.json")
   .then(res => res.json())
   .then(data => {
@@ -53,29 +54,19 @@ function mostrarPregunta() {
   const cita = citasDelBloque[indiceActual];
   pregunta.textContent = cita.cita;
 
+  // Mezclar y mostrar libros
   opcionesLibro.innerHTML = "";
   mezclarArray([...cita.opciones_libro]).forEach(libro => {
-  const btn = document.createElement("button");
-  btn.textContent = libro;
-  btn.addEventListener("click", () => validarLibro(btn, libro, cita));
-  opcionesLibro.appendChild(btn);
-});
-
     const btn = document.createElement("button");
     btn.textContent = libro;
     btn.addEventListener("click", () => validarLibro(btn, libro, cita));
     opcionesLibro.appendChild(btn);
   });
 
+  // Mezclar y mostrar capítulos si es avanzado
   opcionesCapitulo.innerHTML = "";
   if (modo === "avanzado") {
     mezclarArray([...cita.opciones_capitulo]).forEach(cap => {
-  const btn = document.createElement("button");
-  btn.textContent = cap;
-  btn.addEventListener("click", () => validarCapitulo(btn, cap, cita));
-  opcionesCapitulo.appendChild(btn);
-});
-
       const btn = document.createElement("button");
       btn.textContent = cap;
       btn.addEventListener("click", () => validarCapitulo(btn, cap, cita));
@@ -147,6 +138,7 @@ function finalizarQuiz() {
   }
   mensajeFinal.textContent = mensaje;
 }
+
 function mezclarArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
