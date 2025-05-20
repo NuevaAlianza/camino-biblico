@@ -7,38 +7,36 @@
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
-  <main class="menu">
-    <h1 id="titulo">Quiz de Citas Bíblicas</h1>
+  <main class="menu" id="pantalla-inicio">
+    <h1>Quiz de Citas Bíblicas</h1>
+    <p>Elige nivel y bloque para comenzar</p>
 
-    <!-- Selector modo -->
-    <section id="selector-modo" class="modo-selector">
-      <p>Elige el modo de juego:</p>
-      <button id="modo-basico-btn" class="btn-modo">Básico (Sólo libro)</button>
-      <button id="modo-avanzado-btn" class="btn-modo">Avanzado (Libro y capítulo)</button>
-    </section>
+    <label for="nivel">Nivel:</label>
+    <select id="nivel" aria-label="Seleccionar nivel">
+      <option value="basico" selected>Básico (Solo libro)</option>
+      <option value="avanzado">Avanzado (Libro y capítulo)</option>
+    </select>
 
-    <!-- Selector bloque -->
-    <section id="selector-bloque" class="bloque-selector oculto">
-      <p>Selecciona el bloque de citas:</p>
-      <select id="bloque-select"></select>
-      <button id="iniciar-btn">Iniciar Quiz</button>
-    </section>
+    <label for="bloque">Bloque:</label>
+    <select id="bloque" aria-label="Seleccionar bloque">
+      <option value="1" selected>Bloque 1</option>
+      <option value="2">Bloque 2</option>
+      <option value="3">Bloque 3</option>
+      <!-- Añade más bloques según tus datos -->
+    </select>
 
-    <!-- Contenedor de preguntas -->
-    <section id="quiz-container" class="oculto">
-      <div id="cita-card" class="cita-card"></div>
-      <div id="opciones-libro" class="opciones"></div>
-      <div id="opciones-capitulo" class="opciones oculto"></div>
-      <div id="barra-progreso" class="barra-progreso"></div>
-    </section>
+    <button id="btn-iniciar">Iniciar Quiz</button>
+  </main>
 
-    <!-- Resultado final -->
-    <section id="resultado-final" class="resultado oculto">
-      <h2>Resultado</h2>
-      <p id="mensaje-resultado"></p>
-      <button id="reiniciar-btn">Reiniciar</button>
-      <button id="volver-inicio-btn">Volver a inicio</button>
-    </section>
+  <main class="quiz" id="pantalla-quiz" style="display:none;">
+    <div id="contenedor-pregunta"></div>
+    <div id="contenedor-opciones"></div>
+
+    <div id="contenedor-botones-final" style="display:none; margin-top: 2rem;">
+      <button id="btn-reiniciar">Reiniciar</button>
+      <button id="btn-volver">Volver al inicio</button>
+      <p id="mensaje-final" style="margin-top: 1rem; font-weight: bold;"></p>
+    </div>
   </main>
 
   <script src="js/app/citas.js"></script>
