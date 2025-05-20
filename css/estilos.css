@@ -180,5 +180,14 @@ main.menu-principal button:hover {
 .oculto {
   display: none;
 }
+.correcto {
+  background-color: #4CAF50 !important; /* Verde */
+  color: white;
+}
+
+.incorrecto {
+  background-color: #E76F51 !important; /* Rojo */
+  color: white;
+}
 
 
