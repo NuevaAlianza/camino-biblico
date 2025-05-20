@@ -54,7 +54,13 @@ function mostrarPregunta() {
   pregunta.textContent = cita.cita;
 
   opcionesLibro.innerHTML = "";
-  cita.opciones_libro.forEach(libro => {
+  mezclarArray([...cita.opciones_libro]).forEach(libro => {
+  const btn = document.createElement("button");
+  btn.textContent = libro;
+  btn.addEventListener("click", () => validarLibro(btn, libro, cita));
+  opcionesLibro.appendChild(btn);
+});
+
     const btn = document.createElement("button");
     btn.textContent = libro;
     btn.addEventListener("click", () => validarLibro(btn, libro, cita));
@@ -63,7 +69,13 @@ function mostrarPregunta() {
 
   opcionesCapitulo.innerHTML = "";
   if (modo === "avanzado") {
-    cita.opciones_capitulo.forEach(cap => {
+    mezclarArray([...cita.opciones_capitulo]).forEach(cap => {
+  const btn = document.createElement("button");
+  btn.textContent = cap;
+  btn.addEventListener("click", () => validarCapitulo(btn, cap, cita));
+  opcionesCapitulo.appendChild(btn);
+});
+
       const btn = document.createElement("button");
       btn.textContent = cap;
       btn.addEventListener("click", () => validarCapitulo(btn, cap, cita));
@@ -134,4 +146,11 @@ function finalizarQuiz() {
     mensaje += `\n✔️ Aciertos en capítulos: ${aciertosCapitulo} / ${total}`;
   }
   mensajeFinal.textContent = mensaje;
+}
+function mezclarArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }
