@@ -300,156 +300,6 @@
     "cita biblica": "1 Reyes 2,10: David descansó con sus padres y fue sepultado en la Ciudad de David."
   },
   {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Cuál era el mensaje principal de Juan el Bautista?",
-    "respuesta": "Arrepentirse porque el reino de Dios se acercaba",
-    "opcion_1": "Seguir estrictamente la ley de Moisés como los fariseos",
-    "opcion_2": "Construir templos para la adoración de Dios",
-    "opcion_3": "Ser un profeta que guíe a las naciones",
-    "cita biblica": "Mateo 3,2 “Arrepentíos, porque el reino de los cielos se ha acercado.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Dónde bautizaba Juan a las personas?",
-    "respuesta": "En el río Jordán",
-    "opcion_1": "En el mar de Galilea, donde también predicaban muchos profetas",
-    "opcion_2": "En el río Éufrates, mencionado en varias escrituras",
-    "opcion_3": "En un lago utilizado para rituales de purificación",
-    "cita biblica": "Mateo 3,6 “Y eran bautizados por él en el río Jordán.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Cómo se llamaba el padre de Juan el Bautista?",
-    "respuesta": "Zacarías",
-    "opcion_1": "José, conocido por ser el esposo de María",
-    "opcion_2": "Simón, uno de los discípulos de Jesús",
-    "opcion_3": "Elías, el profeta que ascendió al cielo sin morir",
-    "cita biblica": "Lucas 1,5 “Zacarías era sacerdote en Abías.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Qué relación tenía Juan el Bautista con Jesús?",
-    "respuesta": "Primo",
-    "opcion_1": "Amigo cercano que compartía su ministerio",
-    "opcion_2": "Hermano en la fe y seguidor de sus enseñanzas",
-    "opcion_3": "Discípulo que lo ayudó en su camino a la cruz",
-    "cita biblica": "Lucas 1,36 “Tu parienta Isabel ha concebido un hijo en su vejez.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Cómo fue el nacimiento de Juan el Bautista anunciado?",
-    "respuesta": "Por un ángel a Zacarías",
-    "opcion_1": "Por sueños proféticos relatados en antiguas escrituras",
-    "opcion_2": "Por palabras de profetas que anticipaban su llegada",
-    "opcion_3": "Por un milagro que ocurrió en el templo",
-    "cita biblica": "Lucas 1,11-13 “El ángel le dijo: Zacarías, tu oración ha sido escuchada.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Qué vestimenta usaba Juan el Bautista?",
-    "respuesta": "Piel de camello con cinturón de cuero",
-    "opcion_1": "Toga blanca utilizada por los maestros religiosos",
-    "opcion_2": "Vestido sacerdotal reservado para los levitas",
-    "opcion_3": "Ropa de lino, común entre los fariseos",
-    "cita biblica": "Mateo 3,4 “Vestía de pelo de camello y tenía un cinturón de cuero alrededor de su cintura.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Qué comida comía Juan el Bautista en el desierto?",
-    "respuesta": "Grillos y miel silvestre",
-    "opcion_1": "Pan y vino, los alimentos comunes en las celebraciones judías",
-    "opcion_2": "Frutas que recolectaba en los árboles del desierto",
-    "opcion_3": "Cordero, que era parte de las comidas religiosas",
-    "cita biblica": "Mateo 3,4 “Su comida era langostas y miel silvestre.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Por qué Juan el Bautista bautizaba a la gente?",
-    "respuesta": "Para arrepentimiento y perdón de pecados",
-    "opcion_1": "Para limpieza física que ayudaba en su vida diaria",
-    "opcion_2": "Para iniciación política dentro de la comunidad judía",
-    "opcion_3": "Para purificación ceremonial en preparación para la Pascua",
-    "cita biblica": "Juan 1,33 “Yo os bautizo con agua, pero vendrá uno que bautizará con Espíritu Santo.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Quién bautizó a Jesús?",
-    "respuesta": "Juan el Bautista",
-    "opcion_1": "Pedro, el discípulo más cercano a Jesús",
-    "opcion_2": "Juan, otro discípulo muy amado",
-    "opcion_3": "Jesús mismo, como muestra de su autoridad divina",
-    "cita biblica": "Mateo 3,13 “Entonces Jesús vino desde Galilea para ser bautizado por Juan.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Qué dijo Juan sobre Jesús cuando lo vio?",
-    "respuesta": "“Este es el Cordero de Dios que quita el pecado del mundo”",
-    "opcion_1": "“Él es el Mesías esperado por los judíos”",
-    "opcion_2": "“Él es un profeta con gran sabiduría”",
-    "opcion_3": "“Él es un rey que gobernará para siempre”",
-    "cita biblica": "Juan 1,29 “He aquí el Cordero de Dios, que quita el pecado del mundo.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Cómo terminó la vida de Juan el Bautista?",
-    "respuesta": "Fue decapitado por orden de Herodes",
-    "opcion_1": "Se murió de viejo después de predicar muchos años",
-    "opcion_2": "Fue exiliado a tierras lejanas por sus enseñanzas revolucionarias",
-    "opcion_3": "Se convirtió en rey debido a su influencia sobre el pueblo",
-    "cita biblica": "Mateo 14,10 “Herodes mandó decapitar a Juan el Bautista.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Por qué Herodes mandó matar a Juan el Bautista?",
-    "respuesta": "Por denunciar su matrimonio ilícito",
-    "opcion_1": "Porque quería ser rey en lugar de Jesús",
-    "opcion_2": "Porque Juan se rebeló contra el gobierno romano",
-    "opcion_3": "Por celos de la fama de Juan entre la gente",
-    "cita biblica": "Mateo 14,4 “Juan le dijo: No te es lícito tener a la mujer de tu hermano.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Qué profeta se le compara a Juan el Bautista?",
-    "respuesta": "Elías",
-    "opcion_1": "Isaías, quien habló sobre la llegada del Mesías",
-    "opcion_2": "Jeremías, que anunció la destrucción de Jerusalén",
-    "opcion_3": "Daniel, que tuvo visiones del futuro",
-    "cita biblica": "Mateo 11,14 “Este es Elías, que había de venir.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Qué lugar visitó Juan para predicar?",
-    "respuesta": "El desierto",
-    "opcion_1": "Las ciudades principales como Jerusalén",
-    "opcion_2": "Los templos donde se reunían los sacerdotes",
-    "opcion_3": "Las sinagogas donde se debatían las escrituras",
-    "cita biblica": "Mateo 3,1 “En aquellos días apareció Juan el Bautista predicando en el desierto de Judea.”"
-  },
-  {
-    "tema": "Juan el Bautista",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Cómo llamó Juan a los fariseos y saduceos que venían a bautizarse?",
-    "respuesta": "Raza de víboras",
-    "opcion_1": "Hijos de Dios que necesitaban arrepentimiento",
-    "opcion_2": "Pueblo escogido que debía ser fiel a la ley",
-    "opcion_3": "Justos que serían recompensados por sus acciones",
-    "cita biblica": "Mateo 3,7 “Raza de víboras, ¿quién os enseñó a huir de la ira venidera?”"
-  },
-  {
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿De dónde era originario el profeta Elías?",
@@ -750,154 +600,934 @@
     "cita biblica": "Génesis 45,4-5: Yo soy su hermano José... no se aflijan... fue Dios quien me envió delante de ustedes para salvar vidas."
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Quién fue el esposo de Rut?",
-    "respuesta": "Booz",
-    "opcion_1": "Elimelec",
-    "opcion_2": "Mahlón",
-    "opcion_3": "Noé",
-    "cita biblica": "Rut 4,13 “Booz tomó a Rut y ella fue su esposa.”"
+    "pregunta": "¿Cuál era el mensaje principal de Juan el Bautista?",
+    "respuesta": "Arrepentirse porque el reino de Dios se acercaba",
+    "opcion_1": "Seguir estrictamente la ley de Moisés como los fariseos",
+    "opcion_2": "Construir templos para la adoración de Dios",
+    "opcion_3": "Ser un profeta que guíe a las naciones",
+    "cita biblica": "Mateo 3,2 “Arrepentíos, porque el reino de los cielos se ha acercado.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Por qué Rut decidió quedarse con Noemí?",
-    "respuesta": "Porque amaba a Noemí y a su Dios",
-    "opcion_1": "Porque quería riquezas",
-    "opcion_2": "Porque tenía miedo",
-    "opcion_3": "Porque era la única opción",
-    "cita biblica": "Rut 1,16 “Dondequiera que tú vayas, iré yo; y dondequiera que vivas, viviré.”"
+    "pregunta": "¿Dónde bautizaba Juan a las personas?",
+    "respuesta": "En el río Jordán",
+    "opcion_1": "En el mar de Galilea, donde también predicaban muchos profetas",
+    "opcion_2": "En el río Éufrates, mencionado en varias escrituras",
+    "opcion_3": "En un lago utilizado para rituales de purificación",
+    "cita biblica": "Mateo 3,6 “Y eran bautizados por él en el río Jordán.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Qué profesión tenía Booz?",
-    "respuesta": "Era un hombre rico y dueño de tierras",
-    "opcion_1": "Pastor de ovejas",
-    "opcion_2": "Comerciante",
-    "opcion_3": "Sacerdote",
-    "cita biblica": "Rut 2,1 “Booz era un hombre rico, dueño de tierras en Belén.”"
+    "pregunta": "¿Cómo se llamaba el padre de Juan el Bautista?",
+    "respuesta": "Zacarías",
+    "opcion_1": "José, conocido por ser el esposo de María",
+    "opcion_2": "Simón, uno de los discípulos de Jesús",
+    "opcion_3": "Elías, el profeta que ascendió al cielo sin morir",
+    "cita biblica": "Lucas 1,5 “Zacarías era sacerdote en Abías.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿De dónde era originaria Rut?",
-    "respuesta": "De Moab",
-    "opcion_1": "De Jerusalén",
-    "opcion_2": "De Egipto",
-    "opcion_3": "De Canaán",
-    "cita biblica": "Rut 1,4 “Rut, mujer moabita.”"
+    "pregunta": "¿Qué relación tenía Juan el Bautista con Jesús?",
+    "respuesta": "Primo",
+    "opcion_1": "Amigo cercano que compartía su ministerio",
+    "opcion_2": "Hermano en la fe y seguidor de sus enseñanzas",
+    "opcion_3": "Discípulo que lo ayudó en su camino a la cruz",
+    "cita biblica": "Lucas 1,36 “Tu parienta Isabel ha concebido un hijo en su vejez.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Qué relación tenía Noemí con Rut?",
-    "respuesta": "Suegra",
-    "opcion_1": "Novia",
-    "opcion_2": "Hermana",
-    "opcion_3": "Amiga",
-    "cita biblica": "Rut 1,8 “Ve, vuelve a tu casa, hija mía.”"
+    "pregunta": "¿Cómo fue el nacimiento de Juan el Bautista anunciado?",
+    "respuesta": "Por un ángel a Zacarías",
+    "opcion_1": "Por sueños proféticos relatados en antiguas escrituras",
+    "opcion_2": "Por palabras de profetas que anticipaban su llegada",
+    "opcion_3": "Por un milagro que ocurrió en el templo",
+    "cita biblica": "Lucas 1,11-13 “El ángel le dijo: Zacarías, tu oración ha sido escuchada.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Qué hizo Rut para sostener a Noemí y a ella misma?",
-    "respuesta": "Cogía espigas en el campo de Booz",
-    "opcion_1": "Trabajaba en la tienda",
-    "opcion_2": "Cocinaba para los aldeanos",
-    "opcion_3": "Pastaba ovejas",
-    "cita biblica": "Rut 2,2 “Rut fue a recoger espigas detrás de los segadores.”"
+    "pregunta": "¿Qué vestimenta usaba Juan el Bautista?",
+    "respuesta": "Piel de camello con cinturón de cuero",
+    "opcion_1": "Toga blanca utilizada por los maestros religiosos",
+    "opcion_2": "Vestido sacerdotal reservado para los levitas",
+    "opcion_3": "Ropa de lino, común entre los fariseos",
+    "cita biblica": "Mateo 3,4 “Vestía de pelo de camello y tenía un cinturón de cuero alrededor de su cintura.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Qué actitud mostró Rut hacia Dios?",
-    "respuesta": "Fe y lealtad",
-    "opcion_1": "Duda",
-    "opcion_2": "Indiferencia",
-    "opcion_3": "Ira",
-    "cita biblica": "Rut 1,16 “Tu pueblo será mi pueblo y tu Dios mi Dios.”"
+    "pregunta": "¿Qué comida comía Juan el Bautista en el desierto?",
+    "respuesta": "Grillos y miel silvestre",
+    "opcion_1": "Pan y vino, los alimentos comunes en las celebraciones judías",
+    "opcion_2": "Frutas que recolectaba en los árboles del desierto",
+    "opcion_3": "Cordero, que era parte de las comidas religiosas",
+    "cita biblica": "Mateo 3,4 “Su comida era langostas y miel silvestre.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Cómo describió Booz a Rut cuando la vio?",
-    "respuesta": "Como una mujer virtuosa",
-    "opcion_1": "Como una mujer deshonesta",
-    "opcion_2": "Como una esclava",
-    "opcion_3": "Como una forastera",
-    "cita biblica": "Rut 2,11 “Booz respondió a Rut que sabía de su lealtad.”"
+    "pregunta": "¿Por qué Juan el Bautista bautizaba a la gente?",
+    "respuesta": "Para arrepentimiento y perdón de pecados",
+    "opcion_1": "Para limpieza física que ayudaba en su vida diaria",
+    "opcion_2": "Para iniciación política dentro de la comunidad judía",
+    "opcion_3": "Para purificación ceremonial en preparación para la Pascua",
+    "cita biblica": "Juan 1,33 “Yo os bautizo con agua, pero vendrá uno que bautizará con Espíritu Santo.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Qué hizo Booz para proteger a Rut mientras recogía espigas?",
-    "respuesta": "Dijo a sus trabajadores que no la molestaran",
-    "opcion_1": "La hizo trabajar más rápido",
-    "opcion_2": "La llevó a la ciudad",
-    "opcion_3": "Le dio una casa",
-    "cita biblica": "Rut 2,8 “No molestes a la joven.”"
+    "pregunta": "¿Quién bautizó a Jesús?",
+    "respuesta": "Juan el Bautista",
+    "opcion_1": "Pedro, el discípulo más cercano a Jesús",
+    "opcion_2": "Juan, otro discípulo muy amado",
+    "opcion_3": "Jesús mismo, como muestra de su autoridad divina",
+    "cita biblica": "Mateo 3,13 “Entonces Jesús vino desde Galilea para ser bautizado por Juan.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Quién fue el pariente cercano que tenía derecho de redimir a Rut?",
-    "respuesta": "Un pariente cercano no quiso redimirla",
-    "opcion_1": "Booz",
-    "opcion_2": "Onéle",
-    "opcion_3": "Elimelec",
-    "cita biblica": "Rut 4,3 “¿Quién comprará la parcela de tierra de Elimelec?”"
+    "pregunta": "¿Qué dijo Juan sobre Jesús cuando lo vio?",
+    "respuesta": "“Este es el Cordero de Dios que quita el pecado del mundo”",
+    "opcion_1": "“Él es el Mesías esperado por los judíos”",
+    "opcion_2": "“Él es un profeta con gran sabiduría”",
+    "opcion_3": "“Él es un rey que gobernará para siempre”",
+    "cita biblica": "Juan 1,29 “He aquí el Cordero de Dios, que quita el pecado del mundo.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Qué hizo Booz para redimir a Rut?",
-    "respuesta": "Compró la propiedad y se casó con ella",
-    "opcion_1": "La envió lejos",
-    "opcion_2": "Le dio dinero",
-    "opcion_3": "Le dio un anillo como promesa",
-    "cita biblica": "Rut 4,9 “Booz compró la tierra y tomó a Rut como esposa.”"
+    "pregunta": "¿Cómo terminó la vida de Juan el Bautista?",
+    "respuesta": "Fue decapitado por orden de Herodes",
+    "opcion_1": "Se murió de viejo después de predicar muchos años",
+    "opcion_2": "Fue exiliado a tierras lejanas por sus enseñanzas revolucionarias",
+    "opcion_3": "Se convirtió en rey debido a su influencia sobre el pueblo",
+    "cita biblica": "Mateo 14,10 “Herodes mandó decapitar a Juan el Bautista.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Qué bendición le dio Booz a Rut y Noemí?",
-    "respuesta": "Que su familia sea famosa en Israel",
-    "opcion_1": "Que tengan riquezas",
-    "opcion_2": "Que tengan poder político",
-    "opcion_3": "Que vivan en el extranjero",
-    "cita biblica": "Rut 4,11 “Que el Señor haga que la mujer que viene a tu casa sea como Raquel y Lea.”"
+    "pregunta": "¿Por qué Herodes mandó matar a Juan el Bautista?",
+    "respuesta": "Por denunciar su matrimonio ilícito",
+    "opcion_1": "Porque quería ser rey en lugar de Jesús",
+    "opcion_2": "Porque Juan se rebeló contra el gobierno romano",
+    "opcion_3": "Por celos de la fama de Juan entre la gente",
+    "cita biblica": "Mateo 14,4 “Juan le dijo: No te es lícito tener a la mujer de tu hermano.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Quién fue el hijo de Rut y Booz?",
-    "respuesta": "Obed",
-    "opcion_1": "Josué",
-    "opcion_2": "David",
-    "opcion_3": "Salomón",
-    "cita biblica": "Rut 4,17 “Rut dio a luz a Obed, abuelo de David.”"
+    "pregunta": "¿Qué profeta se le compara a Juan el Bautista?",
+    "respuesta": "Elías",
+    "opcion_1": "Isaías, quien habló sobre la llegada del Mesías",
+    "opcion_2": "Jeremías, que anunció la destrucción de Jerusalén",
+    "opcion_3": "Daniel, que tuvo visiones del futuro",
+    "cita biblica": "Mateo 11,14 “Este es Elías, que había de venir.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Qué valor principal enseña la historia de Rut?",
-    "respuesta": "Lealtad y fe",
-    "opcion_1": "Fuerza física",
-    "opcion_2": "Riquezas",
-    "opcion_3": "Poder",
-    "cita biblica": "Rut 1,16 “Dondequiera que tú vayas, iré yo.”"
+    "pregunta": "¿Qué lugar visitó Juan para predicar?",
+    "respuesta": "El desierto",
+    "opcion_1": "Las ciudades principales como Jerusalén",
+    "opcion_2": "Los templos donde se reunían los sacerdotes",
+    "opcion_3": "Las sinagogas donde se debatían las escrituras",
+    "cita biblica": "Mateo 3,1 “En aquellos días apareció Juan el Bautista predicando en el desierto de Judea.”"
   },
   {
-    "tema": "Rut",
+    "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
-    "pregunta": "¿Cómo terminó la historia de Rut?",
-    "respuesta": "Con Rut integrada al pueblo de Israel y ancestro de David",
-    "opcion_1": "Con Rut regresando a Moab",
-    "opcion_2": "Con Rut volviendo sola",
-    "opcion_3": "Con Rut abandonada",
-    "cita biblica": "Rut 4,22 “Obed fue el padre de Isaí, padre de David.”"
+    "pregunta": "¿Cómo llamó Juan a los fariseos y saduceos que venían a bautizarse?",
+    "respuesta": "Raza de víboras",
+    "opcion_1": "Hijos de Dios que necesitaban arrepentimiento",
+    "opcion_2": "Pueblo escogido que debía ser fiel a la ley",
+    "opcion_3": "Justos que serían recompensados por sus acciones",
+    "cita biblica": "Mateo 3,7 “Raza de víboras, ¿quién os enseñó a huir de la ira venidera?”"
+  },
+  {
+    "tema": "Misa-1",
+    "tipo": "",
+    "pregunta": "¿Qué significa el Rito de Entrada en la Misa?",
+    "respuesta": "Es la preparación espiritual y comunitaria para celebrar la Eucaristía",
+    "opcion_1": "Gestos Que hacemos Al momento de entrar al templo",
+    "opcion_2": "Introduccion necesaria, para estar listos para comunion y bautizos",
+    "opcion_3": "La entrega de las ofrendas, que nos prepara para  la liturgia.",
+    "cita biblica": "OGMR 46"
+  },
+  {
+    "tema": "Misa-1",
+    "tipo": "",
+    "pregunta": "¿Qué gesto realiza el sacerdote al comenzar la Misa?",
+    "respuesta": "La señal de la cruz",
+    "opcion_1": "La elevación del cáliz",
+    "opcion_2": "Se arrodilla",
+    "opcion_3": "Impone las manos a la asamblea",
+    "cita biblica": "Éxodo 17,11"
+  },
+  {
+    "tema": "Misa-1",
+    "tipo": "",
+    "pregunta": "¿Cuál es el propósito del acto penitencial?",
+    "respuesta": "Reconocer los pecados y pedir perdón a Dios",
+    "opcion_1": "Agradecer a Dios por el día",
+    "opcion_2": "Saber el origen del pecado y sacarlo del corazon",
+    "opcion_3": "Dar la paz, con un corazon igual de limpio que mis semejantes.",
+    "cita biblica": "Isaías 1,18"
+  },
+  {
+    "tema": "Misa-1",
+    "tipo": "",
+    "pregunta": "¿Cuál es la fórmula más común del acto penitencial?",
+    "respuesta": "Yo confieso ante Dios todopoderoso",
+    "opcion_1": "Padre nuestro que estás en el cielo",
+    "opcion_2": "Creo en Dios Padre todopoderoso",
+    "opcion_3": "Señor, ten piedad de nosotros",
+    "cita biblica": "Lucas 18,13"
+  },
+  {
+    "tema": "Misa-1",
+    "tipo": "",
+    "pregunta": "¿Cuándo se omite el canto del Gloria en la Misa?",
+    "respuesta": "En Cuaresma y Adviento",
+    "opcion_1": "En los domingos del Tiempo Ordinario",
+    "opcion_2": "En solemnidades",
+    "opcion_3": "En fiestas de santos mayores",
+    "cita biblica": "Lucas 2,14"
+  },
+  {
+    "tema": "Misa-1",
+    "tipo": "",
+    "pregunta": "¿Qué parte concluye el Rito de Entrada?",
+    "respuesta": "La oración colecta",
+    "opcion_1": "La bendición final",
+    "opcion_2": "La proclamación del Evangelio",
+    "opcion_3": "El gloria",
+    "cita biblica": "2 Crónicas 30,27"
+  },
+  {
+    "tema": "Misa-1",
+    "tipo": "",
+    "pregunta": "¿Qué nos recuerda el canto de entrada?",
+    "respuesta": "Que somos un pueblo peregrino hacia el encuentro con el Señor",
+    "opcion_1": "Que debemos guardar silencio, para estar en sintonia con nuestro hermano",
+    "opcion_2": "Que la Misa ya terminó",
+    "opcion_3": "Que la Misa ya  inicio",
+    "cita biblica": "Salmo 121,1"
+  },
+  {
+    "tema": "Misa-1",
+    "tipo": "",
+    "pregunta": "¿Cuál es la función del saludo inicial del sacerdote?",
+    "respuesta": "Reconocer la presencia del Señor y dar la bienvenida a la asamblea",
+    "opcion_1": "Dar instrucciones sobre la homilía",
+    "opcion_2": "Leer el salmo del día",
+    "opcion_3": "Rezar el padrenuestro",
+    "cita biblica": "2 Corintios 13,13"
+  },
+  {
+    "tema": "Misa-1",
+    "tipo": "",
+    "pregunta": "¿Qué parte del Rito de Entrada puede variar según el tiempo litúrgico?",
+    "respuesta": "El Gloria",
+    "opcion_1": "La oración colecta",
+    "opcion_2": "La homilía",
+    "opcion_3": "La consagración",
+    "cita biblica": "Apocalipsis 15,4"
+  },
+  {
+    "tema": "Misa-1",
+    "tipo": "",
+    "pregunta": "¿Qué enseña el Catecismo sobre el acto penitencial?",
+    "respuesta": "Nos dispone a la celebración reconociendo nuestra necesidad de misericordia",
+    "opcion_1": "Es un momento de descanso",
+    "opcion_2": "Es un símbolo opcional sin sentido profundo",
+    "opcion_3": "Es una antigua costumbre que ya no se usa",
+    "cita biblica": "CIC 1435"
+  },
+  {
+    "tema": "Misa-2",
+    "tipo": "",
+    "pregunta": "¿Qué gesto realiza el sacerdote al llegar al altar?",
+    "respuesta": "Lo besa como signo de veneración",
+    "opcion_1": "Se sienta junto al ambón",
+    "opcion_2": "Hace la señal de la cruz sobre él",
+    "opcion_3": "Se arrodilla frente al altar",
+    "cita biblica": "Apocalipsis 8,3"
+  },
+  {
+    "tema": "Misa-2",
+    "tipo": "",
+    "pregunta": "¿Qué puede acompañar el canto de entrada en ocasiones especiales?",
+    "respuesta": "Uso de incienso",
+    "opcion_1": "Toque de campanas",
+    "opcion_2": "Lectura del evangelio",
+    "opcion_3": "Cirio Pascual",
+    "cita biblica": "Éxodo 30,1"
+  },
+  {
+    "tema": "Misa-2",
+    "tipo": "",
+    "pregunta": "¿Qué representa el beso al altar?",
+    "respuesta": "Amor y reverencia por Cristo presente",
+    "opcion_1": "Despedida simbólica",
+    "opcion_2": "Inicio de la homilía",
+    "opcion_3": "Alabanza al Espíritu Santo",
+    "cita biblica": "Apocalipsis 6,9"
+  },
+  {
+    "tema": "Misa-2",
+    "tipo": "",
+    "pregunta": "¿Quiénes acompañan normalmente al sacerdote en la procesión de entrada?",
+    "respuesta": "Acólitos, lectores y diácono (si lo hay)",
+    "opcion_1": "Solamente el coro y los sacristanes",
+    "opcion_2": "Fieles con velas yPersonas de Blanco",
+    "opcion_3": "Nadie, entra solo",
+    "cita biblica": "Nehemías 8,5-6"
+  },
+  {
+    "tema": "Misa-2",
+    "tipo": "",
+    "pregunta": "¿Qué parte del Rito de Entrada puede ser sustituida por la aspersión con agua bendita?",
+    "respuesta": "El acto penitencial",
+    "opcion_1": "La oración colecta",
+    "opcion_2": "El canto de entrada",
+    "opcion_3": "La lectura del salmo",
+    "cita biblica": "Números 8,7"
+  },
+  {
+    "tema": "Misa-2",
+    "tipo": "",
+    "pregunta": "¿Qué fórmula se utiliza habitualmente en el acto penitencial cuando se hace la confesión general de la comunidad?",
+    "respuesta": "Yo confieso ante Dios todopoderoso... (Confiteor)",
+    "opcion_1": "Padre nuestro que estás en el cielo...",
+    "opcion_2": "Señor, ten piedad de nosotros...",
+    "opcion_3": "Creo en Dios Padre todopoderoso...",
+    "cita biblica": "OGMR 51"
+  },
+  {
+    "tema": "Misa-2",
+    "tipo": "",
+    "pregunta": "¿Cuántas formas del acto penitencial existen en el Misal Romano?",
+    "respuesta": "Tres",
+    "opcion_1": "Dos",
+    "opcion_2": "Cuatro",
+    "opcion_3": "Una sola",
+    "cita biblica": "CIC 1435 / OGMR 51"
+  },
+  {
+    "tema": "Misa-2",
+    "tipo": "",
+    "pregunta": "¿Qué diferencia el Rito de Entrada en una solemnidad respecto a un dia común?",
+    "respuesta": "Puede incluir incienso, ministros adicionales y Gloria",
+    "opcion_1": "No se realiza procesión",
+    "opcion_2": "El sacerdote no saluda y pasamos a la litugia de la palabra",
+    "opcion_3": "Se omite el canto del gloria y saludo al altar",
+    "cita biblica": "Salmo 100,4"
+  },
+  {
+    "tema": "Misa-2",
+    "tipo": "",
+    "pregunta": "¿Quién dirige el canto de entrada normalmente?",
+    "respuesta": "El monitor o el coro",
+    "opcion_1": "El lector",
+    "opcion_2": "El sacerdote",
+    "opcion_3": "El pueblo directamente",
+    "cita biblica": "Salmo 95,1-2"
+  },
+  {
+    "tema": "Misa-2",
+    "tipo": "",
+    "pregunta": "¿Qué actitud debe tener la asamblea durante el Rito de Entrada?",
+    "respuesta": "Participación activa, cantando y respondiendo",
+    "opcion_1": "Permanecer en silencio total",
+    "opcion_2": "Permanecer sentados",
+    "opcion_3": "Leer individualmente",
+    "cita biblica": "CIC 1348; Salmo 100,2"
+  },
+  {
+    "tema": "Misa-3",
+    "tipo": "",
+    "pregunta": "¿Qué parte del Rito de Entrada puede omitirse en una Misa con sacramento de matrimonio?",
+    "respuesta": "El acto penitencial",
+    "opcion_1": "El saludo inicial",
+    "opcion_2": "El canto de entrada",
+    "opcion_3": "El Evangelio",
+    "cita biblica": "Juan 2,1-2"
+  },
+  {
+    "tema": "Misa-3",
+    "tipo": "",
+    "pregunta": "¿Qué sustituye al rito de entrada en la Misa del Domingo de Ramos?",
+    "respuesta": "La procesión con los ramos y la proclamación del Evangelio de entrada",
+    "opcion_1": "El rezo del rosario",
+    "opcion_2": "El canto del Gloria",
+    "opcion_3": "La lectura del Salmo",
+    "cita biblica": "Marcos 11,8-10"
+  },
+  {
+    "tema": "Misa-3",
+    "tipo": "",
+    "pregunta": "¿Qué rito inicia la Vigilia Pascual en lugar del saludo inicial?",
+    "respuesta": "La bendición del fuego y encendido del cirio pascual",
+    "opcion_1": "El canto del Aleluya",
+    "opcion_2": "El Padrenuestro",
+    "opcion_3": "La aspersión con agua",
+    "cita biblica": "Lucas 24,1-5"
+  },
+  {
+    "tema": "Misa-3",
+    "tipo": "",
+    "pregunta": "¿Qué sucede con los ritos iniciales en una Misa exequial?",
+    "respuesta": "Se adaptan con el recibimiento del féretro y oraciones especiales",
+    "opcion_1": "Se omiten completamente",
+    "opcion_2": "Se realizan igual que en días ordinarios",
+    "opcion_3": "Se sustituyen por letanías",
+    "cita biblica": "Sabiduría 3,1"
+  },
+  {
+    "tema": "Misa-3",
+    "tipo": "",
+    "pregunta": "En una Misa con Bautismo, ¿cuál de estas afirmaciones es verdadera?",
+    "respuesta": "El rito bautismal se integra al inicio, antes de la Liturgia de la Palabra",
+    "opcion_1": "El Bautismo se realiza al final, después de la bendición",
+    "opcion_2": "Se omite la oración colecta",
+    "opcion_3": "No hay canto de entrada",
+    "cita biblica": "Mateo 28,19"
+  },
+  {
+    "tema": "Misa-3",
+    "tipo": "",
+    "pregunta": "¿Qué indica la OGMR 46 sobre los ritos iniciales en ciertas celebraciones unidas a la Misa?",
+    "respuesta": "Que pueden omitirse o realizarse de forma especial",
+    "opcion_1": "Que siempre deben mantenerse completos",
+    "opcion_2": "Que solo el Gloria se puede cambiar",
+    "opcion_3": "Que no deben usarse cantos",
+    "cita biblica": "OGMR 46"
+  },
+  {
+    "tema": "Misa-4",
+    "tipo": "",
+    "pregunta": "¿De qué parte de la Biblia se toma habitualmente la primera lectura en la Misa dominical?",
+    "respuesta": "Del Antiguo Testamento",
+    "opcion_1": "De los Evangelios",
+    "opcion_2": "Del Nuevo Testamento",
+    "opcion_3": "50/50",
+    "cita biblica": "OGMR 57"
+  },
+  {
+    "tema": "Misa-4",
+    "tipo": "",
+    "pregunta": "¿Qué sucede después de la primera lectura en la Liturgia de la Palabra?",
+    "respuesta": "Se proclama el Salmo responsorial",
+    "opcion_1": "El Monitor Introduce la Siguiente Lectura",
+    "opcion_2": "Se reza el Padre Nuestro",
+    "opcion_3": "Se proclama el Evangelio",
+    "cita biblica": "OGMR 61"
+  },
+  {
+    "tema": "Misa-4",
+    "tipo": "",
+    "pregunta": "¿Quién puede proclamar el Evangelio durante la Misa?",
+    "respuesta": "El diácono o el sacerdote",
+    "opcion_1": "El lector o salmista",
+    "opcion_2": "El ministro extraordinario",
+    "opcion_3": "Un laico encargado",
+    "cita biblica": "OGMR 60"
+  },
+  {
+    "tema": "Misa-4",
+    "tipo": "",
+    "pregunta": "¿Qué nombre recibe el canto que precede al Evangelio y anuncia su proclamación?",
+    "respuesta": "Aclamación antes del Evangelio",
+    "opcion_1": "Ofertorio",
+    "opcion_2": "Amen",
+    "opcion_3": "Antífona de comunión",
+    "cita biblica": "OGMR 62"
+  },
+  {
+    "tema": "Misa-4",
+    "tipo": "",
+    "pregunta": "¿Qué parte de la Liturgia de la Palabra es obligatoria los domingos y días de precepto?",
+    "respuesta": "La homilía",
+    "opcion_1": "La segunda lectura",
+    "opcion_2": "La oración de los fieles",
+    "opcion_3": "El Aleluya",
+    "cita biblica": "OGMR 66"
+  },
+  {
+    "tema": "Misa-4",
+    "tipo": "",
+    "pregunta": "¿En qué celebraciones no se incluye la segunda lectura en la Liturgia de la Palabra?",
+    "respuesta": "En días feriales y memorias libres",
+    "opcion_1": "En domingos y solemnidades",
+    "opcion_2": "En celebraciones penitenciales",
+    "opcion_3": "En la Vigilia Pascual",
+    "cita biblica": "OGMR 66"
+  },
+  {
+    "tema": "Misa-4",
+    "tipo": "",
+    "pregunta": "¿Qué oración expresa la fe de la comunidad y se dice en domingos y solemnidades?",
+    "respuesta": "El Credo",
+    "opcion_1": "El Padre Nuestro",
+    "opcion_2": "El Confiteor",
+    "opcion_3": "El Magníficat",
+    "cita biblica": "OGMR 67"
+  },
+  {
+    "tema": "Misa-4",
+    "tipo": "",
+    "pregunta": "¿Quién debe proclamar la primera y segunda lectura si hay un lector laico disponible?",
+    "respuesta": "El lector laico",
+    "opcion_1": "El sacerdote",
+    "opcion_2": "El diácono",
+    "opcion_3": "El salmista",
+    "cita biblica": "OGMR 59"
+  },
+  {
+    "tema": "Misa-4",
+    "tipo": "",
+    "pregunta": "¿Qué se responde habitualmente después de proclamarse el Evangelio?",
+    "respuesta": "Gloria a ti, Señor Jesús",
+    "opcion_1": "Amen",
+    "opcion_2": "Te alabamos, Señor",
+    "opcion_3": "Aleluya",
+    "cita biblica": "OGMR 60"
+  },
+  {
+    "tema": "Misa-4",
+    "tipo": "",
+    "pregunta": "¿En qué momento de la Misa se elevan súplicas por la Iglesia, los gobernantes y necesidades del mundo?",
+    "respuesta": "En la oración de los fieles",
+    "opcion_1": "En la homilía",
+    "opcion_2": "En el ofertorio",
+    "opcion_3": "En el Padre Nuestro",
+    "cita biblica": "OGMR 69–71"
+  },
+  {
+    "tema": "Misa-5",
+    "tipo": "",
+    "pregunta": "¿Qué debe hacer la asamblea durante la proclamación del Evangelio?",
+    "respuesta": "Ponerse de pie y hacer la señal de la cruz en la frente, boca y pecho",
+    "opcion_1": "Quedarse sentada y en silencio",
+    "opcion_2": "Hacer la genuflexión",
+    "opcion_3": "Cantar el Aleluya con el sacerdote",
+    "cita biblica": "OGMR 60"
+  },
+  {
+    "tema": "Misa-5",
+    "tipo": "",
+    "pregunta": "¿Quién puede proclamar las lecturas que no son del Evangelio?",
+    "respuesta": "Un lector instituido o un laico designado",
+    "opcion_1": "El celebrante principal",
+    "opcion_2": "Un acólito",
+    "opcion_3": "Un religioso consagrado",
+    "cita biblica": "OGMR 59"
+  },
+  {
+    "tema": "Misa-5",
+    "tipo": "",
+    "pregunta": "¿Cuál es el fin principal de la homilía?",
+    "respuesta": "Explicar la Palabra de Dios y aplicarla a la vida actual",
+    "opcion_1": "Repetir las lecturas bíblicas",
+    "opcion_2": "Compartir experiencias personales",
+    "opcion_3": "Introducir el ofertorio",
+    "cita biblica": "OGMR 65"
+  },
+  {
+    "tema": "Misa-5",
+    "tipo": "",
+    "pregunta": "¿Quién propone las intenciones de la oración universal?",
+    "respuesta": "El diácono, un lector o el sacerdote",
+    "opcion_1": "El obispo presente",
+    "opcion_2": "Un miembro de la asamblea",
+    "opcion_3": "El salmista",
+    "cita biblica": "OGMR 71"
+  },
+  {
+    "tema": "Misa-5",
+    "tipo": "",
+    "pregunta": "¿A quién van dirigidas las intenciones de la oración de los fieles?",
+    "respuesta": "Por la Iglesia, autoridades, necesitados y comunidad local",
+    "opcion_1": "Por el sacerdote y los monaguillos",
+    "opcion_2": "Por los que van a comulgar solamente",
+    "opcion_3": "Por los ministros de la música",
+    "cita biblica": "OGMR 70"
+  },
+  {
+    "tema": "Misa-5",
+    "tipo": "",
+    "pregunta": "¿Por qué la homilía no debe omitirse los domingos?",
+    "respuesta": "Porque ayuda a comprender y aplicar la Palabra proclamada",
+    "opcion_1": "Porque es tradición",
+    "opcion_2": "Porque lo pide el pueblo",
+    "opcion_3": "Porque reemplaza al Credo",
+    "cita biblica": "OGMR 66; CIC 132"
+  },
+  {
+    "tema": "Misa-5",
+    "tipo": "",
+    "pregunta": "¿Por qué el pueblo responde al salmo responsorial?",
+    "respuesta": "Para hacer propia la Palabra de Dios escuchada",
+    "opcion_1": "Para participar en la música",
+    "opcion_2": "Para saludar al lector",
+    "opcion_3": "Para preparar el ofertorio",
+    "cita biblica": "OGMR 61"
+  },
+  {
+    "tema": "Misa-5",
+    "tipo": "",
+    "pregunta": "¿En qué momento de la Misa puedes hacer peticiones personales de forma comunitaria?",
+    "respuesta": "En la oración universal",
+    "opcion_1": "En el ofertorio",
+    "opcion_2": "Después de la homilía",
+    "opcion_3": "En la aclamación del Evangelio",
+    "cita biblica": "OGMR 69"
+  },
+  {
+    "tema": "Misa-5",
+    "tipo": "",
+    "pregunta": "¿Por qué el Evangelio lo proclama el diácono o el sacerdote y no un lector laico?",
+    "respuesta": "Porque es Cristo mismo quien habla en el Evangelio",
+    "opcion_1": "Porque se requiere una voz fuerte",
+    "opcion_2": "Porque hay que memorizarlo",
+    "opcion_3": "Porque solo ellos usan ornamentos litúrgicos",
+    "cita biblica": "OGMR 60"
+  },
+  {
+    "tema": "Misa-5",
+    "tipo": "",
+    "pregunta": "¿Por qué se canta el Aleluya antes del Evangelio?",
+    "respuesta": "Para expresar júbilo y preparar la acogida de Cristo que habla",
+    "opcion_1": "Para marcar el centro de la Misa",
+    "opcion_2": "Porque así se inicia la liturgia eucarística",
+    "opcion_3": "Porque no hay homilía sin Aleluya",
+    "cita biblica": "OGMR 62"
+  },
+  {
+    "tema": "Misa-6",
+    "tipo": "",
+    "pregunta": "¿Con qué momento inicia la Liturgia Eucarística?",
+    "respuesta": "Con la preparación de los dones",
+    "opcion_1": "Con el canto del Aleluya",
+    "opcion_2": "Con el saludo de paz",
+    "opcion_3": "Con la oración colecta",
+    "cita biblica": "OGMR 72"
+  },
+  {
+    "tema": "Misa-6",
+    "tipo": "",
+    "pregunta": "¿Qué se presenta durante la preparación de los dones?",
+    "respuesta": "Pan, vino y ofrendas del pueblo",
+    "opcion_1": "Cruz y cirios",
+    "opcion_2": "Catecismos y rosarios",
+    "opcion_3": "Sólo el pan consagrado",
+    "cita biblica": "OGMR 73"
+  },
+  {
+    "tema": "Misa-6",
+    "tipo": "",
+    "pregunta": "¿Qué acción realiza el sacerdote con el pan y el vino en el ofertorio?",
+    "respuesta": "Los bendice y los ofrece a Dios",
+    "opcion_1": "Los reparte a los fieles",
+    "opcion_2": "Los eleva para la consagración",
+    "opcion_3": "Los guarda en el sagrario",
+    "cita biblica": "OGMR 73"
+  },
+  {
+    "tema": "Misa-6",
+    "tipo": "",
+    "pregunta": "¿Qué expresa el pueblo al responder “El Señor reciba de tus manos este sacrificio”?",
+    "respuesta": "Que participa activamente en la ofrenda",
+    "opcion_1": "Que termina el ofertorio",
+    "opcion_2": "Que comienza la homilía",
+    "opcion_3": "Que se distribuye la comunión",
+    "cita biblica": "OGMR 75"
+  },
+  {
+    "tema": "Misa-6",
+    "tipo": "",
+    "pregunta": "¿Cómo concluye la oración sobre las ofrendas?",
+    "respuesta": "Por Cristo nuestro Señor. Amén",
+    "opcion_1": "Palabra de Dios. Te alabamos Señor",
+    "opcion_2": "Gloria a ti, Señor Jesús",
+    "opcion_3": "Amén. Aleluya",
+    "cita biblica": "OGMR 77"
+  },
+  {
+    "tema": "Misa-6",
+    "tipo": "",
+    "pregunta": "¿Qué oración central inicia después de la presentación de los dones?",
+    "respuesta": "Plegaria Eucarística",
+    "opcion_1": "Padre Nuestro",
+    "opcion_2": "Oración colecta",
+    "opcion_3": "Homilía",
+    "cita biblica": "OGMR 78"
+  },
+  {
+    "tema": "Misa-6",
+    "tipo": "",
+    "pregunta": "¿Quién puede pronunciar la Plegaria Eucarística?",
+    "respuesta": "Sólo el sacerdote celebrante",
+    "opcion_1": "Un lector instituido",
+    "opcion_2": "El diácono",
+    "opcion_3": "Un ministro extraordinario de la comunión",
+    "cita biblica": "OGMR 147"
+  },
+  {
+    "tema": "Misa-6",
+    "tipo": "",
+    "pregunta": "¿Cuál es el momento más solemne de la Plegaria Eucarística?",
+    "respuesta": "La consagración",
+    "opcion_1": "El ofertorio",
+    "opcion_2": "El canto del Aleluya",
+    "opcion_3": "La comunión",
+    "cita biblica": "OGMR 79d"
+  },
+  {
+    "tema": "Misa-6",
+    "tipo": "",
+    "pregunta": "¿Qué se proclama durante la consagración?",
+    "respuesta": "Las palabras de Jesús en la Última Cena",
+    "opcion_1": "Los salmos del día",
+    "opcion_2": "El Santo Rosario",
+    "opcion_3": "El Padre Nuestro",
+    "cita biblica": "OGMR 79d; CIC 1353"
+  },
+  {
+    "tema": "Misa-6",
+    "tipo": "",
+    "pregunta": "¿Qué gesto hace el sacerdote al mostrar el Cuerpo y la Sangre de Cristo consagrados?",
+    "respuesta": "Los eleva para adoración",
+    "opcion_1": "Los reparte inmediatamente",
+    "opcion_2": "Invita al Pueblo a orar, Padre...",
+    "opcion_3": "Los mezcla con agua",
+    "cita biblica": "OGMR 79d"
+  },
+  {
+    "tema": "Misa-7",
+    "tipo": "",
+    "pregunta": "¿Por qué los fieles presentan pan, vino u otras ofrendas al altar?",
+    "respuesta": "Para participar en la entrega de sí mismos a Dios",
+    "opcion_1": "Para colaborar con el sacerdote",
+    "opcion_2": "Para mantener una tradición antigua",
+    "opcion_3": "Para acelerar la Misa",
+    "cita biblica": "OGMR 73; CIC 901"
+  },
+  {
+    "tema": "Misa-7",
+    "tipo": "",
+    "pregunta": "¿Qué actitud interior debe tener el fiel durante la consagración?",
+    "respuesta": "Adoración y reverencia profunda",
+    "opcion_1": "Memorización del rito",
+    "opcion_2": "Preparación para comulgar",
+    "opcion_3": "Oración espontánea en voz alta",
+    "cita biblica": "OGMR 78; CIC 1378"
+  },
+  {
+    "tema": "Misa-7",
+    "tipo": "",
+    "pregunta": "¿Por qué el sacerdote pronuncia las palabras de Jesús en la Última Cena?",
+    "respuesta": "Porque actúa en la persona de Cristo (in persona Christi)",
+    "opcion_1": "Porque recuerda lo que hizo San Pedro",
+    "opcion_2": "Para enseñar historia bíblica",
+    "opcion_3": "Porque está presidiendo una lectura",
+    "cita biblica": "OGMR 79d; CIC 1548"
+  },
+  {
+    "tema": "Misa-7",
+    "tipo": "",
+    "pregunta": "¿Por qué nos arrodillamos durante la consagración?",
+    "respuesta": "Para adorar el misterio de la transubstanciación",
+    "opcion_1": "Porque el sacerdote lo indica",
+    "opcion_2": "Por costumbre litúrgica",
+    "opcion_3": "Porque no hay espacio para sentarse",
+    "cita biblica": "OGMR 43; CIC 1378"
+  },
+  {
+    "tema": "Misa-7",
+    "tipo": "",
+    "pregunta": "¿Qué significa decir “Amén” al final de la doxología (“Por Cristo, con Él y en Él...\")?",
+    "respuesta": "Afirmar nuestra participación en el sacrificio eucarístico",
+    "opcion_1": "Indicar que terminó la oración",
+    "opcion_2": "Anunciar la comunión",
+    "opcion_3": "Iniciar la lectura siguiente",
+    "cita biblica": "OGMR 79h; CIC 1061"
+  },
+  {
+    "tema": "Misa-7",
+    "tipo": "",
+    "pregunta": "pregunta",
+    "respuesta": "respuesta",
+    "opcion_1": "opcion_1",
+    "opcion_2": "opcion_2",
+    "opcion_3": "opcion_3",
+    "cita biblica": "cita biblica"
+  },
+  {
+    "tema": "Misa-7",
+    "tipo": "",
+    "pregunta": "¿Qué ocurre realmente en el momento de la consagración?",
+    "respuesta": "El pan y el vino se convierten en el Cuerpo y la Sangre de Cristo",
+    "opcion_1": "El pan y el vino son bendecidos pero no cambian",
+    "opcion_2": "Se hace un signo simbólico de comunión",
+    "opcion_3": "Se recuerda un milagro eucarístico",
+    "cita biblica": "CIC 1376"
+  },
+  {
+    "tema": "Misa-7",
+    "tipo": "",
+    "pregunta": "¿Cómo se llama esta transformación del pan y el vino en el Cuerpo y Sangre de Cristo?",
+    "respuesta": "Transubstanciación",
+    "opcion_1": "Epíclesis",
+    "opcion_2": "Consagración",
+    "opcion_3": "Memorial",
+    "cita biblica": "CIC 1376"
+  },
+  {
+    "tema": "Misa-7",
+    "tipo": "",
+    "pregunta": "¿Por qué es importante la epíclesis en la Plegaria Eucarística?",
+    "respuesta": "Porque invoca al Espíritu Santo para que santifique los dones",
+    "opcion_1": "Porque marca el inicio del ofertorio",
+    "opcion_2": "Porque pide perdón por los pecados",
+    "opcion_3": "Porque introduce el Evangelio",
+    "cita biblica": "CIC 1353; OGMR 79c"
+  },
+  {
+    "tema": "Misa-7",
+    "tipo": "",
+    "pregunta": "¿Por qué la Eucaristía es sacrificio?",
+    "respuesta": "Porque actualiza el sacrificio de Cristo en la cruz",
+    "opcion_1": "Porque se presenta pan y vino",
+    "opcion_2": "Porque se hace en un altar",
+    "opcion_3": "Porque se nombra a los mártires",
+    "cita biblica": "CIC 1366"
+  },
+  {
+    "tema": "Misa-7",
+    "tipo": "",
+    "pregunta": "¿Por qué se dice que la Eucaristía es memorial?",
+    "respuesta": "Porque hace presente el único sacrificio de Cristo",
+    "opcion_1": "Porque recordamos a los difuntos",
+    "opcion_2": "Porque repetimos una tradición",
+    "opcion_3": "Porque leemos textos antiguos",
+    "cita biblica": "CIC 1363–1367"
+  },
+  {
+    "tema": "Misa-8",
+    "tipo": "",
+    "pregunta": "¿Qué oración inicia el Rito de la Comunión?",
+    "respuesta": "El Padre Nuestro",
+    "opcion_1": "El Credo",
+    "opcion_2": "La Plegaria Eucarística",
+    "opcion_3": "La oración de los fieles",
+    "cita biblica": "OGMR 81"
+  },
+  {
+    "tema": "Misa-8",
+    "tipo": "",
+    "pregunta": "¿Qué se pide en la oración del Padrenuestro dentro de la Misa?",
+    "respuesta": "El pan de cada día, que es Cristo",
+    "opcion_1": "Evitar el pecado",
+    "opcion_2": "Agradecer la homilía",
+    "opcion_3": "Recordar la lectura anterior",
+    "cita biblica": "CIC 2835; OGMR 81"
+  },
+  {
+    "tema": "Misa-8",
+    "tipo": "",
+    "pregunta": "¿Qué gesto expresa la paz de Cristo entre los fieles?",
+    "respuesta": "El saludo de paz",
+    "opcion_1": "La señal de la cruz",
+    "opcion_2": "El canto de comunión",
+    "opcion_3": "El amén final",
+    "cita biblica": "OGMR 82"
+  },
+  {
+    "tema": "Misa-8",
+    "tipo": "",
+    "pregunta": "¿Qué oración pronuncia el sacerdote antes de la comunión?",
+    "respuesta": "“Este es el Cordero de Dios...”",
+    "opcion_1": "“Te alabamos, Señor”",
+    "opcion_2": "“Danos hoy nuestro pan...”",
+    "opcion_3": "“El Señor esté con ustedes”",
+    "cita biblica": "OGMR 84"
+  },
+  {
+    "tema": "Misa-8",
+    "tipo": "",
+    "pregunta": "¿Qué debe hacer el fiel antes de comulgar?",
+    "respuesta": "Estar en gracia y haber guardado el ayuno eucarístico",
+    "opcion_1": "Haber rezado el rosario",
+    "opcion_2": "Haber confesado todos los pecados",
+    "opcion_3": "Haber hecho genuflexión",
+    "cita biblica": "OGMR 160; CIC 1385"
+  },
+  {
+    "tema": "Misa-8",
+    "tipo": "",
+    "pregunta": "¿Quién puede distribuir la comunión?",
+    "respuesta": "El sacerdote, diácono y ministros extraordinarios instituidos",
+    "opcion_1": "Solo el sacerdote",
+    "opcion_2": "El lector instituido",
+    "opcion_3": "Cualquier fiel adulto",
+    "cita biblica": "OGMR 162; CIC 910"
+  },
+  {
+    "tema": "Misa-8",
+    "tipo": "",
+    "pregunta": "¿Qué hace el sacerdote si quedan formas consagradas tras la comunión?",
+    "respuesta": "Las reserva en el sagrario",
+    "opcion_1": "Las reparte de nuevo",
+    "opcion_2": "Las bendice de nuevo",
+    "opcion_3": "Las desecha con agua",
+    "cita biblica": "OGMR 163"
+  },
+  {
+    "tema": "Misa-8",
+    "tipo": "",
+    "pregunta": "pregunta",
+    "respuesta": "respuesta",
+    "opcion_1": "opcion_1",
+    "opcion_2": "opcion_2",
+    "opcion_3": "opcion_3",
+    "cita biblica": "cita biblica"
+  },
+  {
+    "tema": "Misa-8",
+    "tipo": "",
+    "pregunta": "¿Qué dice el fiel justo antes de recibir la comunión del ministro?",
+    "respuesta": "“Amén”",
+    "opcion_1": "“Gracias, Señor”",
+    "opcion_2": "“Señor, ten piedad”",
+    "opcion_3": "“Aleluya”",
+    "cita biblica": "CIC 1381"
+  },
+  {
+    "tema": "Misa-8",
+    "tipo": "",
+    "pregunta": "¿Qué oración dice toda la asamblea antes de acercarse a comulgar?",
+    "respuesta": "“Señor, no soy digno de que entres en mi casa…”",
+    "opcion_1": "“Hazme digno de ti”",
+    "opcion_2": "“Concédenos la paz”",
+    "opcion_3": "“Cristo ha resucitado”",
+    "cita biblica": "OGMR 84"
+  },
+  {
+    "tema": "Misa-8",
+    "tipo": "",
+    "pregunta": "¿Qué expresa el “Amén” que dice el fiel al recibir la comunión?",
+    "respuesta": "Fe en la presencia real de Cristo",
+    "opcion_1": "Aceptación del rito litúrgico",
+    "opcion_2": "Gratitud por la Misa finalizada",
+    "opcion_3": "Confirmación de la homilía",
+    "cita biblica": "CIC 1381"
   },
   {
     "tema": "Mujer samaritana",
@@ -1200,156 +1830,6 @@
     "cita biblica": "Génesis 6,22 “Así hizo Noé; hizo conforme a todo lo que Dios le mandó.”"
   },
   {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Quién fue el padre de Salomón?",
-    "respuesta": "David",
-    "opcion_1": "Saúl",
-    "opcion_2": "Abraham",
-    "opcion_3": "Josué",
-    "cita biblica": "1 Reyes 2,12: Salomón se sentó en el trono de su padre David, y su reinado fue firme."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Quién fue la madre de Salomón?",
-    "respuesta": "Betsabé",
-    "opcion_1": "Mical",
-    "opcion_2": "Abigail",
-    "opcion_3": "Noemí",
-    "cita biblica": "2 Samuel 12,24: David consoló a Betsabé, su esposa. Ella dio a luz un hijo y le puso por nombre Salomón."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Qué pidió Salomón a Dios en lugar de riquezas o poder?",
-    "respuesta": "Sabiduría",
-    "opcion_1": "Tiempo de vida",
-    "opcion_2": "Victorias militares",
-    "opcion_3": "Tesoros",
-    "cita biblica": "1 Reyes 3,9: Concede a tu servidor un corazón atento para juzgar a tu pueblo y discernir entre el bien y el mal."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Dónde tuvo Salomón el sueño en el que habló con Dios?",
-    "respuesta": "Gabaón",
-    "opcion_1": "Jerusalén",
-    "opcion_2": "Betel",
-    "opcion_3": "Hebrón",
-    "cita biblica": "1 Reyes 3,5: En Gabaón, Yavé se apareció a Salomón en sueños durante la noche."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Con qué ejemplo mostró Salomón su sabiduría ante el pueblo?",
-    "respuesta": "Con el juicio de las dos madres",
-    "opcion_1": "Construyendo el templo",
-    "opcion_2": "Con una profecía",
-    "opcion_3": "Multiplicando caballos",
-    "cita biblica": "1 Reyes 3,27: Entonces el rey dijo: \"Entréguenle el niño vivo a la primera mujer, no lo maten; ella es su madre."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Cuál fue una de las grandes obras de Salomón?",
-    "respuesta": "La construcción del Templo de Jerusalén",
-    "opcion_1": "La Torre de Babel",
-    "opcion_2": "La reconstrucción del Arca",
-    "opcion_3": "El altar en el monte Carmelo",
-    "cita biblica": "1 Reyes 6,1: En el año cuarto del reinado de Salomón, comenzó la construcción del Templo de Yavé."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿A cuántos años comenzó Salomón la construcción del Templo?",
-    "respuesta": "Cuatro años después de reinar",
-    "opcion_1": "Siete años después",
-    "opcion_2": "Cuando tenía veinte años",
-    "opcion_3": "A los diez años",
-    "cita biblica": "1 Reyes 6,1: En el año cuarto del reinado de Salomón sobre Israel, comenzó la construcción del Templo."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Cuánto tiempo duró la construcción del Templo?",
-    "respuesta": "Siete años",
-    "opcion_1": "Tres años",
-    "opcion_2": "Diez años",
-    "opcion_3": "Doce años",
-    "cita biblica": "1 Reyes 6,38: En el año undécimo... el Templo fue terminado... Salomón tardó siete años en construirlo."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Qué reina extranjera visitó a Salomón por su fama?",
-    "respuesta": "La reina de Sabá",
-    "opcion_1": "La reina de Egipto",
-    "opcion_2": "La reina de Persia",
-    "opcion_3": "La reina de Canaán",
-    "cita biblica": "1 Reyes 10,1: La reina de Sabá oyó hablar de la fama de Salomón y vino a ponerlo a prueba con preguntas difíciles."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Qué llevó la reina de Sabá a Salomón?",
-    "respuesta": "Oro, especias y piedras preciosas",
-    "opcion_1": "Vacas, camellos y trigo",
-    "opcion_2": "Armas y soldados",
-    "opcion_3": "Libros sagrados y ropas",
-    "cita biblica": "1 Reyes 10,2: Llegó a Jerusalén con un gran séquito, camellos cargados de especias, mucho oro y piedras preciosas."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Qué lo llevó a apartarse de Dios en su vejez?",
-    "respuesta": "Sus mujeres extranjeras",
-    "opcion_1": "Sus riquezas",
-    "opcion_2": "La idolatría de su pueblo",
-    "opcion_3": "La presión de otros reyes",
-    "cita biblica": "1 Reyes 11,4: Cuando Salomón ya era viejo, sus mujeres desviaron su corazón hacia otros dioses."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Cuántas esposas tuvo Salomón según la Biblia?",
-    "respuesta": "Setecientas",
-    "opcion_1": "Trescientas",
-    "opcion_2": "Cien",
-    "opcion_3": "Doce",
-    "cita biblica": "1 Reyes 11,3: Tuvo setecientas esposas con rango de princesas y trescientas concubinas, y sus mujeres desviaron su corazón."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Qué castigo anunció Dios por el pecado de Salomón?",
-    "respuesta": "Dividir el reino",
-    "opcion_1": "La muerte inmediata",
-    "opcion_2": "Una peste grande",
-    "opcion_3": "Derrota en batalla",
-    "cita biblica": "1 Reyes 11,11: Como has hecho esto... voy a arrancarte el reino y lo daré a uno de tus servidores."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Quién sucedió a Salomón como rey?",
-    "respuesta": "Roboam",
-    "opcion_1": "Abías",
-    "opcion_2": "Jeroboam",
-    "opcion_3": "Adonías",
-    "cita biblica": "1 Reyes 11,43: Salomón descansó con sus padres y fue sepultado en la Ciudad de David. Su hijo Roboam reinó en su lugar."
-  },
-  {
-    "tema": "Salomón",
-    "tipo": "quiz comentado",
-    "pregunta": "¿Dónde fue sepultado Salomón?",
-    "respuesta": "En la Ciudad de David",
-    "opcion_1": "En Jerusalén",
-    "opcion_2": "En el Templo",
-    "opcion_3": "En Hebrón",
-    "cita biblica": "1 Reyes 11,43: Fue sepultado en la Ciudad de David, su padre."
-  },
-  {
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál era el nombre original de Pablo?",
@@ -1648,5 +2128,305 @@
     "opcion_2": "A un leproso",
     "opcion_3": "A un mudo",
     "cita biblica": "Hechos 3,6: Pedro dijo: “No tengo oro ni plata, pero lo que tengo te lo doy: en nombre de Jesús... ¡levántate y anda!”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el esposo de Rut?",
+    "respuesta": "Booz",
+    "opcion_1": "Elimelec",
+    "opcion_2": "Mahlón",
+    "opcion_3": "Noé",
+    "cita biblica": "Rut 4,13 “Booz tomó a Rut y ella fue su esposa.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Por qué Rut decidió quedarse con Noemí?",
+    "respuesta": "Porque amaba a Noemí y a su Dios",
+    "opcion_1": "Porque quería riquezas",
+    "opcion_2": "Porque tenía miedo",
+    "opcion_3": "Porque era la única opción",
+    "cita biblica": "Rut 1,16 “Dondequiera que tú vayas, iré yo; y dondequiera que vivas, viviré.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué profesión tenía Booz?",
+    "respuesta": "Era un hombre rico y dueño de tierras",
+    "opcion_1": "Pastor de ovejas",
+    "opcion_2": "Comerciante",
+    "opcion_3": "Sacerdote",
+    "cita biblica": "Rut 2,1 “Booz era un hombre rico, dueño de tierras en Belén.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿De dónde era originaria Rut?",
+    "respuesta": "De Moab",
+    "opcion_1": "De Jerusalén",
+    "opcion_2": "De Egipto",
+    "opcion_3": "De Canaán",
+    "cita biblica": "Rut 1,4 “Rut, mujer moabita.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué relación tenía Noemí con Rut?",
+    "respuesta": "Suegra",
+    "opcion_1": "Novia",
+    "opcion_2": "Hermana",
+    "opcion_3": "Amiga",
+    "cita biblica": "Rut 1,8 “Ve, vuelve a tu casa, hija mía.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Rut para sostener a Noemí y a ella misma?",
+    "respuesta": "Cogía espigas en el campo de Booz",
+    "opcion_1": "Trabajaba en la tienda",
+    "opcion_2": "Cocinaba para los aldeanos",
+    "opcion_3": "Pastaba ovejas",
+    "cita biblica": "Rut 2,2 “Rut fue a recoger espigas detrás de los segadores.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué actitud mostró Rut hacia Dios?",
+    "respuesta": "Fe y lealtad",
+    "opcion_1": "Duda",
+    "opcion_2": "Indiferencia",
+    "opcion_3": "Ira",
+    "cita biblica": "Rut 1,16 “Tu pueblo será mi pueblo y tu Dios mi Dios.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo describió Booz a Rut cuando la vio?",
+    "respuesta": "Como una mujer virtuosa",
+    "opcion_1": "Como una mujer deshonesta",
+    "opcion_2": "Como una esclava",
+    "opcion_3": "Como una forastera",
+    "cita biblica": "Rut 2,11 “Booz respondió a Rut que sabía de su lealtad.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Booz para proteger a Rut mientras recogía espigas?",
+    "respuesta": "Dijo a sus trabajadores que no la molestaran",
+    "opcion_1": "La hizo trabajar más rápido",
+    "opcion_2": "La llevó a la ciudad",
+    "opcion_3": "Le dio una casa",
+    "cita biblica": "Rut 2,8 “No molestes a la joven.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el pariente cercano que tenía derecho de redimir a Rut?",
+    "respuesta": "Un pariente cercano no quiso redimirla",
+    "opcion_1": "Booz",
+    "opcion_2": "Onéle",
+    "opcion_3": "Elimelec",
+    "cita biblica": "Rut 4,3 “¿Quién comprará la parcela de tierra de Elimelec?”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué hizo Booz para redimir a Rut?",
+    "respuesta": "Compró la propiedad y se casó con ella",
+    "opcion_1": "La envió lejos",
+    "opcion_2": "Le dio dinero",
+    "opcion_3": "Le dio un anillo como promesa",
+    "cita biblica": "Rut 4,9 “Booz compró la tierra y tomó a Rut como esposa.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué bendición le dio Booz a Rut y Noemí?",
+    "respuesta": "Que su familia sea famosa en Israel",
+    "opcion_1": "Que tengan riquezas",
+    "opcion_2": "Que tengan poder político",
+    "opcion_3": "Que vivan en el extranjero",
+    "cita biblica": "Rut 4,11 “Que el Señor haga que la mujer que viene a tu casa sea como Raquel y Lea.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el hijo de Rut y Booz?",
+    "respuesta": "Obed",
+    "opcion_1": "Josué",
+    "opcion_2": "David",
+    "opcion_3": "Salomón",
+    "cita biblica": "Rut 4,17 “Rut dio a luz a Obed, abuelo de David.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué valor principal enseña la historia de Rut?",
+    "respuesta": "Lealtad y fe",
+    "opcion_1": "Fuerza física",
+    "opcion_2": "Riquezas",
+    "opcion_3": "Poder",
+    "cita biblica": "Rut 1,16 “Dondequiera que tú vayas, iré yo.”"
+  },
+  {
+    "tema": "Rut",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cómo terminó la historia de Rut?",
+    "respuesta": "Con Rut integrada al pueblo de Israel y ancestro de David",
+    "opcion_1": "Con Rut regresando a Moab",
+    "opcion_2": "Con Rut volviendo sola",
+    "opcion_3": "Con Rut abandonada",
+    "cita biblica": "Rut 4,22 “Obed fue el padre de Isaí, padre de David.”"
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue el padre de Salomón?",
+    "respuesta": "David",
+    "opcion_1": "Saúl",
+    "opcion_2": "Abraham",
+    "opcion_3": "Josué",
+    "cita biblica": "1 Reyes 2,12: Salomón se sentó en el trono de su padre David, y su reinado fue firme."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién fue la madre de Salomón?",
+    "respuesta": "Betsabé",
+    "opcion_1": "Mical",
+    "opcion_2": "Abigail",
+    "opcion_3": "Noemí",
+    "cita biblica": "2 Samuel 12,24: David consoló a Betsabé, su esposa. Ella dio a luz un hijo y le puso por nombre Salomón."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué pidió Salomón a Dios en lugar de riquezas o poder?",
+    "respuesta": "Sabiduría",
+    "opcion_1": "Tiempo de vida",
+    "opcion_2": "Victorias militares",
+    "opcion_3": "Tesoros",
+    "cita biblica": "1 Reyes 3,9: Concede a tu servidor un corazón atento para juzgar a tu pueblo y discernir entre el bien y el mal."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde tuvo Salomón el sueño en el que habló con Dios?",
+    "respuesta": "Gabaón",
+    "opcion_1": "Jerusalén",
+    "opcion_2": "Betel",
+    "opcion_3": "Hebrón",
+    "cita biblica": "1 Reyes 3,5: En Gabaón, Yavé se apareció a Salomón en sueños durante la noche."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Con qué ejemplo mostró Salomón su sabiduría ante el pueblo?",
+    "respuesta": "Con el juicio de las dos madres",
+    "opcion_1": "Construyendo el templo",
+    "opcion_2": "Con una profecía",
+    "opcion_3": "Multiplicando caballos",
+    "cita biblica": "1 Reyes 3,27: Entonces el rey dijo: \"Entréguenle el niño vivo a la primera mujer, no lo maten; ella es su madre."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál fue una de las grandes obras de Salomón?",
+    "respuesta": "La construcción del Templo de Jerusalén",
+    "opcion_1": "La Torre de Babel",
+    "opcion_2": "La reconstrucción del Arca",
+    "opcion_3": "El altar en el monte Carmelo",
+    "cita biblica": "1 Reyes 6,1: En el año cuarto del reinado de Salomón, comenzó la construcción del Templo de Yavé."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿A cuántos años comenzó Salomón la construcción del Templo?",
+    "respuesta": "Cuatro años después de reinar",
+    "opcion_1": "Siete años después",
+    "opcion_2": "Cuando tenía veinte años",
+    "opcion_3": "A los diez años",
+    "cita biblica": "1 Reyes 6,1: En el año cuarto del reinado de Salomón sobre Israel, comenzó la construcción del Templo."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuánto tiempo duró la construcción del Templo?",
+    "respuesta": "Siete años",
+    "opcion_1": "Tres años",
+    "opcion_2": "Diez años",
+    "opcion_3": "Doce años",
+    "cita biblica": "1 Reyes 6,38: En el año undécimo... el Templo fue terminado... Salomón tardó siete años en construirlo."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué reina extranjera visitó a Salomón por su fama?",
+    "respuesta": "La reina de Sabá",
+    "opcion_1": "La reina de Egipto",
+    "opcion_2": "La reina de Persia",
+    "opcion_3": "La reina de Canaán",
+    "cita biblica": "1 Reyes 10,1: La reina de Sabá oyó hablar de la fama de Salomón y vino a ponerlo a prueba con preguntas difíciles."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué llevó la reina de Sabá a Salomón?",
+    "respuesta": "Oro, especias y piedras preciosas",
+    "opcion_1": "Vacas, camellos y trigo",
+    "opcion_2": "Armas y soldados",
+    "opcion_3": "Libros sagrados y ropas",
+    "cita biblica": "1 Reyes 10,2: Llegó a Jerusalén con un gran séquito, camellos cargados de especias, mucho oro y piedras preciosas."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué lo llevó a apartarse de Dios en su vejez?",
+    "respuesta": "Sus mujeres extranjeras",
+    "opcion_1": "Sus riquezas",
+    "opcion_2": "La idolatría de su pueblo",
+    "opcion_3": "La presión de otros reyes",
+    "cita biblica": "1 Reyes 11,4: Cuando Salomón ya era viejo, sus mujeres desviaron su corazón hacia otros dioses."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuántas esposas tuvo Salomón según la Biblia?",
+    "respuesta": "Setecientas",
+    "opcion_1": "Trescientas",
+    "opcion_2": "Cien",
+    "opcion_3": "Doce",
+    "cita biblica": "1 Reyes 11,3: Tuvo setecientas esposas con rango de princesas y trescientas concubinas, y sus mujeres desviaron su corazón."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué castigo anunció Dios por el pecado de Salomón?",
+    "respuesta": "Dividir el reino",
+    "opcion_1": "La muerte inmediata",
+    "opcion_2": "Una peste grande",
+    "opcion_3": "Derrota en batalla",
+    "cita biblica": "1 Reyes 11,11: Como has hecho esto... voy a arrancarte el reino y lo daré a uno de tus servidores."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Quién sucedió a Salomón como rey?",
+    "respuesta": "Roboam",
+    "opcion_1": "Abías",
+    "opcion_2": "Jeroboam",
+    "opcion_3": "Adonías",
+    "cita biblica": "1 Reyes 11,43: Salomón descansó con sus padres y fue sepultado en la Ciudad de David. Su hijo Roboam reinó en su lugar."
+  },
+  {
+    "tema": "Salomón",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Dónde fue sepultado Salomón?",
+    "respuesta": "En la Ciudad de David",
+    "opcion_1": "En Jerusalén",
+    "opcion_2": "En el Templo",
+    "opcion_3": "En Hebrón",
+    "cita biblica": "1 Reyes 11,43: Fue sepultado en la Ciudad de David, su padre."
   }
 ]
