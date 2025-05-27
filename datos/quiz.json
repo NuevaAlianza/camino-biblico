@@ -1359,16 +1359,7 @@
     "opcion_3": "Iniciar la lectura siguiente",
     "cita biblica": "OGMR 79h; CIC 1061"
   },
-  {
-    "tema": "Misa-7",
-    "tipo": "quiz comentado",
-    "pregunta": "pregunta",
-    "respuesta": "respuesta",
-    "opcion_1": "opcion_1",
-    "opcion_2": "opcion_2",
-    "opcion_3": "opcion_3",
-    "cita biblica": "cita biblica"
-  },
+ 
   {
     "tema": "Misa-7",
     "tipo": "quiz comentado",
@@ -1489,16 +1480,7 @@
     "opcion_3": "Las desecha con agua",
     "cita biblica": "OGMR 163"
   },
-  {
-    "tema": "Misa-8",
-    "tipo": "quiz comentado",
-    "pregunta": "pregunta",
-    "respuesta": "respuesta",
-    "opcion_1": "opcion_1",
-    "opcion_2": "opcion_2",
-    "opcion_3": "opcion_3",
-    "cita biblica": "cita biblica"
-  },
+ 
   {
     "tema": "Misa-8",
     "tipo": "quiz comentado",
@@ -1599,16 +1581,7 @@
     "opcion_3": "Canto del salmo",
     "cita biblica": "OGMR 47"
   },
-  {
-    "tema": "Misa-I-P",
-    "tipo": "quiz comentado",
-    "pregunta": "pregunta",
-    "respuesta": "respuesta",
-    "opcion_1": "opcion_1",
-    "opcion_2": "opcion_2",
-    "opcion_3": "opcion_3",
-    "cita biblica": "cita biblica"
-  },
+  
   {
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
