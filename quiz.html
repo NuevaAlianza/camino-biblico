@@ -311,30 +311,32 @@
     };
 
     function mostrarResultadoFinal() {
-    document.getElementById("quiz").classList.add("oculto");
-    const resultados = document.getElementById("resultadoFinal");
-    const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
-    let mensaje = "";
+  document.getElementById("quiz").classList.add("oculto");
+  document.getElementById("temas").classList.remove("oculto"); // Mostrar temas (contenedor del botón)
+  const resultados = document.getElementById("resultadoFinal");
+  const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
+  let mensaje = "";
 
-    if (porcentaje === 100) {
-      mensaje = "¡Perfecto! Conoces muy bien el tema.";
-    } else if (porcentaje >= 80) {
-      mensaje = "¡Muy bien! Solo algunos detalles por mejorar.";
-    } else if (porcentaje >= 60) {
-      mensaje = "Bien, aunque podrías repasar un poco más.";
-    } else {
-      mensaje = "Sigue practicando, ¡ánimo!";
-    }
-
-    resultados.innerHTML = `
-      <p>Has respondido correctamente ${respuestasCorrectas} de ${preguntasFiltradas.length} preguntas.</p>
-      <p>Tu puntaje: ${porcentaje}%</p>
-      <p>${mensaje}</p>
-    `;
-
-    resultados.classList.remove("oculto");
-    document.getElementById("inicioBtn").classList.remove("oculto");
+  if (porcentaje === 100) {
+    mensaje = "¡Perfecto! Conoces muy bien el tema.";
+  } else if (porcentaje >= 80) {
+    mensaje = "¡Muy bien! Solo algunos detalles por mejorar.";
+  } else if (porcentaje >= 60) {
+    mensaje = "Bien, aunque podrías repasar un poco más.";
+  } else {
+    mensaje = "Sigue practicando, ¡ánimo!";
   }
+
+  resultados.innerHTML = `
+    <p>Has respondido correctamente ${respuestasCorrectas} de ${preguntasFiltradas.length} preguntas.</p>
+    <p>Tu puntaje: ${porcentaje}%</p>
+    <p>${mensaje}</p>
+  `;
+
+  resultados.classList.remove("oculto");
+  document.getElementById("inicioBtn").classList.remove("oculto");
+}
+
 
 
     // Carga inicial de datos
