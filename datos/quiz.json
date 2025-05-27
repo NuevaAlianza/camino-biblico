@@ -751,7 +751,7 @@
   },
   {
     "tema": "Misa-1",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué significa el Rito de Entrada en la Misa?",
     "respuesta": "Es la preparación espiritual y comunitaria para celebrar la Eucaristía",
     "opcion_1": "Gestos Que hacemos Al momento de entrar al templo",
@@ -761,7 +761,7 @@
   },
   {
     "tema": "Misa-1",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué gesto realiza el sacerdote al comenzar la Misa?",
     "respuesta": "La señal de la cruz",
     "opcion_1": "La elevación del cáliz",
@@ -771,7 +771,7 @@
   },
   {
     "tema": "Misa-1",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Cuál es el propósito del acto penitencial?",
     "respuesta": "Reconocer los pecados y pedir perdón a Dios",
     "opcion_1": "Agradecer a Dios por el día",
@@ -781,7 +781,7 @@
   },
   {
     "tema": "Misa-1",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Cuál es la fórmula más común del acto penitencial?",
     "respuesta": "Yo confieso ante Dios todopoderoso",
     "opcion_1": "Padre nuestro que estás en el cielo",
@@ -791,7 +791,7 @@
   },
   {
     "tema": "Misa-1",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Cuándo se omite el canto del Gloria en la Misa?",
     "respuesta": "En Cuaresma y Adviento",
     "opcion_1": "En los domingos del Tiempo Ordinario",
@@ -801,7 +801,7 @@
   },
   {
     "tema": "Misa-1",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué parte concluye el Rito de Entrada?",
     "respuesta": "La oración colecta",
     "opcion_1": "La bendición final",
@@ -811,7 +811,7 @@
   },
   {
     "tema": "Misa-1",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué nos recuerda el canto de entrada?",
     "respuesta": "Que somos un pueblo peregrino hacia el encuentro con el Señor",
     "opcion_1": "Que debemos guardar silencio, para estar en sintonia con nuestro hermano",
@@ -821,7 +821,7 @@
   },
   {
     "tema": "Misa-1",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Cuál es la función del saludo inicial del sacerdote?",
     "respuesta": "Reconocer la presencia del Señor y dar la bienvenida a la asamblea",
     "opcion_1": "Dar instrucciones sobre la homilía",
@@ -831,7 +831,7 @@
   },
   {
     "tema": "Misa-1",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué parte del Rito de Entrada puede variar según el tiempo litúrgico?",
     "respuesta": "El Gloria",
     "opcion_1": "La oración colecta",
@@ -841,7 +841,7 @@
   },
   {
     "tema": "Misa-1",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué enseña el Catecismo sobre el acto penitencial?",
     "respuesta": "Nos dispone a la celebración reconociendo nuestra necesidad de misericordia",
     "opcion_1": "Es un momento de descanso",
@@ -851,7 +851,7 @@
   },
   {
     "tema": "Misa-2",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué gesto realiza el sacerdote al llegar al altar?",
     "respuesta": "Lo besa como signo de veneración",
     "opcion_1": "Se sienta junto al ambón",
@@ -861,7 +861,7 @@
   },
   {
     "tema": "Misa-2",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué puede acompañar el canto de entrada en ocasiones especiales?",
     "respuesta": "Uso de incienso",
     "opcion_1": "Toque de campanas",
@@ -871,7 +871,7 @@
   },
   {
     "tema": "Misa-2",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué representa el beso al altar?",
     "respuesta": "Amor y reverencia por Cristo presente",
     "opcion_1": "Despedida simbólica",
@@ -881,7 +881,7 @@
   },
   {
     "tema": "Misa-2",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Quiénes acompañan normalmente al sacerdote en la procesión de entrada?",
     "respuesta": "Acólitos, lectores y diácono (si lo hay)",
     "opcion_1": "Solamente el coro y los sacristanes",
@@ -891,7 +891,7 @@
   },
   {
     "tema": "Misa-2",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué parte del Rito de Entrada puede ser sustituida por la aspersión con agua bendita?",
     "respuesta": "El acto penitencial",
     "opcion_1": "La oración colecta",
@@ -901,7 +901,7 @@
   },
   {
     "tema": "Misa-2",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué fórmula se utiliza habitualmente en el acto penitencial cuando se hace la confesión general de la comunidad?",
     "respuesta": "Yo confieso ante Dios todopoderoso... (Confiteor)",
     "opcion_1": "Padre nuestro que estás en el cielo...",
@@ -911,7 +911,7 @@
   },
   {
     "tema": "Misa-2",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Cuántas formas del acto penitencial existen en el Misal Romano?",
     "respuesta": "Tres",
     "opcion_1": "Dos",
@@ -921,7 +921,7 @@
   },
   {
     "tema": "Misa-2",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué diferencia el Rito de Entrada en una solemnidad respecto a un dia común?",
     "respuesta": "Puede incluir incienso, ministros adicionales y Gloria",
     "opcion_1": "No se realiza procesión",
@@ -931,7 +931,7 @@
   },
   {
     "tema": "Misa-2",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Quién dirige el canto de entrada normalmente?",
     "respuesta": "El monitor o el coro",
     "opcion_1": "El lector",
@@ -941,7 +941,7 @@
   },
   {
     "tema": "Misa-2",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué actitud debe tener la asamblea durante el Rito de Entrada?",
     "respuesta": "Participación activa, cantando y respondiendo",
     "opcion_1": "Permanecer en silencio total",
@@ -951,7 +951,7 @@
   },
   {
     "tema": "Misa-3",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué parte del Rito de Entrada puede omitirse en una Misa con sacramento de matrimonio?",
     "respuesta": "El acto penitencial",
     "opcion_1": "El saludo inicial",
@@ -961,7 +961,7 @@
   },
   {
     "tema": "Misa-3",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué sustituye al rito de entrada en la Misa del Domingo de Ramos?",
     "respuesta": "La procesión con los ramos y la proclamación del Evangelio de entrada",
     "opcion_1": "El rezo del rosario",
@@ -971,7 +971,7 @@
   },
   {
     "tema": "Misa-3",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué rito inicia la Vigilia Pascual en lugar del saludo inicial?",
     "respuesta": "La bendición del fuego y encendido del cirio pascual",
     "opcion_1": "El canto del Aleluya",
@@ -981,7 +981,7 @@
   },
   {
     "tema": "Misa-3",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué sucede con los ritos iniciales en una Misa exequial?",
     "respuesta": "Se adaptan con el recibimiento del féretro y oraciones especiales",
     "opcion_1": "Se omiten completamente",
@@ -991,7 +991,7 @@
   },
   {
     "tema": "Misa-3",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "En una Misa con Bautismo, ¿cuál de estas afirmaciones es verdadera?",
     "respuesta": "El rito bautismal se integra al inicio, antes de la Liturgia de la Palabra",
     "opcion_1": "El Bautismo se realiza al final, después de la bendición",
@@ -1001,7 +1001,7 @@
   },
   {
     "tema": "Misa-3",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué indica la OGMR 46 sobre los ritos iniciales en ciertas celebraciones unidas a la Misa?",
     "respuesta": "Que pueden omitirse o realizarse de forma especial",
     "opcion_1": "Que siempre deben mantenerse completos",
@@ -1011,7 +1011,7 @@
   },
   {
     "tema": "Misa-4",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿De qué parte de la Biblia se toma habitualmente la primera lectura en la Misa dominical?",
     "respuesta": "Del Antiguo Testamento",
     "opcion_1": "De los Evangelios",
@@ -1021,7 +1021,7 @@
   },
   {
     "tema": "Misa-4",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué sucede después de la primera lectura en la Liturgia de la Palabra?",
     "respuesta": "Se proclama el Salmo responsorial",
     "opcion_1": "El Monitor Introduce la Siguiente Lectura",
@@ -1031,7 +1031,7 @@
   },
   {
     "tema": "Misa-4",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Quién puede proclamar el Evangelio durante la Misa?",
     "respuesta": "El diácono o el sacerdote",
     "opcion_1": "El lector o salmista",
@@ -1041,7 +1041,7 @@
   },
   {
     "tema": "Misa-4",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué nombre recibe el canto que precede al Evangelio y anuncia su proclamación?",
     "respuesta": "Aclamación antes del Evangelio",
     "opcion_1": "Ofertorio",
@@ -1051,7 +1051,7 @@
   },
   {
     "tema": "Misa-4",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué parte de la Liturgia de la Palabra es obligatoria los domingos y días de precepto?",
     "respuesta": "La homilía",
     "opcion_1": "La segunda lectura",
@@ -1061,7 +1061,7 @@
   },
   {
     "tema": "Misa-4",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿En qué celebraciones no se incluye la segunda lectura en la Liturgia de la Palabra?",
     "respuesta": "En días feriales y memorias libres",
     "opcion_1": "En domingos y solemnidades",
@@ -1071,7 +1071,7 @@
   },
   {
     "tema": "Misa-4",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué oración expresa la fe de la comunidad y se dice en domingos y solemnidades?",
     "respuesta": "El Credo",
     "opcion_1": "El Padre Nuestro",
@@ -1081,7 +1081,7 @@
   },
   {
     "tema": "Misa-4",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Quién debe proclamar la primera y segunda lectura si hay un lector laico disponible?",
     "respuesta": "El lector laico",
     "opcion_1": "El sacerdote",
@@ -1091,7 +1091,7 @@
   },
   {
     "tema": "Misa-4",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué se responde habitualmente después de proclamarse el Evangelio?",
     "respuesta": "Gloria a ti, Señor Jesús",
     "opcion_1": "Amen",
@@ -1101,7 +1101,7 @@
   },
   {
     "tema": "Misa-4",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿En qué momento de la Misa se elevan súplicas por la Iglesia, los gobernantes y necesidades del mundo?",
     "respuesta": "En la oración de los fieles",
     "opcion_1": "En la homilía",
@@ -1111,7 +1111,7 @@
   },
   {
     "tema": "Misa-5",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué debe hacer la asamblea durante la proclamación del Evangelio?",
     "respuesta": "Ponerse de pie y hacer la señal de la cruz en la frente, boca y pecho",
     "opcion_1": "Quedarse sentada y en silencio",
@@ -1121,7 +1121,7 @@
   },
   {
     "tema": "Misa-5",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Quién puede proclamar las lecturas que no son del Evangelio?",
     "respuesta": "Un lector instituido o un laico designado",
     "opcion_1": "El celebrante principal",
@@ -1131,7 +1131,7 @@
   },
   {
     "tema": "Misa-5",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Cuál es el fin principal de la homilía?",
     "respuesta": "Explicar la Palabra de Dios y aplicarla a la vida actual",
     "opcion_1": "Repetir las lecturas bíblicas",
@@ -1141,7 +1141,7 @@
   },
   {
     "tema": "Misa-5",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Quién propone las intenciones de la oración universal?",
     "respuesta": "El diácono, un lector o el sacerdote",
     "opcion_1": "El obispo presente",
@@ -1151,7 +1151,7 @@
   },
   {
     "tema": "Misa-5",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿A quién van dirigidas las intenciones de la oración de los fieles?",
     "respuesta": "Por la Iglesia, autoridades, necesitados y comunidad local",
     "opcion_1": "Por el sacerdote y los monaguillos",
@@ -1161,7 +1161,7 @@
   },
   {
     "tema": "Misa-5",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Por qué la homilía no debe omitirse los domingos?",
     "respuesta": "Porque ayuda a comprender y aplicar la Palabra proclamada",
     "opcion_1": "Porque es tradición",
@@ -1171,7 +1171,7 @@
   },
   {
     "tema": "Misa-5",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Por qué el pueblo responde al salmo responsorial?",
     "respuesta": "Para hacer propia la Palabra de Dios escuchada",
     "opcion_1": "Para participar en la música",
@@ -1181,7 +1181,7 @@
   },
   {
     "tema": "Misa-5",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿En qué momento de la Misa puedes hacer peticiones personales de forma comunitaria?",
     "respuesta": "En la oración universal",
     "opcion_1": "En el ofertorio",
@@ -1191,7 +1191,7 @@
   },
   {
     "tema": "Misa-5",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Por qué el Evangelio lo proclama el diácono o el sacerdote y no un lector laico?",
     "respuesta": "Porque es Cristo mismo quien habla en el Evangelio",
     "opcion_1": "Porque se requiere una voz fuerte",
@@ -1201,7 +1201,7 @@
   },
   {
     "tema": "Misa-5",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Por qué se canta el Aleluya antes del Evangelio?",
     "respuesta": "Para expresar júbilo y preparar la acogida de Cristo que habla",
     "opcion_1": "Para marcar el centro de la Misa",
@@ -1211,7 +1211,7 @@
   },
   {
     "tema": "Misa-6",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Con qué momento inicia la Liturgia Eucarística?",
     "respuesta": "Con la preparación de los dones",
     "opcion_1": "Con el canto del Aleluya",
@@ -1221,7 +1221,7 @@
   },
   {
     "tema": "Misa-6",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué se presenta durante la preparación de los dones?",
     "respuesta": "Pan, vino y ofrendas del pueblo",
     "opcion_1": "Cruz y cirios",
@@ -1231,7 +1231,7 @@
   },
   {
     "tema": "Misa-6",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué acción realiza el sacerdote con el pan y el vino en el ofertorio?",
     "respuesta": "Los bendice y los ofrece a Dios",
     "opcion_1": "Los reparte a los fieles",
@@ -1241,7 +1241,7 @@
   },
   {
     "tema": "Misa-6",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué expresa el pueblo al responder “El Señor reciba de tus manos este sacrificio”?",
     "respuesta": "Que participa activamente en la ofrenda",
     "opcion_1": "Que termina el ofertorio",
@@ -1251,7 +1251,7 @@
   },
   {
     "tema": "Misa-6",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Cómo concluye la oración sobre las ofrendas?",
     "respuesta": "Por Cristo nuestro Señor. Amén",
     "opcion_1": "Palabra de Dios. Te alabamos Señor",
@@ -1261,7 +1261,7 @@
   },
   {
     "tema": "Misa-6",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué oración central inicia después de la presentación de los dones?",
     "respuesta": "Plegaria Eucarística",
     "opcion_1": "Padre Nuestro",
@@ -1271,7 +1271,7 @@
   },
   {
     "tema": "Misa-6",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Quién puede pronunciar la Plegaria Eucarística?",
     "respuesta": "Sólo el sacerdote celebrante",
     "opcion_1": "Un lector instituido",
@@ -1281,7 +1281,7 @@
   },
   {
     "tema": "Misa-6",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Cuál es el momento más solemne de la Plegaria Eucarística?",
     "respuesta": "La consagración",
     "opcion_1": "El ofertorio",
@@ -1291,7 +1291,7 @@
   },
   {
     "tema": "Misa-6",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué se proclama durante la consagración?",
     "respuesta": "Las palabras de Jesús en la Última Cena",
     "opcion_1": "Los salmos del día",
@@ -1301,7 +1301,7 @@
   },
   {
     "tema": "Misa-6",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué gesto hace el sacerdote al mostrar el Cuerpo y la Sangre de Cristo consagrados?",
     "respuesta": "Los eleva para adoración",
     "opcion_1": "Los reparte inmediatamente",
@@ -1311,7 +1311,7 @@
   },
   {
     "tema": "Misa-7",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Por qué los fieles presentan pan, vino u otras ofrendas al altar?",
     "respuesta": "Para participar en la entrega de sí mismos a Dios",
     "opcion_1": "Para colaborar con el sacerdote",
@@ -1321,7 +1321,7 @@
   },
   {
     "tema": "Misa-7",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué actitud interior debe tener el fiel durante la consagración?",
     "respuesta": "Adoración y reverencia profunda",
     "opcion_1": "Memorización del rito",
@@ -1331,7 +1331,7 @@
   },
   {
     "tema": "Misa-7",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Por qué el sacerdote pronuncia las palabras de Jesús en la Última Cena?",
     "respuesta": "Porque actúa en la persona de Cristo (in persona Christi)",
     "opcion_1": "Porque recuerda lo que hizo San Pedro",
@@ -1341,7 +1341,7 @@
   },
   {
     "tema": "Misa-7",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Por qué nos arrodillamos durante la consagración?",
     "respuesta": "Para adorar el misterio de la transubstanciación",
     "opcion_1": "Porque el sacerdote lo indica",
@@ -1351,7 +1351,7 @@
   },
   {
     "tema": "Misa-7",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué significa decir “Amén” al final de la doxología (“Por Cristo, con Él y en Él...\")?",
     "respuesta": "Afirmar nuestra participación en el sacrificio eucarístico",
     "opcion_1": "Indicar que terminó la oración",
@@ -1361,7 +1361,7 @@
   },
   {
     "tema": "Misa-7",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "pregunta",
     "respuesta": "respuesta",
     "opcion_1": "opcion_1",
@@ -1371,7 +1371,7 @@
   },
   {
     "tema": "Misa-7",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué ocurre realmente en el momento de la consagración?",
     "respuesta": "El pan y el vino se convierten en el Cuerpo y la Sangre de Cristo",
     "opcion_1": "El pan y el vino son bendecidos pero no cambian",
@@ -1381,7 +1381,7 @@
   },
   {
     "tema": "Misa-7",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Cómo se llama esta transformación del pan y el vino en el Cuerpo y Sangre de Cristo?",
     "respuesta": "Transubstanciación",
     "opcion_1": "Epíclesis",
@@ -1391,7 +1391,7 @@
   },
   {
     "tema": "Misa-7",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Por qué es importante la epíclesis en la Plegaria Eucarística?",
     "respuesta": "Porque invoca al Espíritu Santo para que santifique los dones",
     "opcion_1": "Porque marca el inicio del ofertorio",
@@ -1401,7 +1401,7 @@
   },
   {
     "tema": "Misa-7",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Por qué la Eucaristía es sacrificio?",
     "respuesta": "Porque actualiza el sacrificio de Cristo en la cruz",
     "opcion_1": "Porque se presenta pan y vino",
@@ -1411,7 +1411,7 @@
   },
   {
     "tema": "Misa-7",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Por qué se dice que la Eucaristía es memorial?",
     "respuesta": "Porque hace presente el único sacrificio de Cristo",
     "opcion_1": "Porque recordamos a los difuntos",
@@ -1421,7 +1421,7 @@
   },
   {
     "tema": "Misa-8",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué oración inicia el Rito de la Comunión?",
     "respuesta": "El Padre Nuestro",
     "opcion_1": "El Credo",
@@ -1431,7 +1431,7 @@
   },
   {
     "tema": "Misa-8",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué se pide en la oración del Padrenuestro dentro de la Misa?",
     "respuesta": "El pan de cada día, que es Cristo",
     "opcion_1": "Evitar el pecado",
@@ -1441,7 +1441,7 @@
   },
   {
     "tema": "Misa-8",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué gesto expresa la paz de Cristo entre los fieles?",
     "respuesta": "El saludo de paz",
     "opcion_1": "La señal de la cruz",
@@ -1451,7 +1451,7 @@
   },
   {
     "tema": "Misa-8",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué oración pronuncia el sacerdote antes de la comunión?",
     "respuesta": "“Este es el Cordero de Dios...”",
     "opcion_1": "“Te alabamos, Señor”",
@@ -1461,7 +1461,7 @@
   },
   {
     "tema": "Misa-8",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué debe hacer el fiel antes de comulgar?",
     "respuesta": "Estar en gracia y haber guardado el ayuno eucarístico",
     "opcion_1": "Haber rezado el rosario",
@@ -1471,7 +1471,7 @@
   },
   {
     "tema": "Misa-8",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Quién puede distribuir la comunión?",
     "respuesta": "El sacerdote, diácono y ministros extraordinarios instituidos",
     "opcion_1": "Solo el sacerdote",
@@ -1481,7 +1481,7 @@
   },
   {
     "tema": "Misa-8",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué hace el sacerdote si quedan formas consagradas tras la comunión?",
     "respuesta": "Las reserva en el sagrario",
     "opcion_1": "Las reparte de nuevo",
@@ -1491,7 +1491,7 @@
   },
   {
     "tema": "Misa-8",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "pregunta",
     "respuesta": "respuesta",
     "opcion_1": "opcion_1",
@@ -1501,7 +1501,7 @@
   },
   {
     "tema": "Misa-8",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué dice el fiel justo antes de recibir la comunión del ministro?",
     "respuesta": "“Amén”",
     "opcion_1": "“Gracias, Señor”",
@@ -1511,7 +1511,7 @@
   },
   {
     "tema": "Misa-8",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué oración dice toda la asamblea antes de acercarse a comulgar?",
     "respuesta": "“Señor, no soy digno de que entres en mi casa…”",
     "opcion_1": "“Hazme digno de ti”",
@@ -1521,13 +1521,353 @@
   },
   {
     "tema": "Misa-8",
-    "tipo": "",
+    "tipo": "quiz comentado",
     "pregunta": "¿Qué expresa el “Amén” que dice el fiel al recibir la comunión?",
     "respuesta": "Fe en la presencia real de Cristo",
     "opcion_1": "Aceptación del rito litúrgico",
     "opcion_2": "Gratitud por la Misa finalizada",
     "opcion_3": "Confirmación de la homilía",
     "cita biblica": "CIC 1381"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de estos elementos forma parte de los Ritos Iniciales?",
+    "respuesta": "Oración colecta",
+    "opcion_1": "Lectura del Evangelio",
+    "opcion_2": "Plegaria eucarística",
+    "opcion_3": "Ofertorio",
+    "cita biblica": "OGMR 54"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de los siguientes NO pertenece a los Ritos Iniciales?",
+    "respuesta": "Lectura del Evangelio",
+    "opcion_1": "Canto de entrada",
+    "opcion_2": "Saludo al altar",
+    "opcion_3": "Oración colecta",
+    "cita biblica": "OGMR 46–54"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué elemento falta en esta secuencia: canto de entrada, saludo, acto penitencial, gloria...?",
+    "respuesta": "Oración colecta",
+    "opcion_1": "Primera lectura",
+    "opcion_2": "Evangelio",
+    "opcion_3": "Prefacio",
+    "cita biblica": "OGMR 54"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál es el orden correcto de los Ritos Iniciales?",
+    "respuesta": "Canto, saludo, penitencial, Kyrie, gloria, colecta",
+    "opcion_1": "Canto, colecta, penitencial, gloria, saludo",
+    "opcion_2": "Canto, gloria, penitencial, colecta, saludo",
+    "opcion_3": "Canto, saludo, penitencial, Kyrie,  colecta , gloria",
+    "cita biblica": "OGMR 46–54"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué parte puede omitirse en los Ritos Iniciales según el día litúrgico?",
+    "respuesta": "Gloria",
+    "opcion_1": "Saludo",
+    "opcion_2": "Acto penitencial",
+    "opcion_3": "Oración colecta",
+    "cita biblica": "OGMR 53"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de estas oraciones corresponde a los Ritos Iniciales?",
+    "respuesta": "Señor, ten piedad",
+    "opcion_1": "Consagración",
+    "opcion_2": "Plegaria eucarística",
+    "opcion_3": "Prefacio",
+    "cita biblica": "OGMR 52"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de estos cantos es propio de los Ritos Iniciales?",
+    "respuesta": "Canto de entrada",
+    "opcion_1": "Canto de comunión",
+    "opcion_2": "Canto del ofertorio",
+    "opcion_3": "Canto del salmo",
+    "cita biblica": "OGMR 47"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "pregunta",
+    "respuesta": "respuesta",
+    "opcion_1": "opcion_1",
+    "opcion_2": "opcion_2",
+    "opcion_3": "opcion_3",
+    "cita biblica": "cita biblica"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de estos elementos pertenece a la Liturgia de la Palabra?",
+    "respuesta": "Evangelio",
+    "opcion_1": "Plegaria eucarística",
+    "opcion_2": "Ofertorio",
+    "opcion_3": "Consagración",
+    "cita biblica": "OGMR 60"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de los siguientes NO forma parte de la Liturgia de la Palabra?",
+    "respuesta": "Plegaria eucarística",
+    "opcion_1": "Homilía",
+    "opcion_2": "Primera lectura",
+    "opcion_3": "Salmo responsorial",
+    "cita biblica": "OGMR 55–71"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué elemento falta en esta secuencia: primera lectura, salmo responsorial, segunda lectura, Evangelio...?",
+    "respuesta": "Aclamación al Evangelio",
+    "opcion_1": "Oración colecta",
+    "opcion_2": "Prefacio",
+    "opcion_3": "Plegaria eucarística",
+    "cita biblica": "OGMR 62"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál es el orden correcto de la Liturgia de la Palabra?",
+    "respuesta": "Primera lectura, salmo, segunda lectura, aclamación, Evangelio, homilía, credo, oración de los fieles",
+    "opcion_1": "Evangelio, homilía, credo, oración de los fieles, salmo, segunda lectura, primera lectura",
+    "opcion_2": "Primera lectura, salmo, Evangelio, segunda lectura, homilía, credo, oración universal",
+    "opcion_3": "Primera lectura, segunda lectura, salmo, Evangelio, credo, homilía, oración de los fieles",
+    "cita biblica": "OGMR 55–71"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de estos elementos es una respuesta orante entre lecturas?",
+    "respuesta": "Salmo responsorial",
+    "opcion_1": "Oración colecta",
+    "opcion_2": "Prefacio",
+    "opcion_3": "Consagración",
+    "cita biblica": "OGMR 61"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuándo se dice la profesión de fe durante la Liturgia de la Palabra?",
+    "respuesta": "En domingos y solemnidades",
+    "opcion_1": "En todas las misas",
+    "opcion_2": "En ferias de Adviento",
+    "opcion_3": "En la misa diaria de semana santa",
+    "cita biblica": "OGMR 68"
+  },
+  {
+    "tema": "Misa-I-P",
+    "tipo": "quiz comentado",
+    "pregunta": "En qué tipo de celebraciones litúrgicas **no se incluye** la segunda lectura?",
+    "respuesta": "En ferias y memorias libres",
+    "opcion_1": "En domingos y solemnidades",
+    "opcion_2": "En fiestas del Señor",
+    "opcion_3": "En celebraciones con varios ministros",
+    "cita biblica": "OGMR 66"
+  },
+  {
+    "tema": "Misa-RC",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué dice el sacerdote antes de la bendición final?",
+    "respuesta": "“El Señor esté con ustedes”",
+    "opcion_1": "“Gloria a Dios en el cielo”",
+    "opcion_2": "“El Señor reciba este sacrificio”",
+    "opcion_3": "“Vayan en paz”",
+    "cita biblica": "OGMR 167"
+  },
+  {
+    "tema": "Misa-RC",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué responde el pueblo tras la despedida?",
+    "respuesta": "Demos gracias a Dios",
+    "opcion_1": "Amén",
+    "opcion_2": "Gloria a ti, Señor Jesús",
+    "opcion_3": "Te alabamos, Señor",
+    "cita biblica": "OGMR 168"
+  },
+  {
+    "tema": "Misa-RC",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál es el propósito de la despedida en la Misa?",
+    "respuesta": "Enviar a los fieles a vivir lo celebrado",
+    "opcion_1": "Terminar formalmente el canto",
+    "opcion_2": "Recordar el credo",
+    "opcion_3": "Repetir el acto penitencial",
+    "cita biblica": "OGMR 168"
+  },
+  {
+    "tema": "Misa-RC",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué sucede inmediatamente después de la bendición final?",
+    "respuesta": "Despedida",
+    "opcion_1": "Padrenuestro",
+    "opcion_2": "Oración colecta",
+    "opcion_3": "Aclamación del Evangelio",
+    "cita biblica": "OGMR 168"
+  },
+  {
+    "tema": "Misa-RC",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de estas acciones NO forma parte de los ritos de conclusión?",
+    "respuesta": "Consagración",
+    "opcion_1": "Bendición final",
+    "opcion_2": "Despedida",
+    "opcion_3": "Monición final",
+    "cita biblica": "OGMR 90"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de estos elementos pertenece a la Liturgia Eucarística?",
+    "respuesta": "Ofertorio",
+    "opcion_1": "Lectura del Evangelio",
+    "opcion_2": "Salmo responsorial",
+    "opcion_3": "Oración de los fieles",
+    "cita biblica": "OGMR 73"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de los siguientes NO forma parte de la Liturgia Eucarística?",
+    "respuesta": "Homilía",
+    "opcion_1": "Plegaria eucarística",
+    "opcion_2": "Prefacio",
+    "opcion_3": "Fracción del pan",
+    "cita biblica": "OGMR 72–106"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué parte sigue a la preparación de los dones?",
+    "respuesta": "Oración sobre las ofrendas",
+    "opcion_1": "Plegaria eucarística",
+    "opcion_2": "Prefacio",
+    "opcion_3": "Padre nuestro",
+    "cita biblica": "OGMR 77"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué oración inicia la plegaria eucarística y precede a la consagración?",
+    "respuesta": "Prefacio",
+    "opcion_1": "Credo",
+    "opcion_2": "Oración colecta",
+    "opcion_3": "Padre nuestro",
+    "cita biblica": "OGMR 79a"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué parte incluye las palabras de Jesús en la Última Cena?",
+    "respuesta": "Narración de la institución y consagración",
+    "opcion_1": "Prefacio",
+    "opcion_2": "Plegaria universal",
+    "opcion_3": "Oración colecta",
+    "cita biblica": "OGMR 79d"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué oración inicia el rito de la comunión antes de comulgar?",
+    "respuesta": "Padre nuestro",
+    "opcion_1": "Gloria",
+    "opcion_2": "Oración colecta",
+    "opcion_3": "Credo",
+    "cita biblica": "OGMR 81"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué rito incluye el gesto de la paz entre los fieles?",
+    "respuesta": "Rito de la comunión",
+    "opcion_1": "Liturgia de la Palabra",
+    "opcion_2": "Plegaria eucarística",
+    "opcion_3": "Ritos iniciales",
+    "cita biblica": "OGMR 82"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué elemento finaliza la Liturgia Eucarística?",
+    "respuesta": "Oración después de la comunión",
+    "opcion_1": "Consagración",
+    "opcion_2": "Fracción del pan",
+    "opcion_3": "Gloria",
+    "cita biblica": "OGMR 88"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué elemento falta en esta secuencia: oración sobre las ofrendas, plegaria eucarística, comunión...?",
+    "respuesta": "Preparación de los dones",
+    "opcion_1": "Credo",
+    "opcion_2": "Salmo responsorial",
+    "opcion_3": "Homilía",
+    "cita biblica": "OGMR 73–79"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál es el orden correcto en la Liturgia Eucarística?",
+    "respuesta": "Preparación de los dones, oración sobre las ofrendas, plegaria eucarística, comunión, oración final",
+    "opcion_1": "Oración colecta, plegaria eucarística, evangelio, comunión",
+    "opcion_2": "Fracción del pan, plegaria eucarística, comunión, colecta",
+    "opcion_3": "Preparación de los dones, comunión, plegaria eucarística, oración de los fieles",
+    "cita biblica": "OGMR 72–88"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de los siguientes NO pertenece a la Plegaria Eucarística?",
+    "respuesta": "Oración de los fieles",
+    "opcion_1": "Prefacio",
+    "opcion_2": "Consagración",
+    "opcion_3": "Epíclesis",
+    "cita biblica": "OGMR 79"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Cuál de estos elementos se encuentra dentro del rito de comunión?",
+    "respuesta": "Fracción del pan",
+    "opcion_1": "Consagración",
+    "opcion_2": "Anámnesis",
+    "opcion_3": "Oración colecta",
+    "cita biblica": "OGMR 83"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué parte se recita justo antes de la fracción del pan?",
+    "respuesta": "Rito de la paz",
+    "opcion_1": "Prefacio",
+    "opcion_2": "Consagración",
+    "opcion_3": "Credo",
+    "cita biblica": "OGMR 82"
+  },
+  {
+    "tema": "Misa-RE",
+    "tipo": "quiz comentado",
+    "pregunta": "¿Qué elemento finaliza la Liturgia Eucarística?",
+    "respuesta": "Oración después de la comunión",
+    "opcion_1": "Plegaria eucarística",
+    "opcion_2": "Fracción del pan",
+    "opcion_3": "Credo",
+    "cita biblica": "OGMR 88"
   },
   {
     "tema": "Mujer samaritana",
