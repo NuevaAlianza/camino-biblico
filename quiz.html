@@ -311,44 +311,22 @@
     };
 
   function mostrarResultadoFinal() {
-    preguntaContainer.classList.add('oculto');
-    opcionesLibroContainer.classList.add('oculto');
-    opcionesCapituloContainer.classList.add('oculto');
-    siguienteBtn.classList.add('oculto');
+      document.getElementById("quiz").classList.add("oculto");
+      const resultados = document.getElementById("resultadoFinal");
+      const porcentaje = Math.round((respuestasCorrectas / preguntasFiltradas.length) * 100);
+      let mensaje = "";
 
-    const total = citasActuales.length;
-    const porcentajeLibro = Math.round((aciertosLibro / total) * 100);
-    const porcentajeCapitulo = Math.round((aciertosCapitulo / total) * 100);
+      if (porcentaje === 100) mensaje = "¡Perfecto! Conoces muy bien el tema.";
+      else if (porcentaje >= 80) mensaje = "¡Muy bien! Tienes buen conocimiento.";
+      else if (porcentaje >= 50) mensaje = "Está bien, pero puedes mejorar.";
+      else mensaje = "Te recomendamos repasar este tema.";
 
-    let mensaje = '';
-    if (porcentajeLibro >= 90 && porcentajeCapitulo >= 90) {
-        mensaje = '¡Excelente! Conoces muy bien las Escrituras.';
-    } else if (porcentajeLibro >= 70 && porcentajeCapitulo >= 70) {
-        mensaje = '¡Muy bien! Aún puedes mejorar un poco más.';
-    } else {
-        mensaje = 'Sigue practicando. ¡No te desanimes!';
+      resultados.textContent = `Tu resultado: ${porcentaje}% - ${mensaje}`;
+      resultados.classList.remove("oculto");
+
+      // Mostrar botón para volver al inicio
+      document.getElementById("inicioBtn").classList.remove("oculto");
     }
-
-    resultadoContainer.innerHTML = `
-        <h2>Resultado Final</h2>
-        <p><strong>Porcentaje de aciertos en libros:</strong> ${porcentajeLibro}%</p>
-        <p><strong>Porcentaje de aciertos en capítulos:</strong> ${porcentajeCapitulo}%</p>
-        <p>${mensaje}</p>
-        <button id="reiniciarBtn">Reiniciar tema</button>
-        <button id="inicioBtn2">Volver al inicio</button>
-    `;
-    resultadoContainer.classList.remove('oculto');
-
-    // Eventos para los botones
-    document.getElementById('reiniciarBtn').addEventListener('click', () => {
-        resultadoContainer.classList.add('oculto');
-        iniciarJuego();
-    });
-
-    document.getElementById('inicioBtn2').addEventListener('click', () => {
-        window.location.href = 'index.html'; // O la ruta correcta a tu menú principal
-    });
-}
 
 
     // Carga inicial de datos
