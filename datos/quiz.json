@@ -1,5 +1,6 @@
 [
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué le sucedió a los tres amigos de Daniel cuando no adoraron la estatua de oro?",
@@ -10,6 +11,7 @@
     "cita biblica": "Daniel 3,19 “Fue arrojados al horno de fuego ardiente.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué visión tuvo Daniel que le reveló el fin de los tiempos?",
@@ -20,6 +22,7 @@
     "cita biblica": "Daniel 7,2-3 “Vi cuatro grandes bestias que subían del mar.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue el ángel que le explicó las visiones a Daniel?",
@@ -30,6 +33,7 @@
     "cita biblica": "Daniel 8,16 “Se me acercó uno con aspecto humano y me dijo: 'Gabriel, explícame la visión.'”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué nombre babilónico le fue dado a Daniel?",
@@ -40,6 +44,7 @@
     "cita biblica": "Daniel 1,7 “Al joven Daniel le pusieron por nombre Beltasar.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué Daniel y sus amigos no se contaminaron con la comida del rey?",
@@ -50,6 +55,7 @@
     "cita biblica": "Daniel 1,8 “Daniel propuso al jefe de los eunucos no contaminarse con la comida del rey.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué rey murió después de una noche sin dormir porque no pudo recordar sus sueños?",
@@ -60,6 +66,7 @@
     "cita biblica": "Daniel 2,3 “El rey no podía dormir por causa de su sueño y llamó a sus sabios.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo respondió Daniel cuando el rey le pidió que interpretara el sueño?",
@@ -70,6 +77,7 @@
     "cita biblica": "Daniel 2,27 “No hay hombre en la tierra que pueda revelar el misterio, pero Dios ha revelado el sueño a Daniel.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué castigo sufrió el que no interpretara el sueño del rey?",
@@ -80,6 +88,7 @@
     "cita biblica": "Daniel 2,5 “El que no revele el sueño será cortado en pedazos y su casa convertida en basurero.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué ocurrió cuando Daniel interpretó el sueño?",
@@ -90,6 +99,7 @@
     "cita biblica": "Daniel 2,46 “El rey se postró y alabó al Dios de Daniel.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué símbolo representaba el reino de Babilonia en el sueño de la estatua?",
@@ -100,6 +110,7 @@
     "cita biblica": "Daniel 2,38 “Tú eres la cabeza de oro.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué habilidad especial le dio Dios a Daniel para interpretar sueños?",
@@ -110,6 +121,7 @@
     "cita biblica": "Daniel 1,17 “A estos cuatro jóvenes Dios les dio conocimiento y entendimiento en toda clase de letras y sabiduría.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Daniel para no contaminarse con la comida del rey?",
@@ -120,6 +132,7 @@
     "cita biblica": "Daniel 1,8 “Daniel propuso al jefe de los eunucos no contaminarse con la comida del rey.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿En qué fue lanzado Daniel por orar a Dios contra la orden del rey?",
@@ -130,6 +143,7 @@
     "cita biblica": "Daniel 6,16 “Entonces mandó que metiesen a Daniel en el foso de los leones.”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue el rey que gobernaba cuando Daniel interpretó el sueño de la estatua?",
@@ -140,6 +154,7 @@
     "cita biblica": "Daniel 2,1 “El rey Nebucodonosor tuvo sueños...”"
   },
   {
+    "categoria": "Profetas",
     "tema": "Daniel",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo se llamaban los tres amigos de Daniel que también fueron llevados a Babilonia?",
@@ -150,6 +165,7 @@
     "cita biblica": "Daniel 1,6 “Entre ellos estaban Daniel, Ananías, Misael y Azarías.”"
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién ungió a David como rey por primera vez?",
@@ -160,6 +176,7 @@
     "cita biblica": "1 Samuel 16,13: Samuel tomó el cuerno con el aceite y lo ungió en presencia de sus hermanos. A partir de ese día, el espíritu de Yavé vino sobre David."
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué instrumento tocaba David para calmar al rey Saúl?",
@@ -170,6 +187,7 @@
     "cita biblica": "1 Samuel 16,23: Cuando el espíritu malo de parte de Dios venía sobre Saúl, David tomaba el arpa y tocaba. Saúl se calmaba y se sentía mejor."
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Contra qué gigante peleó David cuando era joven?",
@@ -180,6 +198,7 @@
     "cita biblica": "1 Samuel 17,50: David venció al filisteo con honda y piedra, lo hirió y lo mató sin tener espada en la mano."
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué arma usó David para vencer a Goliat?",
@@ -190,6 +209,7 @@
     "cita biblica": "1 Samuel 17,49: Metió la mano en la bolsa, tomó una piedra, la tiró con la honda y golpeó al filisteo en la frente."
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuántos hermanos tenía David?",
@@ -200,6 +220,7 @@
     "cita biblica": "1 Samuel 16,10-11: Jesé hizo pasar siete hijos suyos delante de Samuel, pero él dijo: \"Yavé no ha elegido a ninguno de ellos.\" Luego preguntó: \"¿Esos son todos tus hijos?\" Jesé respondió: \"Queda el más chico, que cuida las ovejas."
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué oficio tenía David antes de ser rey?",
@@ -210,6 +231,7 @@
     "cita biblica": "1 Samuel 16,11: \"Queda el más chico, que cuida las ovejas\", dijo Jesé."
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién era el mejor amigo de David?",
@@ -220,6 +242,7 @@
     "cita biblica": "1 Samuel 18,1: Desde ese momento, el alma de Jonatán quedó unida a la de David, y lo amó como a sí mismo."
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo David cuando tuvo la oportunidad de matar a Saúl en la cueva?",
@@ -230,6 +253,7 @@
     "cita biblica": "1 Samuel 24,7: David no dejó que sus hombres atacaran a Saúl y les dijo: \"No alzaré mi mano contra mi señor, porque es el ungido de Yavé."
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue la esposa más conocida de David, madre de Salomón?",
@@ -240,6 +264,7 @@
     "cita biblica": "2 Samuel 12,24: David consoló a Betsabé, su esposa. Se acercó a ella, durmió con ella y dio a luz un hijo, al que llamó Salomón."
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué pecado cometió David con Urías el hitita?",
@@ -250,6 +275,7 @@
     "cita biblica": "2 Samuel 11,15: “Pongan a Urías al frente donde la lucha sea más dura, y déjenlo solo para que lo hieran y muera.”"
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué profeta confrontó a David por su pecado con Betsabé?",
@@ -260,6 +286,7 @@
     "cita biblica": "2 Samuel 12,7: Entonces Natán dijo a David: “Tú eres ese hombre.”"
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál fue la reacción de David al arrepentirse por su pecado?",
@@ -270,6 +297,7 @@
     "cita biblica": "2 Samuel 12,13: David respondió a Natán: \"He pecado contra Yavé.\" Natán le dijo: \"Yavé ha perdonado tu pecado; no morirás."
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue Absalón?",
@@ -280,6 +308,7 @@
     "cita biblica": "2 Samuel 15,10: Absalón dijo: \"Cuando oigan la trompeta, digan: '¡Absalón reina en Hebrón!'"
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuánto tiempo reinó David sobre Israel?",
@@ -290,6 +319,7 @@
     "cita biblica": "1 Reyes 2,11: David reinó cuarenta años en total: siete en Hebrón y treinta y tres en Jerusalén."
   },
   {
+    "categoria": "Reyes",
     "tema": "David",
     "tipo": "quiz comentado",
     "pregunta": "¿Dónde fue sepultado el rey David?",
@@ -300,6 +330,7 @@
     "cita biblica": "1 Reyes 2,10: David descansó con sus padres y fue sepultado en la Ciudad de David."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿De dónde era originario el profeta Elías?",
@@ -310,6 +341,7 @@
     "cita biblica": "1 Reyes 17,1: Elías, el tisbita, de Tisbé de Galaad, dijo a Ajab..."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿En tiempos de qué rey profetizó Elías?",
@@ -320,6 +352,7 @@
     "cita biblica": "1 Reyes 17,1: Elías... dijo a Ajab: “¡Vive el Señor... que no habrá rocío ni lluvia...!”"
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué anunció Elías que no habría en Israel por años?",
@@ -330,6 +363,7 @@
     "cita biblica": "1 Reyes 17,1: No habrá rocío ni lluvia durante estos años, hasta que yo lo diga."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Dónde se refugió Elías tras anunciar la sequía?",
@@ -340,6 +374,7 @@
     "cita biblica": "1 Reyes 17,3-4: Escóndete en el torrente de Querit... beberás del torrente."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién alimentó a Elías junto al torrente?",
@@ -350,6 +385,7 @@
     "cita biblica": "1 Reyes 17,6: Los cuervos le llevaban pan por la mañana y carne por la tarde."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Con qué viuda se hospedó Elías durante la sequía?",
@@ -360,6 +396,7 @@
     "cita biblica": "1 Reyes 17,10: Llegó a la puerta de la ciudad y encontró allí a una viuda recogiendo leña."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué milagro ocurrió con la harina y el aceite de la viuda?",
@@ -370,6 +407,7 @@
     "cita biblica": "1 Reyes 17,16: Ni la tinaja de harina se vació, ni la aceitera se agotó..."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Elías cuando murió el hijo de la viuda?",
@@ -380,6 +418,7 @@
     "cita biblica": "1 Reyes 17,21-22: Oró al Señor... y el Señor oyó la oración de Elías: el niño volvió a la vida."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿En qué monte desafió Elías a los profetas de Baal?",
@@ -390,6 +429,7 @@
     "cita biblica": "1 Reyes 18,19-20: Reúne a todo Israel en el monte Carmelo..."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué ocurrió cuando Elías oró en el Monte Carmelo?",
@@ -400,6 +440,7 @@
     "cita biblica": "1 Reyes 18,38: Cayó fuego del Señor, que consumió el holocausto..."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo el pueblo tras el milagro del fuego?",
@@ -410,6 +451,7 @@
     "cita biblica": "1 Reyes 18,39: El pueblo cayó rostro en tierra y dijo: \"¡El Señor es Dios!"
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue la reina que buscó matar a Elías?",
@@ -420,6 +462,7 @@
     "cita biblica": "1 Reyes 19,2: Jezabel le mandó un mensaje: “Así me hagan los dioses... si mañana a esta hora no te hago como tú hiciste con ellos.”"
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Dónde se refugió Elías cuando huía de Jezabel?",
@@ -430,6 +473,7 @@
     "cita biblica": "1 Reyes 19,8: Caminó cuarenta días hasta el monte de Dios, el Horeb."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo se manifestó Dios a Elías en el monte Horeb?",
@@ -440,6 +484,7 @@
     "cita biblica": "1 Reyes 19,12: Después del fuego, se oyó el murmullo de una brisa suave."
   },
   {
+    "categoria": "Profeta",
     "tema": "Elías",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue el sucesor de Elías como profeta?",
@@ -450,6 +495,7 @@
     "cita biblica": "1 Reyes 19,19: Elías encontró a Eliseo... y le echó su manto encima."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Quiénes fueron los padres de José?",
@@ -460,6 +506,7 @@
     "cita biblica": "Génesis 30,22-24: Dios se acordó de Raquel... ella concibió y dio a luz un hijo, y le llamó José."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué lugar ocupaba José entre los hijos de Jacob?",
@@ -470,6 +517,7 @@
     "cita biblica": "Génesis 30,24: Le llamó José... era el undécimo hijo de Jacob."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué sus hermanos envidiaban a José?",
@@ -480,6 +528,7 @@
     "cita biblica": "Génesis 37,5: José tuvo un sueño... y sus hermanos le tenían odio."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué prenda especial le dio Jacob a José?",
@@ -490,6 +539,7 @@
     "cita biblica": "Génesis 37,3: Israel amaba a José... y le hizo una túnica de mangas largas (de colores)."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué soñó José que provocó el enojo de sus hermanos?",
@@ -500,6 +550,7 @@
     "cita biblica": "Génesis 37,7: Atábamos gavillas... y mi gavilla se levantó... y las de ustedes se inclinaban ante ella."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hicieron sus hermanos con José al principio?",
@@ -510,6 +561,7 @@
     "cita biblica": "Génesis 37,24: Lo tomaron y lo arrojaron a la cisterna... estaba vacía, sin agua."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿A quién vendieron los hermanos de José?",
@@ -520,6 +572,7 @@
     "cita biblica": "Génesis 37,28: Lo vendieron por veinte monedas de plata a los ismaelitas."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hicieron los hermanos con la túnica de José?",
@@ -530,6 +583,7 @@
     "cita biblica": "Génesis 37,31-33: Tomaron la túnica... la mojaron en sangre... y se la enviaron a su padre."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿A dónde fue llevado José como esclavo?",
@@ -540,6 +594,7 @@
     "cita biblica": "Génesis 37,36: Los madianitas lo vendieron a Egipto, a Putifar."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién compró a José en Egipto?",
@@ -550,6 +605,7 @@
     "cita biblica": "Génesis 37,36: Lo vendieron a Putifar, oficial del faraón."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué fue encarcelado José injustamente?",
@@ -560,6 +616,7 @@
     "cita biblica": "Génesis 39,20: El señor de José lo tomó y lo metió en la cárcel... por acusación falsa."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué habilidad hizo destacar a José en prisión?",
@@ -570,6 +627,7 @@
     "cita biblica": "Génesis 40,8: ¿No es de Dios la interpretación? Cuéntenme el sueño."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué sueño del faraón interpretó José?",
@@ -580,6 +638,7 @@
     "cita biblica": "Génesis 41,17-27: El faraón soñó con siete vacas gordas y siete flacas... José explicó que eran años de abundancia y hambre."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué puesto recibió José tras interpretar el sueño del faraón?",
@@ -590,6 +649,7 @@
     "cita biblica": "Génesis 41,41: El faraón dijo a José: “Yo te pongo al frente de toda la tierra de Egipto.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "José – Hijo de Jacob",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo José cuando se reencontró con sus hermanos?",
@@ -600,6 +660,7 @@
     "cita biblica": "Génesis 45,4-5: Yo soy su hermano José... no se aflijan... fue Dios quien me envió delante de ustedes para salvar vidas."
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál era el mensaje principal de Juan el Bautista?",
@@ -610,6 +671,7 @@
     "cita biblica": "Mateo 3,2 “Arrepentíos, porque el reino de los cielos se ha acercado.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Dónde bautizaba Juan a las personas?",
@@ -620,6 +682,7 @@
     "cita biblica": "Mateo 3,6 “Y eran bautizados por él en el río Jordán.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo se llamaba el padre de Juan el Bautista?",
@@ -630,6 +693,7 @@
     "cita biblica": "Lucas 1,5 “Zacarías era sacerdote en Abías.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué relación tenía Juan el Bautista con Jesús?",
@@ -640,6 +704,7 @@
     "cita biblica": "Lucas 1,36 “Tu parienta Isabel ha concebido un hijo en su vejez.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo fue el nacimiento de Juan el Bautista anunciado?",
@@ -650,6 +715,7 @@
     "cita biblica": "Lucas 1,11-13 “El ángel le dijo: Zacarías, tu oración ha sido escuchada.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué vestimenta usaba Juan el Bautista?",
@@ -660,6 +726,7 @@
     "cita biblica": "Mateo 3,4 “Vestía de pelo de camello y tenía un cinturón de cuero alrededor de su cintura.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué comida comía Juan el Bautista en el desierto?",
@@ -670,6 +737,7 @@
     "cita biblica": "Mateo 3,4 “Su comida era langostas y miel silvestre.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué Juan el Bautista bautizaba a la gente?",
@@ -680,6 +748,7 @@
     "cita biblica": "Juan 1,33 “Yo os bautizo con agua, pero vendrá uno que bautizará con Espíritu Santo.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién bautizó a Jesús?",
@@ -690,6 +759,7 @@
     "cita biblica": "Mateo 3,13 “Entonces Jesús vino desde Galilea para ser bautizado por Juan.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué dijo Juan sobre Jesús cuando lo vio?",
@@ -700,6 +770,7 @@
     "cita biblica": "Juan 1,29 “He aquí el Cordero de Dios, que quita el pecado del mundo.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo terminó la vida de Juan el Bautista?",
@@ -710,6 +781,7 @@
     "cita biblica": "Mateo 14,10 “Herodes mandó decapitar a Juan el Bautista.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué Herodes mandó matar a Juan el Bautista?",
@@ -720,6 +792,7 @@
     "cita biblica": "Mateo 14,4 “Juan le dijo: No te es lícito tener a la mujer de tu hermano.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué profeta se le compara a Juan el Bautista?",
@@ -730,6 +803,7 @@
     "cita biblica": "Mateo 11,14 “Este es Elías, que había de venir.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué lugar visitó Juan para predicar?",
@@ -740,6 +814,7 @@
     "cita biblica": "Mateo 3,1 “En aquellos días apareció Juan el Bautista predicando en el desierto de Judea.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Juan el Bautista",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo llamó Juan a los fariseos y saduceos que venían a bautizarse?",
@@ -750,6 +825,7 @@
     "cita biblica": "Mateo 3,7 “Raza de víboras, ¿quién os enseñó a huir de la ira venidera?”"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-1",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué significa el Rito de Entrada en la Misa?",
@@ -760,6 +836,7 @@
     "cita biblica": "OGMR 46"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-1",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué gesto realiza el sacerdote al comenzar la Misa?",
@@ -770,6 +847,7 @@
     "cita biblica": "Éxodo 17,11"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-1",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál es el propósito del acto penitencial?",
@@ -780,6 +858,7 @@
     "cita biblica": "Isaías 1,18"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-1",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál es la fórmula más común del acto penitencial?",
@@ -790,6 +869,7 @@
     "cita biblica": "Lucas 18,13"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-1",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuándo se omite el canto del Gloria en la Misa?",
@@ -800,6 +880,7 @@
     "cita biblica": "Lucas 2,14"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-1",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué parte concluye el Rito de Entrada?",
@@ -810,6 +891,7 @@
     "cita biblica": "2 Crónicas 30,27"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-1",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué nos recuerda el canto de entrada?",
@@ -820,6 +902,7 @@
     "cita biblica": "Salmo 121,1"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-1",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál es la función del saludo inicial del sacerdote?",
@@ -830,6 +913,7 @@
     "cita biblica": "2 Corintios 13,13"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-1",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué parte del Rito de Entrada puede variar según el tiempo litúrgico?",
@@ -840,6 +924,7 @@
     "cita biblica": "Apocalipsis 15,4"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-1",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué enseña el Catecismo sobre el acto penitencial?",
@@ -850,6 +935,7 @@
     "cita biblica": "CIC 1435"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-2",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué gesto realiza el sacerdote al llegar al altar?",
@@ -860,6 +946,7 @@
     "cita biblica": "Apocalipsis 8,3"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-2",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué puede acompañar el canto de entrada en ocasiones especiales?",
@@ -870,6 +957,7 @@
     "cita biblica": "Éxodo 30,1"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-2",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué representa el beso al altar?",
@@ -880,6 +968,7 @@
     "cita biblica": "Apocalipsis 6,9"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-2",
     "tipo": "quiz comentado",
     "pregunta": "¿Quiénes acompañan normalmente al sacerdote en la procesión de entrada?",
@@ -890,6 +979,7 @@
     "cita biblica": "Nehemías 8,5-6"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-2",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué parte del Rito de Entrada puede ser sustituida por la aspersión con agua bendita?",
@@ -900,6 +990,7 @@
     "cita biblica": "Números 8,7"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-2",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué fórmula se utiliza habitualmente en el acto penitencial cuando se hace la confesión general de la comunidad?",
@@ -910,6 +1001,7 @@
     "cita biblica": "OGMR 51"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-2",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuántas formas del acto penitencial existen en el Misal Romano?",
@@ -920,6 +1012,7 @@
     "cita biblica": "CIC 1435 / OGMR 51"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-2",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué diferencia el Rito de Entrada en una solemnidad respecto a un dia común?",
@@ -930,6 +1023,7 @@
     "cita biblica": "Salmo 100,4"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-2",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién dirige el canto de entrada normalmente?",
@@ -940,6 +1034,7 @@
     "cita biblica": "Salmo 95,1-2"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-2",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué actitud debe tener la asamblea durante el Rito de Entrada?",
@@ -950,6 +1045,7 @@
     "cita biblica": "CIC 1348; Salmo 100,2"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-3",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué parte del Rito de Entrada puede omitirse en una Misa con sacramento de matrimonio?",
@@ -960,6 +1056,7 @@
     "cita biblica": "Juan 2,1-2"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-3",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué sustituye al rito de entrada en la Misa del Domingo de Ramos?",
@@ -970,6 +1067,7 @@
     "cita biblica": "Marcos 11,8-10"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-3",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué rito inicia la Vigilia Pascual en lugar del saludo inicial?",
@@ -980,6 +1078,7 @@
     "cita biblica": "Lucas 24,1-5"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-3",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué sucede con los ritos iniciales en una Misa exequial?",
@@ -990,6 +1089,7 @@
     "cita biblica": "Sabiduría 3,1"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-3",
     "tipo": "quiz comentado",
     "pregunta": "En una Misa con Bautismo, ¿cuál de estas afirmaciones es verdadera?",
@@ -1000,6 +1100,7 @@
     "cita biblica": "Mateo 28,19"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-3",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué indica la OGMR 46 sobre los ritos iniciales en ciertas celebraciones unidas a la Misa?",
@@ -1010,6 +1111,7 @@
     "cita biblica": "OGMR 46"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-4",
     "tipo": "quiz comentado",
     "pregunta": "¿De qué parte de la Biblia se toma habitualmente la primera lectura en la Misa dominical?",
@@ -1020,6 +1122,7 @@
     "cita biblica": "OGMR 57"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-4",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué sucede después de la primera lectura en la Liturgia de la Palabra?",
@@ -1030,6 +1133,7 @@
     "cita biblica": "OGMR 61"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-4",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién puede proclamar el Evangelio durante la Misa?",
@@ -1040,6 +1144,7 @@
     "cita biblica": "OGMR 60"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-4",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué nombre recibe el canto que precede al Evangelio y anuncia su proclamación?",
@@ -1050,6 +1155,7 @@
     "cita biblica": "OGMR 62"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-4",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué parte de la Liturgia de la Palabra es obligatoria los domingos y días de precepto?",
@@ -1060,6 +1166,7 @@
     "cita biblica": "OGMR 66"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-4",
     "tipo": "quiz comentado",
     "pregunta": "¿En qué celebraciones no se incluye la segunda lectura en la Liturgia de la Palabra?",
@@ -1070,6 +1177,7 @@
     "cita biblica": "OGMR 66"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-4",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué oración expresa la fe de la comunidad y se dice en domingos y solemnidades?",
@@ -1080,6 +1188,7 @@
     "cita biblica": "OGMR 67"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-4",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién debe proclamar la primera y segunda lectura si hay un lector laico disponible?",
@@ -1090,6 +1199,7 @@
     "cita biblica": "OGMR 59"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-4",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué se responde habitualmente después de proclamarse el Evangelio?",
@@ -1100,6 +1210,7 @@
     "cita biblica": "OGMR 60"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-4",
     "tipo": "quiz comentado",
     "pregunta": "¿En qué momento de la Misa se elevan súplicas por la Iglesia, los gobernantes y necesidades del mundo?",
@@ -1110,6 +1221,7 @@
     "cita biblica": "OGMR 69–71"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-5",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué debe hacer la asamblea durante la proclamación del Evangelio?",
@@ -1120,6 +1232,7 @@
     "cita biblica": "OGMR 60"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-5",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién puede proclamar las lecturas que no son del Evangelio?",
@@ -1130,6 +1243,7 @@
     "cita biblica": "OGMR 59"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-5",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál es el fin principal de la homilía?",
@@ -1140,6 +1254,7 @@
     "cita biblica": "OGMR 65"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-5",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién propone las intenciones de la oración universal?",
@@ -1150,6 +1265,7 @@
     "cita biblica": "OGMR 71"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-5",
     "tipo": "quiz comentado",
     "pregunta": "¿A quién van dirigidas las intenciones de la oración de los fieles?",
@@ -1160,6 +1276,7 @@
     "cita biblica": "OGMR 70"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-5",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué la homilía no debe omitirse los domingos?",
@@ -1170,6 +1287,7 @@
     "cita biblica": "OGMR 66; CIC 132"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-5",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué el pueblo responde al salmo responsorial?",
@@ -1180,6 +1298,7 @@
     "cita biblica": "OGMR 61"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-5",
     "tipo": "quiz comentado",
     "pregunta": "¿En qué momento de la Misa puedes hacer peticiones personales de forma comunitaria?",
@@ -1190,6 +1309,7 @@
     "cita biblica": "OGMR 69"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-5",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué el Evangelio lo proclama el diácono o el sacerdote y no un lector laico?",
@@ -1200,6 +1320,7 @@
     "cita biblica": "OGMR 60"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-5",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué se canta el Aleluya antes del Evangelio?",
@@ -1210,6 +1331,7 @@
     "cita biblica": "OGMR 62"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-6",
     "tipo": "quiz comentado",
     "pregunta": "¿Con qué momento inicia la Liturgia Eucarística?",
@@ -1220,6 +1342,7 @@
     "cita biblica": "OGMR 72"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-6",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué se presenta durante la preparación de los dones?",
@@ -1230,6 +1353,7 @@
     "cita biblica": "OGMR 73"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-6",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué acción realiza el sacerdote con el pan y el vino en el ofertorio?",
@@ -1240,6 +1364,7 @@
     "cita biblica": "OGMR 73"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-6",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué expresa el pueblo al responder “El Señor reciba de tus manos este sacrificio”?",
@@ -1250,6 +1375,7 @@
     "cita biblica": "OGMR 75"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-6",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo concluye la oración sobre las ofrendas?",
@@ -1260,6 +1386,7 @@
     "cita biblica": "OGMR 77"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-6",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué oración central inicia después de la presentación de los dones?",
@@ -1270,6 +1397,7 @@
     "cita biblica": "OGMR 78"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-6",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién puede pronunciar la Plegaria Eucarística?",
@@ -1280,6 +1408,7 @@
     "cita biblica": "OGMR 147"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-6",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál es el momento más solemne de la Plegaria Eucarística?",
@@ -1290,6 +1419,7 @@
     "cita biblica": "OGMR 79d"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-6",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué se proclama durante la consagración?",
@@ -1300,6 +1430,7 @@
     "cita biblica": "OGMR 79d; CIC 1353"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-6",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué gesto hace el sacerdote al mostrar el Cuerpo y la Sangre de Cristo consagrados?",
@@ -1310,6 +1441,7 @@
     "cita biblica": "OGMR 79d"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-7",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué los fieles presentan pan, vino u otras ofrendas al altar?",
@@ -1320,6 +1452,7 @@
     "cita biblica": "OGMR 73; CIC 901"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-7",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué actitud interior debe tener el fiel durante la consagración?",
@@ -1330,6 +1463,7 @@
     "cita biblica": "OGMR 78; CIC 1378"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-7",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué el sacerdote pronuncia las palabras de Jesús en la Última Cena?",
@@ -1340,6 +1474,7 @@
     "cita biblica": "OGMR 79d; CIC 1548"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-7",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué nos arrodillamos durante la consagración?",
@@ -1350,6 +1485,7 @@
     "cita biblica": "OGMR 43; CIC 1378"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-7",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué significa decir “Amén” al final de la doxología (“Por Cristo, con Él y en Él...\")?",
@@ -1359,8 +1495,8 @@
     "opcion_3": "Iniciar la lectura siguiente",
     "cita biblica": "OGMR 79h; CIC 1061"
   },
- 
   {
+    "categoria": "Misa",
     "tema": "Misa-7",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué ocurre realmente en el momento de la consagración?",
@@ -1371,6 +1507,7 @@
     "cita biblica": "CIC 1376"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-7",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo se llama esta transformación del pan y el vino en el Cuerpo y Sangre de Cristo?",
@@ -1381,6 +1518,7 @@
     "cita biblica": "CIC 1376"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-7",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué es importante la epíclesis en la Plegaria Eucarística?",
@@ -1391,6 +1529,7 @@
     "cita biblica": "CIC 1353; OGMR 79c"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-7",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué la Eucaristía es sacrificio?",
@@ -1401,6 +1540,7 @@
     "cita biblica": "CIC 1366"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-7",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué se dice que la Eucaristía es memorial?",
@@ -1411,6 +1551,7 @@
     "cita biblica": "CIC 1363–1367"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-8",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué oración inicia el Rito de la Comunión?",
@@ -1421,6 +1562,7 @@
     "cita biblica": "OGMR 81"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-8",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué se pide en la oración del Padrenuestro dentro de la Misa?",
@@ -1431,6 +1573,7 @@
     "cita biblica": "CIC 2835; OGMR 81"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-8",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué gesto expresa la paz de Cristo entre los fieles?",
@@ -1441,6 +1584,7 @@
     "cita biblica": "OGMR 82"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-8",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué oración pronuncia el sacerdote antes de la comunión?",
@@ -1451,6 +1595,7 @@
     "cita biblica": "OGMR 84"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-8",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué debe hacer el fiel antes de comulgar?",
@@ -1461,6 +1606,7 @@
     "cita biblica": "OGMR 160; CIC 1385"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-8",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién puede distribuir la comunión?",
@@ -1471,6 +1617,7 @@
     "cita biblica": "OGMR 162; CIC 910"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-8",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hace el sacerdote si quedan formas consagradas tras la comunión?",
@@ -1480,8 +1627,8 @@
     "opcion_3": "Las desecha con agua",
     "cita biblica": "OGMR 163"
   },
- 
   {
+    "categoria": "Misa",
     "tema": "Misa-8",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué dice el fiel justo antes de recibir la comunión del ministro?",
@@ -1492,6 +1639,7 @@
     "cita biblica": "CIC 1381"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-8",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué oración dice toda la asamblea antes de acercarse a comulgar?",
@@ -1502,6 +1650,7 @@
     "cita biblica": "OGMR 84"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-8",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué expresa el “Amén” que dice el fiel al recibir la comunión?",
@@ -1512,6 +1661,7 @@
     "cita biblica": "CIC 1381"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de estos elementos forma parte de los Ritos Iniciales?",
@@ -1522,6 +1672,7 @@
     "cita biblica": "OGMR 54"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de los siguientes NO pertenece a los Ritos Iniciales?",
@@ -1532,6 +1683,7 @@
     "cita biblica": "OGMR 46–54"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué elemento falta en esta secuencia: canto de entrada, saludo, acto penitencial, gloria...?",
@@ -1542,6 +1694,7 @@
     "cita biblica": "OGMR 54"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál es el orden correcto de los Ritos Iniciales?",
@@ -1552,6 +1705,7 @@
     "cita biblica": "OGMR 46–54"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué parte puede omitirse en los Ritos Iniciales según el día litúrgico?",
@@ -1562,6 +1716,7 @@
     "cita biblica": "OGMR 53"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de estas oraciones corresponde a los Ritos Iniciales?",
@@ -1572,6 +1727,7 @@
     "cita biblica": "OGMR 52"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de estos cantos es propio de los Ritos Iniciales?",
@@ -1581,8 +1737,8 @@
     "opcion_3": "Canto del salmo",
     "cita biblica": "OGMR 47"
   },
-  
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de estos elementos pertenece a la Liturgia de la Palabra?",
@@ -1593,6 +1749,7 @@
     "cita biblica": "OGMR 60"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de los siguientes NO forma parte de la Liturgia de la Palabra?",
@@ -1603,6 +1760,7 @@
     "cita biblica": "OGMR 55–71"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué elemento falta en esta secuencia: primera lectura, salmo responsorial, segunda lectura, Evangelio...?",
@@ -1613,6 +1771,7 @@
     "cita biblica": "OGMR 62"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál es el orden correcto de la Liturgia de la Palabra?",
@@ -1623,6 +1782,7 @@
     "cita biblica": "OGMR 55–71"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de estos elementos es una respuesta orante entre lecturas?",
@@ -1633,6 +1793,7 @@
     "cita biblica": "OGMR 61"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuándo se dice la profesión de fe durante la Liturgia de la Palabra?",
@@ -1643,6 +1804,7 @@
     "cita biblica": "OGMR 68"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-I-P",
     "tipo": "quiz comentado",
     "pregunta": "En qué tipo de celebraciones litúrgicas **no se incluye** la segunda lectura?",
@@ -1653,6 +1815,7 @@
     "cita biblica": "OGMR 66"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RC",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué dice el sacerdote antes de la bendición final?",
@@ -1663,6 +1826,7 @@
     "cita biblica": "OGMR 167"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RC",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué responde el pueblo tras la despedida?",
@@ -1673,6 +1837,7 @@
     "cita biblica": "OGMR 168"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RC",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál es el propósito de la despedida en la Misa?",
@@ -1683,6 +1848,7 @@
     "cita biblica": "OGMR 168"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RC",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué sucede inmediatamente después de la bendición final?",
@@ -1693,6 +1859,7 @@
     "cita biblica": "OGMR 168"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RC",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de estas acciones NO forma parte de los ritos de conclusión?",
@@ -1703,6 +1870,7 @@
     "cita biblica": "OGMR 90"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de estos elementos pertenece a la Liturgia Eucarística?",
@@ -1713,6 +1881,7 @@
     "cita biblica": "OGMR 73"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de los siguientes NO forma parte de la Liturgia Eucarística?",
@@ -1723,6 +1892,7 @@
     "cita biblica": "OGMR 72–106"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué parte sigue a la preparación de los dones?",
@@ -1733,6 +1903,7 @@
     "cita biblica": "OGMR 77"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué oración inicia la plegaria eucarística y precede a la consagración?",
@@ -1743,6 +1914,7 @@
     "cita biblica": "OGMR 79a"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué parte incluye las palabras de Jesús en la Última Cena?",
@@ -1753,6 +1925,7 @@
     "cita biblica": "OGMR 79d"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué oración inicia el rito de la comunión antes de comulgar?",
@@ -1763,6 +1936,7 @@
     "cita biblica": "OGMR 81"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué rito incluye el gesto de la paz entre los fieles?",
@@ -1773,6 +1947,7 @@
     "cita biblica": "OGMR 82"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué elemento finaliza la Liturgia Eucarística?",
@@ -1783,6 +1958,7 @@
     "cita biblica": "OGMR 88"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué elemento falta en esta secuencia: oración sobre las ofrendas, plegaria eucarística, comunión...?",
@@ -1793,6 +1969,7 @@
     "cita biblica": "OGMR 73–79"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál es el orden correcto en la Liturgia Eucarística?",
@@ -1803,6 +1980,7 @@
     "cita biblica": "OGMR 72–88"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de los siguientes NO pertenece a la Plegaria Eucarística?",
@@ -1813,6 +1991,7 @@
     "cita biblica": "OGMR 79"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál de estos elementos se encuentra dentro del rito de comunión?",
@@ -1823,6 +2002,7 @@
     "cita biblica": "OGMR 83"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué parte se recita justo antes de la fracción del pan?",
@@ -1833,6 +2013,7 @@
     "cita biblica": "OGMR 82"
   },
   {
+    "categoria": "Misa",
     "tema": "Misa-RE",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué elemento finaliza la Liturgia Eucarística?",
@@ -1843,6 +2024,7 @@
     "cita biblica": "OGMR 88"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Dónde se encontró Jesús con la mujer samaritana?",
@@ -1853,6 +2035,7 @@
     "cita biblica": "Juan 4,6 “Llegó a un pueblo de Samaria, llamado Sicar, junto al campo que Jacob dio a José.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué le pidió Jesús a la mujer samaritana?",
@@ -1863,6 +2046,7 @@
     "cita biblica": "Juan 4,7 “Dame de beber.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué la mujer samaritana se sorprendió de que Jesús le pidiera agua?",
@@ -1873,6 +2057,7 @@
     "cita biblica": "Juan 4,9 “Los judíos no se tratan con los samaritanos.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué tipo de agua ofreció Jesús a la mujer samaritana?",
@@ -1883,6 +2068,7 @@
     "cita biblica": "Juan 4,10 “Si conocieras el don de Dios, y quién es el que te dice: Dame de beber, tú le pedirías, y él te daría agua viva.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué dijo Jesús que pasaría si alguien bebía de su agua?",
@@ -1893,6 +2079,7 @@
     "cita biblica": "Juan 4,14 “El agua que yo le daré será en él una fuente de agua que salte para vida eterna.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué le confesó la mujer samaritana a Jesús?",
@@ -1903,6 +2090,7 @@
     "cita biblica": "Juan 4,17-18 “Has tenido cinco maridos, y el que tienes no es tu marido.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo reaccionó la mujer tras hablar con Jesús?",
@@ -1913,6 +2101,7 @@
     "cita biblica": "Juan 4,28-29 “Dejó su cántaro y fue al pueblo a decir.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué les dijo la mujer a los habitantes de su pueblo?",
@@ -1923,6 +2112,7 @@
     "cita biblica": "Juan 4,29 “Venid a ver a un hombre que me ha dicho todo lo que he hecho.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo respondieron los samaritanos a la invitación de la mujer?",
@@ -1933,6 +2123,7 @@
     "cita biblica": "Juan 4,39-40 “Muchos samaritanos creyeron por causa de sus palabras.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién era el Mesías según la conversación?",
@@ -1943,6 +2134,7 @@
     "cita biblica": "Juan 4,25-26 “Cuando venga el Mesías, él nos lo declarará. Jesús le dijo: Yo soy, el que habla contigo.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué le dijo Jesús a la mujer sobre la adoración verdadera?",
@@ -1953,6 +2145,7 @@
     "cita biblica": "Juan 4,23-24 “Dios es espíritu, y es necesario que los que le adoran, le adoren en espíritu y en verdad.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué los judíos y samaritanos tenían conflicto?",
@@ -1963,6 +2156,7 @@
     "cita biblica": "Juan 4,9 “Los judíos no se tratan con los samaritanos.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué símbolo usó Jesús para explicar el agua viva?",
@@ -1973,6 +2167,7 @@
     "cita biblica": "Juan 4,14 “Será en él una fuente de agua que salte para vida eterna.”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál fue la primera reacción de la mujer al conocer a Jesús?",
@@ -1983,6 +2178,7 @@
     "cita biblica": "Juan 4,9 “¿Cómo tú, siendo judío, me pides a mí de beber?”"
   },
   {
+    "categoria": "Testigos de jesus",
     "tema": "Mujer samaritana",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué cambio ocurrió en la mujer samaritana tras el encuentro?",
@@ -1993,6 +2189,7 @@
     "cita biblica": "Juan 4,39 “Muchos creyeron por causa de la mujer.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue Noé?",
@@ -2003,6 +2200,7 @@
     "cita biblica": "Génesis 6,9 “Noé era un hombre justo y perfecto en sus generaciones.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué le pidió Dios a Noé que construyera?",
@@ -2013,6 +2211,7 @@
     "cita biblica": "Génesis 6,14 “Hazte un arca de madera de ciprés.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué Dios decidió enviar el diluvio?",
@@ -2023,6 +2222,7 @@
     "cita biblica": "Génesis 6,5 “La maldad del hombre era mucha en la tierra.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuántos de cada animal debía llevar Noé al arca?",
@@ -2033,6 +2233,7 @@
     "cita biblica": "Génesis 6,19 “De todo animal de la tierra, de toda carne, dos de cada especie.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Quiénes entraron con Noé en el arca?",
@@ -2043,6 +2244,7 @@
     "cita biblica": "Génesis 7,7 “Entraron Noé y sus hijos con su esposa en el arca.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuánto tiempo duró el diluvio?",
@@ -2053,6 +2255,7 @@
     "cita biblica": "Génesis 7,12 “Y hubo lluvia sobre la tierra cuarenta días y cuarenta noches.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo supo Noé que había terminado el diluvio?",
@@ -2063,6 +2266,7 @@
     "cita biblica": "Génesis 8,11 “La paloma trajo en el pico una hoja de olivo.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué pacto hizo Dios con Noé después del diluvio?",
@@ -2073,6 +2277,7 @@
     "cita biblica": "Génesis 9,11 “No habrá más diluvio para destruir la tierra.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué señal puso Dios para recordar su pacto con Noé?",
@@ -2083,6 +2288,7 @@
     "cita biblica": "Génesis 9,13 “He puesto mi arco iris en las nubes.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Noé después de salir del arca?",
@@ -2093,6 +2299,7 @@
     "cita biblica": "Génesis 8,20 “Edificó un altar al Señor.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo reaccionó Noé después de beber vino?",
@@ -2103,6 +2310,7 @@
     "cita biblica": "Génesis 9,21 “Bebió del vino y se embriagó.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Quiénes son los hijos de Noé?",
@@ -2113,6 +2321,7 @@
     "cita biblica": "Génesis 5,32 “Los hijos de Noé: Sem, Cam y Jafet.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿De dónde provienen todas las naciones según la Biblia?",
@@ -2123,6 +2332,7 @@
     "cita biblica": "Génesis 10,32 “Estas son las familias de los hijos de Noé, por sus naciones.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué le dijo Dios a Noé para bendecirlo y mandarlo?",
@@ -2133,6 +2343,7 @@
     "cita biblica": "Génesis 9,1 “Sed fructíferos y multiplicaos.”"
   },
   {
+    "categoria": "Patriarcas",
     "tema": "Noé",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Noé para garantizar la supervivencia de la vida?",
@@ -2143,6 +2354,7 @@
     "cita biblica": "Génesis 6,22 “Así hizo Noé; hizo conforme a todo lo que Dios le mandó.”"
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál era el nombre original de Pablo?",
@@ -2153,6 +2365,7 @@
     "cita biblica": "Hechos 13,9: Entonces Saulo, también llamado Pablo, lleno del Espíritu Santo, fijó los ojos en él."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Dónde nació Pablo?",
@@ -2163,6 +2376,7 @@
     "cita biblica": "Hechos 22,3: Yo soy judío, nacido en Tarso de Cilicia, pero criado en esta ciudad."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿A qué grupo religioso pertenecía Pablo antes de convertirse?",
@@ -2173,6 +2387,7 @@
     "cita biblica": "Hechos 23,6: Hermanos, yo soy fariseo, hijo de fariseos..."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué oficio tenía Pablo?",
@@ -2183,6 +2398,7 @@
     "cita biblica": "Hechos 18,3: Como tenía el mismo oficio, se quedó con ellos y trabajaban juntos, pues eran fabricantes de tiendas."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién estuvo presente en la conversión de Pablo camino a Damasco?",
@@ -2193,6 +2409,7 @@
     "cita biblica": "Hechos 9,4-5: Cayó al suelo y oyó una voz que le decía: \"Saulo, Saulo, ¿por qué me persigues?\" Él respondió: \"¿Quién eres, Señor?\" Y Él: \"Yo soy Jesús, a quien tú persigues."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué le sucedió a Pablo después del encuentro con Jesús?",
@@ -2203,6 +2420,7 @@
     "cita biblica": "Hechos 9,8-9: Aunque tenía los ojos abiertos, no veía. Lo llevaron de la mano a Damasco, donde estuvo tres días sin ver."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién devolvió la vista a Pablo en Damasco?",
@@ -2213,6 +2431,7 @@
     "cita biblica": "Hechos 9,17: Ananías entró en la casa, le impuso las manos y le dijo: \"Hermano Saulo, el Señor Jesús... me envió para que recobres la vista."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuántos viajes misioneros realizó Pablo?",
@@ -2223,6 +2442,7 @@
     "cita biblica": "Hechos (varios): Pablo realizó tres viajes misioneros principales relatados entre los capítulos 13 y 21."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿A quién llevó Pablo como compañero en su primer viaje misionero?",
@@ -2233,6 +2453,7 @@
     "cita biblica": "Hechos 13,2: Aparten para mí a Bernabé y a Saulo, para la obra a la que los he llamado."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué joven acompañó a Pablo en su segundo viaje?",
@@ -2243,6 +2464,7 @@
     "cita biblica": "Hechos 16,1-3: Pablo quiso que Timoteo lo acompañara, y lo tomó consigo."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué ocurrió con Pablo y Silas en Filipos?",
@@ -2253,6 +2475,7 @@
     "cita biblica": "Hechos 16,23-25: Los echaron en la cárcel... pero a medianoche, Pablo y Silas oraban y cantaban himnos a Dios."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Pablo durante su tiempo en prisión?",
@@ -2263,6 +2486,7 @@
     "cita biblica": "Filipenses 1,13: Mi situación ha servido más bien para el progreso del Evangelio."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿A quién escribió Pablo sobre el amor como el mayor don?",
@@ -2273,6 +2497,7 @@
     "cita biblica": "1 Corintios 13,13: Hay tres cosas que permanecen: la fe, la esperanza y el amor, pero la más excelente es el amor."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿A quién envió Pablo de regreso con una carta de perdón?",
@@ -2283,6 +2508,7 @@
     "cita biblica": "Filemón 1,10-12: Te ruego por mi hijo Onésimo, que engendré en la prisión... lo recibas como a mi propio corazón."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pablo",
     "tipo": "quiz comentado",
     "pregunta": "¿Dónde murió Pablo según la tradición?",
@@ -2293,6 +2519,7 @@
     "cita biblica": "2 Timoteo 4,6-7: Estoy a punto de ser ofrecido en sacrificio, y el momento de mi partida ha llegado. He peleado la buena batalla, he acabado la carrera, he guardado la fe."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál era el nombre original de Pedro?",
@@ -2303,6 +2530,7 @@
     "cita biblica": "Juan 1,42: Tú eres Simón, hijo de Juan; tú te llamarás Cefas, que quiere decir Pedro."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue el hermano de Pedro?",
@@ -2313,6 +2541,7 @@
     "cita biblica": "Juan 1,40: Andrés, hermano de Simón Pedro, era uno de los dos que oyeron a Juan y siguieron a Jesús."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué oficio tenía Pedro antes de seguir a Jesús?",
@@ -2323,6 +2552,7 @@
     "cita biblica": "Lucas 5,3: Jesús subió a una barca que era de Simón y le pidió que la apartara un poco..."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Dónde vivía Pedro?",
@@ -2333,6 +2563,7 @@
     "cita biblica": "Lucas 4,38: Al salir de la sinagoga, entró en casa de Simón."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Jesús con la suegra de Pedro?",
@@ -2343,6 +2574,7 @@
     "cita biblica": "Lucas 4,39: Jesús se inclinó sobre ella, reprendió la fiebre y la dejó; al instante se levantó y sirvió."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué milagro presenció Pedro en su barca?",
@@ -2353,6 +2585,7 @@
     "cita biblica": "Lucas 5,6-8: Echaron las redes y recogieron tal cantidad de peces que las redes se rompían."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué dijo Pedro cuando Jesús preguntó quién era él?",
@@ -2363,6 +2596,7 @@
     "cita biblica": "Marcos 8,29: Pedro le respondió: \"Tú eres el Mesías."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿A qué apóstol reprendió Jesús diciendo: “¡Apártate de mí, Satanás!”?",
@@ -2373,6 +2607,7 @@
     "cita biblica": "Marcos 8,33: Jesús reprendió a Pedro: \"¡Apártate de mí, Satanás!"
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Pedro cuando Jesús fue arrestado?",
@@ -2383,6 +2618,7 @@
     "cita biblica": "Juan 18,10: Simón Pedro sacó una espada e hirió al siervo del sumo sacerdote, cortándole la oreja."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuántas veces negó Pedro a Jesús?",
@@ -2393,6 +2629,7 @@
     "cita biblica": "Lucas 22,61: Cantó un gallo, y el Señor miró a Pedro."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Pedro al darse cuenta que había negado a Jesús?",
@@ -2403,6 +2640,7 @@
     "cita biblica": "Lucas 22,62: Pedro salió afuera y rompió a llorar amargamente."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Jesús tras resucitar para reconciliarse con Pedro?",
@@ -2413,6 +2651,7 @@
     "cita biblica": "Juan 21,17: Jesús le dijo: “¿Me amas?” Pedro se entristeció y Jesús le dijo: “Apacienta mis ovejas.”"
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué símbolo le dio Jesús a Pedro como señal de autoridad?",
@@ -2423,6 +2662,7 @@
     "cita biblica": "Juan 21,17 y Mateo 16,19: Te daré las llaves del Reino de los Cielos."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué dijo Pedro en Pentecostés?",
@@ -2433,6 +2673,7 @@
     "cita biblica": "Hechos 2,32: A este Jesús, Dios lo resucitó, y todos nosotros somos testigos de ello."
   },
   {
+    "categoria": "Apostoles",
     "tema": "Pedro",
     "tipo": "quiz comentado",
     "pregunta": "¿A quién sanó Pedro en la Puerta Hermosa del templo?",
@@ -2443,6 +2684,7 @@
     "cita biblica": "Hechos 3,6: Pedro dijo: “No tengo oro ni plata, pero lo que tengo te lo doy: en nombre de Jesús... ¡levántate y anda!”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue el esposo de Rut?",
@@ -2453,6 +2695,7 @@
     "cita biblica": "Rut 4,13 “Booz tomó a Rut y ella fue su esposa.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Por qué Rut decidió quedarse con Noemí?",
@@ -2463,6 +2706,7 @@
     "cita biblica": "Rut 1,16 “Dondequiera que tú vayas, iré yo; y dondequiera que vivas, viviré.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué profesión tenía Booz?",
@@ -2473,6 +2717,7 @@
     "cita biblica": "Rut 2,1 “Booz era un hombre rico, dueño de tierras en Belén.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿De dónde era originaria Rut?",
@@ -2483,6 +2728,7 @@
     "cita biblica": "Rut 1,4 “Rut, mujer moabita.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué relación tenía Noemí con Rut?",
@@ -2493,6 +2739,7 @@
     "cita biblica": "Rut 1,8 “Ve, vuelve a tu casa, hija mía.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Rut para sostener a Noemí y a ella misma?",
@@ -2503,6 +2750,7 @@
     "cita biblica": "Rut 2,2 “Rut fue a recoger espigas detrás de los segadores.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué actitud mostró Rut hacia Dios?",
@@ -2513,6 +2761,7 @@
     "cita biblica": "Rut 1,16 “Tu pueblo será mi pueblo y tu Dios mi Dios.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo describió Booz a Rut cuando la vio?",
@@ -2523,6 +2772,7 @@
     "cita biblica": "Rut 2,11 “Booz respondió a Rut que sabía de su lealtad.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Booz para proteger a Rut mientras recogía espigas?",
@@ -2533,6 +2783,7 @@
     "cita biblica": "Rut 2,8 “No molestes a la joven.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue el pariente cercano que tenía derecho de redimir a Rut?",
@@ -2543,6 +2794,7 @@
     "cita biblica": "Rut 4,3 “¿Quién comprará la parcela de tierra de Elimelec?”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué hizo Booz para redimir a Rut?",
@@ -2553,6 +2805,7 @@
     "cita biblica": "Rut 4,9 “Booz compró la tierra y tomó a Rut como esposa.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué bendición le dio Booz a Rut y Noemí?",
@@ -2563,6 +2816,7 @@
     "cita biblica": "Rut 4,11 “Que el Señor haga que la mujer que viene a tu casa sea como Raquel y Lea.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue el hijo de Rut y Booz?",
@@ -2573,6 +2827,7 @@
     "cita biblica": "Rut 4,17 “Rut dio a luz a Obed, abuelo de David.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué valor principal enseña la historia de Rut?",
@@ -2583,6 +2838,7 @@
     "cita biblica": "Rut 1,16 “Dondequiera que tú vayas, iré yo.”"
   },
   {
+    "categoria": "Mujeres",
     "tema": "Rut",
     "tipo": "quiz comentado",
     "pregunta": "¿Cómo terminó la historia de Rut?",
@@ -2593,6 +2849,7 @@
     "cita biblica": "Rut 4,22 “Obed fue el padre de Isaí, padre de David.”"
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue el padre de Salomón?",
@@ -2603,6 +2860,7 @@
     "cita biblica": "1 Reyes 2,12: Salomón se sentó en el trono de su padre David, y su reinado fue firme."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién fue la madre de Salomón?",
@@ -2613,6 +2871,7 @@
     "cita biblica": "2 Samuel 12,24: David consoló a Betsabé, su esposa. Ella dio a luz un hijo y le puso por nombre Salomón."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué pidió Salomón a Dios en lugar de riquezas o poder?",
@@ -2623,6 +2882,7 @@
     "cita biblica": "1 Reyes 3,9: Concede a tu servidor un corazón atento para juzgar a tu pueblo y discernir entre el bien y el mal."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Dónde tuvo Salomón el sueño en el que habló con Dios?",
@@ -2633,6 +2893,7 @@
     "cita biblica": "1 Reyes 3,5: En Gabaón, Yavé se apareció a Salomón en sueños durante la noche."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Con qué ejemplo mostró Salomón su sabiduría ante el pueblo?",
@@ -2643,6 +2904,7 @@
     "cita biblica": "1 Reyes 3,27: Entonces el rey dijo: \"Entréguenle el niño vivo a la primera mujer, no lo maten; ella es su madre."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuál fue una de las grandes obras de Salomón?",
@@ -2653,6 +2915,7 @@
     "cita biblica": "1 Reyes 6,1: En el año cuarto del reinado de Salomón, comenzó la construcción del Templo de Yavé."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿A cuántos años comenzó Salomón la construcción del Templo?",
@@ -2663,6 +2926,7 @@
     "cita biblica": "1 Reyes 6,1: En el año cuarto del reinado de Salomón sobre Israel, comenzó la construcción del Templo."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuánto tiempo duró la construcción del Templo?",
@@ -2673,6 +2937,7 @@
     "cita biblica": "1 Reyes 6,38: En el año undécimo... el Templo fue terminado... Salomón tardó siete años en construirlo."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué reina extranjera visitó a Salomón por su fama?",
@@ -2683,6 +2948,7 @@
     "cita biblica": "1 Reyes 10,1: La reina de Sabá oyó hablar de la fama de Salomón y vino a ponerlo a prueba con preguntas difíciles."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué llevó la reina de Sabá a Salomón?",
@@ -2693,6 +2959,7 @@
     "cita biblica": "1 Reyes 10,2: Llegó a Jerusalén con un gran séquito, camellos cargados de especias, mucho oro y piedras preciosas."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué lo llevó a apartarse de Dios en su vejez?",
@@ -2703,6 +2970,7 @@
     "cita biblica": "1 Reyes 11,4: Cuando Salomón ya era viejo, sus mujeres desviaron su corazón hacia otros dioses."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Cuántas esposas tuvo Salomón según la Biblia?",
@@ -2713,6 +2981,7 @@
     "cita biblica": "1 Reyes 11,3: Tuvo setecientas esposas con rango de princesas y trescientas concubinas, y sus mujeres desviaron su corazón."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Qué castigo anunció Dios por el pecado de Salomón?",
@@ -2723,6 +2992,7 @@
     "cita biblica": "1 Reyes 11,11: Como has hecho esto... voy a arrancarte el reino y lo daré a uno de tus servidores."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Quién sucedió a Salomón como rey?",
@@ -2733,6 +3003,7 @@
     "cita biblica": "1 Reyes 11,43: Salomón descansó con sus padres y fue sepultado en la Ciudad de David. Su hijo Roboam reinó en su lugar."
   },
   {
+    "categoria": "Reyes",
     "tema": "Salomón",
     "tipo": "quiz comentado",
     "pregunta": "¿Dónde fue sepultado Salomón?",
