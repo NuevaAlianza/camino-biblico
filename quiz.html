@@ -2,126 +2,346 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Quiz por Categoría y Tema</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz comentado</title>
   <style>
-    button { margin: 5px; padding: 8px 15px; font-size: 16px; }
-    #quiz-container { margin-top: 20px; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e0f2fe;
+      color: #1e293b;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #3b0764;
+    }
+
+    #temas, #quiz, #resultadoFinal {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #f1f5f9;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 12px;
+      background-color: #7c3aed;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #5b21b6;
+    }
+
+    .oculto {
+      display: none;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #contador {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      color: #3b0764;
+    }
+
+    .opcion {
+      background-color: #c4b5fd;
+      color: #1e1b4b;
+    }
+
+    .opcion.correcta {
+      background-color: #34d399;
+      color: #064e3b;
+    }
+
+    .opcion.incorrecta {
+      background-color: #f87171;
+      color: #7f1d1d;
+    }
+
+    #comentario {
+      margin-top: 1rem;
+      font-style: italic;
+      background: #e0e7ff;
+      padding: 1rem;
+      border-radius: 8px;
+      color: #312e81;
+    }
+
+    #temporizador {
+      height: 10px;
+      width: 100%;
+      margin: 1rem 0;
+      background-color: #d1d5db;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    #barra {
+      height: 100%;
+      width: 100%;
+      background-color: #22c55e;
+      transition: width 1s linear;
+    }
+
+    #inicioBtn {
+      background-color: #1d4ed8;
+    }
+    #inicioBtn:hover {
+      background-color: #1e40af;
+    }
+
+    #volverBtn {
+      background-color: #6b7280;
+    }
+    #volverBtn:hover {
+      background-color: #4b5563;
+    }
+
+    #siguienteBtn {
+      background-color: #0ea5e9;
+    }
+    #siguienteBtn:hover {
+      background-color: #0284c7;
+    }
+
+    #resultadoFinal {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #3b0764;
+    }
+
+    #mensajeFinal {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #334155;
+    }
   </style>
 </head>
 <body>
+  <h1>Quiz comentado</h1>
 
-  <h2>Selecciona una categoría</h2>
-  <div id="categorias"></div>
+  <div id="temas" class="fade-in">
+    <h2>Elige un tema:</h2>
+    <div id="listaTemas"></div>
+  </div>
 
-  <h2>Selecciona un tema</h2>
-  <div id="temas"></div>
+  <button id="inicioBtn" class="oculto">← Volver al inicio</button>
 
-  <div id="quiz-container"></div>
+  <div id="quiz" class="oculto fade-in">
+    <div id="contador"></div>
+    <div id="temporizador"><div id="barra"></div></div>
+    <div id="textoPregunta" style="margin-bottom: 1rem;"></div>
+    <div id="opciones"></div>
+    <div id="comentario" class="oculto"></div>
+    <button id="siguienteBtn" class="oculto">Siguiente pregunta</button>
+    <button id="volverBtn">← Volver a temas</button>
+  </div>
 
-<script>
-  // Aquí tu JSON con preguntas (puede venir de archivo o fetch)
-  const datos = [
-    {
-      "categoria": "Profetas",
-      "tema": "Daniel",
-      "tipo": "quiz comentado",
-      "pregunta": "¿Qué le sucedió a los tres amigos de Daniel cuando no adoraron la estatua de oro?",
-      "respuesta": "Fueron lanzados al horno de fuego ardiente",
-      "opcion_1": "Fueron arrojados a un pozo con escorpiones",
-      "opcion_2": "Fueron condenados al exilio",
-      "opcion_3": "Se les negó todo alimento",
-      "cita biblica": "Daniel 3,19 “Fue arrojados al horno de fuego ardiente.”"
-    },
-    {
-      "categoria": "Profetas",
-      "tema": "Daniel",
-      "tipo": "quiz comentado",
-      "pregunta": "¿Qué visión tuvo Daniel que le reveló el fin de los tiempos?",
-      "respuesta": "La visión de las cuatro bestias",
-      "opcion_1": "La visión del carnero y el macho cabrío",
-      "opcion_2": "La visión del fuego eterno",
-      "opcion_3": "La visión de los siete sellos",
-      "cita biblica": "Daniel 7,2-3 “Vi cuatro grandes bestias que subían del mar.”"
-    },
-    {
-      "categoria": "Apóstoles",
-      "tema": "Pedro",
-      "tipo": "quiz comentado",
-      "pregunta": "¿Quién negó a Jesús tres veces?",
-      "respuesta": "Pedro",
-      "opcion_1": "Juan",
-      "opcion_2": "Pablo",
-      "opcion_3": "Andrés",
-      "cita biblica": "Mateo 26,69-75"
+  <div id="resultadoFinal" class="oculto fade-in">
+    <div id="resumen"></div>
+    <div id="mensajeFinal"></div>
+    <button id="volverBtn2">← Volver a temas</button>
+    <button id="inicioBtn2">🏠 Volver al inicio</button>
+  </div>
+
+  <script>
+    let preguntas = [];
+    let preguntasFiltradas = [];
+    let indice = 0;
+    let tiempo = 58;
+    let timer;
+    let respuestasCorrectas = 0;
+
+    const sonidoCorrecto = new Audio('assets/sonidos/correcto.mp3');
+    const sonidoIncorrecto = new Audio('assets/sonidos/incorrecto.mp3');
+    const sonidoClick = new Audio('assets/sonidos/click.mp3');
+
+    async function cargarDatos() {
+      const res = await fetch(`datos/quiz.json?v=${Date.now()}`);
+      preguntas = await res.json();
+
+      const temasUnicos = [...new Set(preguntas.map(p => p.tema))];
+      const listaTemas = document.getElementById("listaTemas");
+      listaTemas.innerHTML = "";
+
+      temasUnicos.forEach(tema => {
+        const btn = document.createElement("button");
+        btn.textContent = tema;
+        btn.onclick = () => {
+          sonidoClick.play();
+          seleccionarTema(tema);
+        };
+        listaTemas.appendChild(btn);
+      });
+
+      document.getElementById("inicioBtn").classList.add("oculto");
     }
-  ];
 
-  const divCategorias = document.getElementById('categorias');
-  const divTemas = document.getElementById('temas');
-  const divQuiz = document.getElementById('quiz-container');
+    function seleccionarTema(tema) {
+      preguntasFiltradas = preguntas.filter(p => p.tema === tema);
+      indice = 0;
+      respuestasCorrectas = 0;
+      document.getElementById("temas").classList.add("oculto");
+      document.getElementById("resultadoFinal").classList.add("oculto");
+      document.getElementById("quiz").classList.remove("oculto");
+      mostrarPregunta();
+    }
 
-  // Función para listar categorías únicas y crear botones
-  function mostrarCategorias() {
-    const categorias = [...new Set(datos.map(d => d.categoria))];
-    divCategorias.innerHTML = '';
-    divTemas.innerHTML = '';
-    divQuiz.innerHTML = '';
-    categorias.forEach(c => {
-      const btn = document.createElement('button');
-      btn.textContent = c;
-      btn.onclick = () => mostrarTemas(c);
-      divCategorias.appendChild(btn);
-    });
-  }
+    function mostrarPregunta() {
+      clearInterval(timer);
+      tiempo = 58;
+      actualizarBarra();
 
-  // Función para listar temas según categoría
-  function mostrarTemas(categoria) {
-    const temas = [...new Set(datos.filter(d => d.categoria === categoria).map(d => d.tema))];
-    divTemas.innerHTML = '';
-    divQuiz.innerHTML = '';
-    temas.forEach(t => {
-      const btn = document.createElement('button');
-      btn.textContent = t;
-      btn.onclick = () => iniciarQuiz(categoria, t);
-      divTemas.appendChild(btn);
-    });
-  }
+      const p = preguntasFiltradas[indice];
+      document.getElementById("textoPregunta").textContent = p.pregunta;
+      document.getElementById("contador").textContent = `Pregunta ${indice + 1} de ${preguntasFiltradas.length}`;
 
-  // Función simple para iniciar quiz (mostrar preguntas para esa categoria y tema)
-  function iniciarQuiz(categoria, tema) {
-    const preguntas = datos.filter(d => d.categoria === categoria && d.tema === tema);
-    divQuiz.innerHTML = `<h3>Quiz: ${categoria} - ${tema}</h3>`;
-    preguntas.forEach((p, i) => {
-      divQuiz.innerHTML += `
-        <div style="border:1px solid #ccc; margin:10px; padding:10px;">
-          <p><strong>Pregunta ${i+1}:</strong> ${p.pregunta}</p>
-          <ul>
-            <li>A) ${p.respuesta}</li>
-            <li>B) ${p.opcion_1}</li>
-            <li>C) ${p.opcion_2}</li>
-            <li>D) ${p.opcion_3}</li>
-          </ul>
-          <p><em>Cita bíblica: ${p["cita biblica"]}</em></p>
-        </div>
-      `;
-    });
-  }
+      const opciones = [p.respuesta, p.opcion_1, p.opcion_2, p.opcion_3].sort(() => Math.random() - 0.5);
+      const contenedor = document.getElementById("opciones");
+      contenedor.innerHTML = "";
 
-  // Mostrar categorías al cargar la página
-  mostrarCategorias();
+      document.getElementById("comentario").classList.add("oculto");
+      document.getElementById("siguienteBtn").classList.add("oculto");
 
-</script>
-<!-- Contenedor de selección de categoría/tema -->
-<div id="menu"></div>
+      opciones.forEach(opcion => {
+        const btn = document.createElement("button");
+        btn.className = "opcion";
+        btn.textContent = opcion;
+        btn.onclick = () => evaluarRespuesta(btn, opcion === p.respuesta, p.cita_biblica);
+        contenedor.appendChild(btn);
+      });
 
-<!-- Contenedor del quiz comentado -->
-<div id="quiz-container" style="display:none;">
-  <h2 id="pregunta"></h2>
-  <div id="opciones"></div>
-  <div id="retroalimentacion" style="margin-top:1em;"></div>
-  <button id="siguiente" style="display:none;">Siguiente</button>
-</div>
-<script src="js/app/quiz.js"></script>
+      timer = setInterval(() => {
+        tiempo--;
+        actualizarBarra();
+        if (tiempo <= 0) {
+          clearInterval(timer);
+          mostrarComentario(p.cita_biblica);
+          document.querySelectorAll(".opcion").forEach(btn => {
+            if (btn.textContent === p.respuesta) btn.classList.add("correcta");
+            else btn.classList.add("incorrecta");
+            btn.disabled = true;
+          });
+          document.getElementById("siguienteBtn").classList.remove("oculto");
+        }
+      }, 1000);
+    }
 
+    function actualizarBarra() {
+      const barra = document.getElementById("barra");
+      barra.style.width = (tiempo / 58 * 100) + "%";
+      barra.style.backgroundColor = tiempo > 20 ? "#22c55e" : tiempo > 10 ? "#facc15" : "#ef4444";
+    }
+
+    function evaluarRespuesta(btn, esCorrecta, comentario) {
+      clearInterval(timer);
+      document.querySelectorAll(".opcion").forEach(b => {
+        b.disabled = true;
+        if (b.textContent === preguntasFiltradas[indice].respuesta) {
+          b.classList.add("correcta");
+        } else if (b === btn && !esCorrecta) {
+          b.classList.add("incorrecta");
+        }
+      });
+
+      if (esCorrecta) {
+        respuestasCorrectas++;
+        sonidoCorrecto.play();
+      } else {
+        sonidoIncorrecto.play();
+      }
+
+      mostrarComentario(comentario);
+      document.getElementById("siguienteBtn").classList.remove("oculto");
+    }
+
+    function mostrarComentario(texto) {
+      const comentario = document.getElementById("comentario");
+      comentario.textContent = texto;
+      comentario.classList.remove("oculto");
+    }
+
+    document.getElementById("siguienteBtn").onclick = () => {
+      sonidoClick.play();
+      indice++;
+      if (indice >= preguntasFiltradas.length) {
+        mostrarResultadoFinal();
+      } else {
+        mostrarPregunta();
+      }
+    };
+
+    document.getElementById("volverBtn").onclick = () => {
+      sonidoClick.play();
+      document.getElementById("quiz").classList.add("oculto");
+      document.getElementById("temas").classList.remove("oculto");
+    };
+
+    document.getElementById("inicioBtn").onclick = () => {
+      sonidoClick.play();
+      document.getElementById("resultadoFinal").classList.add("oculto");
+      document.getElementById("temas").classList.remove("oculto");
+    };
+
+    document.getElementById("volverBtn2").onclick = () => {
+      sonidoClick.play();
+      document.getElementById("resultadoFinal").classList.add("oculto");
+      document.getElementById("temas").classList.remove("oculto");
+    };
+
+    document.getElementById("inicioBtn2").onclick = () => {
+      sonidoClick.play();
+      location.href = "index.html"; // o la ruta deseada
+    };
+
+    function mostrarResultadoFinal() {
+      document.getElementById("quiz").classList.add("oculto");
+      document.getElementById("resultadoFinal").classList.remove("oculto");
+
+      const total = preguntasFiltradas.length;
+      const porcentaje = Math.round((respuestasCorrectas / total) * 100);
+
+      const resumen = document.getElementById("resumen");
+      resumen.textContent = `Obtuviste ${respuestasCorrectas} de ${total} respuestas correctas (${porcentaje}%)`;
+
+      const mensajeFinal = document.getElementById("mensajeFinal");
+      if (porcentaje === 100) {
+        mensajeFinal.textContent = "¡Excelente! Has respondido todo correctamente.";
+      } else if (porcentaje >= 80) {
+        mensajeFinal.textContent = "¡Muy bien! Conoces muy bien este tema.";
+      } else if (porcentaje >= 50) {
+        mensajeFinal.textContent = "Buen intento. ¡Puedes seguir aprendiendo!";
+      } else {
+        mensajeFinal.textContent = "¡Ánimo! Sigue practicando y mejorarás.";
+      }
+
+      document.getElementById("inicioBtn").classList.remove("oculto");
+    }
+
+    cargarDatos();
+  </script>
 </body>
 </html>
