@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quiz comentado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz comentado con categorías y temas</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -13,49 +13,63 @@
       padding: 2rem;
     }
 
-    h1 {
+    h1, h2 {
       text-align: center;
       color: #3b0764;
     }
 
-    #temas, #quiz, #resultadoFinal {
+    #selector {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #f1f5f9;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 1rem;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      background-color: white;
+      transition: background-color 0.3s;
+    }
+    select:disabled {
+      background-color: #ddd;
+      cursor: not-allowed;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    button {
+      margin-top: 1.5rem;
+      background-color: #7c3aed;
+      color: white;
+      border: none;
+    }
+    button:hover:not(:disabled) {
+      background-color: #5b21b6;
+    }
+
+    #quiz, #resultadoFinal {
       max-width: 700px;
       margin: 2rem auto;
       padding: 2rem;
       background: #f1f5f9;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    button {
-      display: block;
-      width: 100%;
-      padding: 1rem;
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 12px;
-      background-color: #7c3aed;
-      color: #fff;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #5b21b6;
-    }
-
-    .oculto {
       display: none;
-    }
-
-    .fade-in {
-      animation: fadeIn 0.4s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     #contador {
@@ -68,16 +82,30 @@
     .opcion {
       background-color: #c4b5fd;
       color: #1e1b4b;
+      border: none;
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 0.4rem 0;
+      width: 100%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
     }
-
+    .opcion:hover:not(:disabled) {
+      background-color: #a78bfa;
+    }
     .opcion.correcta {
       background-color: #34d399;
       color: #064e3b;
+      cursor: default;
     }
-
     .opcion.incorrecta {
       background-color: #f87171;
       color: #7f1d1d;
+      cursor: default;
+    }
+    .opcion:disabled {
+      cursor: default;
     }
 
     #comentario {
@@ -102,28 +130,7 @@
       height: 100%;
       width: 100%;
       background-color: #22c55e;
-      transition: width 1s linear;
-    }
-
-    #inicioBtn {
-      background-color: #1d4ed8;
-    }
-    #inicioBtn:hover {
-      background-color: #1e40af;
-    }
-
-    #volverBtn {
-      background-color: #6b7280;
-    }
-    #volverBtn:hover {
-      background-color: #4b5563;
-    }
-
-    #siguienteBtn {
-      background-color: #0ea5e9;
-    }
-    #siguienteBtn:hover {
-      background-color: #0284c7;
+      transition: width 1s linear, background-color 0.5s;
     }
 
     #resultadoFinal {
@@ -138,32 +145,53 @@
       font-size: 1.1rem;
       color: #334155;
     }
+
+    #volverBtn, #inicioBtn {
+      margin-top: 1rem;
+      background-color: #6b7280;
+      color: white;
+      border: none;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    #volverBtn:hover, #inicioBtn:hover {
+      background-color: #4b5563;
+    }
   </style>
 </head>
 <body>
   <h1>Quiz comentado</h1>
 
-  <div id="temas" class="fade-in">
-    <h2>Elige un tema:</h2>
-    <div id="listaTemas"></div>
+  <div id="selector">
+    <label for="categoriaSelect">Selecciona una categoría:</label>
+    <select id="categoriaSelect" aria-label="Seleccionar categoría">
+      <option value="" selected disabled>-- Elige categoría --</option>
+    </select>
+
+    <label for="temaSelect">Selecciona un tema:</label>
+    <select id="temaSelect" aria-label="Seleccionar tema" disabled>
+      <option value="" selected disabled>-- Elige tema --</option>
+    </select>
+
+    <button id="inicioBtn" disabled>Iniciar Quiz</button>
   </div>
 
-  <button id="inicioBtn" class="oculto">← Volver al inicio</button>
-
-  <div id="quiz" class="oculto fade-in">
+  <div id="quiz" role="main" aria-live="polite">
     <div id="contador"></div>
     <div id="temporizador"><div id="barra"></div></div>
     <div id="textoPregunta" style="margin-bottom: 1rem;"></div>
     <div id="opciones"></div>
-    <div id="comentario" class="oculto"></div>
+    <div id="comentario" class="oculto" aria-live="polite"></div>
     <button id="siguienteBtn" class="oculto">Siguiente pregunta</button>
-    <button id="volverBtn">← Volver a temas</button>
+    <button id="volverBtn">← Volver a selección</button>
   </div>
 
-  <div id="resultadoFinal" class="oculto fade-in">
+  <div id="resultadoFinal" role="region" aria-live="polite">
     <div id="resumen"></div>
     <div id="mensajeFinal"></div>
-    <button id="volverBtn2">← Volver a temas</button>
+    <button id="volverBtn2">← Volver a selección</button>
     <button id="inicioBtn2">🏠 Volver al inicio</button>
   </div>
 
@@ -175,170 +203,253 @@
     let timer;
     let respuestasCorrectas = 0;
 
+    // Sonidos
     const sonidoCorrecto = new Audio('assets/sonidos/correcto.mp3');
     const sonidoIncorrecto = new Audio('assets/sonidos/incorrecto.mp3');
     const sonidoClick = new Audio('assets/sonidos/click.mp3');
 
+    const categoriaSelect = document.getElementById('categoriaSelect');
+    const temaSelect = document.getElementById('temaSelect');
+    const inicioBtn = document.getElementById('inicioBtn');
+
     async function cargarDatos() {
-      const res = await fetch(`datos/quiz.json?v=${Date.now()}`);
-      preguntas = await res.json();
+      try {
+        const res = await fetch(`datos/quiz.json?v=${Date.now()}`);
+        preguntas = await res.json();
 
-      const temasUnicos = [...new Set(preguntas.map(p => p.tema))];
-      const listaTemas = document.getElementById("listaTemas");
-      listaTemas.innerHTML = "";
+        // Obtener categorías únicas
+        const categoriasUnicas = [...new Set(preguntas.map(p => p.categoria))];
+        categoriaSelect.innerHTML = '<option value="" selected disabled>-- Elige categoría --</option>';
+        categoriasUnicas.forEach(cat => {
+          const option = document.createElement('option');
+          option.value = cat;
+          option.textContent = cat;
+          categoriaSelect.appendChild(option);
+        });
 
+        temaSelect.innerHTML = '<option value="" selected disabled>-- Elige tema --</option>';
+        temaSelect.disabled = true;
+        inicioBtn.disabled = true;
+      } catch (error) {
+        alert('Error cargando los datos del quiz.');
+        console.error(error);
+      }
+    }
+
+    categoriaSelect.addEventListener('change', () => {
+      sonidoClick.play();
+      const catSeleccionada = categoriaSelect.value;
+      if (!catSeleccionada) return;
+
+      // Filtrar temas de la categoría seleccionada
+      const temasUnicos = [...new Set(preguntas.filter(p => p.categoria === catSeleccionada).map(p => p.tema))];
+      temaSelect.innerHTML = '<option value="" selected disabled>-- Elige tema --</option>';
       temasUnicos.forEach(tema => {
-        const btn = document.createElement("button");
-        btn.textContent = tema;
-        btn.onclick = () => {
-          sonidoClick.play();
-          seleccionarTema(tema);
-        };
-        listaTemas.appendChild(btn);
+        const option = document.createElement('option');
+        option.value = tema;
+        option.textContent = tema;
+        temaSelect.appendChild(option);
       });
 
-      document.getElementById("inicioBtn").classList.add("oculto");
-    }
+      temaSelect.disabled = false;
+      inicioBtn.disabled = true;
+    });
 
-    function seleccionarTema(tema) {
-      preguntasFiltradas = preguntas.filter(p => p.tema === tema);
+    temaSelect.addEventListener('change', () => {
+      sonidoClick.play();
+      inicioBtn.disabled = !temaSelect.value;
+    });
+
+    inicioBtn.addEventListener('click', () => {
+      sonidoClick.play();
+      iniciarQuiz();
+    });
+
+    function iniciarQuiz() {
+      const categoria = categoriaSelect.value;
+      const tema = temaSelect.value;
+
+      preguntasFiltradas = preguntas.filter(p => p.categoria === categoria && p.tema === tema);
       indice = 0;
       respuestasCorrectas = 0;
-      document.getElementById("temas").classList.add("oculto");
-      document.getElementById("resultadoFinal").classList.add("oculto");
-      document.getElementById("quiz").classList.remove("oculto");
+
+      document.getElementById('selector').style.display = 'none';
+      document.getElementById('resultadoFinal').style.display = 'none';
+      document.getElementById('quiz').style.display = 'block';
+
       mostrarPregunta();
+      iniciarTemporizador();
+      document.getElementById('siguienteBtn').classList.add('oculto');
     }
+
+    const textoPregunta = document.getElementById('textoPregunta');
+    const opcionesDiv = document.getElementById('opciones');
+    const comentarioDiv = document.getElementById('comentario');
+    const siguienteBtn = document.getElementById('siguienteBtn');
+    const contadorDiv = document.getElementById('contador');
+    const barra = document.getElementById('barra');
 
     function mostrarPregunta() {
       clearInterval(timer);
       tiempo = 58;
-      actualizarBarra();
+      barra.style.width = '100%';
+      barra.style.backgroundColor = '#22c55e';
+      siguienteBtn.classList.add('oculto');
+      comentarioDiv.classList.add('oculto');
+      comentarioDiv.textContent = '';
 
       const p = preguntasFiltradas[indice];
-      document.getElementById("textoPregunta").textContent = p.pregunta;
-      document.getElementById("contador").textContent = `Pregunta ${indice + 1} de ${preguntasFiltradas.length}`;
+      textoPregunta.textContent = p.pregunta;
 
-      const opciones = [p.respuesta, p.opcion_1, p.opcion_2, p.opcion_3].sort(() => Math.random() - 0.5);
-      const contenedor = document.getElementById("opciones");
-      contenedor.innerHTML = "";
+      opcionesDiv.innerHTML = '';
 
-      document.getElementById("comentario").classList.add("oculto");
-      document.getElementById("siguienteBtn").classList.add("oculto");
+      // Armar arreglo con opciones en orden aleatorio
+      let opciones = [
+        { texto: p.respuesta, correcta: true },
+        { texto: p.opcion_1, correcta: false },
+        { texto: p.opcion_2, correcta: false },
+        { texto: p.opcion_3, correcta: false }
+      ];
+      opciones = opciones.sort(() => Math.random() - 0.5);
 
-      opciones.forEach(opcion => {
-        const btn = document.createElement("button");
-        btn.className = "opcion";
-        btn.textContent = opcion;
-        btn.onclick = () => evaluarRespuesta(btn, opcion === p.respuesta, p.cita_biblica);
-        contenedor.appendChild(btn);
+      opciones.forEach((opcion, i) => {
+        const btn = document.createElement('button');
+        btn.textContent = opcion.texto;
+        btn.className = 'opcion';
+        btn.disabled = false;
+        btn.addEventListener('click', () => seleccionarRespuesta(btn, opcion.correcta));
+        opcionesDiv.appendChild(btn);
       });
+
+      actualizarContador();
+      iniciarTemporizador();
+    }
+
+    function seleccionarRespuesta(boton, esCorrecta) {
+      clearInterval(timer);
+      const botones = opcionesDiv.querySelectorAll('button');
+      botones.forEach(b => b.disabled = true);
+
+      if (esCorrecta) {
+        boton.classList.add('correcta');
+        respuestasCorrectas++;
+        sonidoCorrecto.play();
+      } else {
+        boton.classList.add('incorrecta');
+        sonidoIncorrecto.play();
+        // Marcar cuál era la correcta
+        botones.forEach(b => {
+          if (!b.classList.contains('correcta') && preguntasFiltradas[indice].respuesta === b.textContent) {
+            b.classList.add('correcta');
+          }
+        });
+      }
+
+      // Mostrar comentario (cita bíblica)
+      comentarioDiv.textContent = preguntasFiltradas[indice].cita_biblica || '';
+      comentarioDiv.classList.remove('oculto');
+
+      siguienteBtn.classList.remove('oculto');
+    }
+
+    siguienteBtn.addEventListener('click', () => {
+      sonidoClick.play();
+      indice++;
+      if (indice < preguntasFiltradas.length) {
+        mostrarPregunta();
+      } else {
+        mostrarResultado();
+      }
+    });
+
+    function iniciarTemporizador() {
+      clearInterval(timer);
+      tiempo = 58;
+      barra.style.width = '100%';
+      barra.style.backgroundColor = '#22c55e';
+      contadorDiv.textContent = `Tiempo restante: ${tiempo} s`;
 
       timer = setInterval(() => {
         tiempo--;
-        actualizarBarra();
+        contadorDiv.textContent = `Tiempo restante: ${tiempo} s`;
+        barra.style.width = `${(tiempo / 58) * 100}%`;
+
+        if (tiempo <= 20) barra.style.backgroundColor = '#eab308'; // amarillo
+        if (tiempo <= 10) barra.style.backgroundColor = '#ef4444'; // rojo
+
         if (tiempo <= 0) {
           clearInterval(timer);
-          mostrarComentario(p.cita_biblica);
-          document.querySelectorAll(".opcion").forEach(btn => {
-            if (btn.textContent === p.respuesta) btn.classList.add("correcta");
-            else btn.classList.add("incorrecta");
-            btn.disabled = true;
+          // Deshabilitar opciones
+          const botones = opcionesDiv.querySelectorAll('button');
+          botones.forEach(b => b.disabled = true);
+          sonidoIncorrecto.play();
+
+          // Mostrar la respuesta correcta
+          botones.forEach(b => {
+            if (preguntasFiltradas[indice].respuesta === b.textContent) {
+              b.classList.add('correcta');
+            }
           });
-          document.getElementById("siguienteBtn").classList.remove("oculto");
+
+          // Mostrar comentario
+          comentarioDiv.textContent = preguntasFiltradas[indice].cita_biblica || '';
+          comentarioDiv.classList.remove('oculto');
+          siguienteBtn.classList.remove('oculto');
         }
       }, 1000);
     }
 
-    function actualizarBarra() {
-      const barra = document.getElementById("barra");
-      barra.style.width = (tiempo / 58 * 100) + "%";
-      barra.style.backgroundColor = tiempo > 20 ? "#22c55e" : tiempo > 10 ? "#facc15" : "#ef4444";
-    }
-
-    function evaluarRespuesta(btn, esCorrecta, comentario) {
-      clearInterval(timer);
-      document.querySelectorAll(".opcion").forEach(b => {
-        b.disabled = true;
-        if (b.textContent === preguntasFiltradas[indice].respuesta) {
-          b.classList.add("correcta");
-        } else if (b === btn && !esCorrecta) {
-          b.classList.add("incorrecta");
-        }
-      });
-
-      if (esCorrecta) {
-        respuestasCorrectas++;
-        sonidoCorrecto.play();
-      } else {
-        sonidoIncorrecto.play();
-      }
-
-      mostrarComentario(comentario);
-      document.getElementById("siguienteBtn").classList.remove("oculto");
-    }
-
-    function mostrarComentario(texto) {
-      const comentario = document.getElementById("comentario");
-      comentario.textContent = texto;
-      comentario.classList.remove("oculto");
-    }
-
-    document.getElementById("siguienteBtn").onclick = () => {
-      sonidoClick.play();
-      indice++;
-      if (indice >= preguntasFiltradas.length) {
-        mostrarResultadoFinal();
-      } else {
-        mostrarPregunta();
-      }
-    };
-
-    document.getElementById("volverBtn").onclick = () => {
-      sonidoClick.play();
-      document.getElementById("quiz").classList.add("oculto");
-      document.getElementById("temas").classList.remove("oculto");
-    };
-
-    document.getElementById("inicioBtn").onclick = () => {
-      sonidoClick.play();
-      document.getElementById("resultadoFinal").classList.add("oculto");
-      document.getElementById("temas").classList.remove("oculto");
-    };
-
-    document.getElementById("volverBtn2").onclick = () => {
-      sonidoClick.play();
-      document.getElementById("resultadoFinal").classList.add("oculto");
-      document.getElementById("temas").classList.remove("oculto");
-    };
-
-    document.getElementById("inicioBtn2").onclick = () => {
-      sonidoClick.play();
-      location.href = "index.html"; // o la ruta deseada
-    };
-
-    function mostrarResultadoFinal() {
-      document.getElementById("quiz").classList.add("oculto");
-      document.getElementById("resultadoFinal").classList.remove("oculto");
+    function mostrarResultado() {
+      document.getElementById('quiz').style.display = 'none';
+      document.getElementById('resultadoFinal').style.display = 'block';
 
       const total = preguntasFiltradas.length;
       const porcentaje = Math.round((respuestasCorrectas / total) * 100);
 
-      const resumen = document.getElementById("resumen");
-      resumen.textContent = `Obtuviste ${respuestasCorrectas} de ${total} respuestas correctas (${porcentaje}%)`;
+      document.getElementById('resumen').textContent = `Respondiste correctamente ${respuestasCorrectas} de ${total} preguntas. (${porcentaje}%)`;
 
-      const mensajeFinal = document.getElementById("mensajeFinal");
+      let mensaje = '';
       if (porcentaje === 100) {
-        mensajeFinal.textContent = "¡Excelente! Has respondido todo correctamente.";
-      } else if (porcentaje >= 80) {
-        mensajeFinal.textContent = "¡Muy bien! Conoces muy bien este tema.";
+        mensaje = '¡Perfecto! Dominaste este tema.';
+      } else if (porcentaje >= 75) {
+        mensaje = 'Muy bien, casi perfecto.';
       } else if (porcentaje >= 50) {
-        mensajeFinal.textContent = "Buen intento. ¡Puedes seguir aprendiendo!";
+        mensaje = 'Buen esfuerzo, pero puedes mejorar.';
       } else {
-        mensajeFinal.textContent = "¡Ánimo! Sigue practicando y mejorarás.";
+        mensaje = 'No te rindas, sigue practicando.';
       }
+      document.getElementById('mensajeFinal').textContent = mensaje;
+    }
 
-      document.getElementById("inicioBtn").classList.remove("oculto");
+    // Botones para volver al inicio o selección
+    document.getElementById('volverBtn').addEventListener('click', () => {
+      sonidoClick.play();
+      resetApp();
+    });
+    document.getElementById('volverBtn2').addEventListener('click', () => {
+      sonidoClick.play();
+      resetApp();
+    });
+    document.getElementById('inicioBtn2').addEventListener('click', () => {
+      sonidoClick.play();
+      resetApp();
+    });
+
+    function resetApp() {
+      document.getElementById('selector').style.display = 'block';
+      document.getElementById('quiz').style.display = 'none';
+      document.getElementById('resultadoFinal').style.display = 'none';
+      categoriaSelect.value = '';
+      temaSelect.innerHTML = '<option value="" selected disabled>-- Elige tema --</option>';
+      temaSelect.disabled = true;
+      inicioBtn.disabled = true;
+      respuestasCorrectas = 0;
+      indice = 0;
+      clearInterval(timer);
+      comentarioDiv.classList.add('oculto');
+      comentarioDiv.textContent = '';
+      contadorDiv.textContent = '';
+      opcionesDiv.innerHTML = '';
     }
 
     cargarDatos();
