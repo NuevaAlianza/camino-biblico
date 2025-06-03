@@ -1,33 +1,57 @@
+<!-- progreso.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Revisión de Progreso</title>
-  <link rel="stylesheet" href="css/estilos.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f9;
+      padding: 2rem;
+    }
+    .contenedor-progreso {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    .tarjeta-progreso {
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      transition: transform 0.2s;
+    }
+    .tarjeta-progreso:hover {
+      transform: scale(1.02);
+    }
+    .titulo-categoria {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #6b21a8;
+    }
+    .info-progreso {
+      margin-bottom: 0.5rem;
+    }
+    .rango {
+      font-weight: bold;
+      color: #9333ea;
+    }
+    .vacio {
+      text-align: center;
+      color: #777;
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
-  <main class="container">
-    <h1>Tu progreso</h1>
-
-    <section class="resumen">
-      <p>Quizzes completados: <strong id="total-quizzes">0</strong></p>
-      <p>Promedio de aciertos: <strong id="promedio">0%</strong></p>
-    </section>
-
-    <section>
-      <h2>Estadísticas por tema</h2>
-      <canvas id="grafico-temas" width="400" height="200"></canvas>
-    </section>
-
-    <section>
-      <h2>Historial de sesiones</h2>
-      <ul id="lista-historial"></ul>
-    </section>
-  </main>
-
+  <h1>Mi Progreso</h1>
+  <div id="contenedorProgreso" class="contenedor-progreso"></div>
+  <div id="sinProgreso" class="vacio" style="display: none;">
+    Aún no has completado ningún tema. ¡Juega y regresa para ver tu avance!
+  </div>
   <script src="js/app/progreso.js"></script>
 </body>
 </html>
-
