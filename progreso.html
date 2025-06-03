@@ -2,19 +2,32 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f4a261" />
-  <link rel="manifest" href="manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Revisión de Progreso</title>
   <link rel="stylesheet" href="css/estilos.css" />
-  <title>Revisión de progreso</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <main class="progreso">
-    <h1>Revisión de progreso</h1>
-    <button onclick="location.href='index.html'">← Volver al menú</button>
-    <!-- Aquí irá el contenido dinámico -->
+  <main class="container">
+    <h1>Tu progreso</h1>
+
+    <section class="resumen">
+      <p>Quizzes completados: <strong id="total-quizzes">0</strong></p>
+      <p>Promedio de aciertos: <strong id="promedio">0%</strong></p>
+    </section>
+
+    <section>
+      <h2>Estadísticas por tema</h2>
+      <canvas id="grafico-temas" width="400" height="200"></canvas>
+    </section>
+
+    <section>
+      <h2>Historial de sesiones</h2>
+      <ul id="lista-historial"></ul>
+    </section>
   </main>
+
   <script src="js/app/progreso.js"></script>
 </body>
 </html>
-<!-- Página para revisión de progreso -->
+
