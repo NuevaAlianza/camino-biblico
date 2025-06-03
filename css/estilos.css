@@ -344,3 +344,40 @@ main.menu-principal button:hover {
 #resultado button:hover {
   background-color: #5a23b1;
 }
+.opcion {
+  background-color: #8049c7; /* púrpura base */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 3px 6px rgba(90, 50, 130, 0.3);
+}
+
+.opcion:hover:not(:disabled) {
+  background-color: #6a35a6; /* más oscuro al pasar el mouse */
+  transform: scale(1.02);
+}
+
+/* Estado al hacer clic o después de responder */
+.opcion.correcto {
+  background-color: #a465f2 !important; /* púrpura claro */
+  box-shadow: 0 0 10px rgba(164, 101, 242, 0.6);
+  color: #fff;
+}
+
+.opcion.incorrecto {
+  background-color: #c77cff !important; /* rosa-violeta */
+  box-shadow: 0 0 10px rgba(199, 124, 255, 0.6);
+  color: #fff;
+}
+
+/* Desactivar botón después de hacer clic */
+.opcion:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
