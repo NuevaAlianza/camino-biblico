@@ -160,6 +160,7 @@ function mostrarResultado() {
   juego.classList.add("oculto");
   resultadoEl.classList.remove("oculto");
   detalleResultado.textContent = `Respondiste correctamente ${puntaje} de ${preguntas.length} preguntas.`;
+  guardarProgreso("quiz comentado", temaSelect.value, puntaje, preguntas.length);
 }
 
 function resetearEstado() {
