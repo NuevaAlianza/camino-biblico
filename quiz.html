@@ -11,12 +11,19 @@
     <h1>Quiz Comentado</h1>
 
     <div class="seleccion-tema">
-      <label for="tema">Selecciona un tema:</label>
-      <select id="tema">
-        <option value="">-- Elige un tema --</option>
-      </select>
-      <button id="iniciar">Iniciar</button>
-    </div>
+  <label for="categoria">Selecciona una categoría:</label>
+  <select id="categoria">
+    <option value="">-- Elige una categoría --</option>
+  </select>
+
+  <label for="tema">Selecciona un tema:</label>
+  <select id="tema" disabled>
+    <option value="">-- Elige un tema --</option>
+  </select>
+
+  <button id="iniciar" disabled>Iniciar</button>
+</div>
+
 
     <div id="juego" class="oculto">
       <div id="barra-tiempo">
