@@ -24,6 +24,9 @@ const sonidoInicio = new Audio("assets/sonidos/start.mp3");
 const sonidoAdvertencia = new Audio("assets/sonidos/warning.mp3");
 const sonidoFin = new Audio("assets/sonidos/end.mp3");
 const sonidoClick = new Audio("assets/sonidos/click.mp3");
+const sonidoCorrecto = new Audio("assets/sonidos/correct.mp3");
+const sonidoIncorrecto = new Audio("assets/sonidos/incorrect.mp3");
+
 
 function reproducirSonido(audio) {
   audio.currentTime = 0;
@@ -96,8 +99,12 @@ function seleccionarOpcion(opcion, actual) {
     }
   });
 
+ // ✅ Reproducir sonido según si es correcta o incorrecta
   if (opcion === actual.respuesta) {
     puntaje++;
+    reproducirSonido(sonidoCorrecto);
+  } else {
+    reproducirSonido(sonidoIncorrecto);
   }
 
   comentarioEl.textContent = actual["cita biblica"];
