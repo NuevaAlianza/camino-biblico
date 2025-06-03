@@ -93,9 +93,9 @@ function seleccionarOpcion(opcion, actual) {
   botones.forEach((btn) => {
     btn.disabled = true;
     if (btn.textContent === actual.respuesta) {
-      btn.classList.add("correcta");
+      btn.classList.add("correcto");
     } else if (btn.textContent === opcion) {
-      btn.classList.add("incorrecta");
+      btn.classList.add("incorrecto");
     }
   });
 
