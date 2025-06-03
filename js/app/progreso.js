@@ -1,54 +1,100 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const progreso = JSON.parse(localStorage.getItem("progreso")) || [];
+// js/app/progreso.js
 
-  // Mostrar resumen
-  document.getElementById("total-quizzes").textContent = progreso.length;
+async function cargarDatosQuiz() {
+  const respuesta = await fetch("datos/quiz.json");
+  return await respuesta.json();
+}
 
-  if (progreso.length === 0) {
-    document.getElementById("promedio").textContent = "0%";
+function calcularRango(porcentaje) {
+  if (porcentaje >= 97) return "A+";
+  if (porcentaje >= 90) return "A";
+  if (porcentaje >= 85) return "A−";
+  if (porcentaje >= 80) return "B+";
+  if (porcentaje >= 75) return "B";
+  if (porcentaje >= 70) return "B−";
+  if (porcentaje >= 60) return "C";
+  if (porcentaje >= 50) return "D";
+  return "F";
+}
+
+function agruparTemasPorCategoria(preguntas) {
+  const categorias = {};
+  preguntas.forEach(({ categoria, tema }) => {
+    if (!categorias[categoria]) categorias[categoria] = new Set();
+    categorias[categoria].add(tema);
+  });
+  return Object.fromEntries(
+    Object.entries(categorias).map(([cat, temas]) => [cat, Array.from(temas)])
+  );
+}
+
+function obtenerResumenPorCategoria(categorias, progreso) {
+  const resumen = {};
+  for (const categoria in categorias) {
+    const temas = categorias[categoria];
+    let jugados = 0;
+    let aciertos = 0;
+    let totalPreguntas = 0;
+
+    temas.forEach((tema) => {
+      const entrada = progreso.find((p) => p.categoria === categoria && p.tema === tema);
+      if (entrada) {
+        jugados++;
+        aciertos += entrada.puntaje;
+        totalPreguntas += entrada.total;
+      }
+    });
+
+    const avance = temas.length ? (jugados / temas.length) * 100 : 0;
+    const desempeño = totalPreguntas ? (aciertos / totalPreguntas) * 100 : 0;
+
+    resumen[categoria] = {
+      totalTemas: temas.length,
+      jugados,
+      avance: Math.round(avance),
+      desempeño: Math.round(desempeño),
+      rangoAvance: calcularRango(avance),
+      rangoDesempeño: calcularRango(desempeño),
+    };
+  }
+  return resumen;
+}
+
+function mostrarTarjetas(resumen) {
+  const contenedor = document.getElementById("contenedorProgreso");
+  const sinProgreso = document.getElementById("sinProgreso");
+  contenedor.innerHTML = "";
+
+  const categorias = Object.keys(resumen);
+  const hayProgreso = categorias.some((c) => resumen[c].jugados > 0);
+
+  if (!hayProgreso) {
+    sinProgreso.style.display = "block";
     return;
+  } else {
+    sinProgreso.style.display = "none";
   }
 
-  const promedio = progreso.reduce((acc, item) => acc + (item.puntaje / item.total), 0) / progreso.length;
-  document.getElementById("promedio").textContent = `${Math.round(promedio * 100)}%`;
-
-  // Estadísticas por tema
-  const porTema = {};
-  progreso.forEach(({ tema, puntaje, total }) => {
-    if (!porTema[tema]) porTema[tema] = { total: 0, aciertos: 0 };
-    porTema[tema].total += total;
-    porTema[tema].aciertos += puntaje;
+  categorias.forEach((categoria) => {
+    const datos = resumen[categoria];
+    const div = document.createElement("div");
+    div.className = "tarjeta-progreso";
+    div.innerHTML = `
+      <div class="titulo-categoria">${categoria}</div>
+      <div class="info-progreso">Temas jugados: ${datos.jugados} / ${datos.totalTemas}</div>
+      <div class="info-progreso">Avance: ${datos.avance}% (<span class="rango">${datos.rangoAvance}</span>)</div>
+      <div class="info-progreso">Desempeño: ${datos.desempeño}% (<span class="rango">${datos.rangoDesempeño}</span>)</div>
+    `;
+    contenedor.appendChild(div);
   });
+}
 
-  const temas = Object.keys(porTema);
-  const aciertos = temas.map(t => Math.round((porTema[t].aciertos / porTema[t].total) * 100));
+// Inicialización
 
-  new Chart(document.getElementById("grafico-temas"), {
-    type: 'bar',
-    data: {
-      labels: temas,
-      datasets: [{
-        label: '% Aciertos por tema',
-        data: aciertos,
-        backgroundColor: 'rgba(102, 0, 153, 0.6)',
-        borderColor: 'rgba(102, 0, 153, 1)',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: { beginAtZero: true, max: 100 }
-      }
-    }
-  });
-
-  // Mostrar historial
-  const lista = document.getElementById("lista-historial");
-  progreso.reverse().forEach(({ categoria, tema, puntaje, total, fecha }) => {
-    const li = document.createElement("li");
-    li.textContent = `${tema} (${categoria}) – ${puntaje}/${total} el ${new Date(fecha).toLocaleDateString()}`;
-    lista.appendChild(li);
-  });
+document.addEventListener("DOMContentLoaded", async () => {
+  const preguntas = await cargarDatosQuiz();
+  const progreso = JSON.parse(localStorage.getItem("progreso")) || [];
+  const categorias = agruparTemasPorCategoria(preguntas);
+  const resumen = obtenerResumenPorCategoria(categorias, progreso);
+  mostrarTarjetas(resumen);
 });
-
-
