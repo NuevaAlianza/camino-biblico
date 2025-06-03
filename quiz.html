@@ -2,229 +2,44 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quiz comentado con categorías y temas</title>
-  <style>
-    /* (Estilos CSS igual que el anterior, omitido por brevedad) */
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Comentado</title>
+  <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
-  <h1>Quiz comentado</h1>
+  <div class="contenedor-principal">
+    <h1>Quiz Comentado</h1>
 
-  <div id="selector">
-    <label for="categoriaSelect">Selecciona una categoría:</label>
-    <select id="categoriaSelect" aria-label="Seleccionar categoría">
-      <option value="" selected disabled>-- Elige categoría --</option>
-    </select>
+    <div class="seleccion-tema">
+      <label for="tema">Selecciona un tema:</label>
+      <select id="tema">
+        <option value="">-- Elige un tema --</option>
+      </select>
+      <button id="iniciar">Iniciar</button>
+    </div>
 
-    <label for="temaSelect">Selecciona un tema:</label>
-    <select id="temaSelect" aria-label="Seleccionar tema" disabled>
-      <option value="" selected disabled>-- Elige tema --</option>
-    </select>
+    <div id="juego" class="oculto">
+      <div id="barra-tiempo">
+        <div id="progreso"></div>
+      </div>
+      <div id="contador">Tiempo: 58s</div>
+      <div id="conteo-pregunta">Pregunta 1 de 15</div>
 
-    <button id="inicioBtn" disabled>Iniciar Quiz</button>
+      <div id="pregunta"></div>
+
+      <div class="opciones" id="opciones"></div>
+
+      <div id="comentario" class="oculto"></div>
+    </div>
+
+    <div id="resultado" class="oculto">
+      <h2>Resultado</h2>
+      <p id="detalle-resultado"></p>
+      <button id="reiniciar">Volver a jugar</button>
+      <button id="volver">Inicio</button>
+    </div>
   </div>
 
-  <div id="quiz" role="main" aria-live="polite">
-    <div id="contador"></div>
-    <div id="temporizador"><div id="barra"></div></div>
-    <div id="textoPregunta"></div>
-    <div id="opciones"></div>
-    <div id="comentario" class="oculto" aria-live="polite"></div>
-    <button id="siguienteBtn" class="oculto">Siguiente pregunta</button>
-    <button id="volverBtn">← Volver a selección</button>
-  </div>
-
-  <div id="resultadoFinal" role="region" aria-live="polite">
-    <div id="resumen"></div>
-    <div id="mensajeFinal"></div>
-    <button id="volverBtn2">← Volver a selección</button>
-    <button id="inicioBtn2">🏠 Volver al inicio</button>
-  </div>
-
-  <script>
-    let preguntas = [];
-    let preguntasFiltradas = [];
-    let indice = 0;
-    let tiempo = 58;
-    let timer;
-    let respuestasCorrectas = 0;
-
-    const sonidoCorrecto = new Audio('assets/sonidos/correcto.mp3');
-    const sonidoIncorrecto = new Audio('assets/sonidos/incorrecto.mp3');
-    const sonidoClick = new Audio('assets/sonidos/click.mp3');
-
-    const categoriaSelect = document.getElementById('categoriaSelect');
-    const temaSelect = document.getElementById('temaSelect');
-    const inicioBtn = document.getElementById('inicioBtn');
-    const quizDiv = document.getElementById('quiz');
-    const resultadoFinal = document.getElementById('resultadoFinal');
-    const selector = document.getElementById('selector');
-    const textoPregunta = document.getElementById('textoPregunta');
-    const opcionesDiv = document.getElementById('opciones');
-    const comentarioDiv = document.getElementById('comentario');
-    const siguienteBtn = document.getElementById('siguienteBtn');
-    const contadorDiv = document.getElementById('contador');
-    const barra = document.getElementById('barra');
-    const volverBtn = document.getElementById('volverBtn');
-    const volverBtn2 = document.getElementById('volverBtn2');
-    const inicioBtn2 = document.getElementById('inicioBtn2');
-    const resumenDiv = document.getElementById('resumen');
-    const mensajeFinal = document.getElementById('mensajeFinal');
-
-    async function cargarDatos() {
-      try {
-        const res = await fetch(`datos/quiz.json?v=${Date.now()}`);
-        preguntas = await res.json();
-        const categorias = [...new Set(preguntas.map(p => p.categoria))];
-        categoriaSelect.innerHTML = '<option value="" selected disabled>-- Elige categoría --</option>';
-        categorias.forEach(cat => {
-          const option = document.createElement('option');
-          option.value = cat;
-          option.textContent = cat;
-          categoriaSelect.appendChild(option);
-        });
-      } catch (e) {
-        alert('Error cargando datos');
-      }
-    }
-
-    categoriaSelect.addEventListener('change', () => {
-      sonidoClick.play();
-      const temas = preguntas.filter(p => p.categoria === categoriaSelect.value)
-                              .map(p => p.tema);
-      const temasUnicos = [...new Set(temas)];
-      temaSelect.innerHTML = '<option value="" selected disabled>-- Elige tema --</option>';
-      temasUnicos.forEach(t => {
-        const opt = document.createElement('option');
-        opt.value = t;
-        opt.textContent = t;
-        temaSelect.appendChild(opt);
-      });
-      temaSelect.disabled = false;
-    });
-
-    temaSelect.addEventListener('change', () => {
-      sonidoClick.play();
-      inicioBtn.disabled = !temaSelect.value;
-    });
-
-    inicioBtn.addEventListener('click', () => {
-      sonidoClick.play();
-      iniciarQuiz();
-    });
-
-    siguienteBtn.addEventListener('click', () => {
-      sonidoClick.play();
-      indice++;
-      if (indice < preguntasFiltradas.length) {
-        mostrarPregunta();
-        iniciarTemporizador();
-      } else {
-        finalizarQuiz();
-      }
-    });
-
-    volverBtn.addEventListener('click', reiniciar);
-    volverBtn2.addEventListener('click', reiniciar);
-    inicioBtn2.addEventListener('click', () => location.href = 'index.html');
-
-    function iniciarQuiz() {
-      preguntasFiltradas = preguntas.filter(p => p.categoria === categoriaSelect.value && p.tema === temaSelect.value);
-      indice = 0;
-      respuestasCorrectas = 0;
-      selector.style.display = 'none';
-      resultadoFinal.style.display = 'none';
-      quizDiv.style.display = 'block';
-      mostrarPregunta();
-      iniciarTemporizador();
-    }
-
-    function mostrarPregunta() {
-      clearInterval(timer);
-      tiempo = 58;
-      barra.style.width = '100%';
-      barra.style.backgroundColor = '#22c55e';
-      siguienteBtn.classList.add('oculto');
-      comentarioDiv.classList.add('oculto');
-      comentarioDiv.textContent = '';
-
-      const p = preguntasFiltradas[indice];
-      textoPregunta.textContent = p.pregunta;
-      opcionesDiv.innerHTML = '';
-
-      let opciones = [
-        { texto: p.respuesta, correcta: true },
-        { texto: p.opcion_1, correcta: false },
-        { texto: p.opcion_2, correcta: false },
-        { texto: p.opcion_3, correcta: false },
-      ].sort(() => Math.random() - 0.5);
-
-      opciones.forEach(op => {
-        const btn = document.createElement('button');
-        btn.textContent = op.texto;
-        btn.className = 'opcion';
-        btn.addEventListener('click', () => seleccionarOpcion(btn, op.correcta, p['cita biblica']));
-        opcionesDiv.appendChild(btn);
-      });
-
-      contadorDiv.textContent = `Pregunta ${indice + 1} de ${preguntasFiltradas.length}`;
-    }
-
-    function seleccionarOpcion(boton, esCorrecta, comentario) {
-      clearInterval(timer);
-      document.querySelectorAll('.opcion').forEach(btn => btn.disabled = true);
-
-      if (esCorrecta) {
-        boton.classList.add('correcta');
-        sonidoCorrecto.play();
-        respuestasCorrectas++;
-      } else {
-        boton.classList.add('incorrecta');
-        sonidoIncorrecto.play();
-        document.querySelectorAll('.opcion').forEach(btn => {
-          if (preguntasFiltradas[indice].respuesta === btn.textContent) {
-            btn.classList.add('correcta');
-          }
-        });
-      }
-
-      comentarioDiv.textContent = comentario;
-      comentarioDiv.classList.remove('oculto');
-      siguienteBtn.classList.remove('oculto');
-    }
-
-    function iniciarTemporizador() {
-      timer = setInterval(() => {
-        tiempo--;
-        barra.style.width = `${(tiempo / 58) * 100}%`;
-        if (tiempo < 20) barra.style.backgroundColor = '#facc15';
-        if (tiempo < 10) barra.style.backgroundColor = '#f87171';
-        if (tiempo <= 0) {
-          clearInterval(timer);
-          seleccionarOpcion({ textContent: '' }, false, 'Se acabó el tiempo.');
-        }
-      }, 1000);
-    }
-
-    function finalizarQuiz() {
-      quizDiv.style.display = 'none';
-      resultadoFinal.style.display = 'block';
-      resumenDiv.textContent = `Respondiste correctamente ${respuestasCorrectas} de ${preguntasFiltradas.length}`;
-      const porcentaje = (respuestasCorrectas / preguntasFiltradas.length) * 100;
-      if (porcentaje === 100) mensajeFinal.textContent = '¡Perfecto! Conoces muy bien este tema.';
-      else if (porcentaje >= 70) mensajeFinal.textContent = '¡Muy bien! Solo algunos detalles por repasar.';
-      else if (porcentaje >= 40) mensajeFinal.textContent = 'Bien, pero puedes mejorar.';
-      else mensajeFinal.textContent = 'Sigue estudiando, ¡tú puedes!';
-    }
-
-    function reiniciar() {
-      selector.style.display = 'block';
-      quizDiv.style.display = 'none';
-      resultadoFinal.style.display = 'none';
-    }
-
-    cargarDatos();
-  </script>
+  <script src="js/app/quiz.js"></script>
 </body>
 </html>
