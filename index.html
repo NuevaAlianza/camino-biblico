@@ -12,15 +12,19 @@
   <main class="menu-principal">
     <h1>App Bíblica</h1>
     <p>Elige una modalidad:</p>
-     <button id="btn-instalar" style="display:none;">Instalar app</button>
-    <button onclick="location.href='reflexion.html'">🧘 Espiritu Santo Y YO</button>
+    <button id="btn-instalar" style="display:none;">Instalar app</button>
+    <button onclick="location.href='reflexion.html'">🧘 Espíritu Santo Y YO</button>
     <button onclick="location.href='quiz.html'">🧠 Quiz Con Ruedita</button>
     <button onclick="location.href='citas.html'">📖 Citas bíblicas</button>
-   
-
     <button onclick="location.href='progreso.html'">📊 Revisión de progreso</button>
     <button onclick="location.href='config.html'">⚙️ Configuración / Acerca de</button>
   </main>
+
+  <!-- Banner oculto para instalar la app -->
+  <div id="instalar-app" style="display:none;" class="instalar-banner">
+    <span>¿Deseas instalar la app?</span>
+    <button id="btn-instalar">Instalar</button>
+  </div>
 
   <script>
     if ('serviceWorker' in navigator) {
@@ -31,68 +35,33 @@
       });
     }
 
-        </script>
-      <script>
-      
-  let deferredPrompt;
+    let deferredPrompt;
 
-  // Escucha el evento que indica que puede instalarse
-  window.addEventListener('beforeinstallprompt', (e) => {
-    // Previene que aparezca el banner automático
-    e.preventDefault();
-    deferredPrompt = e;
-    
-    // Muestra el botón
-    const installBtn = document.getElementById('btn-instalar');
-    installBtn.style.display = 'inline-block';
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
 
-    installBtn.addEventListener('click', () => {
-      installBtn.style.display = 'none';
-      deferredPrompt.prompt();
+      const installBtn = document.getElementById('btn-instalar');
+      const banner = document.getElementById('instalar-app');
 
-      deferredPrompt.userChoice.then(choiceResult => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('Usuario aceptó la instalación');
-        } else {
-          console.log('Usuario canceló la instalación');
-        }
-        deferredPrompt = null;
+      if (banner) banner.style.display = 'flex';
+      if (installBtn) installBtn.style.display = 'inline-block';
+
+      installBtn.addEventListener('click', () => {
+        if (banner) banner.style.display = 'none';
+        installBtn.style.display = 'none';
+        deferredPrompt.prompt();
+
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Usuario aceptó la instalación');
+          } else {
+            console.log('Usuario canceló la instalación');
+          }
+          deferredPrompt = null;
+        });
       });
     });
-  });
-</script>
-  <script>
-  let deferredPrompt;
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-
-    const banner = document.getElementById('instalar-app');
-    const btn = document.getElementById('btn-instalar');
-    banner.style.display = 'flex';
-
-    btn.addEventListener('click', () => {
-      banner.style.display = 'none';
-      deferredPrompt.prompt();
-
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('Usuario aceptó la instalación');
-        } else {
-          console.log('Usuario canceló la instalación');
-        }
-        deferredPrompt = null;
-      });
-    });
-  });
-</script>
-
-<div id="instalar-app" style="display:none;" class="instalar-banner">
-  <span>¿Deseas instalar la app?</span>
-  <button id="btn-instalar">Instalar</button>
-</div>
-
-
+  </script>
 </body>
 </html>
