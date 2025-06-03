@@ -93,7 +93,7 @@ iniciarBtn.addEventListener("click", () => {
   preguntaActual = 0;
   puntaje = 0;
 
-  document.querySelector(".seleccion-categoria-tema").classList.add("oculto");
+  document.querySelector(".seleccion-tema").classList.add("oculto");
   resultadoEl.classList.add("oculto");
   juego.classList.remove("oculto");
   mostrarPregunta();
