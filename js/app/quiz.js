@@ -24,8 +24,8 @@ const sonidoInicio = new Audio("assets/sonidos/start.mp3");
 const sonidoAdvertencia = new Audio("assets/sonidos/warning.mp3");
 const sonidoFin = new Audio("assets/sonidos/end.mp3");
 const sonidoClick = new Audio("assets/sonidos/click.mp3");
-const sonidoCorrecto = new Audio("assets/sonidos/correct.mp3");
-const sonidoIncorrecto = new Audio("assets/sonidos/incorrect.mp3");
+const sonidoCorrecto = new Audio("assets/sonidos/correcto.mp3");
+const sonidoIncorrecto = new Audio("assets/sonidos/incorrecto.mp3");
 
 
 function reproducirSonido(audio) {
