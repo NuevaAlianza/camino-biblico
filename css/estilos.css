@@ -410,3 +410,56 @@ h1, h2 {
   padding: 0.5rem;
   border-bottom: 1px solid #ddd;
 }
+
+/* Estilo general del contenedor de progreso */
+.contenedor-progreso {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 1rem;
+}
+
+/* Tarjeta individual */
+.tarjeta-progreso {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tarjeta-progreso:hover {
+  transform: scale(1.02);
+}
+
+/* Título de categoría */
+.titulo-categoria {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #6b21a8;
+}
+
+/* Información de progreso */
+.info-progreso {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* Rango (A+, B−, etc.) */
+.rango {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #9333ea;
+}
+
+/* Cuando no hay datos */
+.vacio {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #777;
+}
+
