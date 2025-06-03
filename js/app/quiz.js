@@ -205,7 +205,7 @@ function detenerTemporizador() {
 }
 
 reiniciarBtn.addEventListener("click", () => {
-  document.querySelector(".seleccion-categoria-tema").classList.remove("oculto");
+  document.querySelector(".seleccion-tema").classList.remove("oculto");
   resultadoEl.classList.add("oculto");
 });
 
