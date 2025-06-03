@@ -19,6 +19,17 @@ const contadorEl = document.getElementById("contador");
 const conteoPreguntaEl = document.getElementById("conteo-pregunta");
 const barraProgreso = document.getElementById("progreso");
 
+// Sonidos
+const sonidoInicio = new Audio("assets/sonidos/start.mp3");
+const sonidoAdvertencia = new Audio("assets/sonidos/warning.mp3");
+const sonidoFin = new Audio("assets/sonidos/end.mp3");
+const sonidoClick = new Audio("assets/sonidos/click.mp3");
+
+function reproducirSonido(audio) {
+  audio.currentTime = 0;
+  audio.play();
+}
+
 fetch("datos/quiz.json")
   .then((res) => res.json())
   .then((json) => {
@@ -33,6 +44,8 @@ fetch("datos/quiz.json")
   });
 
 iniciarBtn.addEventListener("click", () => {
+  reproducirSonido(sonidoClick); // Punto 2
+
   const tema = temaSelect.value;
   if (!tema) return alert("Selecciona un tema");
 
@@ -48,6 +61,7 @@ iniciarBtn.addEventListener("click", () => {
 
 function mostrarPregunta() {
   resetearEstado();
+  reproducirSonido(sonidoInicio); // Punto 3
 
   const actual = preguntas[preguntaActual];
   preguntaEl.textContent = actual.pregunta;
@@ -58,7 +72,10 @@ function mostrarPregunta() {
     const btn = document.createElement("button");
     btn.textContent = op;
     btn.classList.add("opcion");
-    btn.addEventListener("click", () => seleccionarOpcion(op, actual));
+    btn.addEventListener("click", () => {
+      reproducirSonido(sonidoClick); // Punto 4
+      seleccionarOpcion(op, actual);
+    });
     opcionesEl.appendChild(btn);
   });
 
@@ -122,6 +139,10 @@ function iniciarTemporizador() {
     const porcentaje = (tiempo / 58) * 100;
     barraProgreso.style.width = `${porcentaje}%`;
 
+    if (tiempo === 20 || tiempo === 10) {
+      reproducirSonido(sonidoAdvertencia); // Punto 1
+    }
+
     if (tiempo <= 20 && tiempo > 10) {
       barraProgreso.style.backgroundColor = "orange";
     } else if (tiempo <= 10) {
@@ -130,6 +151,7 @@ function iniciarTemporizador() {
 
     if (tiempo <= 0) {
       clearInterval(intervalo);
+      reproducirSonido(sonidoFin); // Punto 1 (fin)
       seleccionarOpcion("tiempo agotado", preguntas[preguntaActual]);
     }
   }, 1000);
