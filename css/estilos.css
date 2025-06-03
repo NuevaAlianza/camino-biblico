@@ -381,3 +381,32 @@ main.menu-principal button:hover {
   opacity: 0.8;
   cursor: not-allowed;
 }
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fdf6ff;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(80, 0, 100, 0.2);
+}
+
+h1, h2 {
+  color: #660099;
+  text-align: center;
+}
+
+.resumen p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+#lista-historial {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-historial li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
