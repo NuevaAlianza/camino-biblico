@@ -264,4 +264,83 @@ main.menu-principal button:hover {
 .oculto {
   display: none;
 }
+.seleccion-tema {
+  background: #f5f0ff; /* un violeta muy claro */
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(90, 40, 150, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.seleccion-tema label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #4a0073; /* púrpura oscuro */
+}
+
+.seleccion-tema select,
+.seleccion-tema button {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1.5px solid #a175c8;
+  font-size: 1rem;
+  color: #4a0073;
+  background-color: #e6dbff; /* lila suave */
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.seleccion-tema select:focus,
+.seleccion-tema button:hover:not(:disabled) {
+  background-color: #c3a0ff;
+  border-color: #8049c7;
+}
+
+.seleccion-tema button:disabled {
+  background-color: #ddd6f3;
+  cursor: not-allowed;
+  color: #9e9ca4;
+}
+
+#resultado {
+  background: #f3e8ff; /* lila muy claro */
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px 20px;
+  box-shadow: 0 4px 14px rgba(120, 80, 190, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+#resultado h2 {
+  color: #5d0080;
+  margin-bottom: 15px;
+}
+
+#detalle-resultado {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+  color: #6a0085;
+}
+
+#resultado button {
+  background-color: #7e3ff2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  margin: 0 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#resultado button:hover {
+  background-color: #5a23b1;
+}
