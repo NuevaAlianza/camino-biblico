@@ -5,6 +5,7 @@ let puntaje = 0;
 let tiempo = 58;
 let intervalo;
 
+const categoriaSelect = document.getElementById("categoria");
 const temaSelect = document.getElementById("tema");
 const iniciarBtn = document.getElementById("iniciar");
 const juego = document.getElementById("juego");
@@ -27,7 +28,6 @@ const sonidoClick = new Audio("assets/sonidos/click.mp3");
 const sonidoCorrecto = new Audio("assets/sonidos/correcto.mp3");
 const sonidoIncorrecto = new Audio("assets/sonidos/incorrecto.mp3");
 
-
 function reproducirSonido(audio) {
   audio.currentTime = 0;
   audio.play();
@@ -37,26 +37,63 @@ fetch("datos/quiz.json")
   .then((res) => res.json())
   .then((json) => {
     datos = json.filter((item) => item.tipo === "quiz comentado");
-    const temas = [...new Set(datos.map((item) => item.tema))];
-    temas.forEach((tema) => {
+
+    // Obtener categorías únicas y llenar select categoría
+    const categorias = [...new Set(datos.map((item) => item.categoria))];
+    categorias.forEach((categoria) => {
       const option = document.createElement("option");
-      option.value = tema;
-      option.textContent = tema;
-      temaSelect.appendChild(option);
+      option.value = categoria;
+      option.textContent = categoria;
+      categoriaSelect.appendChild(option);
     });
   });
 
-iniciarBtn.addEventListener("click", () => {
-  reproducirSonido(sonidoClick); // Punto 2
+categoriaSelect.addEventListener("change", () => {
+  const categoria = categoriaSelect.value;
 
+  // Limpiar opciones de temas
+  temaSelect.innerHTML = '<option value="">-- Elige un tema --</option>';
+
+  if (!categoria) {
+    temaSelect.disabled = true;
+    iniciarBtn.disabled = true;
+    return;
+  }
+
+  // Obtener temas asociados a la categoría
+  const temas = [...new Set(datos.filter((item) => item.categoria === categoria).map(item => item.tema))];
+
+  temas.forEach((tema) => {
+    const option = document.createElement("option");
+    option.value = tema;
+    option.textContent = tema;
+    temaSelect.appendChild(option);
+  });
+
+  temaSelect.disabled = false;
+  iniciarBtn.disabled = true;
+});
+
+temaSelect.addEventListener("change", () => {
+  iniciarBtn.disabled = temaSelect.value === "";
+});
+
+iniciarBtn.addEventListener("click", () => {
+  reproducirSonido(sonidoClick);
+
+  const categoria = categoriaSelect.value;
   const tema = temaSelect.value;
+
+  if (!categoria) return alert("Selecciona una categoría");
   if (!tema) return alert("Selecciona un tema");
 
-  preguntas = datos.filter((item) => item.tema === tema);
+  preguntas = datos.filter(item => item.categoria === categoria && item.tema === tema);
   preguntas = preguntas.sort(() => 0.5 - Math.random()).slice(0, 15);
+  
   preguntaActual = 0;
   puntaje = 0;
-  document.querySelector(".seleccion-tema").classList.add("oculto");
+
+  document.querySelector(".seleccion-categoria-tema").classList.add("oculto");
   resultadoEl.classList.add("oculto");
   juego.classList.remove("oculto");
   mostrarPregunta();
@@ -64,7 +101,7 @@ iniciarBtn.addEventListener("click", () => {
 
 function mostrarPregunta() {
   resetearEstado();
-  reproducirSonido(sonidoInicio); // Punto 3
+  reproducirSonido(sonidoInicio);
 
   const actual = preguntas[preguntaActual];
   preguntaEl.textContent = actual.pregunta;
@@ -76,7 +113,7 @@ function mostrarPregunta() {
     btn.textContent = op;
     btn.classList.add("opcion");
     btn.addEventListener("click", () => {
-      reproducirSonido(sonidoClick); // Punto 4
+      reproducirSonido(sonidoClick);
       seleccionarOpcion(op, actual);
     });
     opcionesEl.appendChild(btn);
@@ -99,7 +136,6 @@ function seleccionarOpcion(opcion, actual) {
     }
   });
 
- // ✅ Reproducir sonido según si es correcta o incorrecta
   if (opcion === actual.respuesta) {
     puntaje++;
     reproducirSonido(sonidoCorrecto);
@@ -147,7 +183,7 @@ function iniciarTemporizador() {
     barraProgreso.style.width = `${porcentaje}%`;
 
     if (tiempo === 20 || tiempo === 10) {
-      reproducirSonido(sonidoAdvertencia); // Punto 1
+      reproducirSonido(sonidoAdvertencia);
     }
 
     if (tiempo <= 20 && tiempo > 10) {
@@ -158,7 +194,7 @@ function iniciarTemporizador() {
 
     if (tiempo <= 0) {
       clearInterval(intervalo);
-      reproducirSonido(sonidoFin); // Punto 1 (fin)
+      reproducirSonido(sonidoFin);
       seleccionarOpcion("tiempo agotado", preguntas[preguntaActual]);
     }
   }, 1000);
@@ -169,7 +205,7 @@ function detenerTemporizador() {
 }
 
 reiniciarBtn.addEventListener("click", () => {
-  document.querySelector(".seleccion-tema").classList.remove("oculto");
+  document.querySelector(".seleccion-categoria-tema").classList.remove("oculto");
   resultadoEl.classList.add("oculto");
 });
 
