@@ -20,7 +20,7 @@ const conteoPreguntaEl = document.getElementById("conteo-pregunta");
 const barraProgreso = document.getElementById("progreso");
 
 // Sonidos
-const sonidoInicio = new Audio("assets/sonidos/start.mp3");
+const sonidoInicio = new Audio("assets/sonidos/inicio.mp3");
 const sonidoAdvertencia = new Audio("assets/sonidos/warning.mp3");
 const sonidoFin = new Audio("assets/sonidos/end.mp3");
 const sonidoClick = new Audio("assets/sonidos/click.mp3");
