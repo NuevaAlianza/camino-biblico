@@ -1,31 +1,31 @@
 const CACHE_NAME = 'app-static-v1';
 const URLS_TO_CACHE = [
   '/',
-  '/index.html',
-  '/citas.html',
-  '/config.html',
-  '/progreso.html',
-  '/quiz-comentado.html',
-  '/quiz.html',
-  '/reflexion.html',
-  '/css/estilos.css',
-  '/manifest.json',
+  'index.html',
+  'citas.html',
+  'config.html',
+  'progreso.html',
+  'quiz-comentado.html',
+  'quiz.html',
+  'reflexion.html',
+  'css/estilos.css',
+  'manifest.json',
   // JS
-  '/js/app/citas.js',
-  '/js/app/quiz.js',
-  '/js/app/reflexion.js',
+  'js/app/citas.js',
+  'js/app/quiz.js',
+  'js/app/reflexion.js',
   // Imágenes
-  '/assets/img/icon-192.png',
-  '/assets/img/icon-512.png',
+  'assets/img/icon-192.png',
+  'assets/img/icon-512.png',
   // Sonidos
-  '/assets/sonidos/click.mp3',
-  '/assets/sonidos/correcto.mp3',
-  '/assets/sonidos/incorrecto.mp3',
+  'assets/sonidos/click.mp3',
+  'assets/sonidos/correcto.mp3',
+  'assets/sonidos/incorrecto.mp3',
   // Datos JSON
-  '/datos/citas.json',
-  '/datos/reflexion.json',
-  '/datos/quiz.json',
-  '/offline.html', // <-- Importante para fallback
+  'datos/citas.json',
+  'datos/reflexion.json',
+  'datos/quiz.json',
+  'offline.html', // <-- Importante para fallback
 ];
 
 self.addEventListener('install', event => {
