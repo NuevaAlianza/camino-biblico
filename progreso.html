@@ -4,232 +4,192 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Progreso</title>
+  <link rel="stylesheet" href="css/estilos.css">
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 1rem;
-      background: #f5f5f5;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    .menu {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .tarjetas {
+    main {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-    .categoria {
-      margin-bottom: 2rem;
-    }
-    .card {
       padding: 1rem;
-      border-radius: 12px;
-      color: #333;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .nota-F { background: #FFE5E5; }
-    .nota-D { background: #EEEEEE; }
-    .nota-C { background: #D0E7FF; }
-    .nota-B, .nota-B+ { background: #CD7F32; color: #fff; }
-    .nota-A { background: #C0C0C0; }
-    .nota-A\+ { background: #FFD700; }
-    .estado { font-size: 0.9em; font-style: italic; margin-top: 0.5em; }
-    button {
+
+    .card {
+      border-radius: 1rem;
+      padding: 1rem;
+      color: white;
+      box-shadow: 0 0 10px #0004;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .nota-Amas { background: #FFD700; }  /* A+ */
+    .nota-A { background: #4CAF50; }
+    .nota-B { background: #2196F3; }
+    .nota-C { background: #FF9800; }
+    .nota-D, .nota-F { background: #F44336; }
+
+    .botones {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1rem;
+    }
+
+    .botones button {
       padding: 0.5rem 1rem;
       font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
     }
-    .acciones {
+
+    h1 {
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 1rem;
+    }
+
+    h2 {
+      margin: 0.2em 0;
+    }
+
+    p {
+      margin: 0.2em 0;
     }
   </style>
 </head>
 <body>
-  <h1>Tu progreso</h1>
-  <div class="menu">
-    <button onclick="mostrar('quiz')">📘 Quiz comentado</button>
-    <button onclick="mostrar('citas')">📖 Citas bíblicas</button>
-  </div>
-
-  <div id="contenido"></div>
-
-  <div class="acciones">
-    <button onclick="reiniciarProgreso()">🔄 Reiniciar progreso</button>
-    <button onclick="exportarProgreso()">📤 Exportar</button>
+  <h1>Progreso</h1>
+  <div class="botones">
+    <button onclick="mostrar('quiz')">Quiz comentado</button>
+    <button onclick="mostrar('reflexion')">Reflexión</button>
+    <button onclick="mostrar('citas')">Citas bíblicas</button>
+    <button onclick="reiniciar()">🗑️ Reiniciar</button>
+    <button onclick="exportar()">📤 Exportar</button>
     <button onclick="document.getElementById('importar').click()">📥 Importar</button>
-    <input type="file" id="importar" accept=".json" style="display:none" onchange="importarProgreso(event)">
+    <input type="file" id="importar" style="display:none" accept="application/json" onchange="importar(this)">
+  </div>
+  <main id="contenedor"></main>
+  <div id="updateNotice" style="text-align:center; display:none">
+    🔄 Nueva versión disponible. Recarga la página.
   </div>
 
   <script>
+    const VERSION = "1.0";
+    let progreso = JSON.parse(localStorage.getItem("progreso")) || { version: VERSION };
+
+    if (progreso.version !== VERSION) {
+      progreso = { version: VERSION };
+    }
+
     const progresoBase = {
-      version: 1.3,
       quiz: {
-        "Profetas": {
-          "Daniel": { porcentaje: 0, nota: "F" },
-          "Elías": { porcentaje: 0, nota: "F" },
-          
-        },
-        "Mujeres": {
-          "Rut": { porcentaje: 0, nota: "F" }
-        }
+        "David": { porcentaje: 0, nota: "F" },
+        "Salomón": { porcentaje: 0, nota: "F" },
+        "Pablo": { porcentaje: 0, nota: "F" },
+        "Pedro": { porcentaje: 0, nota: "F" },
+        "Elías": { porcentaje: 0, nota: "F" },
+        "José": { porcentaje: 0, nota: "F" }
       },
-      citas: {
-        "Bloque 1": { porcentajeLibro: 0, porcentajeCapitulo: 0, nota: "F" },
-        "Bloque 2": { porcentajeLibro: 0, porcentajeCapitulo: 0, nota: "F" },
-        "Bloque 3": { porcentajeLibro: 0, porcentajeCapitulo: 0, nota: "F" }
-      }
+      reflexion: {},
+      citas: {}
     };
 
-    function cargarProgreso() {
-      const guardado = localStorage.getItem('progreso');
-      let progreso = guardado ? JSON.parse(guardado) : progresoBase;
-
-      if (!guardado || progreso.version !== progresoBase.version) {
-        progreso = mergeProgreso(progreso);
-        guardarProgreso(progreso);
-      }
-
-      return progreso;
-    }
-
-    function guardarProgreso(data) {
-      localStorage.setItem('progreso', JSON.stringify(data));
-    }
-
-    function mergeProgreso(guardado) {
-      const nuevo = JSON.parse(JSON.stringify(progresoBase));
-      for (let tipo in nuevo) {
-        if (tipo === 'version') continue;
-        for (let categoria in nuevo[tipo]) {
-          if (!guardado[tipo]) guardado[tipo] = {};
-          if (!guardado[tipo][categoria]) guardado[tipo][categoria] = nuevo[tipo][categoria];
-          else {
-            for (let tema in nuevo[tipo][categoria]) {
-              if (!guardado[tipo][categoria][tema]) {
-                guardado[tipo][categoria][tema] = nuevo[tipo][categoria][tema];
-              }
-            }
-          }
-        }
-      }
-      guardado.version = nuevo.version;
-      return guardado;
-    }
+    const notas = [
+      { nota: "Amas", min: 95 },
+      { nota: "A", min: 85 },
+      { nota: "B", min: 75 },
+      { nota: "C", min: 60 },
+      { nota: "D", min: 50 },
+      { nota: "F", min: 0 }
+    ];
 
     function mostrar(tipo) {
-      const progreso = cargarProgreso();
-      const contenedor = document.getElementById('contenido');
-      contenedor.innerHTML = '';
+      const contenedor = document.getElementById("contenedor");
+      contenedor.innerHTML = "";
 
-      for (let categoria in progreso[tipo]) {
-        const divCat = document.createElement('div');
-        divCat.classList.add('categoria');
-        const titulo = document.createElement('h2');
-        titulo.textContent = categoria;
-        divCat.appendChild(titulo);
+      const dataTipo = { ...progresoBase[tipo], ...progreso[tipo] };
+      const temas = Object.keys(dataTipo).sort();
 
-        const grid = document.createElement('div');
-        grid.classList.add('tarjetas');
-
-        for (let tema in progreso[tipo][categoria]) {
-          const data = progreso[tipo][categoria][tema];
-          let porcentaje = data.porcentaje || ((data.porcentajeLibro + data.porcentajeCapitulo) / 2) || 0;
-          let nota = data.nota || "F";
-
-          const card = document.createElement('div');
-          card.className = `card nota-${nota.replace('+', '\+')}`;
-          card.innerHTML = `<strong>${tema}</strong><br>
-            ${porcentaje.toFixed(0)}%<br>
-            Nota: ${nota}<br>
-            <div class="estado">${estado(porcentaje)}</div>`;
-
-          grid.appendChild(card);
+      temas.forEach((tema) => {
+        const data = dataTipo[tema];
+        let porcentaje = 0;
+        if ('porcentaje' in data) {
+          porcentaje = data.porcentaje;
+        } else if ('porcentajeLibro' in data && 'porcentajeCapitulo' in data) {
+          porcentaje = (data.porcentajeLibro + data.porcentajeCapitulo) / 2;
         }
 
-        divCat.appendChild(grid);
-        contenedor.appendChild(divCat);
-      }
+        const notaObj = notas.find(n => porcentaje >= n.min);
+        const nota = notaObj ? notaObj.nota : "F";
+
+        const card = document.createElement("div");
+        card.className = `card nota-${nota}`;
+
+        card.innerHTML = `
+          <h2>${tema}</h2>
+          <p><strong>Correctas:</strong> ${porcentaje.toFixed(1)}%</p>
+          <p><strong>Nota:</strong> ${nota === "Amas" ? "A+" : nota}</p>
+        `;
+
+        contenedor.appendChild(card);
+      });
     }
 
-    function estado(p) {
-      if (p >= 98) return '✅ Completado';
-      if (p >= 50) return '⏳ En progreso';
-      return '❌ No iniciado';
-    }
-
-    function reiniciarProgreso() {
-      if (confirm("¿Seguro que deseas reiniciar tu progreso?")) {
-        guardarProgreso(progresoBase);
+    function reiniciar() {
+      if (confirm("¿Estás seguro de que quieres borrar tu progreso?")) {
+        localStorage.removeItem("progreso");
         location.reload();
       }
     }
 
-    function exportarProgreso() {
-      const datos = localStorage.getItem('progreso');
-      const blob = new Blob([datos], { type: 'application/json' });
+    function exportar() {
+      const dataStr = JSON.stringify(progreso, null, 2);
+      const blob = new Blob([dataStr], { type: "application/json" });
       const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
+
+      const a = document.createElement("a");
       a.href = url;
-      a.download = 'progreso.json';
+      a.download = "progreso.json";
       a.click();
+
+      URL.revokeObjectURL(url);
     }
 
-    function importarProgreso(event) {
-      const archivo = event.target.files[0];
-      if (!archivo) return;
-      const lector = new FileReader();
-      lector.onload = e => {
+    function importar(input) {
+      const file = input.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
         try {
-          const datos = JSON.parse(e.target.result);
-          guardarProgreso(datos);
+          const data = JSON.parse(e.target.result);
+          if (!data.version) throw new Error("Formato inválido");
+          localStorage.setItem("progreso", JSON.stringify(data));
           location.reload();
-        } catch {
-          alert("Archivo inválido.");
+        } catch (err) {
+          alert("Archivo inválido");
         }
       };
-      lector.readAsText(archivo);
+      reader.readAsText(file);
     }
 
-    // Mostrar automáticamente el progreso del quiz al cargar la página
-    document.addEventListener('DOMContentLoaded', () => {
-      mostrar('quiz');
+    // Mostrar vista por defecto
+    document.addEventListener("DOMContentLoaded", () => {
+      mostrar("quiz");
     });
+
+    // Service worker para PWA
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(reg => {
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              document.getElementById("updateNotice").style.display = "block";
+            }
+          });
+        });
+      });
+    }
   </script>
-  <div id="updateNotice" style="display:none; position:fixed; bottom:1rem; left:50%; transform:translateX(-50%);
-background:#ffc107; padding:1rem 1.5rem; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.2); z-index:1000;">
-  🔄 Nueva versión disponible.
-  <button onclick="location.reload()" style="margin-left:1rem; padding:0.4rem 0.8rem;">Actualizar</button>
-</div>
-
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/camino-biblico/sw.js').then(reg => {
-      reg.onupdatefound = () => {
-        const nuevoWorker = reg.installing;
-        nuevoWorker.onstatechange = () => {
-          if (nuevoWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            document.getElementById('updateNotice').style.display = 'block';
-          }
-        };
-      };
-    });
-  }
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    actualizarTarjetas();
-  });
-</script>
-
 </body>
 </html>
