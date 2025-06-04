@@ -61,6 +61,7 @@ function obtenerResumenPorCategoria(categorias, progreso) {
 }
 
 function mostrarTarjetas(resumen) {
+  console.log("Mostrando tarjetas de progreso...", resumen); // NUEVO
   const contenedor = document.getElementById("contenedorProgreso");
   const sinProgreso = document.getElementById("sinProgreso");
   contenedor.innerHTML = "";
