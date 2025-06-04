@@ -1,6 +1,6 @@
 const CACHE_NAME = 'app-static-v1';
 const URLS_TO_CACHE = [
-  '/',
+  './',
   './index.html',
   './citas.html',
   './config.html',
