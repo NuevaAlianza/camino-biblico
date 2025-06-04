@@ -83,8 +83,7 @@
           "José (hijo de Jacob)": { porcentaje: 0, nota: "F" }
         },
         "Mujeres": {
-          "Rut": { porcentaje: 0, nota: "F" },
-         
+          "Rut": { porcentaje: 0, nota: "F" }
         }
       },
       citas: {
@@ -98,7 +97,6 @@
       const guardado = localStorage.getItem('progreso');
       let progreso = guardado ? JSON.parse(guardado) : progresoBase;
 
-      // Fusionar con base si hay diferencia de versión
       if (!guardado || progreso.version !== progresoBase.version) {
         progreso = mergeProgreso(progreso);
         guardarProgreso(progreso);
@@ -204,6 +202,11 @@
       };
       lector.readAsText(archivo);
     }
+
+    // Mostrar automáticamente el progreso del quiz al cargar la página
+    document.addEventListener('DOMContentLoaded', () => {
+      mostrar('quiz');
+    });
   </script>
 </body>
 </html>
