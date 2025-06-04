@@ -1,19 +1,20 @@
 {
   "name": "Nueva Alianza",
   "short_name": "N.ALianza",
-  "start_url": "./",
+  "start_url":"/camino-biblico/index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#006600",
-  "orientation": "portrait",
+  "background_color": "#f4a261",
+  "theme_color": "#f4a261",
+
+  "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "assets/img/icon-192.png",
+      "src": "/camino-biblico/assets/img/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/img/icon-512.png",
+      "src": "/camino-biblico/assets/img/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
