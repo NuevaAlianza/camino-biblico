@@ -52,7 +52,7 @@ self.addEventListener('fetch', event => {
       return cachedResponse || fetch(event.request).catch(() => {
         // Si falla la red y es navegación, devuelve offline.html
         if (event.request.mode === 'navigate') {
-          return caches.match('/offline.html');
+          return caches.match('./offline.html');
         }
       });
     })
