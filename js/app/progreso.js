@@ -105,4 +105,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   mostrarTarjetas(resumen);
 });
 
-window.resumen = resumen;
+
