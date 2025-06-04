@@ -1,4 +1,4 @@
-const CACHE_NAME = 'app-static-v2';
+const CACHE_NAME = 'app-static-v3';
 const URLS_TO_CACHE = [
   './',
   './index.html',
@@ -22,9 +22,8 @@ const URLS_TO_CACHE = [
   './assets/sonidos/correcto.mp3',
   './assets/sonidos/incorrecto.mp3',
   // Datos JSON
-  './datos/citas.json',
-  './datos/reflexion.json',
-  './datos/quiz.json',
+  // No cacheamos JSON para evitar datos viejos
+
   './offline.html', // <-- Importante para fallback
 ];
 
