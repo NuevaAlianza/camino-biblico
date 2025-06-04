@@ -1,31 +1,211 @@
-<!-- progreso.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Revisión de Progreso</title>
-  <link rel="stylesheet" href="css/estilos.css">
-  
+  <title>Progreso</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background: #f5f5f5;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .tarjetas {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .categoria {
+      margin-bottom: 2rem;
+    }
+    .card {
+      padding: 1rem;
+      border-radius: 12px;
+      color: #333;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .nota-F { background: #FFE5E5; }
+    .nota-D { background: #EEEEEE; }
+    .nota-C { background: #D0E7FF; }
+    .nota-B, .nota-B+ { background: #CD7F32; color: #fff; }
+    .nota-A { background: #C0C0C0; }
+    .nota-A\+ { background: #FFD700; }
+    .estado { font-size: 0.9em; font-style: italic; margin-top: 0.5em; }
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .acciones {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Mi Progreso</h1>
-  <div id="contenedorProgreso" class="contenedor-progreso"></div>
-  <div id="sinProgreso" class="vacio" style="display: none;">
-    Aún no has completado ningún tema. ¡Juega y regresa para ver tu avance!
+  <h1>Tu progreso</h1>
+  <div class="menu">
+    <button onclick="mostrar('quiz')">📘 Quiz comentado</button>
+    <button onclick="mostrar('citas')">📖 Citas bíblicas</button>
   </div>
-  <script src="js/app/progreso.js"></script>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/camino-biblico/sw.js').then(reg => {
-      console.log('SW registrado:', reg);
 
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        // Si cambia el SW activo, recarga la página automáticamente para usar la nueva versión
-        window.location.reload();
-      });
-    });
-  }
-</script>
+  <div id="contenido"></div>
+
+  <div class="acciones">
+    <button onclick="reiniciarProgreso()">🔄 Reiniciar progreso</button>
+    <button onclick="exportarProgreso()">📤 Exportar</button>
+    <button onclick="document.getElementById('importar').click()">📥 Importar</button>
+    <input type="file" id="importar" accept=".json" style="display:none" onchange="importarProgreso(event)">
+  </div>
+
+  <script>
+    const progresoBase = {
+      version: 1,
+      quiz: {
+        "Personajes Bíblicos": {
+          "David": { porcentaje: 0, nota: "F" },
+          "Salomón": { porcentaje: 0, nota: "F" },
+          "Pablo": { porcentaje: 0, nota: "F" },
+          "Pedro": { porcentaje: 0, nota: "F" },
+          "Elías": { porcentaje: 0, nota: "F" },
+          "José (hijo de Jacob)": { porcentaje: 0, nota: "F" }
+        },
+        "Temas Generales": {
+          "Oración": { porcentaje: 0, nota: "F" },
+          "Perdón": { porcentaje: 0, nota: "F" },
+          "Amor": { porcentaje: 0, nota: "F" },
+          "Fe": { porcentaje: 0, nota: "F" }
+        }
+      },
+      citas: {
+        "Bloque 1": { porcentajeLibro: 0, porcentajeCapitulo: 0, nota: "F" },
+        "Bloque 2": { porcentajeLibro: 0, porcentajeCapitulo: 0, nota: "F" },
+        "Bloque 3": { porcentajeLibro: 0, porcentajeCapitulo: 0, nota: "F" }
+      }
+    };
+
+    function cargarProgreso() {
+      const guardado = localStorage.getItem('progreso');
+      let progreso = guardado ? JSON.parse(guardado) : progresoBase;
+
+      // Fusionar con base si hay diferencia de versión
+      if (!guardado || progreso.version !== progresoBase.version) {
+        progreso = mergeProgreso(progreso);
+        guardarProgreso(progreso);
+      }
+
+      return progreso;
+    }
+
+    function guardarProgreso(data) {
+      localStorage.setItem('progreso', JSON.stringify(data));
+    }
+
+    function mergeProgreso(guardado) {
+      const nuevo = JSON.parse(JSON.stringify(progresoBase));
+      for (let tipo in nuevo) {
+        if (tipo === 'version') continue;
+        for (let categoria in nuevo[tipo]) {
+          if (!guardado[tipo]) guardado[tipo] = {};
+          if (!guardado[tipo][categoria]) guardado[tipo][categoria] = nuevo[tipo][categoria];
+          else {
+            for (let tema in nuevo[tipo][categoria]) {
+              if (!guardado[tipo][categoria][tema]) {
+                guardado[tipo][categoria][tema] = nuevo[tipo][categoria][tema];
+              }
+            }
+          }
+        }
+      }
+      guardado.version = nuevo.version;
+      return guardado;
+    }
+
+    function mostrar(tipo) {
+      const progreso = cargarProgreso();
+      const contenedor = document.getElementById('contenido');
+      contenedor.innerHTML = '';
+
+      for (let categoria in progreso[tipo]) {
+        const divCat = document.createElement('div');
+        divCat.classList.add('categoria');
+        const titulo = document.createElement('h2');
+        titulo.textContent = categoria;
+        divCat.appendChild(titulo);
+
+        const grid = document.createElement('div');
+        grid.classList.add('tarjetas');
+
+        for (let tema in progreso[tipo][categoria]) {
+          const data = progreso[tipo][categoria][tema];
+          let porcentaje = data.porcentaje || ((data.porcentajeLibro + data.porcentajeCapitulo) / 2) || 0;
+          let nota = data.nota || "F";
+
+          const card = document.createElement('div');
+          card.className = `card nota-${nota.replace('+', '\+')}`;
+          card.innerHTML = `<strong>${tema}</strong><br>
+            ${porcentaje.toFixed(0)}%<br>
+            Nota: ${nota}<br>
+            <div class="estado">${estado(porcentaje)}</div>`;
+
+          grid.appendChild(card);
+        }
+
+        divCat.appendChild(grid);
+        contenedor.appendChild(divCat);
+      }
+    }
+
+    function estado(p) {
+      if (p >= 98) return '✅ Completado';
+      if (p >= 50) return '⏳ En progreso';
+      return '❌ No iniciado';
+    }
+
+    function reiniciarProgreso() {
+      if (confirm("¿Seguro que deseas reiniciar tu progreso?")) {
+        guardarProgreso(progresoBase);
+        location.reload();
+      }
+    }
+
+    function exportarProgreso() {
+      const datos = localStorage.getItem('progreso');
+      const blob = new Blob([datos], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'progreso.json';
+      a.click();
+    }
+
+    function importarProgreso(event) {
+      const archivo = event.target.files[0];
+      if (!archivo) return;
+      const lector = new FileReader();
+      lector.onload = e => {
+        try {
+          const datos = JSON.parse(e.target.result);
+          guardarProgreso(datos);
+          location.reload();
+        } catch {
+          alert("Archivo inválido.");
+        }
+      };
+      lector.readAsText(archivo);
+    }
+  </script>
 </body>
 </html>
