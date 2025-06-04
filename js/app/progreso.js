@@ -94,3 +94,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   const resumen = obtenerResumenPorCategoria(categorias, progreso);
   mostrarTarjetas(resumen);
 });
+
+window.resumen = resumen;
