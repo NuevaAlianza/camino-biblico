@@ -1,195 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progreso</title>
-  <link rel="stylesheet" href="css/estilos.css">
-  <style>
-    main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-    }
-
-    .card {
-      border-radius: 1rem;
-      padding: 1rem;
-      color: white;
-      box-shadow: 0 0 10px #0004;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .nota-Amas { background: #FFD700; }  /* A+ */
-    .nota-A { background: #4CAF50; }
-    .nota-B { background: #2196F3; }
-    .nota-C { background: #FF9800; }
-    .nota-D, .nota-F { background: #F44336; }
-
-    .botones {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-      margin: 1rem;
-    }
-
-    .botones button {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    h2 {
-      margin: 0.2em 0;
-    }
-
-    p {
-      margin: 0.2em 0;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Progreso del Usuario</title>
+  <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
-  <h1>Progreso</h1>
-  <div class="botones">
-    <button onclick="mostrar('quiz')">Quiz comentado</button>
-    <button onclick="mostrar('reflexion')">Reflexión</button>
-    <button onclick="mostrar('citas')">Citas bíblicas</button>
-    <button onclick="reiniciar()">🗑️ Reiniciar</button>
-    <button onclick="exportar()">📤 Exportar</button>
-    <button onclick="document.getElementById('importar').click()">📥 Importar</button>
-    <input type="file" id="importar" style="display:none" accept="application/json" onchange="importar(this)">
-  </div>
-  <main id="contenedor"></main>
-  <div id="updateNotice" style="text-align:center; display:none">
-    🔄 Nueva versión disponible. Recarga la página.
-  </div>
+  <main>
+    <h1>Tu Progreso</h1>
+    <section id="estadisticas">
+      <h2>Quiz Comentado</h2>
+      <p id="quiz-total">Total preguntas respondidas: 0</p>
+      <p id="quiz-correctas">Respuestas correctas: 0</p>
+      <p id="quiz-porcentaje">Porcentaje de aciertos: 0%</p>
 
-  <script>
-    const VERSION = "1.0";
-    let progreso = JSON.parse(localStorage.getItem("progreso")) || { version: VERSION };
+      <h2>Citas Bíblicas</h2>
+      <p id="citas-total">Total preguntas respondidas: 0</p>
+      <p id="citas-correctas">Respuestas correctas: 0</p>
+      <p id="citas-porcentaje">Porcentaje de aciertos: 0%</p>
+    </section>
 
-    if (progreso.version !== VERSION) {
-      progreso = { version: VERSION };
-    }
+    <button id="borrarProgreso">Borrar progreso</button>
+    <button onclick="location.href='index.html'">Volver al inicio</button>
+  </main>
 
-    const progresoBase = {
-      quiz: {
-        "David": { porcentaje: 0, nota: "F" },
-        "Salomón": { porcentaje: 0, nota: "F" },
-        "Pablo": { porcentaje: 0, nota: "F" },
-        "Pedro": { porcentaje: 0, nota: "F" },
-        "Elías": { porcentaje: 0, nota: "F" },
-        "José": { porcentaje: 0, nota: "F" }
-      },
-      reflexion: {},
-      citas: {}
-    };
-
-    const notas = [
-      { nota: "Amas", min: 95 },
-      { nota: "A", min: 85 },
-      { nota: "B", min: 75 },
-      { nota: "C", min: 60 },
-      { nota: "D", min: 50 },
-      { nota: "F", min: 0 }
-    ];
-
-    function mostrar(tipo) {
-      const contenedor = document.getElementById("contenedor");
-      contenedor.innerHTML = "";
-
-      const dataTipo = { ...progresoBase[tipo], ...progreso[tipo] };
-      const temas = Object.keys(dataTipo).sort();
-
-      temas.forEach((tema) => {
-        const data = dataTipo[tema];
-        let porcentaje = 0;
-        if ('porcentaje' in data) {
-          porcentaje = data.porcentaje;
-        } else if ('porcentajeLibro' in data && 'porcentajeCapitulo' in data) {
-          porcentaje = (data.porcentajeLibro + data.porcentajeCapitulo) / 2;
-        }
-
-        const notaObj = notas.find(n => porcentaje >= n.min);
-        const nota = notaObj ? notaObj.nota : "F";
-
-        const card = document.createElement("div");
-        card.className = `card nota-${nota}`;
-
-        card.innerHTML = `
-          <h2>${tema}</h2>
-          <p><strong>Correctas:</strong> ${porcentaje.toFixed(1)}%</p>
-          <p><strong>Nota:</strong> ${nota === "Amas" ? "A+" : nota}</p>
-        `;
-
-        contenedor.appendChild(card);
-      });
-    }
-
-    function reiniciar() {
-      if (confirm("¿Estás seguro de que quieres borrar tu progreso?")) {
-        localStorage.removeItem("progreso");
-        location.reload();
-      }
-    }
-
-    function exportar() {
-      const dataStr = JSON.stringify(progreso, null, 2);
-      const blob = new Blob([dataStr], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "progreso.json";
-      a.click();
-
-      URL.revokeObjectURL(url);
-    }
-
-    function importar(input) {
-      const file = input.files[0];
-      if (!file) return;
-
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        try {
-          const data = JSON.parse(e.target.result);
-          if (!data.version) throw new Error("Formato inválido");
-          localStorage.setItem("progreso", JSON.stringify(data));
-          location.reload();
-        } catch (err) {
-          alert("Archivo inválido");
-        }
-      };
-      reader.readAsText(file);
-    }
-
-    // Mostrar vista por defecto
-    document.addEventListener("DOMContentLoaded", () => {
-      mostrar("quiz");
-    });
-
-    // Service worker para PWA
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').then(reg => {
-        reg.addEventListener('updatefound', () => {
-          const newWorker = reg.installing;
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              document.getElementById("updateNotice").style.display = "block";
-            }
-          });
-        });
-      });
-    }
-  </script>
+  <script src="js/app/progreso.js"></script>
 </body>
 </html>
