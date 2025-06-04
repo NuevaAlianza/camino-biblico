@@ -66,28 +66,33 @@ function obtenerResumenPorCategoria(categorias, progreso) {
 }
 
 function mostrarTarjetas(resumen) {
+  console.log("Mostrando tarjetas de progreso...", resumen); // NUEVO
   const contenedor = document.getElementById("contenedorProgreso");
   const sinProgreso = document.getElementById("sinProgreso");
+  contenedor.innerHTML = "";
 
-  contenedor.innerHTML = "<p style='color: green;'>Probando visualización...</p>";
+  const categorias = Object.keys(resumen);
+  const hayProgreso = categorias.some((c) => resumen[c].jugados > 0);
 
-  for (const categoria in resumen) {
-    const datos = resumen[categoria];
-    const div = document.createElement("div");
-    div.style.border = "1px solid #ccc";
-    div.style.margin = "10px";
-    div.style.padding = "10px";
-    div.style.borderRadius = "8px";
-    div.innerHTML = `
-      <h3>${categoria}</h3>
-      <p>Jugados: ${datos.jugados} / ${datos.totalTemas}</p>
-      <p>Avance: ${datos.avance}% (${datos.rangoAvance})</p>
-      <p>Desempeño: ${datos.desempeño}% (${datos.rangoDesempeño})</p>
-    `;
-    contenedor.appendChild(div);
+  if (!hayProgreso) {
+    sinProgreso.style.display = "block";
+    return;
+  } else {
+    sinProgreso.style.display = "none";
   }
 
-  sinProgreso.style.display = "none"; // Asegura que no se muestre el mensaje de vacío
+  categorias.forEach((categoria) => {
+    const datos = resumen[categoria];
+    const div = document.createElement("div");
+    div.className = "tarjeta-progreso";
+    div.innerHTML = `
+      <div class="titulo-categoria">${categoria}</div>
+      <div class="info-progreso">Temas jugados: ${datos.jugados} / ${datos.totalTemas}</div>
+      <div class="info-progreso">Avance: ${datos.avance}% (<span class="rango">${datos.rangoAvance}</span>)</div>
+      <div class="info-progreso">Desempeño: ${datos.desempeño}% (<span class="rango">${datos.rangoDesempeño}</span>)</div>
+    `;
+    contenedor.appendChild(div);
+  });
 }
 
 // Inicialización
