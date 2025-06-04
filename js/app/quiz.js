@@ -214,24 +214,29 @@ volverBtn.addEventListener("click", () => {
   window.location.href = "index.html";
 });
 
-async function guardarProgreso(categoria, tema, puntaje, total) {
-  const progreso = JSON.parse(localStorage.getItem("progreso")) || [];
-  progreso.push({
-    categoria,
-    tema,
-    puntaje,
-    total,
-    fecha: new Date().toISOString()
-  });
-  localStorage.setItem("progreso", JSON.stringify(progreso));
-
-  // Llamar a la función que actualiza las tarjetas para reflejar cambios sin recargar
-  await actualizarTarjetas();
-}
 async function actualizarTarjetas() {
   const preguntas = await cargarDatosQuiz();
   const progreso = JSON.parse(localStorage.getItem("progreso")) || [];
-  const categorias = agruparTemasPorCategoria(preguntas);
-  const resumen = obtenerResumenPorCategoria(categorias, progreso);
+
+  // Agrupar por categoría y tema
+  const categorias = {};
+  preguntas.forEach(p => {
+    if (!categorias[p.tema]) categorias[p.tema] = { categoria: p.categoria, total: 0 };
+    categorias[p.tema].total += 1;
+  });
+
+  // Crear resumen por tema con base en progreso
+  const resumen = Object.entries(categorias).map(([tema, datos]) => {
+    const intentos = progreso.filter(p => p.tema === tema);
+    const mejor = intentos.reduce((acc, cur) => cur.puntaje > acc ? cur.puntaje : acc, 0);
+    return {
+      tema,
+      categoria: datos.categoria,
+      total: datos.total,
+      intentos: intentos.length,
+      mejorPuntaje: mejor
+    };
+  });
+
   mostrarTarjetas(resumen);
 }
