@@ -257,3 +257,8 @@ function mostrarTarjetas(resumen) {
     contenedor.appendChild(tarjeta);
   });
 }
+async function cargarDatosQuiz() {
+  const res = await fetch("datos/quiz.json");
+  const json = await res.json();
+  return json.filter(item => item.tipo === "quiz comentado");
+}
