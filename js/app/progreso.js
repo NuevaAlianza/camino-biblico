@@ -1,3 +1,16 @@
+try {
+  const datos = localStorage.getItem("progreso");
+  if (datos) {
+    JSON.parse(datos); // Si es inválido, lanza error
+  }
+} catch (e) {
+  console.warn("Progreso corrupto. Limpiando localStorage...");
+  localStorage.removeItem("progreso");
+  location.reload(); // Recarga limpia
+}
+
+
+
 // js/app/progreso.js
 
 async function cargarDatosQuiz() {
