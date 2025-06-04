@@ -37,7 +37,12 @@ function obtenerResumenPorCategoria(categorias, progreso) {
     let totalPreguntas = 0;
 
     temas.forEach((tema) => {
-      const entrada = progreso.find((p) => p.categoria === categoria && p.tema === tema);
+      const entrada = progreso.find(
+  (p) =>
+    p.categoria.toLowerCase() === categoria.toLowerCase() &&
+    p.tema.toLowerCase() === tema.toLowerCase()
+);
+
       if (entrada) {
         jugados++;
         aciertos += entrada.puntaje;
