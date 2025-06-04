@@ -65,5 +65,17 @@
       });
     });
   </script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/camino-biblico/sw.js').then(reg => {
+      console.log('SW registrado:', reg);
+
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        // Si cambia el SW activo, recarga la página automáticamente para usar la nueva versión
+        window.location.reload();
+      });
+    });
+  }
+</script>
 </body>
 </html>
