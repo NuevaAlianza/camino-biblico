@@ -240,3 +240,20 @@ async function actualizarTarjetas() {
 
   mostrarTarjetas(resumen);
 }
+function mostrarTarjetas(resumen) {
+  const contenedor = document.getElementById("tarjetas");
+  contenedor.innerHTML = "";
+
+  resumen.forEach(item => {
+    const tarjeta = document.createElement("div");
+    tarjeta.className = "tarjeta";
+    tarjeta.innerHTML = `
+      <h3>${item.tema}</h3>
+      <p><strong>Categoría:</strong> ${item.categoria}</p>
+      <p><strong>Preguntas:</strong> ${item.total}</p>
+      <p><strong>Intentos:</strong> ${item.intentos}</p>
+      <p><strong>Mejor Puntaje:</strong> ${item.mejorPuntaje || 0}</p>
+    `;
+    contenedor.appendChild(tarjeta);
+  });
+}
