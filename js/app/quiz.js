@@ -214,7 +214,7 @@ volverBtn.addEventListener("click", () => {
   window.location.href = "index.html";
 });
 
-function guardarProgreso(categoria, tema, puntaje, total) {
+async function guardarProgreso(categoria, tema, puntaje, total) {
   const progreso = JSON.parse(localStorage.getItem("progreso")) || [];
   progreso.push({
     categoria,
@@ -224,4 +224,7 @@ function guardarProgreso(categoria, tema, puntaje, total) {
     fecha: new Date().toISOString()
   });
   localStorage.setItem("progreso", JSON.stringify(progreso));
+
+  // Llamar a la función que actualiza las tarjetas para reflejar cambios sin recargar
+  await actualizarTarjetas();
 }
