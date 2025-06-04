@@ -28,7 +28,7 @@ const URLS_TO_CACHE = [
   '/offline.html', // <-- Importante para fallback
 ];
 
-elf.addEventListener('install', event => {
+self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(URLS_TO_CACHE))
