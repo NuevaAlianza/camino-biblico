@@ -25,37 +25,37 @@ const URLS_TO_CACHE = [
   '/datos/citas.json',
   '/datos/reflexion.json',
   '/datos/quiz.json',
+  '/offline.html', // <-- Importante para fallback
 ];
 
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open(CACHE_NAME).then(async cache => {
-      for (const url of URLS_TO_CACHE) {
-        try {
-          await cache.add(url);
-        } catch (err) {
-          console.warn('No se pudo cachear:', url, err);
-        }
-      }
-    })
+elf.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(URLS_TO_CACHE))
+      .then(() => self.skipWaiting()) // activa inmediatamente el SW
   );
 });
 
-self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request).then(response => {
-      return response || fetch(e.request);
-    })
-  );
-});
-
-self.addEventListener('activate', e => {
-  e.waitUntil(
-    caches.keys().then(keys => {
-      return Promise.all(
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(keys => 
+      Promise.all(
         keys.filter(key => key !== CACHE_NAME)
-          .map(key => caches.delete(key))
-      );
+            .map(key => caches.delete(key))
+      )
+    ).then(() => self.clients.claim()) // toma control de las pestañas abiertas
+  );
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request).then(cachedResponse => {
+      return cachedResponse || fetch(event.request).catch(() => {
+        // Si falla la red y es navegación, devuelve offline.html
+        if (event.request.mode === 'navigate') {
+          return caches.match('/offline.html');
+        }
+      });
     })
   );
 });
