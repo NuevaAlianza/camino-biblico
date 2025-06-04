@@ -462,4 +462,48 @@ h1, h2 {
   font-size: 1.1rem;
   color: #777;
 }
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f9;
+  padding: 2rem;
+}
 
+.contenedor-progreso {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta-progreso {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.tarjeta-progreso:hover {
+  transform: scale(1.02);
+}
+
+.titulo-categoria {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #6b21a8;
+}
+
+.info-progreso {
+  margin-bottom: 0.5rem;
+}
+
+.rango {
+  font-weight: bold;
+  color: #9333ea;
+}
+
+.vacio {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
