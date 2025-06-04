@@ -213,7 +213,7 @@ background:#ffc107; padding:1rem 1.5rem; border-radius:10px; box-shadow:0 2px 10
 
 <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then(reg => {
+    navigator.serviceWorker.register('./sw.js').then(reg => {
       reg.onupdatefound = () => {
         const nuevoWorker = reg.installing;
         nuevoWorker.onstatechange = () => {
