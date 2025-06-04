@@ -81,18 +81,20 @@ function mostrarTarjetas(resumen) {
     sinProgreso.style.display = "none";
   }
 
-  categorias.forEach((categoria) => {
-    const datos = resumen[categoria];
-    const div = document.createElement("div");
-    div.className = "tarjeta-progreso";
-    div.innerHTML = `
-      <div class="titulo-categoria">${categoria}</div>
-      <div class="info-progreso">Temas jugados: ${datos.jugados} / ${datos.totalTemas}</div>
-      <div class="info-progreso">Avance: ${datos.avance}% (<span class="rango">${datos.rangoAvance}</span>)</div>
-      <div class="info-progreso">Desempeño: ${datos.desempeño}% (<span class="rango">${datos.rangoDesempeño}</span>)</div>
-    `;
-    contenedor.appendChild(div);
-  });
+categorias.forEach((categoria) => {
+  const datos = resumen[categoria];
+  console.log("Creando tarjeta para:", categoria, datos);
+  const div = document.createElement("div");
+  div.className = "tarjeta-progreso";
+  div.innerHTML = `
+    <div class="titulo-categoria">${categoria}</div>
+    <div class="info-progreso">Temas jugados: ${datos.jugados} / ${datos.totalTemas}</div>
+    <div class="info-progreso">Avance: ${datos.avance}% (<span class="rango">${datos.rangoAvance}</span>)</div>
+    <div class="info-progreso">Desempeño: ${datos.desempeño}% (<span class="rango">${datos.rangoDesempeño}</span>)</div>
+  `;
+  contenedor.appendChild(div);
+  console.log("Tarjeta agregada para:", categoria);
+});
 }
 
 // Inicialización
