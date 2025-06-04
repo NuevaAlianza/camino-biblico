@@ -208,5 +208,26 @@
       mostrar('quiz');
     });
   </script>
+  <div id="updateNotice" style="display:none; position:fixed; bottom:1rem; left:50%; transform:translateX(-50%);
+background:#ffc107; padding:1rem 1.5rem; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.2); z-index:1000;">
+  🔄 Nueva versión disponible.
+  <button onclick="location.reload()" style="margin-left:1rem; padding:0.4rem 0.8rem;">Actualizar</button>
+</div>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').then(reg => {
+      reg.onupdatefound = () => {
+        const nuevoWorker = reg.installing;
+        nuevoWorker.onstatechange = () => {
+          if (nuevoWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            document.getElementById('updateNotice').style.display = 'block';
+          }
+        };
+      };
+    });
+  }
+</script>
+
 </body>
 </html>
