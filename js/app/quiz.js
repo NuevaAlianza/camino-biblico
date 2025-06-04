@@ -228,3 +228,10 @@ async function guardarProgreso(categoria, tema, puntaje, total) {
   // Llamar a la función que actualiza las tarjetas para reflejar cambios sin recargar
   await actualizarTarjetas();
 }
+async function actualizarTarjetas() {
+  const preguntas = await cargarDatosQuiz();
+  const progreso = JSON.parse(localStorage.getItem("progreso")) || [];
+  const categorias = agruparTemasPorCategoria(preguntas);
+  const resumen = obtenerResumenPorCategoria(categorias, progreso);
+  mostrarTarjetas(resumen);
+}
