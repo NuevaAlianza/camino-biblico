@@ -23,8 +23,10 @@ function calcularNota(porcentaje) {
 }
 
 function generarTarjetas(datos, progreso) {
-  const contenedor = document.getElementById("tarjetas");
-  contenedor.innerHTML = "";
+  const quizCont = document.getElementById("tarjetas-quiz");
+  const citasCont = document.getElementById("tarjetas-citas");
+  quizCont.innerHTML = "";
+  citasCont.innerHTML = "";
 
   // Quiz comentado
   const categorias = {};
@@ -41,12 +43,12 @@ function generarTarjetas(datos, progreso) {
       const card = document.createElement("div");
       card.className = "tarjeta";
       card.innerHTML = `
-        <div class="nota nota-${nota}">${nota}</div>
+        <div class="nota-grande nota-${nota}">${nota}</div>
         <h3>${tema}</h3>
         <p><strong>Categoría:</strong> ${cat}</p>
         <p><strong>Aciertos:</strong> ${registro.porcentaje || 0}%</p>
       `;
-      contenedor.appendChild(card);
+      quizCont.appendChild(card);
     }
   }
 
@@ -60,11 +62,11 @@ function generarTarjetas(datos, progreso) {
     const card = document.createElement("div");
     card.className = "tarjeta";
     card.innerHTML = `
-      <div class="nota nota-${nota}">${nota}</div>
+      <div class="nota-grande nota-${nota}">${nota}</div>
       <h3>${bloque.replace(/-/g, " ")}</h3>
       <p><strong>Aciertos:</strong> ${registro.porcentaje || 0}%</p>
     `;
-    contenedor.appendChild(card);
+    citasCont.appendChild(card);
   }
 }
 
