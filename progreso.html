@@ -5,14 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Revisión de Progreso</title>
   <link rel="stylesheet" href="css/estilos.css" />
+  <style>
+    .tarjetas-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .tarjeta {
+      background: #fdf6ec;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      flex: 1 1 220px;
+      max-width: 300px;
+      position: relative;
+    }
+    .tarjeta h3 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 1.2rem;
+    }
+    .tarjeta p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+    }
+    .nota-grande {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #333;
+      color: white;
+      border-radius: 50%;
+      font-size: 2rem;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 4px white;
+    }
+    .nota-A { background: #4caf50; }
+    .nota-B { background: #8bc34a; }
+    .nota-C { background: #ffc107; }
+    .nota-D { background: #ff9800; }
+    .nota-F { background: #f44336; }
+  </style>
 </head>
 <body>
   <main>
-    <h1>Tu Progreso</h1>
-    <div id="tarjetas" class="tarjetas-contenedor"></div>
-    <button id="borrarProgreso">🗑 Borrar progreso</button>
-    <button onclick="location.href='index.html'">← Volver al inicio</button>
+    <h1 style="text-align:center;">Tu Progreso</h1>
+
+    <section>
+      <h2>Quiz Comentado</h2>
+      <div id="tarjetas-quiz" class="tarjetas-container"></div>
+
+      <h2>Citas Bíblicas</h2>
+      <div id="tarjetas-citas" class="tarjetas-container"></div>
+    </section>
+
+    <div style="text-align:center; margin: 2rem 0;">
+      <button onclick="reiniciarProgreso()">Borrar progreso</button>
+      <button onclick="location.href='index.html'">Volver al inicio</button>
+    </div>
   </main>
+
   <script src="js/app/progreso.js"></script>
 </body>
 </html>
