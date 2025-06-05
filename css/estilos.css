@@ -513,3 +513,56 @@ body {
   gap: 1rem;
   padding: 1rem;
 }
+.seccion-progreso {
+  margin-bottom: 2rem;
+}
+
+.seccion-progreso h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.3rem;
+}
+
+.tarjeta-progreso {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #fffdf9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-progreso:hover {
+  transform: scale(1.01);
+}
+
+.tarjeta-progreso h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.tarjeta-progreso .detalle {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.tarjeta-progreso .nota {
+  font-size: 2.5rem;
+  font-weight: bold;
+  align-self: flex-end;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+.nota.A { color: #4caf50; }     /* Verde */
+.nota.B { color: #8bc34a; }     /* Verde claro */
+.nota.C { color: #ffc107; }     /* Amarillo */
+.nota.D { color: #ff9800; }     /* Naranja */
+.nota.F { color: #f44336; }     /* Rojo */
