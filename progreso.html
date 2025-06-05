@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revisión de Progreso</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <style>
+    .tarjetas-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .tarjeta {
+      background: #fdf6ec;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      flex: 1 1 220px;
+      max-width: 280px;
+      position: relative;
+    }
+    .tarjeta h3 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 1.2rem;
+    }
+    .tarjeta p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+    }
+    .nota-grande {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #333;
+      color: white;
+      border-radius: 50%;
+      font-size: 2rem;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 4px white;
+    }
+    .nota-A { background: #4caf50; }
+    .nota-B { background: #8bc34a; }
+    .nota-C { background: #ffc107; }
+    .nota-D { background: #ff9800; }
+    .nota-F { background: #f44336; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tu Progreso</h1>
+
+    <section class="seccion-progreso">
+      <h2>Quiz Comentado</h2>
+      <div id="tarjetas-quiz" class="tarjetas-container"></div>
+    </section>
+
+    <section class="seccion-progreso">
+      <h2>Citas Bíblicas</h2>
+      <div id="tarjetas-citas" class="tarjetas-container"></div>
+    </section>
+
+    <button id="borrarProgreso">Borrar progreso</button>
+    <button onclick="location.href='index.html'">Volver al inicio</button>
+  </main>
+
+  <script>
+    const progresoBase = {
+      version: 2,
+      categorias: {},
+      bloques: {}
+    };
+
+    async function cargarDatos() {
+      const [quiz, citas] = await Promise.all([
+        fetch("datos/quiz.json").then(r => r.json()),
+        fetch("datos/citas.json").then(r => r.json())
+      ]);
+      return { quiz, citas };
+    }
+
+    function calcularNota(p) {
+      if (p >= 90) return "A";
+      if (p >= 75) return "B";
+      if (p >= 60) return "C";
+      if (p >= 40) return "D";
+      return "F";
+    }
+
+    function crearTarjeta(titulo, subtitulo, porcentaje) {
+      const nota = calcularNota(porcentaje);
+      const div = document.createElement("div");
+      div.className = "tarjeta";
+      div.innerHTML = `
+        <div class="nota-grande nota-${nota}">${nota}</div>
+        <h3>${titulo}</h3>
+        <p>${subtitulo}</p>
+        <p><strong>Aciertos:</strong> ${porcentaje}%</p>
+      `;
+      return div;
+    }
+
+    async function generarTarjetas() {
+      const progreso = JSON.parse(localStorage.getItem("progreso")) || structuredClone(progresoBase);
+      const { quiz, citas } = await cargarDatos();
+
+      const contQuiz = document.getElementById("tarjetas-quiz");
+      const categorias = {};
+      quiz.filter(p => p.tipo === "quiz comentado").forEach(p => {
+        if (!categorias[p.categoria]) categorias[p.categoria] = new Set();
+        categorias[p.categoria].add(p.tema);
+      });
+
+      for (const [cat, temas] of Object.entries(categorias)) {
+        for (const tema of temas) {
+          const p = progreso.categorias?.[cat]?.[tema]?.porcentaje || 0;
+          contQuiz.appendChild(crearTarjeta(tema, `Categoría: ${cat}`, p));
+        }
+      }
+
+      const contCitas = document.getElementById("tarjetas-citas");
+      const bloques = new Set(citas.map(c => `bloque-${c.bloque}-${c.modo || "basico"}`));
+      for (const bloque of bloques) {
+        const p = progreso.bloques?.[bloque]?.porcentaje || 0;
+        contCitas.appendChild(crearTarjeta(bloque.replace(/-/g, " "), "Citas Bíblicas", p));
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", generarTarjetas);
+  </script>
+</body>
+</html>
 
