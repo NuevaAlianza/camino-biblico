@@ -1,94 +1,84 @@
+// js/app/progreso.js
+
+const progresoBase = {
+  version: 2,
+  categorias: {},
+  bloques: {}
+};
+
 async function cargarDatos() {
-  const [quizRes, citasRes] = await Promise.all([
+  const [quizResp, citasResp] = await Promise.all([
     fetch("datos/quiz.json").then(r => r.json()),
     fetch("datos/citas.json").then(r => r.json())
   ]);
-  return { quiz: quizRes, citas: citasRes };
+  return { quiz: quizResp, citas: citasResp };
 }
 
-function generarEstructuraInicial(quiz, citas) {
-  const categorias = {};
-  const bloques = {};
-
-  for (const item of quiz) {
-    if (item.tipo !== "quiz comentado") continue;
-    if (!categorias[item.categoria]) categorias[item.categoria] = {};
-    categorias[item.categoria][item.tema] = {
-      porcentaje: 0, nota: "F", estado: "no iniciado"
-    };
-  }
-
-  for (const cita of citas) {
-    const clave = `bloque-${cita.bloque}-${cita.modo || "basico"}`;
-    if (!bloques[clave]) {
-      bloques[clave] = { porcentaje: 0, nota: "F", estado: "no iniciado" };
-    }
-  }
-
-  return { version: 1, categorias, bloques };
-}
-
-function obtenerNota(pct) {
-  if (pct >= 90) return "A";
-  if (pct >= 80) return "B";
-  if (pct >= 70) return "C";
-  if (pct >= 60) return "D";
+function calcularNota(porcentaje) {
+  if (porcentaje >= 90) return "A";
+  if (porcentaje >= 75) return "B";
+  if (porcentaje >= 60) return "C";
+  if (porcentaje >= 40) return "D";
   return "F";
 }
 
-function mostrarTarjetas(progreso, quiz, citas) {
+function generarTarjetas(datos, progreso) {
   const contenedor = document.getElementById("tarjetas");
   contenedor.innerHTML = "";
 
-  // Tarjetas de quiz
-  for (const [categoria, temas] of Object.entries(progreso.categorias)) {
-    for (const [tema, datos] of Object.entries(temas)) {
-      const tarjeta = document.createElement("div");
-      tarjeta.className = "tarjeta";
-      tarjeta.innerHTML = `
+  // Quiz comentado
+  const categorias = {};
+  datos.quiz.filter(p => p.tipo === "quiz comentado").forEach(p => {
+    if (!categorias[p.categoria]) categorias[p.categoria] = new Set();
+    categorias[p.categoria].add(p.tema);
+  });
+
+  for (const [cat, temas] of Object.entries(categorias)) {
+    for (const tema of temas) {
+      const registro = (progreso.categorias?.[cat]?.[tema]) || { porcentaje: 0 };
+      const nota = calcularNota(registro.porcentaje);
+
+      const card = document.createElement("div");
+      card.className = "tarjeta";
+      card.innerHTML = `
+        <div class="nota nota-${nota}">${nota}</div>
         <h3>${tema}</h3>
-        <p><strong>Categoría:</strong> ${categoria}</p>
-        <p><strong>Estado:</strong> ${datos.estado || "no iniciado"}</p>
-        <p><strong>Aciertos:</strong> ${datos.porcentaje || 0}%</p>
-        <p><strong>Nota:</strong> ${datos.nota || "F"}</p>
+        <p><strong>Categoría:</strong> ${cat}</p>
+        <p><strong>Aciertos:</strong> ${registro.porcentaje || 0}%</p>
       `;
-      contenedor.appendChild(tarjeta);
+      contenedor.appendChild(card);
     }
   }
 
-  // Tarjetas de citas
-  for (const [bloque, datos] of Object.entries(progreso.bloques)) {
-    const tarjeta = document.createElement("div");
-    tarjeta.className = "tarjeta";
-    tarjeta.innerHTML = `
-      <h3>${bloque}</h3>
-      <p><strong>Estado:</strong> ${datos.estado || "no iniciado"}</p>
-      <p><strong>Aciertos:</strong> ${datos.porcentaje || 0}%</p>
-      <p><strong>Nota:</strong> ${datos.nota || "F"}</p>
+  // Citas bíblicas
+  const bloques = new Set(datos.citas.map(c => `bloque-${c.bloque}-${c.modo || "basico"}`));
+
+  for (const bloque of bloques) {
+    const registro = progreso.bloques?.[bloque] || { porcentaje: 0 };
+    const nota = calcularNota(registro.porcentaje);
+
+    const card = document.createElement("div");
+    card.className = "tarjeta";
+    card.innerHTML = `
+      <div class="nota nota-${nota}">${nota}</div>
+      <h3>${bloque.replace(/-/g, " ")}</h3>
+      <p><strong>Aciertos:</strong> ${registro.porcentaje || 0}%</p>
     `;
-    contenedor.appendChild(tarjeta);
+    contenedor.appendChild(card);
   }
 }
 
-function borrarProgreso(base) {
+function borrarProgreso() {
   if (confirm("¿Seguro que quieres borrar todo el progreso?")) {
-    localStorage.setItem("progreso", JSON.stringify(base));
+    localStorage.setItem("progreso", JSON.stringify(structuredClone(progresoBase)));
     location.reload();
   }
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const { quiz, citas } = await cargarDatos();
-  const base = generarEstructuraInicial(quiz, citas);
+  const datos = await cargarDatos();
+  const progreso = JSON.parse(localStorage.getItem("progreso")) || structuredClone(progresoBase);
 
-  // Cargar o inicializar
-  let progreso = JSON.parse(localStorage.getItem("progreso"));
-  if (!progreso || !progreso.version) {
-    progreso = structuredClone(base);
-    localStorage.setItem("progreso", JSON.stringify(progreso));
-  }
-
-  mostrarTarjetas(progreso, quiz, citas);
-
-  document.getElementById("borrarProgreso").addEventListener("click", () => borrarProgreso(base));
+  generarTarjetas(datos, progreso);
+  document.getElementById("borrarProgreso").addEventListener("click", borrarProgreso);
 });
