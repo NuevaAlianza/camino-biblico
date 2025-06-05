@@ -1,32 +1,14 @@
-<!-- progreso.html -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Progreso del Usuario</title>
-  <link rel="stylesheet" href="css/estilos.css" />
-</head>
 <body>
-  <main>
-    <h1>Tu Progreso</h1>
-    <section id="estadisticas">
-      <h2>Quiz Comentado</h2>
-      <p id="quiz-total">Total preguntas respondidas: 0</p>
-      <p id="quiz-correctas">Respuestas correctas: 0</p>
-      <p id="quiz-porcentaje">Porcentaje de aciertos: 0%</p>
+  <h1>Progreso</h1>
+  <section id="seccion-quiz">
+    <h2>Quiz comentado</h2>
+    <div id="tarjetas-quiz" class="contenedor-tarjetas"></div>
+  </section>
 
-      <h2>Citas Bíblicas</h2>
-      <p id="citas-total">Total preguntas respondidas: 0</p>
-      <p id="citas-correctas">Respuestas correctas: 0</p>
-      <p id="citas-porcentaje">Porcentaje de aciertos: 0%</p>
-    </section>
-
-    <button id="borrarProgreso">Borrar progreso</button>
-    <button onclick="location.href='index.html'">Volver al inicio</button>
-  </main>
+  <section id="seccion-citas">
+    <h2>Citas bíblicas</h2>
+    <div id="tarjetas-citas" class="contenedor-tarjetas"></div>
+  </section>
 
   <script src="js/app/progreso.js"></script>
 </body>
-</html>
-
