@@ -65,17 +65,34 @@
       });
     });
   </script>
-  <script>
+<script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/camino-biblico/sw.js').then(reg => {
-      console.log('SW registrado:', reg);
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      // Esto se activa cuando un nuevo SW toma control
+      alert("¡Nueva versión disponible! La app se actualizará.");
+      window.location.reload();
+    });
 
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        // Si cambia el SW activo, recarga la página automáticamente para usar la nueva versión
-        window.location.reload();
+    navigator.serviceWorker.register('sw.js').then(reg => {
+      if (reg.waiting) {
+        // Si ya hay un SW nuevo esperando, lo activamos
+        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+      }
+
+      reg.addEventListener('updatefound', () => {
+        const newWorker = reg.installing;
+        newWorker.addEventListener('statechange', () => {
+          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            // Ya hay uno activo, esto es una actualización
+            alert("Hay una nueva versión. Recargando...");
+            newWorker.postMessage({ type: 'SKIP_WAITING' });
+          }
+        });
       });
     });
   }
 </script>
+
+  
 </body>
 </html>
