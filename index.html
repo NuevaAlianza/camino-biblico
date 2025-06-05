@@ -7,7 +7,6 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="css/estilos.css" />
   <link rel="icon" href="assets/img/icon-192.png" type="image/png">
-
   <title>App Bíblica</title>
 </head>
 <body>
@@ -22,21 +21,20 @@
     <button onclick="location.href='config.html'">⚙️ Configuración / Acerca de</button>
   </main>
 
-  <!-- Banner oculto para instalar la app -->
+  <!-- Notificación visual de nueva versión -->
+  <div id="notificacion-actualizacion" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#ffd700; color:#000; padding:1em; text-align:center; font-weight:bold; z-index:1000;">
+    🆕 ¡Hay una nueva versión disponible!
+    <button id="btn-actualizar" style="margin-left:1em; background:black; color:white; padding:0.5em 1em; border:none; cursor:pointer;">Actualizar ahora</button>
+  </div>
+
+  <!-- Instalar app como PWA -->
   <div id="instalar-app" style="display:none;" class="instalar-banner">
     <span>¿Deseas instalar la app?</span>
     <button id="btn-instalar">Instalar</button>
   </div>
 
+  <!-- Script de instalación -->
   <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('SW registrado:', reg))
-          .catch(err => console.log('SW falló:', err));
-      });
-    }
-
     let deferredPrompt;
 
     window.addEventListener('beforeinstallprompt', (e) => {
@@ -55,44 +53,52 @@
         deferredPrompt.prompt();
 
         deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('Usuario aceptó la instalación');
-          } else {
-            console.log('Usuario canceló la instalación');
-          }
+          console.log(choiceResult.outcome === 'accepted'
+            ? 'Usuario aceptó la instalación'
+            : 'Usuario canceló la instalación');
           deferredPrompt = null;
         });
       });
     });
   </script>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.addEventListener('controllerchange', () => {
-      // Esto se activa cuando un nuevo SW toma control
-      alert("¡Nueva versión disponible! La app se actualizará.");
-      window.location.reload();
-    });
 
-    navigator.serviceWorker.register('sw.js').then(reg => {
-      if (reg.waiting) {
-        // Si ya hay un SW nuevo esperando, lo activamos
-        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
-      }
+  <!-- Service Worker con notificación visual -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').then(reg => {
+          console.log('SW registrado:', reg);
 
-      reg.addEventListener('updatefound', () => {
-        const newWorker = reg.installing;
-        newWorker.addEventListener('statechange', () => {
-          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            // Ya hay uno activo, esto es una actualización
-            alert("Hay una nueva versión. Recargando...");
-            newWorker.postMessage({ type: 'SKIP_WAITING' });
+          // Si ya hay uno nuevo esperando
+          if (reg.waiting) {
+            mostrarNotificacion(reg.waiting);
           }
+
+          reg.addEventListener('updatefound', () => {
+            const newWorker = reg.installing;
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                mostrarNotificacion(newWorker);
+              }
+            });
+          });
+        });
+
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          window.location.reload();
         });
       });
-    });
-  }
-</script>
 
-  
+      function mostrarNotificacion(worker) {
+        const noti = document.getElementById('notificacion-actualizacion');
+        const btn = document.getElementById('btn-actualizar');
+        noti.style.display = 'block';
+
+        btn.addEventListener('click', () => {
+          worker.postMessage({ type: 'SKIP_WAITING' });
+        });
+      }
+    }
+  </script>
 </body>
 </html>
