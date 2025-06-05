@@ -50,4 +50,40 @@ function guardarProgreso(tipo, clave, correctas, total) {
 
   localStorage.setItem("progreso", JSON.stringify(progreso));
 }
+function mostrarTarjetasDesdeProgreso() {
+  const contenedor = document.getElementById("tarjetas-progreso");
+  contenedor.innerHTML = "";
+
+  let progreso = JSON.parse(localStorage.getItem("progreso"));
+
+  // Validar estructura base
+  if (!progreso || typeof progreso !== "object" || !progreso.version) {
+    console.warn("Progreso vacío o inválido. Cargando base.");
+    progreso = structuredClone(progresoBase);
+  }
+
+  // Mostrar tarjetas por categoría (quiz comentado)
+  if (progreso.categorias) {
+    for (const [categoria, temas] of Object.entries(progreso.categorias)) {
+      for (const [tema, datos] of Object.entries(temas)) {
+        contenedor.appendChild(crearTarjeta({
+          titulo: tema,
+          subtitulo: categoria,
+          ...datos
+        }));
+      }
+    }
+  }
+
+  // Mostrar tarjetas por bloque (citas bíblicas)
+  if (progreso.bloques) {
+    for (const [bloque, datos] of Object.entries(progreso.bloques)) {
+      contenedor.appendChild(crearTarjeta({
+        titulo: bloque.replaceAll("-", " "),
+        subtitulo: "Citas Bíblicas",
+        ...datos
+      }));
+    }
+  }
+}
 
