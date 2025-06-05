@@ -28,7 +28,7 @@ function generarTarjetas(datos, progreso) {
   contenedorQuiz.innerHTML = "";
   contenedorCitas.innerHTML = "";
 
-  // Quiz comentado
+  // QUIZ COMENTADO
   const categorias = {};
   datos.quiz.filter(p => p.tipo === "quiz comentado").forEach(p => {
     if (!categorias[p.categoria]) categorias[p.categoria] = new Set();
@@ -52,7 +52,7 @@ function generarTarjetas(datos, progreso) {
     }
   }
 
-  // Citas bíblicas
+  // CITAS BÍBLICAS
   const bloques = new Set(datos.citas.map(c => `bloque-${c.bloque}-${c.modo || "basico"}`));
 
   for (const bloque of bloques) {
@@ -80,8 +80,7 @@ function borrarProgreso() {
 document.addEventListener("DOMContentLoaded", async () => {
   const datos = await cargarDatos();
   const progreso = JSON.parse(localStorage.getItem("progreso")) || structuredClone(progresoBase);
-
   generarTarjetas(datos, progreso);
+
   document.getElementById("borrarProgreso").addEventListener("click", borrarProgreso);
 });
-
