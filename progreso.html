@@ -3,73 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Revisión de Progreso</title>
+  <title>Tu progreso</title>
   <link rel="stylesheet" href="css/estilos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    .tarjetas-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+    body {
+      font-family: sans-serif;
+      background: #fffaf5;
       padding: 1rem;
+      color: #4a148c;
     }
-    .tarjeta {
-      background: #fdf6ec;
-      border-radius: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1rem;
-      flex: 1 1 220px;
-      max-width: 300px;
-      position: relative;
+    h1, h2 {
+      text-align: center;
     }
-    .tarjeta h3 {
-      margin: 0.5rem 0 0.2rem;
+    .resumen {
+      text-align: center;
       font-size: 1.2rem;
     }
-    .tarjeta p {
-      margin: 0.2rem 0;
-      font-size: 0.95rem;
+    #grafico-container {
+      max-width: 600px;
+      margin: 1rem auto;
     }
-    .nota {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      border-radius: 50%;
-      font-size: 2rem;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      box-shadow: 0 0 0 4px white;
+    #historial {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #f3e5f5;
+      padding: 1rem;
+      border-radius: 8px;
     }
-    .nota-A { background: #4caf50; }
-    .nota-B { background: #8bc34a; }
-    .nota-C { background: #ffc107; }
-    .nota-D { background: #ff9800; }
-    .nota-F { background: #f44336; }
+    #historial li {
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Tu Progreso</h1>
-
-    <section>
-      <h2>Quiz Comentado</h2>
-      <div id="tarjetas-quiz" class="tarjetas-container"></div>
-    </section>
-
-    <section>
-      <h2>Citas Bíblicas</h2>
-      <div id="tarjetas-citas" class="tarjetas-container"></div>
-    </section>
-
+  <h1>Tu progreso</h1>
+  <div class="resumen">
+    <p>Quizzes completados: <span id="total-quizzes">0</span></p>
+    <p>Promedio de aciertos: <span id="promedio">0%</span></p>
+  </div>
+  <div id="grafico-container">
+    <h2>Estadísticas por tema</h2>
+    <canvas id="grafico"></canvas>
+  </div>
+  <div>
+    <h2 style="text-align:center">Historial de sesiones</h2>
+    <ul id="historial"></ul>
+  </div>
+  <div style="text-align:center">
     <button onclick="location.href='index.html'">Volver al inicio</button>
-  </main>
-
-  <script src="js/app/progreso.js?v=2"></script>
-
+  </div>
+  <script src="js/app/progreso.js"></script>
 </body>
 </html>
-
