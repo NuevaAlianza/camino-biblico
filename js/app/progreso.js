@@ -1,49 +1,56 @@
+// js/app/progreso.js
+
 document.addEventListener("DOMContentLoaded", () => {
-  const tarjetasQuiz = document.getElementById("tarjetas-quiz");
-  const tarjetasCitas = document.getElementById("tarjetas-citas");
+  const historial = JSON.parse(localStorage.getItem("historial")) || [];
 
-  const temasQuiz = [
-    { categoria: "Personajes", tema: "David", porcentaje: 75 },
-    { categoria: "Profetas", tema: "Elías", porcentaje: 92 },
-    { categoria: "Apóstoles", tema: "Pedro", porcentaje: 50 },
-  ];
+  const totalQuizzes = historial.length;
+  const promedio = totalQuizzes > 0
+    ? Math.round(historial.reduce((acc, cur) => acc + (cur.puntaje / cur.total) * 100, 0) / totalQuizzes)
+    : 0;
 
-  const bloquesCitas = [
-    { bloque: "bloque-1-basico", porcentaje: 100 },
-    { bloque: "bloque-2-avanzado", porcentaje: 68 },
-  ];
+  document.getElementById("total-quizzes").textContent = totalQuizzes;
+  document.getElementById("promedio").textContent = `${promedio}%`;
 
-  function calcularNota(pct) {
-    if (pct >= 90) return "A";
-    if (pct >= 75) return "B";
-    if (pct >= 60) return "C";
-    if (pct >= 40) return "D";
-    return "F";
-  }
-
-  temasQuiz.forEach(t => {
-    const nota = calcularNota(t.porcentaje);
-    const div = document.createElement("div");
-    div.className = "tarjeta";
-    div.innerHTML = `
-      <div class="nota nota-${nota}">${nota}</div>
-      <h3>${t.tema}</h3>
-      <p><strong>Categoría:</strong> ${t.categoria}</p>
-      <p><strong>Aciertos:</strong> ${t.porcentaje}%</p>
-    `;
-    tarjetasQuiz.appendChild(div);
+  // Generar gráfico
+  const temas = {};
+  historial.forEach(entry => {
+    if (!temas[entry.tema]) temas[entry.tema] = [];
+    temas[entry.tema].push((entry.puntaje / entry.total) * 100);
   });
 
-  bloquesCitas.forEach(b => {
-    const nota = calcularNota(b.porcentaje);
-    const div = document.createElement("div");
-    div.className = "tarjeta";
-    div.innerHTML = `
-      <div class="nota nota-${nota}">${nota}</div>
-      <h3>${b.bloque.replace(/-/g, " ")}</h3>
-      <p><strong>Aciertos:</strong> ${b.porcentaje}%</p>
-    `;
-    tarjetasCitas.appendChild(div);
+  const labels = Object.keys(temas);
+  const datos = labels.map(t => {
+    const arr = temas[t];
+    return Math.round(arr.reduce((a, b) => a + b, 0) / arr.length);
+  });
+
+  new Chart(document.getElementById("grafico"), {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [{
+        label: "% Aciertos por tema",
+        data: datos,
+        backgroundColor: "#ab47bc"
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100
+        }
+      }
+    }
+  });
+
+  // Mostrar historial
+  const ul = document.getElementById("historial");
+  historial.slice().reverse().forEach(item => {
+    const li = document.createElement("li");
+    const fecha = new Date(item.fecha).toLocaleDateString();
+    li.textContent = `${item.tema} (${item.tipo}) – ${item.puntaje}/${item.total} el ${fecha}`;
+    ul.appendChild(li);
   });
 });
-
