@@ -4,27 +4,172 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Progreso del Usuario</title>
-  <link rel="stylesheet" href="css/estilos.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 1rem;
+      background: #fafafa;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .tarjetas-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .tarjeta {
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      color: #222;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .tarjeta:hover {
+      transform: scale(1.02);
+    }
+
+    .tarjeta.Amas { background-color: #FFD700; }     /* A+ */
+    .tarjeta.A    { background-color: #C0C0C0; }     /* A */
+    .tarjeta.Bmas { background-color: #CD7F32; }     /* B+ */
+    .tarjeta.B    { background-color: #DDA15E; }     /* B */
+    .tarjeta.C    { background-color: #D0E7FF; }     /* C */
+    .tarjeta.D    { background-color: #EEEEEE; }     /* D */
+    .tarjeta.F    { background-color: #FFE5E5; }     /* F */
+
+    button {
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
-  <main>
-    <h1>Tu Progreso</h1>
-    <section id="estadisticas">
-      <h2>Quiz Comentado</h2>
-      <p id="quiz-total">Total preguntas respondidas: 0</p>
-      <p id="quiz-correctas">Respuestas correctas: 0</p>
-      <p id="quiz-porcentaje">Porcentaje de aciertos: 0%</p>
 
-      <h2>Citas Bíblicas</h2>
-      <p id="citas-total">Total preguntas respondidas: 0</p>
-      <p id="citas-correctas">Respuestas correctas: 0</p>
-      <p id="citas-porcentaje">Porcentaje de aciertos: 0%</p>
-    </section>
+  <h1>Tu Progreso</h1>
 
-    <button id="borrarProgreso">Borrar progreso</button>
+  <section id="tarjetas-progreso" class="tarjetas-grid"></section>
+
+  <div style="text-align: center;">
+    <button onclick="reiniciarProgreso()">Reiniciar Progreso</button>
     <button onclick="location.href='index.html'">Volver al inicio</button>
-  </main>
+  </div>
 
-  <script src="js/app/progreso.js"></script>
+  <script>
+    const progresoBase = {
+      version: 1,
+      categorias: {
+        "Personajes Bíblicos": {
+          "David": { porcentaje: 0, nota: "F", estado: "no iniciado" },
+          "Salomón": { porcentaje: 0, nota: "F", estado: "no iniciado" },
+          "Pablo": { porcentaje: 0, nota: "F", estado: "no iniciado" },
+          "Pedro": { porcentaje: 0, nota: "F", estado: "no iniciado" },
+          "Elías": { porcentaje: 0, nota: "F", estado: "no iniciado" },
+          "José – Hijo de Jacob": { porcentaje: 0, nota: "F", estado: "no iniciado" }
+        }
+      },
+      bloques: {
+        "bloque-1-basico": { porcentaje: 0, nota: "F", estado: "no iniciado" },
+        "bloque-2-basico": { porcentaje: 0, nota: "F", estado: "no iniciado" },
+        "bloque-1-avanzado": { porcentaje: 0, nota: "F", estado: "no iniciado" },
+        "bloque-2-avanzado": { porcentaje: 0, nota: "F", estado: "no iniciado" }
+      }
+    };
+
+    function calcularNota(p) {
+      if (p >= 95) return "A+";
+      if (p >= 90) return "A";
+      if (p >= 80) return "B+";
+      if (p >= 70) return "B";
+      if (p >= 60) return "C";
+      if (p >= 40) return "D";
+      return "F";
+    }
+
+    function guardarProgreso(tipo, clave, correctas, total) {
+      const porcentaje = Math.round((correctas / total) * 100);
+      const nota = calcularNota(porcentaje);
+      const estado = porcentaje === 100 ? "completado" : porcentaje >= 40 ? "en progreso" : "no iniciado";
+
+      let progreso = JSON.parse(localStorage.getItem("progreso")) || structuredClone(progresoBase);
+
+      if (tipo === "quiz comentado") {
+        for (let cat in progreso.categorias) {
+          if (progreso.categorias[cat][clave]) {
+            progreso.categorias[cat][clave] = { porcentaje, nota, estado };
+            break;
+          }
+        }
+      }
+
+      if (tipo === "citas") {
+        progreso.bloques[clave] = { porcentaje, nota, estado };
+      }
+
+      localStorage.setItem("progreso", JSON.stringify(progreso));
+    }
+
+    function mostrarTarjetasDesdeProgreso() {
+      const contenedor = document.getElementById("tarjetas-progreso");
+      contenedor.innerHTML = "";
+
+      const progreso = JSON.parse(localStorage.getItem("progreso")) || structuredClone(progresoBase);
+
+      for (const [categoria, temas] of Object.entries(progreso.categorias)) {
+        for (const [tema, datos] of Object.entries(temas)) {
+          contenedor.appendChild(crearTarjeta({
+            titulo: tema,
+            subtitulo: categoria,
+            ...datos
+          }));
+        }
+      }
+
+      for (const [bloque, datos] of Object.entries(progreso.bloques)) {
+        contenedor.appendChild(crearTarjeta({
+          titulo: bloque.replaceAll("-", " "),
+          subtitulo: "Citas Bíblicas",
+          ...datos
+        }));
+      }
+    }
+
+    function crearTarjeta({ titulo, subtitulo, porcentaje, nota, estado }) {
+      const div = document.createElement("div");
+      const clase = nota === "A+" ? "Amas" : nota === "B+" ? "Bmas" : nota;
+      div.className = `tarjeta ${clase}`;
+      div.innerHTML = `
+        <h3>${titulo}</h3>
+        <p><strong>${subtitulo}</strong></p>
+        <p><strong>${porcentaje}%</strong> — Nota: ${nota}</p>
+        <p>${estado.charAt(0).toUpperCase() + estado.slice(1)}</p>
+      `;
+      return div;
+    }
+
+    function reiniciarProgreso() {
+      if (confirm("¿Seguro que quieres reiniciar todo el progreso?")) {
+        localStorage.setItem("progreso", JSON.stringify(structuredClone(progresoBase)));
+        mostrarTarjetasDesdeProgreso();
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", mostrarTarjetasDesdeProgreso);
+  </script>
 </body>
 </html>
