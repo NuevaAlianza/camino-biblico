@@ -1,3 +1,7 @@
+
+// config.js
+console.log("Página de configuración cargada.");
+
 <script>
   document.getElementById("actualizarApp").addEventListener("click", async () => {
     const estado = document.getElementById("estadoActualizacion");
