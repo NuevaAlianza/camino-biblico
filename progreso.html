@@ -1,14 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revisión de Progreso</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
 <body>
-  <h1>Progreso</h1>
-  <section id="seccion-quiz">
-    <h2>Quiz comentado</h2>
-    <div id="tarjetas-quiz" class="contenedor-tarjetas"></div>
-  </section>
-
-  <section id="seccion-citas">
-    <h2>Citas bíblicas</h2>
-    <div id="tarjetas-citas" class="contenedor-tarjetas"></div>
-  </section>
-
+  <main>
+    <h1>Tu Progreso</h1>
+    <div id="tarjetas" class="tarjetas-contenedor"></div>
+    <button id="borrarProgreso">🗑 Borrar progreso</button>
+    <button onclick="location.href='index.html'">← Volver al inicio</button>
+  </main>
   <script src="js/app/progreso.js"></script>
 </body>
+</html>
