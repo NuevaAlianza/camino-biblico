@@ -50,19 +50,20 @@ function guardarProgreso(tipo, clave, correctas, total) {
 
   localStorage.setItem("progreso", JSON.stringify(progreso));
 }
+
 function mostrarTarjetasDesdeProgreso() {
   const contenedor = document.getElementById("tarjetas-progreso");
+  if (!contenedor) return;
+
   contenedor.innerHTML = "";
 
   let progreso = JSON.parse(localStorage.getItem("progreso"));
 
-  // Validar estructura base
   if (!progreso || typeof progreso !== "object" || !progreso.version) {
     console.warn("Progreso vacío o inválido. Cargando base.");
     progreso = structuredClone(progresoBase);
   }
 
-  // Mostrar tarjetas por categoría (quiz comentado)
   if (progreso.categorias) {
     for (const [categoria, temas] of Object.entries(progreso.categorias)) {
       for (const [tema, datos] of Object.entries(temas)) {
@@ -75,7 +76,6 @@ function mostrarTarjetasDesdeProgreso() {
     }
   }
 
-  // Mostrar tarjetas por bloque (citas bíblicas)
   if (progreso.bloques) {
     for (const [bloque, datos] of Object.entries(progreso.bloques)) {
       contenedor.appendChild(crearTarjeta({
@@ -87,3 +87,15 @@ function mostrarTarjetasDesdeProgreso() {
   }
 }
 
+function crearTarjeta({ titulo, subtitulo, porcentaje, nota, estado }) {
+  const div = document.createElement("div");
+  const clase = nota === "A+" ? "Amas" : nota === "B+" ? "Bmas" : nota;
+  div.className = `tarjeta ${clase}`;
+  div.innerHTML = `
+    <h3>${titulo}</h3>
+    <p><strong>${subtitulo}</strong></p>
+    <p><strong>${porcentaje}%</strong> — Nota: ${nota}</p>
+    <p>${estado.charAt(0).toUpperCase() + estado.slice(1)}</p>
+  `;
+  return div;
+}
