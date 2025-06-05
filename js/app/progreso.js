@@ -23,10 +23,10 @@ function calcularNota(porcentaje) {
 }
 
 function generarTarjetas(datos, progreso) {
-  const quizCont = document.getElementById("tarjetas-quiz");
-  const citasCont = document.getElementById("tarjetas-citas");
-  quizCont.innerHTML = "";
-  citasCont.innerHTML = "";
+  const contenedorQuiz = document.getElementById("tarjetas-quiz");
+  const contenedorCitas = document.getElementById("tarjetas-citas");
+  contenedorQuiz.innerHTML = "";
+  contenedorCitas.innerHTML = "";
 
   // Quiz comentado
   const categorias = {};
@@ -48,7 +48,7 @@ function generarTarjetas(datos, progreso) {
         <p><strong>Categoría:</strong> ${cat}</p>
         <p><strong>Aciertos:</strong> ${registro.porcentaje || 0}%</p>
       `;
-      quizCont.appendChild(card);
+      contenedorQuiz.appendChild(card);
     }
   }
 
@@ -66,7 +66,7 @@ function generarTarjetas(datos, progreso) {
       <h3>${bloque.replace(/-/g, " ")}</h3>
       <p><strong>Aciertos:</strong> ${registro.porcentaje || 0}%</p>
     `;
-    citasCont.appendChild(card);
+    contenedorCitas.appendChild(card);
   }
 }
 
@@ -84,3 +84,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   generarTarjetas(datos, progreso);
   document.getElementById("borrarProgreso").addEventListener("click", borrarProgreso);
 });
+
