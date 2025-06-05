@@ -195,7 +195,8 @@ function finalizarQuiz() {
   seccionFinal.classList.remove("oculto");
 
   reproducirSonido(sonidoFin); // Sonido de fin
-
+ // 👉 Guardar progreso
+  guardarProgreso("citas", `bloque-${bloqueSeleccionado}-${modo}`, aciertosLibro, citasDelBloque.length);
   const total = citasDelBloque.length;
   let mensaje = `✔️ Aciertos en libros: ${aciertosLibro} / ${total}`;
   if (modo === "avanzado") {
