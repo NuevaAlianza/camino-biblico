@@ -34,3 +34,5 @@ async function cargarColeccionables() {
     console.error('Error al cargar los coleccionables:', error);
   }
 }
+cargarColeccionables();
+
