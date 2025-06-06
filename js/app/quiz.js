@@ -262,35 +262,29 @@ async function cargarDatosQuiz() {
   const json = await res.json();
   return json.filter(item => item.tipo === "quiz comentado");
 }
-function guardarProgreso(categoria, tema, puntaje, total) {
-  const porcentaje = Math.round((puntaje / total) * 100);
+function guardarProgreso(tipo, tema, puntaje, total) {
+  const fecha = new Date().toISOString();
+
+  // Actualizar historial
+  const historial = JSON.parse(localStorage.getItem("historial")) || [];
+  historial.push({ tipo, tema, puntaje, total, fecha });
+  localStorage.setItem("historial", JSON.stringify(historial));
+
+  // Calcular nota
+  const porcentaje = (puntaje / total) * 100;
   let nota = "F";
+  if (porcentaje >= 90) nota = "A";
+  else if (porcentaje >= 75) nota = "B";
+  else if (porcentaje >= 60) nota = "C";
+  else if (porcentaje >= 40) nota = "D";
 
-  if (porcentaje >= 90) {
-    nota = "A";
-  } else if (porcentaje >= 75) {
-    nota = "B";
-  } else if (porcentaje >= 60) {
-    nota = "C";
-  } else if (porcentaje >= 40) {
-    nota = "D";
-  }
-
-  const progreso = JSON.parse(localStorage.getItem("progreso")) || {
-    version: 1,
-    categorias: {}
-  };
-
-  if (!progreso.categorias[categoria]) {
-    progreso.categorias[categoria] = {};
-  }
-
-  progreso.categorias[categoria][tema] = {
-    porcentaje,
+  // Actualizar progreso por tema
+  const progreso = JSON.parse(localStorage.getItem("progreso")) || { version: 1, categorias: {} };
+  if (!progreso.categorias[tipo]) progreso.categorias[tipo] = {};
+  progreso.categorias[tipo][tema] = {
+    porcentaje: Math.round(porcentaje),
     nota,
     estado: "completado"
   };
-
   localStorage.setItem("progreso", JSON.stringify(progreso));
 }
-
