@@ -6,6 +6,8 @@ async function cargarColeccionables() {
     const progreso = JSON.parse(localStorage.getItem('progreso')) || {};
     const progresoCategorias = progreso.categorias || {};
 
+    const galeria = document.getElementById("galeria");
+
     for (const categoria in data) {
       for (const tema in data[categoria]) {
         const coleccionable = data[categoria][tema];
@@ -14,7 +16,16 @@ async function cargarColeccionables() {
         const nota = progresoTema?.nota || "F";
         const imagen = nota === "A" ? coleccionable.img_a : coleccionable.img_b;
 
-        console.log(`Mostrar: ${tema} (${categoria}) - Nota: ${nota} → Imagen: ${imagen}`);
+        // Crear tarjeta visual
+        const tarjeta = document.createElement("div");
+        tarjeta.className = "tarjeta-coleccionable";
+
+        tarjeta.innerHTML = `
+          <img src="${imagen}" alt="${coleccionable.nombre}">
+          <h3>${coleccionable.nombre}</h3>
+        `;
+
+        galeria.appendChild(tarjeta);
       }
     }
   } catch (error) {
