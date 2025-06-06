@@ -1,1 +1,268 @@
-
+{
+  "apóstoles": {
+    "Pablo": {
+      "nombre": "Pablo",
+      "categoria": "Apóstoles",
+      "img_a": "assets/img/coleccionables/pablo_a.png",
+      "img_b": "assets/img/coleccionables/pablo_b.png"
+    },
+    "Pedro": {
+      "nombre": "Pedro",
+      "categoria": "Apóstoles",
+      "img_a": "assets/img/coleccionables/pedro_a.png",
+      "img_b": "assets/img/coleccionables/pedro_b.png"
+    },
+    "Juan": {
+      "nombre": "Juan",
+      "categoria": "Apóstoles",
+      "img_a": "assets/img/coleccionables/juan_a.png",
+      "img_b": "assets/img/coleccionables/juan_b.png"
+    },
+    "Mateo": {
+      "nombre": "Mateo",
+      "categoria": "Apóstoles",
+      "img_a": "assets/img/coleccionables/mateo_a.png",
+      "img_b": "assets/img/coleccionables/mateo_b.png"
+    }
+  },
+  "misa": {
+    "Misa-1": {
+      "nombre": "Misa-1",
+      "categoria": "Misa",
+      "img_a": "assets/img/coleccionables/misa_1_a.png",
+      "img_b": "assets/img/coleccionables/misa_1_b.png"
+    },
+    "Misa-2": {
+      "nombre": "Misa-2",
+      "categoria": "Misa",
+      "img_a": "assets/img/coleccionables/misa_2_a.png",
+      "img_b": "assets/img/coleccionables/misa_2_b.png"
+    },
+    "Misa-3": {
+      "nombre": "Misa-3",
+      "categoria": "Misa",
+      "img_a": "assets/img/coleccionables/misa_3_a.png",
+      "img_b": "assets/img/coleccionables/misa_3_b.png"
+    },
+    "Misa-4": {
+      "nombre": "Misa-4",
+      "categoria": "Misa",
+      "img_a": "assets/img/coleccionables/misa_4_a.png",
+      "img_b": "assets/img/coleccionables/misa_4_b.png"
+    },
+    "Misa-5": {
+      "nombre": "Misa-5",
+      "categoria": "Misa",
+      "img_a": "assets/img/coleccionables/misa_5_a.png",
+      "img_b": "assets/img/coleccionables/misa_5_b.png"
+    },
+    "Misa-6": {
+      "nombre": "Misa-6",
+      "categoria": "Misa",
+      "img_a": "assets/img/coleccionables/misa_6_a.png",
+      "img_b": "assets/img/coleccionables/misa_6_b.png"
+    },
+    "Misa-7": {
+      "nombre": "Misa-7",
+      "categoria": "Misa",
+      "img_a": "assets/img/coleccionables/misa_7_a.png",
+      "img_b": "assets/img/coleccionables/misa_7_b.png"
+    },
+    "Misa-8": {
+      "nombre": "Misa-8",
+      "categoria": "Misa",
+      "img_a": "assets/img/coleccionables/misa_8_a.png",
+      "img_b": "assets/img/coleccionables/misa_8_b.png"
+    },
+    "Misa-I-P": {
+      "nombre": "Misa-I-P",
+      "categoria": "Misa",
+      "img_a": "assets/img/coleccionables/misa_i-p_a.png",
+      "img_b": "assets/img/coleccionables/misa_i-p_b.png"
+    },
+    "Misa-RC": {
+      "nombre": "Misa-RC",
+      "categoria": "Misa",
+      "img_a": "assets/img/coleccionables/misa_rc_a.png",
+      "img_b": "assets/img/coleccionables/misa_rc_b.png"
+    },
+    "Misa-RE": {
+      "nombre": "Misa-RE",
+      "categoria": "Misa",
+      "img_a": "assets/img/coleccionables/misa_re_a.png",
+      "img_b": "assets/img/coleccionables/misa_re_b.png"
+    }
+  },
+  "mujeres de la biblia": {
+    "Rut": {
+      "nombre": "Rut",
+      "categoria": "Mujeres de la Biblia",
+      "img_a": "assets/img/coleccionables/rut_a.png",
+      "img_b": "assets/img/coleccionables/rut_b.png"
+    },
+    "Sara": {
+      "nombre": "Sara",
+      "categoria": "Mujeres de la Biblia",
+      "img_a": "assets/img/coleccionables/sara_a.png",
+      "img_b": "assets/img/coleccionables/sara_b.png"
+    },
+    "Rebeca": {
+      "nombre": "Rebeca",
+      "categoria": "Mujeres de la Biblia",
+      "img_a": "assets/img/coleccionables/rebeca_a.png",
+      "img_b": "assets/img/coleccionables/rebeca_b.png"
+    },
+    "Raquel": {
+      "nombre": "Raquel",
+      "categoria": "Mujeres de la Biblia",
+      "img_a": "assets/img/coleccionables/raquel_a.png",
+      "img_b": "assets/img/coleccionables/raquel_b.png"
+    }
+  },
+  "patriarcas": {
+    "José – Hijo de Jacob": {
+      "nombre": "José – Hijo de Jacob",
+      "categoria": "Patriarcas",
+      "img_a": "assets/img/coleccionables/jose_hijo_jacob_a.png",
+      "img_b": "assets/img/coleccionables/jose_hijo_jacob_b.png"
+    },
+    "Noé": {
+      "nombre": "Noé",
+      "categoria": "Patriarcas",
+      "img_a": "assets/img/coleccionables/noe_a.png",
+      "img_b": "assets/img/coleccionables/noe_b.png"
+    },
+    "Abraham": {
+      "nombre": "Abraham",
+      "categoria": "Patriarcas",
+      "img_a": "assets/img/coleccionables/abraham_a.png",
+      "img_b": "assets/img/coleccionables/abraham_b.png"
+    },
+    "Isaac": {
+      "nombre": "Isaac",
+      "categoria": "Patriarcas",
+      "img_a": "assets/img/coleccionables/isaac_a.png",
+      "img_b": "assets/img/coleccionables/isaac_b.png"
+    },
+    "Jacob": {
+      "nombre": "Jacob",
+      "categoria": "Patriarcas",
+      "img_a": "assets/img/coleccionables/jacob_a.png",
+      "img_b": "assets/img/coleccionables/jacob_b.png"
+    }
+  },
+  "profetas": {
+    "Elías": {
+      "nombre": "Elías",
+      "categoria": "Profetas",
+      "img_a": "assets/img/coleccionables/elias_a.png",
+      "img_b": "assets/img/coleccionables/elias_b.png"
+    },
+    "Daniel": {
+      "nombre": "Daniel",
+      "categoria": "Profetas",
+      "img_a": "assets/img/coleccionables/daniel_a.png",
+      "img_b": "assets/img/coleccionables/daniel_b.png"
+    },
+    "Eliseo": {
+      "nombre": "Eliseo",
+      "categoria": "Profetas",
+      "img_a": "assets/img/coleccionables/eliseo_a.png",
+      "img_b": "assets/img/coleccionables/eliseo_b.png"
+    },
+    "Isaías": {
+      "nombre": "Isaías",
+      "categoria": "Profetas",
+      "img_a": "assets/img/coleccionables/isaias_a.png",
+      "img_b": "assets/img/coleccionables/isaias_b.png"
+    },
+    "Jeremías": {
+      "nombre": "Jeremías",
+      "categoria": "Profetas",
+      "img_a": "assets/img/coleccionables/jeremias_a.png",
+      "img_b": "assets/img/coleccionables/jeremias_b.png"
+    }
+  },
+  "reyes": {
+    "David": {
+      "nombre": "David",
+      "categoria": "Reyes",
+      "img_a": "assets/img/coleccionables/david_a.png",
+      "img_b": "assets/img/coleccionables/david_b.png"
+    },
+    "Salomón": {
+      "nombre": "Salomón",
+      "categoria": "Reyes",
+      "img_a": "assets/img/coleccionables/salomon_a.png",
+      "img_b": "assets/img/coleccionables/salomon_b.png"
+    },
+    "Saúl": {
+      "nombre": "Saúl",
+      "categoria": "Reyes",
+      "img_a": "assets/img/coleccionables/saul_a.png",
+      "img_b": "assets/img/coleccionables/saul_b.png"
+    },
+    "Ezequías": {
+      "nombre": "Ezequías",
+      "categoria": "Reyes",
+      "img_a": "assets/img/coleccionables/ezequias_a.png",
+      "img_b": "assets/img/coleccionables/ezequias_b.png"
+    },
+    "Josías": {
+      "nombre": "Josías",
+      "categoria": "Reyes",
+      "img_a": "assets/img/coleccionables/josias_a.png",
+      "img_b": "assets/img/coleccionables/josias_b.png"
+    }
+  },
+  "testigos de jesús": {
+    "José de Arimatea": {
+      "nombre": "José de Arimatea",
+      "categoria": "Testigos de Jesús",
+      "img_a": "assets/img/coleccionables/jose_arimatea_a.png",
+      "img_b": "assets/img/coleccionables/jose_arimatea_b.png"
+    },
+    "Juan el Bautista": {
+      "nombre": "Juan el Bautista",
+      "categoria": "Testigos de Jesús",
+      "img_a": "assets/img/coleccionables/juan_bautista_a.png",
+      "img_b": "assets/img/coleccionables/juan_bautista_b.png"
+    },
+    "La hemorroísa": {
+      "nombre": "La hemorroísa",
+      "categoria": "Testigos de Jesús",
+      "img_a": "assets/img/coleccionables/hemorroisa_a.png",
+      "img_b": "assets/img/coleccionables/hemorroisa_b.png"
+    },
+    "La mujer adúltera": {
+      "nombre": "La mujer adúltera",
+      "categoria": "Testigos de Jesús",
+      "img_a": "assets/img/coleccionables/mujer_adultera_a.png",
+      "img_b": "assets/img/coleccionables/mujer_adultera_b.png"
+    },
+    "María Magdalena": {
+      "nombre": "María Magdalena",
+      "categoria": "Testigos de Jesús",
+      "img_a": "assets/img/coleccionables/maria_magdalena_a.png",
+      "img_b": "assets/img/coleccionables/maria_magdalena_b.png"
+    },
+    "Mujer samaritana": {
+      "nombre": "Mujer samaritana",
+      "categoria": "Testigos de Jesús",
+      "img_a": "assets/img/coleccionables/samaritana_a.png",
+      "img_b": "assets/img/coleccionables/samaritana_b.png"
+    },
+    "Nicodemo": {
+      "nombre": "Nicodemo",
+      "categoria": "Testigos de Jesús",
+      "img_a": "assets/img/coleccionables/nicodemo_a.png",
+      "img_b": "assets/img/coleccionables/nicodemo_b.png"
+    },
+    "Zaqueo": {
+      "nombre": "Zaqueo",
+      "categoria": "Testigos de Jesús",
+      "img_a": "assets/img/coleccionables/zaqueo_a.png",
+      "img_b": "assets/img/coleccionables/zaqueo_b.png"
+    }
+  }
+}
