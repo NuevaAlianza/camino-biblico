@@ -626,3 +626,7 @@ h2 {
   margin-top: 0.5rem;
   color: #5e2a84;
 }
+.tarjeta-coleccionable.bloqueado {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
