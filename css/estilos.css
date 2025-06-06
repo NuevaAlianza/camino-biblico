@@ -596,3 +596,33 @@ h2 {
   color: #87385b;
   margin: 2rem 0 1rem;
 }
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.tarjeta-coleccionable {
+  width: 220px;
+  text-align: center;
+  background: #fdf6f0;
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.tarjeta-coleccionable img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.tarjeta-coleccionable h3 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #5e2a84;
+}
