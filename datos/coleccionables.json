@@ -117,6 +117,24 @@
       "categoria": "Mujeres de la Biblia",
       "img_a": "assets/img/coleccionables/raquel_a.png",
       "img_b": "assets/img/coleccionables/raquel_b.png"
+      },
+    "Lea": {
+      "nombre": "Lea",
+      "categoria": "Mujeres de la Biblia",
+      "img_a": "assets/img/coleccionables/lea_a.png",
+      "img_b": "assets/img/coleccionables/lea_b.png"
+      },
+    "Ester": {
+      "nombre": "Ester",
+      "categoria": "Mujeres de la Biblia",
+      "img_a": "assets/img/coleccionables/ester_a.png",
+      "img_b": "assets/img/coleccionables/ester_b.png"
+},
+    "Débora": {
+      "nombre": "Débora",
+      "categoria": "Mujeres de la Biblia",
+      "img_a": "assets/img/coleccionables/debora_a.png",
+      "img_b": "assets/img/coleccionables/debora_b.png"
     }
   },
   "patriarcas": {
