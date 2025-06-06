@@ -14,25 +14,31 @@ async function cargarColeccionables() {
         const progresoTema = progresoCategorias[categoria]?.[tema];
         const nota = progresoTema?.nota;
 
-        // Solo mostrar si hay nota A o B
-        if (nota === "A" || nota === "B") {
-          const imagen = nota === "A" ? coleccionable.img_a : coleccionable.img_b;
+        let imagen, claseExtra = "";
 
-          const tarjeta = document.createElement("div");
-          tarjeta.className = "tarjeta-coleccionable";
-
-          tarjeta.innerHTML = `
-            <img src="${imagen}" alt="${coleccionable.nombre}">
-            <h3>${coleccionable.nombre}</h3>
-          `;
-
-          galeria.appendChild(tarjeta);
+        if (nota === "A") {
+          imagen = coleccionable.img_a;
+        } else if (nota === "B") {
+          imagen = coleccionable.img_b;
+        } else {
+          imagen = "assets/img/coleccionables/bloqueado.png";
+          claseExtra = "bloqueado";
         }
+
+        const tarjeta = document.createElement("div");
+        tarjeta.className = `tarjeta-coleccionable ${claseExtra}`;
+
+        tarjeta.innerHTML = `
+          <img src="${imagen}" alt="${coleccionable.nombre}">
+          <h3>${coleccionable.nombre}</h3>
+        `;
+
+        galeria.appendChild(tarjeta);
       }
     }
   } catch (error) {
     console.error('Error al cargar los coleccionables:', error);
   }
 }
-cargarColeccionables();
 
+cargarColeccionables();
