@@ -567,31 +567,32 @@ body {
 .nota.D { color: #ff9800; }     /* Naranja */
 .nota.F { color: #f44336; }     /* Rojo */
 
-.galeria {
+.lista-coleccionables {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .tarjeta-coleccionable {
-  width: 160px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 0.5rem;
   text-align: center;
+  width: 160px;
   background-color: #fff8f0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .tarjeta-coleccionable img {
   width: 100%;
-  height: auto;
-  display: block;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
 }
 
-.tarjeta-coleccionable h3 {
-  margin: 0.5rem;
-  font-size: 1rem;
+h2 {
+  text-align: center;
+  color: #87385b;
+  margin: 2rem 0 1rem;
 }
-
