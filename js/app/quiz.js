@@ -278,15 +278,14 @@ function guardarProgreso(tipo, tema, puntaje, total) {
   else if (porcentaje >= 60) nota = "C";
   else if (porcentaje >= 40) nota = "D";
 
-  // Actualizar progreso por tema
-  const progreso = JSON.parse(localStorage.getItem("progreso")) || { version: 1, categorias: {} };
-
-  // Obtener la categoría real del tema desde 'datos'
+  // Buscar la categoría real desde 'datos'
   const preguntaEjemplo = datos.find(p => p.tema === tema);
-  const categoria = preguntaEjemplo?.categoria || "Sin categoría";
+  const categoriaReal = preguntaEjemplo?.categoria || "Desconocido";
 
-  if (!progreso.categorias[categoria]) progreso.categorias[categoria] = {};
-  progreso.categorias[categoria][tema] = {
+  // Actualizar progreso por tema en su categoría real
+  const progreso = JSON.parse(localStorage.getItem("progreso")) || { version: 1, categorias: {} };
+  if (!progreso.categorias[categoriaReal]) progreso.categorias[categoriaReal] = {};
+  progreso.categorias[categoriaReal][tema] = {
     porcentaje: Math.round(porcentaje),
     nota,
     estado: "completado"
@@ -294,3 +293,4 @@ function guardarProgreso(tipo, tema, puntaje, total) {
 
   localStorage.setItem("progreso", JSON.stringify(progreso));
 }
+
