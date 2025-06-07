@@ -283,14 +283,11 @@ function guardarProgreso(tipo, tema, puntaje, total) {
   const categoriaReal = preguntaEjemplo?.categoria || "Desconocido";
 
   // Actualizar progreso por tema en su categoría real
-  const progreso = JSON.parse(localStorage.getItem("progreso")) || { version: 1, categorias: {} };
-  if (!progreso.categorias[categoriaReal]) progreso.categorias[categoriaReal] = {};
-  progreso.categorias[categoriaReal][tema] = {
-    porcentaje: Math.round(porcentaje),
-    nota,
-    estado: "completado"
-  };
+ const progreso = JSON.parse(localStorage.getItem("progreso")) || { version: 1, categorias: {} };
 
-  localStorage.setItem("progreso", JSON.stringify(progreso));
-}
+// Buscar la categoría real del tema desde el arreglo original `datos`
+const preguntaEjemplo = datos.find(p => p.tema === tema);
+const categoriaReal = preguntaEjemplo?.categoria || "Sin categoría";
 
+if (!progreso.categorias[categoriaReal]) progreso.categorias[categoriaReal] = {};
+progreso.categorias[categoriaReal][tema] = {
