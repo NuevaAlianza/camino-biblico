@@ -14,6 +14,8 @@ async function cargarColeccionables() {
         const progresoTema = progresoCategorias[categoria]?.[tema];
         const nota = progresoTema?.nota;
 
+        console.log(`🧩 [${categoria} > ${tema}] → Nota: ${nota}`);
+
         let imagen, claseExtra = "";
 
         if (nota === "A") {
