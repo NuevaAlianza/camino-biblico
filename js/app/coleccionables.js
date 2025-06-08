@@ -8,36 +8,40 @@ async function cargarColeccionables() {
 
     const galeria = document.getElementById("galeria");
 
-    for (const categoria in data) {
-      for (const tema in data[categoria]) {
-        const coleccionable = data[categoria][tema];
-        const progresoTema = progresoCategorias[categoria]?.[tema];
-        const nota = progresoTema?.nota;
+   for (const categoria in data) {
+  for (const tema in data[categoria]) {
+    const coleccionable = data[categoria][tema];
 
-        console.log(`🧩 [${categoria} > ${tema}] → Nota: ${nota}`);
+    // 🔁 Comparación sin importar mayúsculas
+    const progresoCategoria = Object.keys(progresoCategorias).find(cat => cat.toLowerCase() === categoria.toLowerCase());
+    const progresoTema = progresoCategoria ? progresoCategorias[progresoCategoria]?.[tema] : null;
+    const nota = progresoTema?.nota;
 
-        let imagen, claseExtra = "";
+    console.log(`🧩 [${categoria} > ${tema}] → Nota: ${nota}`);
 
-        if (nota === "A") {
-          imagen = coleccionable.img_a;
-        } else if (nota === "B") {
-          imagen = coleccionable.img_b;
-        } else {
-          imagen = "assets/img/coleccionables/bloqueado.png";
-          claseExtra = "bloqueado";
-        }
+    let imagen, claseExtra = "";
 
-        const tarjeta = document.createElement("div");
-        tarjeta.className = `tarjeta-coleccionable ${claseExtra}`;
-
-        tarjeta.innerHTML = `
-          <img src="${imagen}" alt="${coleccionable.nombre}">
-          <h3>${coleccionable.nombre}</h3>
-        `;
-
-        galeria.appendChild(tarjeta);
-      }
+    if (nota === "A") {
+      imagen = coleccionable.img_a;
+    } else if (nota === "B") {
+      imagen = coleccionable.img_b;
+    } else {
+      imagen = "assets/img/coleccionables/bloqueado.png";
+      claseExtra = "bloqueado";
     }
+
+    const tarjeta = document.createElement("div");
+    tarjeta.className = `tarjeta-coleccionable ${claseExtra}`;
+
+    tarjeta.innerHTML = `
+      <img src="${imagen}" alt="${coleccionable.nombre}">
+      <h3>${coleccionable.nombre}</h3>
+    `;
+
+    galeria.appendChild(tarjeta);
+  }
+}
+
   } catch (error) {
     console.error('Error al cargar los coleccionables:', error);
   }
