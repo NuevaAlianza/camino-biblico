@@ -265,12 +265,12 @@ async function cargarDatosQuiz() {
 function guardarProgreso(tipo, tema, puntaje, total) {
   const fecha = new Date().toISOString();
 
-  // Actualizar historial
+  // Historial
   const historial = JSON.parse(localStorage.getItem("historial")) || [];
   historial.push({ tipo, tema, puntaje, total, fecha });
   localStorage.setItem("historial", JSON.stringify(historial));
 
-  // Calcular nota
+  // Nota
   const porcentaje = (puntaje / total) * 100;
   let nota = "F";
   if (porcentaje >= 90) nota = "A";
@@ -278,12 +278,12 @@ function guardarProgreso(tipo, tema, puntaje, total) {
   else if (porcentaje >= 60) nota = "C";
   else if (porcentaje >= 40) nota = "D";
 
-  // Buscar la categoría real desde 'datos'
+  // Categoría real
   const preguntaEjemplo = datos.find(p => p.tema === tema);
   const categoriaReal = preguntaEjemplo?.categoria || "Sin categoría";
 
-  // Actualizar progreso por tema en su categoría real
-  const progreso = JSON.parse(localStorage.getItem("progreso")) || { version: 1, categorias: {} };
+  // Progreso v2
+  const progreso = JSON.parse(localStorage.getItem("progreso")) || { version: 2, categorias: {} };
 
   if (!progreso.categorias[categoriaReal]) {
     progreso.categorias[categoriaReal] = {};
