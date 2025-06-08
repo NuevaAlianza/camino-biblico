@@ -97,7 +97,7 @@
     "Rut": {
       "nombre": "Rut",
       "categoria": "Mujeres de la Biblia",
-      "img_a": "./assets/img/coleccionables/rut_a.png",
+      "img_a": "assets/img/coleccionables/rut_a.png",
       "img_b": "assets/img/coleccionables/rut_b.png"
     },
     "Sara": {
