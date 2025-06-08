@@ -2,9 +2,10 @@ async function cargarColeccionables() {
   try {
     const respuesta = await fetch('datos/coleccionables.json');
     const data = await respuesta.json();
+const progreso = JSON.parse(localStorage.getItem('progreso')) || { version: 2, categorias: {} };
+const progresoCategorias = progreso.categorias || {};
 
-    const progreso = JSON.parse(localStorage.getItem('progreso')) || {};
-    const progresoCategorias = progreso.categorias || {};
+    
 
     const galeria = document.getElementById("galeria");
 
