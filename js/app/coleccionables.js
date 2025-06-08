@@ -35,10 +35,23 @@ async function cargarColeccionables() {
         const tarjeta = document.createElement("div");
         tarjeta.className = `tarjeta-coleccionable ${claseExtra}`;
 
-        tarjeta.innerHTML = `
-          <img src="${imagen}" alt="${coleccionable.nombre}">
-          <h3>${coleccionable.nombre}</h3>
-        `;
+        if (nota === "A" || nota === "B") {
+  tarjeta.innerHTML = `
+    <div class="contenedor-descarga">
+      <a href="${imagen}" download="${coleccionable.nombre}.png">
+        <img src="${imagen}" alt="${coleccionable.nombre}">
+        <span class="icono-descarga">⬇</span>
+      </a>
+    </div>
+    <h3>${coleccionable.nombre}</h3>
+  `;
+} else {
+  tarjeta.innerHTML = `
+    <img src="${imagen}" alt="${coleccionable.nombre}">
+    <h3>${coleccionable.nombre}</h3>
+  `;
+}
+
 
         galeria.appendChild(tarjeta);
       }
