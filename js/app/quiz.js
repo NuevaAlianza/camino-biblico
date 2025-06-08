@@ -291,3 +291,9 @@ const categoriaReal = preguntaEjemplo?.categoria || "Sin categoría";
 
 if (!progreso.categorias[categoriaReal]) progreso.categorias[categoriaReal] = {};
 progreso.categorias[categoriaReal][tema] = {
+porcentaje: Math.round(porcentaje),
+    nota,
+    estado: "completado"
+  };
+  localStorage.setItem("progreso", JSON.stringify(progreso));
+}
