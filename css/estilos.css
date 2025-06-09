@@ -738,3 +738,27 @@ h2 {
   font-size: 0.9rem;
   color: #333;
 }
+
+/* Animación de aparición suave */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resumen-categoria {
+  animation: fadeInUp 0.5s ease both;
+  transition: transform 0.2s ease;
+}
+
+/* Efecto al pasar el mouse */
+.resumen-categoria:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
