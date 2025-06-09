@@ -744,3 +744,78 @@ body {
   background-color: #f4a261;
   color: white;
 }
+.etiqueta-nota {
+  padding: 6px 10px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.nota-a { background-color: #16a34a; }
+.nota-b { background-color: #facc15; color: black; }
+.nota-c { background-color: #f97316; }
+.nota-d, .nota-f { background-color: #dc2626; }
+
+.nota-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.bloque-nota {
+  background-color: #1f2937;
+  padding: 0.8rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.etiqueta {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-bottom: 0.3rem;
+}
+
+.bloque-rendimiento {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+}
+@media screen and (max-width: 768px) {
+  .resumen-categoria {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .columna-izquierda,
+  .columna-derecha {
+    width: 100%;
+  }
+
+  .tema h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .tema p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+  }
+
+  .etiqueta-nota {
+    font-size: 0.95rem;
+    padding: 4px 8px;
+  }
+
+  .bloque-nota {
+    padding: 0.6rem;
+  }
+
+  .bloque-rendimiento {
+    font-size: 0.8rem;
+  }
+}
