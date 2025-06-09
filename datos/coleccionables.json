@@ -96,43 +96,43 @@
   "Mujeres": {
     "Rut": {
       "nombre": "Rut",
-      "categoria": "Mujeres de la Biblia",
+      "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/rut_a.png",
       "img_b": "assets/img/coleccionables/rut_b.png"
     },
     "Sara": {
       "nombre": "Sara",
-      "categoria": "Mujeres de la Biblia",
+      "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/sara_a.png",
       "img_b": "assets/img/coleccionables/sara_b.png"
     },
     "Rebeca": {
       "nombre": "Rebeca",
-      "categoria": "Mujeres de la Biblia",
+      "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/rebeca_a.png",
       "img_b": "assets/img/coleccionables/rebeca_b.png"
     },
     "Raquel": {
       "nombre": "Raquel",
-      "categoria": "Mujeres de la Biblia",
+      "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/raquel_a.png",
       "img_b": "assets/img/coleccionables/raquel_b.png"
       },
     "Lea": {
       "nombre": "Lea",
-      "categoria": "Mujeres de la Biblia",
+      "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/lea_a.png",
       "img_b": "assets/img/coleccionables/lea_b.png"
       },
     "Ester": {
       "nombre": "Ester",
-      "categoria": "Mujeres de la Biblia",
+      "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/ester_a.png",
       "img_b": "assets/img/coleccionables/ester_b.png"
 },
     "Débora": {
       "nombre": "Débora",
-      "categoria": "Mujeres de la Biblia",
+      "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/debora_a.png",
       "img_b": "assets/img/coleccionables/debora_b.png"
     }
