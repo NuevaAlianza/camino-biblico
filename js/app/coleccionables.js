@@ -24,13 +24,15 @@ async function cargarColeccionables() {
         let imagen, claseExtra = "";
 
         if (nota === "A") {
-          imagen = `./${coleccionable.img_a}`;
-        } else if (nota === "B") {
-          imagen = `./${coleccionable.img_b}`;
-        } else {
-          imagen = "./assets/img/coleccionables/bloqueado.png";
-          claseExtra = "bloqueado";
-        }
+  ruta = tema.img_a;
+} else if (nota === "B") {
+  ruta = "assets/img/coleccionables/generica_b.png";
+} else if (nota === "C") {
+  ruta = "assets/img/coleccionables/generica_c.png";
+} else {
+  ruta = "assets/img/coleccionables/bloqueado.png";
+}
+
 
         const tarjeta = document.createElement("div");
         tarjeta.className = `tarjeta-coleccionable ${claseExtra}`;
