@@ -21,18 +21,18 @@ async function cargarColeccionables() {
 
         console.log(`🧩 [${categoria} > ${tema}] → Nota: ${nota}`);
 
-        let imagen, claseExtra = "";
+      
+let imagen, claseExtra = "";
 
-        if (nota === "A") {
-  ruta = tema.img_a;
+if (nota === "A") {
+  imagen = coleccionable.img_a;
 } else if (nota === "B") {
-  ruta = "assets/img/coleccionables/generica_b.png";
+  imagen = coleccionable.img_b;
 } else if (nota === "C") {
-  ruta = "assets/img/coleccionables/generica_c.png";
+  imagen = coleccionable.img_c;
 } else {
-  ruta = "assets/img/coleccionables/bloqueado.png";
+  imagen = "assets/img/coleccionables/bloqueado.png";
 }
-
 
         const tarjeta = document.createElement("div");
         tarjeta.className = `tarjeta-coleccionable ${claseExtra}`;
