@@ -45,7 +45,7 @@ function mostrarResumenPorCategoria() {
       colIzq.innerHTML += `
         <div class="tema">
           <h3>${tema}</h3>
-          <p>Nota: <strong>${nota}</strong></p>
+          <p>Nota: <span class="etiqueta-nota nota-${nota.toLowerCase()}">${nota}</span></p>
           <p>Intentos: ${intentos}</p>
         </div>
       `;
@@ -72,17 +72,17 @@ function mostrarResumenPorCategoria() {
     else if (promedioReal >= 60) notaProm = "D";
 
     colDer.innerHTML = `
-      <div class="grupo-notas">
-        <div>
+      <div class="nota-contenedor">
+        <div class="bloque-nota">
           <div class="etiqueta">Mejor nota por tema</div>
-          <div class="nota-final ${notaAlcanzada}">${notaAlcanzada}</div>
+          <div class="etiqueta-nota nota-${notaAlcanzada.toLowerCase()}">${notaAlcanzada}</div>
         </div>
-        <div>
+        <div class="bloque-nota">
           <div class="etiqueta">Rendimiento total</div>
-          <div class="nota-final ${notaProm}">${notaProm}</div>
+          <div class="etiqueta-nota nota-${notaProm.toLowerCase()}">${notaProm}</div>
+          <div class="bloque-rendimiento">${todasNotas.length} intento(s) • ${promedioReal}% de aciertos</div>
         </div>
       </div>
-      <div class="nota-detalle">${todasNotas.length} intentos • ${promedioReal}% de aciertos</div>
     `;
 
     resumen.appendChild(colIzq);
