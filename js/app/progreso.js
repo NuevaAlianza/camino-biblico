@@ -2,7 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   mostrarResumenGeneral();
-  mostrarHistorial();
   mostrarResumenPorCategoria();
 });
 
@@ -17,50 +16,6 @@ function mostrarResumenGeneral() {
 
   document.getElementById("total-quizzes").textContent = total;
   document.getElementById("promedio").textContent = `${promedio}%`;
-
-  mostrarGrafico(historial);
-}
-
-function mostrarGrafico(historial) {
-  const temas = {};
-  historial.forEach(h => {
-    if (!temas[h.tema]) temas[h.tema] = { aciertos: 0, total: 0 };
-    temas[h.tema].aciertos += h.puntaje;
-    temas[h.tema].total += h.total;
-  });
-
-  const etiquetas = Object.keys(temas);
-  const datos = etiquetas.map(t => Math.round((temas[t].aciertos / temas[t].total) * 100));
-
-  new Chart(document.getElementById("grafico"), {
-    type: "bar",
-    data: {
-      labels: etiquetas,
-      datasets: [{
-        label: "% de aciertos",
-        data: datos,
-        backgroundColor: "#a56ef8"
-      }]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        y: { beginAtZero: true, max: 100 }
-      }
-    }
-  });
-}
-
-function mostrarHistorial() {
-  const historial = JSON.parse(localStorage.getItem("historial")) || [];
-  const lista = document.getElementById("historial");
-  historial
-    .sort((a, b) => new Date(b.fecha) - new Date(a.fecha))
-    .forEach(h => {
-      const li = document.createElement("li");
-      li.textContent = `${h.tema} - ${h.puntaje}/${h.total} - ${new Date(h.fecha).toLocaleString()}`;
-      lista.appendChild(li);
-    });
 }
 
 function mostrarResumenPorCategoria() {
@@ -117,9 +72,17 @@ function mostrarResumenPorCategoria() {
     else if (promedioReal >= 60) notaProm = "D";
 
     colDer.innerHTML = `
-      <div class="etiqueta">Nivel alcanzado</div>
-      <div class="nota-final ${notaAlcanzada}">${notaAlcanzada}</div>
-      <div class="nota-promedio">Promedio de intentos: ${promedioReal}% (${notaProm})</div>
+      <div class="grupo-notas">
+        <div>
+          <div class="etiqueta">Mejor nota por tema</div>
+          <div class="nota-final ${notaAlcanzada}">${notaAlcanzada}</div>
+        </div>
+        <div>
+          <div class="etiqueta">Rendimiento total</div>
+          <div class="nota-final ${notaProm}">${notaProm}</div>
+        </div>
+      </div>
+      <div class="nota-detalle">${todasNotas.length} intentos • ${promedioReal}% de aciertos</div>
     `;
 
     resumen.appendChild(colIzq);
