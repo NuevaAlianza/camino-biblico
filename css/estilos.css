@@ -827,3 +827,12 @@ body {
 .imagen-ampliable:hover {
   opacity: 0.9;
 }
+.imagen-ampliable {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin: 0.5rem 0;
+}
