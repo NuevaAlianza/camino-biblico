@@ -817,3 +817,42 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Estilo específico para la página de progreso */
+.pagina-progreso {
+  background-color: #fffaf5;
+  color: #4a148c;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.pagina-progreso h1, .pagina-progreso h2 {
+  text-align: center;
+  color: #6a1b9a;
+}
+
+.resumen {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.boton-volver {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.boton-volver button {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  border-radius: var(--radio);
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-volver button:hover {
+  background-color: var(--color-secundario);
+}
