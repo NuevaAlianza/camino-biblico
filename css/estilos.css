@@ -574,14 +574,16 @@ body {
 }
 
 .tarjeta-coleccionable {
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 0.5rem;
+  max-width: 260px;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  width: 160px;
-  background-color: #fff8f0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #fdf6f0;
+  padding: 0.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 
 .tarjeta-coleccionable img {
   width: 100%;
@@ -596,22 +598,10 @@ h2 {
 }
 .galeria-coleccionables {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* antes 150px */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* antes 150px */
   gap: 20px;
   padding: 1.5rem;
 }
-
-
-
-.tarjeta-coleccionable {
-  width: 220px;
-  text-align: center;
-  background: #fdf6f0;
-  padding: 0.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
 .tarjeta-coleccionable img {
   width: 100%;
   height: auto;
