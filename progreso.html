@@ -1,11 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tu progreso</title>
   <link rel="stylesheet" href="css/estilos.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
       font-family: sans-serif;
@@ -20,19 +19,47 @@
       text-align: center;
       font-size: 1.2rem;
     }
-    #grafico-container {
-      max-width: 600px;
-      margin: 1rem auto;
-    }
-    #historial {
-      max-width: 600px;
-      margin: 2rem auto;
+    .resumen-categoria {
+      display: flex;
+      flex-wrap: wrap;
       background: #f3e5f5;
+      border-radius: 10px;
+      margin: 1rem auto;
+      max-width: 800px;
       padding: 1rem;
-      border-radius: 8px;
     }
-    #historial li {
-      margin-bottom: 0.5rem;
+    .columna-izquierda, .columna-derecha {
+      flex: 1 1 300px;
+      padding: 1rem;
+    }
+    .tema {
+      margin-bottom: 1rem;
+    }
+    .grupo-notas {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1rem;
+    }
+    .nota-final {
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 0.6rem;
+      width: 60px;
+      border-radius: 8px;
+      margin: auto;
+    }
+    .nota-final.A { background: #4caf50; color: white; }
+    .nota-final.B { background: #fbc02d; color: black; }
+    .nota-final.C { background: #ff9800; color: white; }
+    .nota-final.D { background: #ef5350; color: white; }
+    .nota-final.F { background: #9e9e9e; color: white; }
+
+    .nota-detalle {
+      text-align: center;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      color: #555;
     }
   </style>
 </head>
@@ -44,23 +71,13 @@
     <p>Promedio de aciertos: <span id="promedio">0%</span></p>
   </div>
 
-  <div id="grafico-container">
-    <h2>Estadísticas por tema</h2>
-    <canvas id="grafico"></canvas>
-  </div>
-
   <div>
-    <h2 style="text-align:center">Historial de sesiones</h2>
-    <ul id="historial"></ul>
+    <h2 style="text-align:center; margin-top: 2rem;">Resumen por categoría</h2>
+    <div id="contenedor-resumen-categorias" class="contenedor-progreso"></div>
   </div>
 
   <div style="text-align:center; margin-top: 2rem;">
     <button onclick="location.href='index.html'">Volver al inicio</button>
-  </div>
-
-  <div>
-    <h2 style="text-align:center; margin-top: 2rem;">Resumen por categoría</h2>
-    <div id="contenedor-resumen-categorias" class="contenedor-progreso"></div>
   </div>
 
   <script src="js/app/progreso.js"></script>
