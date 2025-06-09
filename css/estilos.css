@@ -596,10 +596,11 @@ h2 {
 }
 .galeria-coleccionables {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 16px;
-  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* antes 150px */
+  gap: 20px;
+  padding: 1.5rem;
 }
+
 
 
 .tarjeta-coleccionable {
@@ -778,5 +779,53 @@ h2 {
 }
 .tema h3, .tema p, .nota-detalle, .etiqueta, .nota-promedio {
   color: #e0e0e0;
+}
+@media (max-width: 480px) {
+  .galeria-coleccionables {
+    grid-template-columns: 1fr; /* una tarjeta por fila */
+    padding: 1rem;
+    gap: 24px;
+  }
+
+  .tarjeta-coleccionable {
+    width: 100% !important;
+    padding: 1rem;
+  }
+
+  .tarjeta-coleccionable img {
+    max-height: 200px;
+  }
+
+  .tarjeta-coleccionable h3 {
+    font-size: 1.1rem;
+    margin-top: 0.7rem;
+  }
+
+  .icono-descarga {
+    font-size: 1.4rem;
+    bottom: 12px;
+    right: 12px;
+  }
+}
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tarjeta-coleccionable {
+  animation: fadeInScale 0.5s ease both;
+}
+.tarjeta-coleccionable:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+.tarjeta-coleccionable:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
