@@ -1,4 +1,4 @@
-const CACHE_NAME = 'app-static-v9.2';
+const CACHE_NAME = 'app-static-v9.3';
 const URLS_TO_CACHE = [
   './',
   './index.html',
