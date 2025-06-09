@@ -585,136 +585,8 @@ body {
 }
 
 
-.tarjeta-coleccionable img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
-
-h2 {
-  text-align: center;
-  color: #87385b;
-  margin: 2rem 0 1rem;
-}
-.galeria-coleccionables {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* antes 150px */
-  gap: 20px;
-  padding: 1.5rem;
-}
-.tarjeta-coleccionable img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  max-height: 160px;
-  object-fit: contain;
-}
-
-.tarjeta-coleccionable h3 {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  color: #5e2a84;
-}
-.tarjeta-coleccionable.bloqueado {
-  opacity: 0.5;
-  filter: grayscale(100%);
-}
-.contenedor-descarga {
-  position: relative;
-  display: inline-block;
-}
-
-.icono-descarga {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 4px 6px;
-  border-radius: 6px;
-  font-size: 1.2rem;
-  color: #000;
-  pointer-events: none;
-}
-
-.card-a {
-  border: 4px solid #d4af37;
-  box-shadow: 0 0 12px #d4af3777;
-}
-
-.card-b {
-  border: 4px solid #c0c0c0;
-  box-shadow: 0 0 8px #c0c0c055;
-}
-
-.bloqueado {
-  filter: grayscale(100%);
-  opacity: 0.7;
-  pointer-events: none;
-}
-.resumen-categoria {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background: #fff8f0;
-  border: 2px solid #e6d5b8;
-  border-radius: 20px;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 900px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.columna-izquierda {
-  width: 68%;
-  min-width: 280px;
-}
-
-.columna-izquierda h2 {
-  font-size: 1.8rem;
-  color: #87385b;
-  margin-bottom: 1rem;
-}
-
-.tema {
-  margin-bottom: 1.3rem;
-  background: #122941;
-  border-left: 4px solid #f4a261;
-  padding-left: 1rem;
-}
 
 
-.tema h3 {
-  font-size: 1.1rem;
-  color: #5e2a84;
-  margin-bottom: 0.2rem;
-}
-
-.tema p {
-  font-size: 0.95rem;
-  margin: 0.2rem 0;
-  color: #444;
-}
-
-.columna-derecha {
-  width: 28%;
-  min-width: 180px;
-  background: #1e3a5f;
-  border-radius: 12px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-  align-self: center;
-}
-
-
-.etiqueta {
-  font-size: 1.1rem;
-  color: #5a3e1b;
-  margin-bottom: 0.8rem;
-}
-
-.nota-final {
   font-size: 4rem;
   font-weight: bold;
   color: white;
@@ -783,7 +655,7 @@ h2 {
   }
 
   .tarjeta-coleccionable img {
-    max-height: 200px;
+    max-height: 240px;
   }
 
   .tarjeta-coleccionable h3 {
@@ -855,4 +727,20 @@ h2 {
 
 .boton-volver button:hover {
   background-color: var(--color-secundario);
+}
+.icono-descarga {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  color: #444;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contenedor-descarga a:hover .icono-descarga {
+  background-color: #f4a261;
+  color: white;
 }
