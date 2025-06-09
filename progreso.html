@@ -38,25 +38,30 @@
 </head>
 <body>
   <h1>Tu progreso</h1>
+
   <div class="resumen">
     <p>Quizzes completados: <span id="total-quizzes">0</span></p>
     <p>Promedio de aciertos: <span id="promedio">0%</span></p>
   </div>
+
   <div id="grafico-container">
     <h2>Estadísticas por tema</h2>
     <canvas id="grafico"></canvas>
   </div>
+
   <div>
     <h2 style="text-align:center">Historial de sesiones</h2>
     <ul id="historial"></ul>
   </div>
-  <div style="text-align:center">
+
+  <div style="text-align:center; margin-top: 2rem;">
     <button onclick="location.href='index.html'">Volver al inicio</button>
   </div>
+
   <div>
-  <h2 style="text-align:center">Resumen por categoría</h2>
-  <div id="resumen-categorias" style="margin-top: 1rem;"></div>
-</div>
+    <h2 style="text-align:center; margin-top: 2rem;">Resumen por categoría</h2>
+    <div id="resumen-categorias" class="contenedor-progreso"></div>
+  </div>
 
   <script src="js/app/progreso.js"></script>
 </body>
