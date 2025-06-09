@@ -819,3 +819,11 @@ body {
     font-size: 0.8rem;
   }
 }
+.imagen-ampliable {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.imagen-ampliable:hover {
+  opacity: 0.9;
+}
