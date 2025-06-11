@@ -12,8 +12,7 @@ async function cargarColeccionables() {
     const progresoCategorias = progreso.categorias || {};
 
     const galeriaCategorias = document.getElementById("galeria-categorias");
-const galeriaTemporadas = document.getElementById("galeria-temporadas");
-
+    const galeriaTemporadas = document.getElementById("galeria-temporadas");
 
     // 🧩 Coleccionables por categoría y tema
     for (const categoria in data) {
@@ -45,7 +44,12 @@ const galeriaTemporadas = document.getElementById("galeria-temporadas");
             <div class="contenedor-descarga">
               <a href="${imagen}" download="${coleccionable.nombre}.png">
                 <img src="${imagen}" alt="${coleccionable.nombre}">
-                <span class="icono-descarga">⬇</span>
+                <span class="icono-descarga">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" fill="#333">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.92v4h4.5v-4h3.92L12 2z"/>
+                  </svg>
+                </span>
               </a>
             </div>
             <h3>${coleccionable.nombre}</h3>
@@ -57,7 +61,7 @@ const galeriaTemporadas = document.getElementById("galeria-temporadas");
           `;
         }
 
-       galeriaCategorias.appendChild(tarjeta);
+        galeriaCategorias.appendChild(tarjeta);
       }
     }
 
@@ -88,7 +92,12 @@ const galeriaTemporadas = document.getElementById("galeria-temporadas");
           <div class="contenedor-descarga">
             <a href="${imagen}" download="${coleccionable.nombre}.png">
               <img src="${imagen}" alt="${coleccionable.nombre}">
-              <span class="icono-descarga">⬇</span>
+              <span class="icono-descarga">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" fill="#333">
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.92v4h4.5v-4h3.92L12 2z"/>
+                </svg>
+              </span>
             </a>
           </div>
           <h3>${coleccionable.nombre}</h3>
@@ -101,8 +110,6 @@ const galeriaTemporadas = document.getElementById("galeria-temporadas");
       }
 
       galeriaTemporadas.appendChild(tarjeta);
-
-
     }
   } catch (error) {
     console.error('Error al cargar los coleccionables:', error);
