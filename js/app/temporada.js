@@ -26,26 +26,40 @@ document.addEventListener("DOMContentLoaded", async () => {
   idTemporada = urlParams.get("id");
 
   if (!idTemporada) {
-    tituloTemporada.textContent = "Temporada no encontrada";
+    tituloTemporada.textContent = "Temporada no encontrada (sin parámetro)";
     btnComenzar.disabled = true;
     return;
   }
 
-  const res = await fetch("./datos/temporadas.json");
-  const temporadas = await res.json();
-  datosTemporada = temporadas.find(t => t.id === idTemporada);
+  try {
+    const res = await fetch("./datos/temporadas.json");
+    const temporadas = await res.json();
 
-  if (!datosTemporada) {
-    tituloTemporada.textContent = "Temporada no válida";
+    console.log("Parámetro recibido:", idTemporada);
+    console.log("Temporadas cargadas:", temporadas);
+
+    datosTemporada = temporadas.find(t =>
+      t.id.toLowerCase().trim() === idTemporada.toLowerCase().trim()
+    );
+
+    console.log("Resultado de búsqueda:", datosTemporada);
+
+    if (!datosTemporada) {
+      tituloTemporada.textContent = `Temporada no válida: ${idTemporada}`;
+      btnComenzar.disabled = true;
+      return;
+    }
+
+    tituloTemporada.textContent = datosTemporada.titulo;
+    descripcionTemporada.textContent = datosTemporada.descripcion;
+    preguntas = datosTemporada.preguntas;
+
+    btnComenzar.addEventListener("click", comenzarJuego);
+  } catch (error) {
+    console.error("Error cargando temporadas.json:", error);
+    tituloTemporada.textContent = "Error al cargar la temporada.";
     btnComenzar.disabled = true;
-    return;
   }
-
-  tituloTemporada.textContent = datosTemporada.titulo;
-  descripcionTemporada.textContent = datosTemporada.descripcion;
-  preguntas = datosTemporada.preguntas;
-
-  btnComenzar.addEventListener("click", comenzarJuego);
 });
 
 function comenzarJuego() {
@@ -135,4 +149,3 @@ function guardarProgreso() {
   };
   localStorage.setItem("progreso", JSON.stringify(progreso));
 }
-
