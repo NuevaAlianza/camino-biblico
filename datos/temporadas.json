@@ -21,7 +21,7 @@
         "opcion_2": "Camino",
         "opcion_3": "Mensaje"
       }
-      // + más preguntas aquí...
+      
     ]
   },
   {
@@ -46,7 +46,7 @@
         "opcion_2": "Jerusalén",
         "opcion_3": "Galilea"
       }
-      // + más preguntas aquí...
+    
     ]
   }
 ]
