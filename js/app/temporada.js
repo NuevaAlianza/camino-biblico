@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
-  const res = await fetch("datos/temporadas.json");
+  const res = await fetch("./datos/temporadas.json");
   const temporadas = await res.json();
   datosTemporada = temporadas.find(t => t.id === idTemporada);
 
