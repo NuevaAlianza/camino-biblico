@@ -729,7 +729,7 @@ body {
   background-color: var(--color-secundario);
 }
 .icono-descarga {
-  position: absolute;
+  position: relative;
   bottom: 8px;
   right: 8px;
   background: rgba(255, 255, 255, 0.85);
@@ -738,6 +738,7 @@ body {
   font-size: 1.2rem;
   color: #444;
   transition: background-color 0.3s ease, color 0.3s ease;
+display: inline-block;
 }
 
 .contenedor-descarga a:hover .icono-descarga {
