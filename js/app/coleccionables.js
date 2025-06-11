@@ -11,7 +11,9 @@ async function cargarColeccionables() {
     const progreso = JSON.parse(localStorage.getItem('progreso')) || { version: 2, categorias: {}, temporadas: {} };
     const progresoCategorias = progreso.categorias || {};
 
-    const galeria = document.getElementById("galeria");
+    const galeriaCategorias = document.getElementById("galeria-categorias");
+const galeriaTemporadas = document.getElementById("galeria-temporadas");
+
 
     // 🧩 Coleccionables por categoría y tema
     for (const categoria in data) {
@@ -55,7 +57,7 @@ async function cargarColeccionables() {
           `;
         }
 
-        galeria.appendChild(tarjeta);
+       galeriaCategorias.appendChild(tarjeta);
       }
     }
 
@@ -98,7 +100,9 @@ async function cargarColeccionables() {
         `;
       }
 
-      galeria.appendChild(tarjeta);
+      galeriaTemporadas.appendChild(tarjeta);
+
+
     }
   } catch (error) {
     console.error('Error al cargar los coleccionables:', error);
