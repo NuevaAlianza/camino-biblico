@@ -26,10 +26,10 @@
   },
   {
     "id": "T2",
-    "titulo": "Navidad",
+    "titulo": "Nueva Alianza",
     "descripcion": "Una temporada para reflexionar sobre el nacimiento del Salvador.",
-    "fecha_inicio": "2025-12-01",
-    "fecha_fin": "2025-12-31",
+    "fecha_inicio": "2025-06-15",
+    "fecha_fin": "2025-06-30",
     "puntaje_maximo": 12,
     "umbral_coleccionable": 11,
     "coleccionable": {
