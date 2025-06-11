@@ -128,16 +128,30 @@ function finalizarJuego() {
   const umbral = datosTemporada.umbral_coleccionable;
   const nota = puntaje >= umbral ? "A" : puntaje >= umbral - 2 ? "B" : "C";
   let imgSrc;
+  let mensajeExtra = "";
+  let botonDescarga = "";
 
-  if (nota === "A") imgSrc = datosTemporada.coleccionable.imagen_a;
-  else if (nota === "B") imgSrc = datosTemporada.coleccionable.imagen_b;
-  else imgSrc = datosTemporada.coleccionable.imagen_c;
+  if (nota === "A") {
+    imgSrc = datosTemporada.coleccionable.imagen_a;
+    mensajeExtra = `<p style="color:#2a9d8f; font-weight:600; margin-top:1rem;">🏆 ¡Excelente! Has desbloqueado el coleccionable especial.</p>`;
+    botonDescarga = `<a href="${imgSrc}" download style="display:inline-block; margin-top:1rem; background:#e9c46a; padding:0.5rem 1rem; border-radius:0.5rem; color:#333; text-decoration:none; font-weight:bold; font-size:0.9rem;">📥 Descargar</a>`;
+  } else if (nota === "B") {
+    imgSrc = datosTemporada.coleccionable.imagen_b;
+  } else {
+    imgSrc = datosTemporada.coleccionable.imagen_c;
+  }
 
-  imagenColeccionable.innerHTML = `<img src="${imgSrc}" alt="Coleccionable desbloqueado" style="max-width:100%; border-radius:1rem;">`;
+  imagenColeccionable.innerHTML = `
+    <img src="${imgSrc}" alt="Coleccionable desbloqueado" style="max-width:100%; border-radius:1rem;">
+    ${mensajeExtra}
+    ${botonDescarga}
+  `;
+
   puntajeFinal.textContent = `Puntaje: ${puntaje} de ${max}`;
 
   guardarProgreso();
 }
+
 
 function guardarProgreso() {
   const progreso = JSON.parse(localStorage.getItem("progreso")) || { version: 1, temporadas: {} };
