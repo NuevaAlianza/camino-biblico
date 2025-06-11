@@ -836,3 +836,34 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   margin: 0.5rem 0;
 }
+.galeria-coleccionables {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.tarjeta-coleccionable {
+  background: #fdf6f0;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: fadeInScale 0.5s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-coleccionable img {
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.tarjeta-coleccionable h3 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #333;
+}
