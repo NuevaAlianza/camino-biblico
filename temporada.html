@@ -8,12 +8,22 @@
 </head>
 <body>
   <main id="contenedor">
-    <div id="inicio" class="centrado">
-      <h1 id="titulo-temporada">Temporada</h1>
-      <p id="descripcion-temporada"></p>
-      <button id="btn-comenzar">Comenzar quiz</button>
+    
+    <!-- Pantalla de inicio -->
+    <div id="inicio">
+      <div class="cabecera-temporada">
+        <div class="etiqueta">Especial</div>
+        <h1 id="titulo-temporada">Temporada</h1>
+        <p id="descripcion-temporada"></p>
+      </div>
+      <div class="centrado">
+        <button id="btn-comenzar">
+          ▶️ Comenzar quiz
+        </button>
+      </div>
     </div>
 
+    <!-- Juego activo -->
     <div id="juego" class="oculto">
       <div id="barra-tiempo"><div id="progreso"></div></div>
       <div id="contador">Tiempo: 58s</div>
@@ -22,17 +32,16 @@
       <div id="conteo-pregunta"></div>
     </div>
 
+    <!-- Pantalla final -->
     <div id="final" class="oculto">
       <h2>¡Has completado la temporada!</h2>
       <p id="puntaje-final"></p>
       <div id="imagen-coleccionable"></div>
       <button onclick="location.href='index.html'">Volver al inicio</button>
     </div>
+
   </main>
 
   <script src="./js/app/temporada.js"></script>
-
-
 </body>
 </html>
-
