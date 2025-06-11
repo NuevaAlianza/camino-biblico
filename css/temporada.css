@@ -1,1 +1,44 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fef6e4;
+  color: #333;
+  margin: 0;
+  padding: 1rem;
+}
+
+main {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.oculto {
+  display: none;
+}
+
+#barra-tiempo {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  margin-bottom: 1rem;
+}
+#progreso {
+  height: 100%;
+  width: 0%;
+  background: #f4a261;
+  transition: width 0.5s;
+}
+
+button {
+  background-color: #e76f51;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
 
