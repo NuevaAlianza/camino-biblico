@@ -1,57 +1,235 @@
-/* Fondo elegante */
+@media (max-width: 600px) {
+  .cabecera-temporada {
+    padding: 1rem;
+  }
+
+  .cabecera-temporada h1 {
+    font-size: 1.5rem;
+  }
+
+  .cabecera-temporada p {
+    font-size: 0.95rem;
+  }
+  }
+
+
+
+/* Versión responsive para móviles */
+@media (max-width: 600px) {
+  main#contenedor {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  #titulo-temporada {
+    font-size: 1.6rem;
+  }
+
+  #descripcion-temporada {
+    font-size: 1rem;
+  }
+
+  #btn-comenzar,
+  #final button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+
+  #opciones button {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+
+  #pregunta {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  #contador,
+  #conteo-pregunta {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  #imagen-coleccionable img {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .descargar-btn {
+    width: 100%;
+    text-align: center;
+  }
+  }
+
+
+/* Fondo general */
 body {
-  background: linear-gradient(to bottom right, #fef6e4, #f4f1de);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
 }
 
-/* Encabezado */
+/* Contenedor */
+main#contenedor {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Pantallas */
+.oculto {
+  display: none;
+}
+
+.centrado {
+  text-align: center;
+}
+
+/* Título y descripción */
 #titulo-temporada {
   font-size: 2rem;
-  color: #2b2d42;
+  font-weight: bold;
+  color: #264653;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 #descripcion-temporada {
   font-size: 1.1rem;
   color: #555;
-  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-/* Botón de inicio */
-#btn-comenzar {
-  background-color: #264653;
+/* Botón principal */
+#btn-comenzar,
+#final button {
+  background-color: #2a9d8f;
   color: #fff;
   font-weight: 600;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 1rem;
   border: none;
-  cursor: pointer;
   font-size: 1rem;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#btn-comenzar:hover {
-  background-color: #1f3a3d;
-  transform: translateY(-2px);
+#btn-comenzar:hover,
+#final button:hover {
+  background-color: #21867a;
+  transform: scale(1.02);
 }
+
+/* Pregunta */
 #pregunta {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #264653;
   margin-bottom: 1rem;
+  color: #264653;
+}
+
+/* Opciones */
+#opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 #opciones button {
-  background-color: #2a9d8f;
-  color: #fff;
-  font-size: 1rem;
-  border-radius: 0.75rem;
+  background-color: #e76f51;
+  color: white;
   border: none;
   padding: 0.8rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  transition: background-color 0.2s ease;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #opciones button:hover {
-  background-color: #21867a;
+  background-color: #d65a3f;
+}
+
+/* Barra de tiempo */
+#barra-tiempo {
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+#progreso {
+  height: 100%;
+  width: 0%;
+  background-color: #f4a261;
+  transition: width 0.5s;
+}
+
+/* Contador */
+#contador,
+#conteo-pregunta {
+  font-size: 0.9rem;
+  color: #777;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+/* Final */
+#final h2 {
+  color: #2b2d42;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#puntaje-final {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+#imagen-coleccionable img {
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+/* 🎨 Cabecera visual de temporada */
+.cabecera-temporada {
+  background: linear-gradient(to right, #f4a261, #e76f51);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cabecera-temporada .etiqueta {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.3rem;
+  color: #fff7ea;
+}
+
+.cabecera-temporada h1 {
+  font-size: 1.8rem;
+  margin: 0.2rem 0;
+}
+
+.cabecera-temporada p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #fcefe3;
 }
