@@ -13,6 +13,7 @@
   <main class="menu-principal">
     <h1>App Bíblica</h1>
     <p>Elige una modalidad:</p>
+       <div id="temporada"></div> <!-- Aquí se mostrará el botón de la temporada -->
     <button id="btn-instalar" style="display:none;">Instalar app</button>
     <button onclick="location.href='reflexion.html'">🧘 Espíritu Santo Y YO</button>
     <button onclick="location.href='quiz.html'">🧠 Quiz Con Ruedita</button>
@@ -103,5 +104,52 @@
       }
     }
   </script>
+
+<script>
+async function cargarTemporadas() {
+  const res = await fetch('datos/temporadas.json');
+  const temporadas = await res.json();
+  const hoy = new Date();
+
+  let activa = null;
+  let proxima = null;
+
+  temporadas.forEach(t => {
+    const inicio = new Date(t.fecha_inicio);
+    const fin = new Date(t.fecha_fin);
+
+    if (hoy >= inicio && hoy <= fin) activa = t;
+    else if (!proxima && hoy < inicio) proxima = t;
+  });
+
+  const contenedor = document.getElementById("temporada");
+
+  if (activa) {
+    contenedor.innerHTML = `
+      <button onclick="irATemporada('${activa.id}')">
+        🎯 Temporada activa: ${activa.titulo}
+      </button>
+    `;
+  } else if (proxima) {
+    const inicio = new Date(proxima.fecha_inicio);
+    const horasFaltantes = Math.ceil((inicio - hoy) / (1000 * 60 * 60));
+
+    let mensaje = horasFaltantes <= 24
+      ? `⏳ ¡Nueva temporada en ${horasFaltantes} h!`
+      : `📅 Próxima: ${proxima.titulo} (${proxima.fecha_inicio})`;
+
+    contenedor.innerHTML = `<button disabled>${mensaje}</button>`;
+  } else {
+    contenedor.innerHTML = `<p>No hay temporadas activas en este momento.</p>`;
+  }
+}
+
+function irATemporada(id) {
+  window.location.href = `temporada.html?id=${id}`;
+}
+
+document.addEventListener("DOMContentLoaded", cargarTemporadas);
+</script>
+
 </body>
 </html>
