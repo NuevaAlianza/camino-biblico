@@ -154,12 +154,22 @@ function finalizarJuego() {
 
 
 function guardarProgreso() {
-  const progreso = JSON.parse(localStorage.getItem("progreso")) || { version: 1, temporadas: {} };
+  let progreso = JSON.parse(localStorage.getItem("progreso")) || { version: 2, categorias: {}, temporadas: {} };
+
+  if (progreso.version !== 2) {
+    // Si por alguna razón es la versión antigua, migramos
+    progreso = { version: 2, categorias: {}, temporadas: {} };
+  }
+
+  if (!progreso.temporadas) progreso.temporadas = {};
+
   progreso.temporadas[idTemporada] = {
     titulo: datosTemporada.titulo,
     puntaje,
-    nota: puntaje >= datosTemporada.umbral_coleccionable ? "A" : puntaje >= datosTemporada.umbral_coleccionable - 2 ? "B" : "C",
+    nota: puntaje >= datosTemporada.umbral_coleccionable ? "A" :
+          puntaje >= datosTemporada.umbral_coleccionable - 2 ? "B" : "C",
     coleccionable: puntaje >= datosTemporada.umbral_coleccionable
   };
+
   localStorage.setItem("progreso", JSON.stringify(progreso));
 }
