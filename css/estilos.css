@@ -1,3 +1,40 @@
+
+.boton-temporada-activa {
+  background-color: #2a9d8f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.8em 1.5em;
+  font-size: 1.1em;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(42, 157, 143, 0.6);
+  animation: latido 1.2s infinite;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.boton-temporada-activa:hover {
+  background-color: #21867a;
+}
+
+.boton-temporada-proxima {
+  background-color: #e9c46a;
+  color: #333;
+  font-weight: bold;
+  padding: 0.8em 1.2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  opacity: 0.9;
+  cursor: default;
+}
+
+
 /* css/estilos.css */
 
 :root {
