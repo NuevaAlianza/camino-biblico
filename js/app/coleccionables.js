@@ -65,6 +65,8 @@ async function cargarColeccionables() {
       const nota = progresoTemp?.nota;
       const coleccionable = temporada.coleccionable;
 
+      console.log("🗓️ Mostrando temporada:", temporada.id, "con nota", nota);
+
       let imagen;
       if (nota === "A") {
         imagen = coleccionable.imagen_a;
@@ -104,4 +106,3 @@ async function cargarColeccionables() {
 }
 
 cargarColeccionables();
-
