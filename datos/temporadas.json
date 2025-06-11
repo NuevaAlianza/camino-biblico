@@ -1,1 +1,53 @@
+[
+  {
+    "id": "T1",
+    "titulo": "La Biblia",
+    "descripcion": "Un especial dedicado a conocer mejor la Palabra de Dios.",
+    "fecha_inicio": "2025-06-01",
+    "fecha_fin": "2025-06-30",
+    "puntaje_maximo": 10,
+    "umbral_coleccionable": 9,
+    "coleccionable": {
+      "nombre": "Temporada 1 – Biblia",
+      "imagen_a": "assets/img/coleccionables/temporada1_a.png",
+      "imagen_b": "assets/img/coleccionables/generica_b.png",
+      "imagen_c": "assets/img/coleccionables/generica_c.png"
+    },
+    "preguntas": [
+      {
+        "pregunta": "¿Qué significa Biblia?",
+        "respuesta": "Libros",
+        "opcion_1": "Verdad",
+        "opcion_2": "Camino",
+        "opcion_3": "Mensaje"
+      }
+      // + más preguntas aquí...
+    ]
+  },
+  {
+    "id": "T2",
+    "titulo": "Navidad",
+    "descripcion": "Una temporada para reflexionar sobre el nacimiento del Salvador.",
+    "fecha_inicio": "2025-12-01",
+    "fecha_fin": "2025-12-31",
+    "puntaje_maximo": 12,
+    "umbral_coleccionable": 11,
+    "coleccionable": {
+      "nombre": "Temporada 2 – Navidad",
+      "imagen_a": "assets/img/coleccionables/temporada2_a.png",
+      "imagen_b": "assets/img/coleccionables/generica_b.png",
+      "imagen_c": "assets/img/coleccionables/generica_c.png"
+    },
+    "preguntas": [
+      {
+        "pregunta": "¿Dónde nació Jesús?",
+        "respuesta": "Belén",
+        "opcion_1": "Nazaret",
+        "opcion_2": "Jerusalén",
+        "opcion_3": "Galilea"
+      }
+      // + más preguntas aquí...
+    ]
+  }
+]
 
