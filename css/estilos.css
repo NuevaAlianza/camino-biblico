@@ -868,3 +868,78 @@ display: inline-block;
   margin-top: 0.5rem;
   color: #333;
 }
+/* Bloques visuales del menú */
+.bloque-temporada,
+.bloque-educativo,
+.bloque-utilidades {
+  background-color: #fff;
+  border-left: 8px solid var(--color-bloque);
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: var(--sombra);
+}
+
+.bloque-temporada {
+  --color-bloque: #f4a261; /* naranja suave */
+}
+
+.bloque-educativo {
+  --color-bloque: #2a9d8f; /* verde suave */
+}
+
+.bloque-utilidades {
+  --color-bloque: #264653; /* azul profundo */
+}
+
+.bloque-temporada h2,
+.bloque-educativo h2,
+.bloque-utilidades h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--color-bloque);
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 0.4rem;
+}
+
+.bloque-temporada button,
+.bloque-educativo button,
+.bloque-utilidades button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.bloque-temporada button:hover,
+.bloque-educativo button:hover,
+.bloque-utilidades button:hover {
+  background-color: #d6d6d6;
+}
+
+/* Responsivo en móviles */
+@media (max-width: 600px) {
+  .bloque-temporada,
+  .bloque-educativo,
+  .bloque-utilidades {
+    padding: 1rem;
+  }
+
+  .bloque-temporada h2,
+  .bloque-educativo h2,
+  .bloque-utilidades h2 {
+    font-size: 1.1rem;
+  }
+
+  .bloque-temporada button,
+  .bloque-educativo button,
+  .bloque-utilidades button {
+    font-size: 0.95rem;
+  }
+}
