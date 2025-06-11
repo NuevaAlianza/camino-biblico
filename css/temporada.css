@@ -1,125 +1,57 @@
-/* Fondo general */
+/* Fondo elegante */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff8f0; /* fondo cálido suave */
-  color: #333;
+  background: linear-gradient(to bottom right, #fef6e4, #f4f1de);
 }
 
-/* Contenedor principal */
-main#contenedor {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
+/* Encabezado */
+#titulo-temporada {
+  font-size: 2rem;
+  color: #2b2d42;
+  margin-bottom: 0.5rem;
+}
+
+#descripcion-temporada {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón de inicio */
+#btn-comenzar {
+  background-color: #264653;
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Estado inicial oculto */
-.oculto {
-  display: none;
-}
-
-/* Pantallas centradas (inicio y final) */
-.centrado, #final {
-  text-align: center;
-}
-
-/* Botón principal */
-button {
-  background-color: #e76f51;
-  color: white;
   border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 0.5rem;
   cursor: pointer;
-  margin: 1rem 0;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #d65a3f;
+#btn-comenzar:hover {
+  background-color: #1f3a3d;
+  transform: translateY(-2px);
 }
-
-/* Barra de tiempo */
-#barra-tiempo {
-  width: 100%;
-  height: 10px;
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  overflow: hidden;
-}
-
-#progreso {
-  height: 100%;
-  width: 0%;
-  background-color: #f4a261;
-  transition: width 0.5s;
-}
-
-/* Pregunta */
 #pregunta {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #264653;
   margin-bottom: 1rem;
-}
-
-/* Opciones */
-#opciones {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
 }
 
 #opciones button {
   background-color: #2a9d8f;
   color: #fff;
-  padding: 0.7rem;
-  border-radius: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.75rem;
   border: none;
-  transition: background-color 0.3s ease;
+  padding: 0.8rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
 }
 
 #opciones button:hover {
   background-color: #21867a;
 }
-
-/* Contador y número de pregunta */
-#contador,
-#conteo-pregunta {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 0.5rem;
-  text-align: right;
-}
-
-/* Resultado final */
-#final h2 {
-  color: #264653;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-#puntaje-final {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-/* Imagen coleccionable */
-#imagen-coleccionable img {
-  max-width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1.5rem;
-  transition: transform 0.4s ease;
-}
-
-#imagen-coleccionable img:hover {
-  transform: scale(1.02);
-}
-
