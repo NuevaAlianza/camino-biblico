@@ -11,18 +11,32 @@
 </head>
 <body>
   <main class="menu-principal">
+
     <h1>App Bíblica</h1>
-    <p>Elige una modalidad:</p>
-       <div id="temporada"></div> <!-- Aquí se mostrará el botón de la temporada -->
-    <button id="btn-instalar" style="display:none;">Instalar app</button>
-    <button onclick="location.href='reflexion.html'">🧘 Espíritu Santo Y YO</button>
-    <button onclick="location.href='quiz.html'">🧠 Quiz Con Ruedita</button>
-    <button onclick="location.href='citas.html'">📖 Citas bíblicas</button>
-    <button style="background-color: #e0b33f; color: #fff; font-weight: bold;" onclick="location.href='coleccionables.html'">
-  🖼️ coleccionables
-</button>
-    <button onclick="location.href='progreso.html'">📊 Revisión de progreso</button>
-    <button onclick="location.href='config.html'">⚙️ Configuración / Acerca de</button>
+
+    <!-- 🔶 Bloque Temporada -->
+    <section class="bloque-temporada">
+      <h2>Temporada activa</h2>
+      <div id="temporada"></div>
+    </section>
+
+    <!-- 🧘 Bloque Educativo -->
+    <section class="bloque-educativo">
+      <h2>Formación bíblica</h2>
+      <button onclick="location.href='reflexion.html'">🧘 Espíritu Santo Y YO</button>
+      <button onclick="location.href='quiz.html'">🧠 Quiz Con Ruedita</button>
+      <button onclick="location.href='citas.html'">📖 Citas bíblicas</button>
+    </section>
+
+    <!-- 🧩 Bloque Utilidades -->
+    <section class="bloque-utilidades">
+      <h2>Recursos y progreso</h2>
+      <button onclick="location.href='coleccionables.html'">🖼️ Coleccionables</button>
+      <button onclick="location.href='progreso.html'">📊 Revisión de progreso</button>
+      <button onclick="location.href='config.html'">⚙️ Configuración / Acerca de</button>
+    </section>
+
+    
   </main>
 
   <!-- Notificación visual de nueva versión -->
