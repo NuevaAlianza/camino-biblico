@@ -1,3 +1,21 @@
+#btn-inicio {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--color-primario);
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+#btn-inicio:hover {
+  background-color: var(--color-secundario);
+}
 
 .boton-temporada-activa {
   background-color: #2a9d8f;
