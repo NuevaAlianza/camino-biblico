@@ -2,20 +2,25 @@
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  background-color: var(--color-primario);
-  color: white;
-  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.25); /* fondo translúcido claro */
+  backdrop-filter: blur(6px); /* efecto de desenfoque detrás */
+  -webkit-backdrop-filter: blur(6px); /* soporte para Safari */
+  color: var(--color-primario);
+  font-size: 1.6rem;
   padding: 0.8rem 1rem;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   z-index: 999;
-  transition: background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
 }
 
 #btn-inicio:hover {
-  background-color: var(--color-secundario);
+  background-color: rgba(255, 255, 255, 0.4);
+  color: var(--color-secundario);
 }
+
 
 .boton-temporada-activa {
   background-color: #2a9d8f;
