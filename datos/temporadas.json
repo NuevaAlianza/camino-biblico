@@ -21,33 +21,95 @@
         "opcion_2": "Camino",
         "opcion_3": "Mensaje"
       }
-      
     ]
   },
   {
     "id": "T2",
     "titulo": "Nueva Alianza",
-    "descripcion": "Una temporada para reflexionar sobre el nacimiento del Salvador.",
+    "descripcion": "Una Comunidad, que tanto conoces de ella, Animo.",
     "fecha_inicio": "2025-06-15",
     "fecha_fin": "2025-06-30",
-    "puntaje_maximo": 12,
-    "umbral_coleccionable": 11,
+    "puntaje_maximo": 10,
+    "umbral_coleccionable": 9,
     "coleccionable": {
-      "nombre": "Temporada 2 – Navidad",
-      "imagen_a": "assets/img/coleccionables/temporada2_a.png",
+      "nombre": "Temporada 2 – Nueva Alianza",
+      "imagen_a": "assets/img/coleccionables/nuevaalianza_a.png",
       "imagen_b": "assets/img/coleccionables/generica_b.png",
       "imagen_c": "assets/img/coleccionables/generica_c.png"
     },
     "preguntas": [
       {
-        "pregunta": "¿Dónde nació Jesús?",
-        "respuesta": "Belén",
-        "opcion_1": "Nazaret",
-        "opcion_2": "Jerusalén",
-        "opcion_3": "Galilea"
+        "pregunta": "¿En que año se fundo Nueva Alianza?",
+        "respuesta": "26/6/1991",
+        "opcion_1": "26/7/1991",
+        "opcion_2": "26/6/1992",
+        "opcion_3": "27/6/1991"
+      },
+      {
+        "pregunta": "¿Dias en que se celebro El Grupo de oracion?",
+        "respuesta": "Miercoles",
+        "opcion_1": "Martes",
+        "opcion_2": "Lunes",
+        "opcion_3": "Jueves"
+      },
+      {
+        "pregunta": "¿Servidor Encargado Mas Antiguo?",
+        "respuesta": "Ignacio",
+        "opcion_1": "Peter",
+        "opcion_2": "cesarina",
+        "opcion_3": "benjamin"
+      },
+      {
+        "pregunta": "¿Quien fue Servidor 1ro?",
+        "respuesta": "Harold",
+        "opcion_1": "Alexandra",
+        "opcion_2": "Kelvin",
+        "opcion_3": "Angelica"
+      },
+      {
+        "pregunta": "¿Encuentra el Infiltrado?",
+        "respuesta": "leonel",
+        "opcion_1": "Peter",
+        "opcion_2": "Harold",
+        "opcion_3": "Benjamin"
+      },
+      {
+        "pregunta": "¿Cuantos Servidores  Encargado a tenido N.A En su Historia?",
+        "respuesta": "8",
+        "opcion_1": "7",
+        "opcion_2": "9*",
+        "opcion_3": "11"
+      },
+      {
+        "pregunta": "¿ Del total de Servidores Encargados Cuantos Fueron Mujeres?",
+        "respuesta": "2",
+        "opcion_1": "3",
+        "opcion_2": "4",
+        "opcion_3": "5"
+      },
+      {
+        "pregunta": "¿En cual de estos salones se realiso  El Grupo N.A?",
+        "respuesta": "Salon Santa Maria",
+        "opcion_1": "Salon San Antonio de Padua",
+        "opcion_2": "Salon San Francisco De Borja",
+        "opcion_3": "Salon San Francisco de Sales"
+      },
+      {
+        "pregunta": "¿Encuentra El servidor Encargado?",
+        "respuesta": "Harold",
+        "opcion_1": "Rinerson",
+        "opcion_2": "Kelvin",
+        "opcion_3": "Angelica"
+      },
+      {
+        "pregunta": "¿En Cual Parroquia se Fundo El Grupo N.A?",
+        "respuesta": "Juan Maria Vianey",
+        "opcion_1": "Perpetuo Socorro",
+        "opcion_2": "Santa Clara",
+        "opcion_3": "San Mateo"
       }
-    
     ]
   }
 ]
+
 
