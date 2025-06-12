@@ -18,22 +18,7 @@
     <section>
       <h2>Resumen por categoría</h2>
       <div id="contenedor-resumen-categorias" class="contenedor-progreso">
-
-        <!-- 🔽 Tarjeta de ejemplo con imagen ampliable y botón de descarga -->
-        <div class="tarjeta-progreso">
-          <h3 class="titulo-categoria">Testigos de Jesús</h3>
-          <p class="info-progreso">Tema: José de Arimatea</p>
-
-          <div class="contenedor-descarga">
-            <img src="assets/img/coleccionables/jose-arimatea.png" alt="José de Arimatea" class="imagen-ampliable" />
-            <a href="assets/img/coleccionables/jose-arimatea.png" download>
-              <div class="icono-descarga">⬇️</div>
-            </a>
-          </div>
-
-          <p class="rango">Nota: <span class="etiqueta-nota nota-a">A</span></p>
-        </div>
-
+        <!-- Las tarjetas se insertan dinámicamente desde progreso.js -->
       </div>
     </section>
 
@@ -42,39 +27,6 @@
     </div>
   </main>
 
-  <!-- 🧠 Script para ampliar imagen al hacer clic -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll(".imagen-ampliable").forEach(img => {
-        img.addEventListener("click", () => {
-          const overlay = document.createElement("div");
-          overlay.style.position = "fixed";
-          overlay.style.top = "0";
-          overlay.style.left = "0";
-          overlay.style.width = "100vw";
-          overlay.style.height = "100vh";
-          overlay.style.background = "rgba(0,0,0,0.8)";
-          overlay.style.display = "flex";
-          overlay.style.justifyContent = "center";
-          overlay.style.alignItems = "center";
-          overlay.style.zIndex = "1000";
-
-          const imgClon = document.createElement("img");
-          imgClon.src = img.src;
-          imgClon.style.maxWidth = "90%";
-          imgClon.style.maxHeight = "90%";
-          imgClon.style.boxShadow = "0 0 20px #fff";
-          imgClon.style.borderRadius = "12px";
-
-          overlay.appendChild(imgClon);
-          overlay.addEventListener("click", () => overlay.remove());
-          document.body.appendChild(overlay);
-        });
-      });
-    });
-  </script>
-
-  <!-- 📊 Tu script de progreso -->
   <script src="js/app/progreso.js"></script>
 </body>
 </html>
