@@ -40,18 +40,14 @@ function mostrarResumenPorCategoria() {
       const intentos = historial.filter(i => i.tema === tema && i.tipo === "quiz comentado").length;
       mejoresNotas.push(nota);
 
-      // Generar nombre de imagen a partir del nombre del tema
       const imagenNombre = `${tema.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.png`;
       const rutaImagen = `assets/img/coleccionables/${imagenNombre}`;
 
       colIzq.innerHTML += `
         <div class="tema">
           <h3>${tema}</h3>
-          <div class="contenedor-descarga">
-            <img src="${rutaImagen}" alt="${tema}" class="imagen-ampliable" />
-            <a href="${rutaImagen}" download>
-              <div class="icono-descarga">⬇️</div>
-            </a>
+          <div class="contenedor-imagen">
+            <img src="${rutaImagen}" alt="${tema}" />
           </div>
           <p>Nota: <span class="etiqueta-nota nota-${nota.toLowerCase()}">${nota}</span></p>
           <p>Intentos: ${intentos}</p>
@@ -96,36 +92,5 @@ function mostrarResumenPorCategoria() {
     resumen.appendChild(colIzq);
     resumen.appendChild(colDer);
     contenedor.appendChild(resumen);
-  });
-
-  activarAmpliacionImagenes(); // activar zoom tras generar contenido
-}
-
-function activarAmpliacionImagenes() {
-  document.querySelectorAll(".imagen-ampliable").forEach(img => {
-    img.addEventListener("click", () => {
-      const overlay = document.createElement("div");
-      overlay.style.position = "fixed";
-      overlay.style.top = "0";
-      overlay.style.left = "0";
-      overlay.style.width = "100vw";
-      overlay.style.height = "100vh";
-      overlay.style.background = "rgba(0,0,0,0.8)";
-      overlay.style.display = "flex";
-      overlay.style.justifyContent = "center";
-      overlay.style.alignItems = "center";
-      overlay.style.zIndex = "1000";
-
-      const imgClon = document.createElement("img");
-      imgClon.src = img.src;
-      imgClon.style.maxWidth = "90%";
-      imgClon.style.maxHeight = "90%";
-      imgClon.style.boxShadow = "0 0 20px #fff";
-      imgClon.style.borderRadius = "12px";
-
-      overlay.appendChild(imgClon);
-      overlay.addEventListener("click", () => overlay.remove());
-      document.body.appendChild(overlay);
-    });
   });
 }
