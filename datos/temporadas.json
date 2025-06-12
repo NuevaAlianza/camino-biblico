@@ -46,8 +46,8 @@
         "opcion_3": "27/6/1991"
       },
       {
-        "pregunta": "¿Dias en que se celebro El Grupo de oracion?",
-        "respuesta": "Miercoles",
+        "pregunta": "¿Dias en que se celebro El Grupo de Oración?",
+        "respuesta": "Miércoles",
         "opcion_1": "Martes",
         "opcion_2": "Lunes",
         "opcion_3": "Jueves"
@@ -56,8 +56,8 @@
         "pregunta": "¿Servidor Encargado Mas Antiguo?",
         "respuesta": "Ignacio",
         "opcion_1": "Peter",
-        "opcion_2": "cesarina",
-        "opcion_3": "benjamin"
+        "opcion_2": "Cesariana",
+        "opcion_3": "Benjamín"
       },
       {
         "pregunta": "¿Quien fue Servidor 1ro?",
@@ -68,16 +68,16 @@
       },
       {
         "pregunta": "¿Encuentra el Infiltrado?",
-        "respuesta": "leonel",
+        "respuesta": "Leonel",
         "opcion_1": "Peter",
         "opcion_2": "Harold",
-        "opcion_3": "Benjamin"
+        "opcion_3": "Benjamín"
       },
       {
         "pregunta": "¿Cuantos Servidores  Encargado a tenido N.A En su Historia?",
         "respuesta": "8",
         "opcion_1": "7",
-        "opcion_2": "9*",
+        "opcion_2": "9",
         "opcion_3": "11"
       },
       {
@@ -88,11 +88,11 @@
         "opcion_3": "5"
       },
       {
-        "pregunta": "¿En cual de estos salones se realiso  El Grupo N.A?",
-        "respuesta": "Salon Santa Maria",
-        "opcion_1": "Salon San Antonio de Padua",
-        "opcion_2": "Salon San Francisco De Borja",
-        "opcion_3": "Salon San Francisco de Sales"
+        "pregunta": "¿En cual de estos salones se realizo  El Grupo N.A?",
+        "respuesta": "Salón Santa María",
+        "opcion_1": "Salón San Antonio de Padua",
+        "opcion_2": "Salón San Francisco De Borja",
+        "opcion_3": "Salón San Francisco de Sales"
       },
       {
         "pregunta": "¿Encuentra El servidor Encargado?",
@@ -102,11 +102,11 @@
         "opcion_3": "Angelica"
       },
       {
-        "pregunta": "¿En Cual Parroquia se Fundo El Grupo N.A?",
-        "respuesta": "Juan Maria Vianey",
-        "opcion_1": "Perpetuo Socorro",
-        "opcion_2": "Santa Clara",
-        "opcion_3": "San Mateo"
+        "pregunta": "¿Cita Bíblica Que Inspira El Nombre Del Grupo?",
+        "respuesta": "Lucas 22,20",
+        "opcion_1": "Isaías 41,10",
+        "opcion_2": "1 Corintios 11,25",
+        "opcion_3": "Hebreos 8,6-13"
       }
     ]
   }
