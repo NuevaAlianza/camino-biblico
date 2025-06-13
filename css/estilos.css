@@ -1,7 +1,7 @@
 #btn-inicio {
   position: fixed;
   bottom: 1.5rem;
-  right: 1.5rem;
+  left: 1.5rem;
   background-color: rgba(255, 255, 255, 0.25); /* fondo translúcido claro */
   backdrop-filter: blur(6px); /* efecto de desenfoque detrás */
   -webkit-backdrop-filter: blur(6px); /* soporte para Safari */
@@ -1039,12 +1039,6 @@ display: inline-block;
   z-index: 999;
 }
 
-.boton-temporada {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  ...
-}
 @media (max-width: 480px) {
   .boton-temporada,
   .boton-flotante {
@@ -1061,5 +1055,13 @@ display: inline-block;
   .boton-temporada {
     bottom: 15px;
     right: 15px;
+  }
+}
+@media (max-width: 480px) {
+  #btn-inicio {
+    bottom: 15px;
+    left: 15px;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
   }
 }
