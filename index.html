@@ -164,6 +164,14 @@ function irATemporada(id) {
 
 document.addEventListener("DOMContentLoaded", cargarTemporadas);
 </script>
+<!-- Botón flotante de temporada -->
+<a id="boton-temporada" class="boton-temporada oculto" href="temporada.html"></a>
+
+<!-- Script para mostrar el botón si hay temporada activa -->
+<script src="js/app/temporada.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", mostrarBotonTemporada);
+</script>
 
 </body>
 </html>
