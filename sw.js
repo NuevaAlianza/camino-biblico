@@ -1,4 +1,4 @@
-const CACHE_NAME = 'app-static-v9.12';
+const CACHE_NAME = 'app-static-v9.13';
 const URLS_TO_CACHE = [
   './',
   './index.html',
@@ -20,7 +20,7 @@ const URLS_TO_CACHE = [
 
   // Imágenes
   './assets/img/icon-192.png',
-  './assets/img/icon-512.png',
+  './assets/img/icon2-512.png',
 
   // Sonidos
   './assets/sonidos/click.mp3',
