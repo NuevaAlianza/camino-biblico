@@ -1025,3 +1025,40 @@ display: inline-block;
 .oculto {
   display: none !important;
 }
+.boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #264653;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+.boton-temporada {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  ...
+}
+@media (max-width: 480px) {
+  .boton-temporada,
+  .boton-flotante {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 1.5rem;
+  }
+
+  .boton-flotante {
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .boton-temporada {
+    bottom: 15px;
+    right: 15px;
+  }
+}
