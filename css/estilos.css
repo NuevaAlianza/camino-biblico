@@ -1028,7 +1028,7 @@ display: inline-block;
 .boton-flotante {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  left: 20px; /* Mueve el botón a la izquierda */
   background-color: #264653;
   color: white;
   padding: 0.8rem 1.2rem;
@@ -1038,6 +1038,7 @@ display: inline-block;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 999;
 }
+
 .boton-temporada {
   position: fixed;
   bottom: 20px;
