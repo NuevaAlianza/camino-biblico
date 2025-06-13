@@ -46,9 +46,7 @@ function mostrarResumenPorCategoria() {
       colIzq.innerHTML += `
         <div class="tema">
           <h3>${tema}</h3>
-          <div class="contenedor-imagen">
-            <img src="${rutaImagen}" alt="${tema}" />
-          </div>
+          
           <p>Nota: <span class="etiqueta-nota nota-${nota.toLowerCase()}">${nota}</span></p>
           <p>Intentos: ${intentos}</p>
         </div>
