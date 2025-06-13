@@ -173,3 +173,37 @@ function guardarProgreso() {
 
   localStorage.setItem("progreso", JSON.stringify(progreso));
 }
+async function mostrarBotonTemporada() {
+  try {
+    const res = await fetch('datos/temporadas.json');
+    const temporadas = await res.json();
+
+    const hoy = new Date();
+    const btn = document.getElementById('boton-temporada');
+    if (!btn) return;
+
+    for (const temporada of temporadas) {
+      const inicio = new Date(temporada.fecha_inicio);
+      const fin = new Date(temporada.fecha_fin);
+
+      if (hoy >= inicio && hoy <= fin) {
+        const diasRestantes = Math.ceil((fin - hoy) / (1000 * 60 * 60 * 24));
+        btn.textContent = `🟢 ${temporada.titulo} – Termina en ${diasRestantes} día${diasRestantes !== 1 ? 's' : ''}`;
+        btn.classList.remove('oculto');
+        return;
+      }
+
+      if (hoy < inicio) {
+        const diasFaltan = Math.ceil((inicio - hoy) / (1000 * 60 * 60 * 24));
+        btn.textContent = `🕒 ${temporada.titulo} – Inicia en ${diasFaltan} día${diasFaltan !== 1 ? 's' : ''}`;
+        btn.classList.remove('oculto');
+        return;
+      }
+    }
+
+    // No hay temporada activa o próxima
+    btn.classList.add('oculto');
+  } catch (error) {
+    console.error('Error al cargar temporadas:', error);
+  }
+}
