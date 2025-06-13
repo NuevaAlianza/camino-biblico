@@ -1003,3 +1003,25 @@ display: inline-block;
     font-size: 0.95rem;
   }
 }
+.boton-temporada {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-secundario, #e76f51);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.boton-temporada:hover {
+  transform: scale(1.05);
+}
+
+.oculto {
+  display: none !important;
+}
