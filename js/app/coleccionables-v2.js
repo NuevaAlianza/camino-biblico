@@ -1,40 +1,42 @@
 let coleccionablesData = {};
+let temporadasData = [];
 
-fetch('./datos/coleccionables.json')
-  .then(res => res.json())
-  .then(data => {
-    coleccionablesData = data;
-    mostrarResumenCategorias(); // <- esperar a que cargue el JSON
-  });
+Promise.all([
+  fetch('./datos/coleccionables.json').then(res => res.json()),
+  fetch('./datos/temporadas.json').then(res => res.json())
+]).then(([coleccionables, temporadas]) => {
+  coleccionablesData = coleccionables;
+  temporadasData = temporadas;
+  mostrarResumenCategorias();
+});
 
 function mostrarResumenCategorias() {
   const resumen = document.getElementById("resumen-categorias");
+  resumen.innerHTML = "";
 
-  const progreso = JSON.parse(localStorage.getItem("progreso")) || { categorias: {} };
-  const categoriasDisponibles = Object.keys(coleccionablesData);
+  const progreso = JSON.parse(localStorage.getItem("progreso")) || { categorias: {}, temporadas: {} };
+  const progresoCategorias = progreso.categorias || {};
 
-  for (const categoria of categoriasDisponibles) {
+  // Mostrar todas las categorías presentes en coleccionablesData
+  for (const categoria in coleccionablesData) {
     const temas = coleccionablesData[categoria];
-    const progresoCategoria = progreso.categorias?.[categoria] || {};
-
     const total = Object.keys(temas).length;
-    const desbloqueados = Object.values(progresoCategoria).filter(t => t.estado === "completado").length;
 
-    // Calcular nota promedio
-    const notas = Object.values(progresoCategoria)
-      .map(t => t.nota)
-      .filter(nota => ["A", "B", "C"].includes(nota));
+    const completados = Object.entries(temas).filter(([tema]) => {
+      return progresoCategorias[categoria]?.[tema]?.estado === "completado";
+    });
+
+    const desbloqueados = completados.length;
+
+    const notas = completados
+      .map(([tema]) => progresoCategorias[categoria][tema]?.nota)
+      .filter(n => ["A", "B", "C"].includes(n));
 
     let promedio = "-";
     if (notas.length > 0) {
-      const sumaNotas = notas.reduce((acc, nota) => {
-        if (nota === "A") return acc + 3;
-        if (nota === "B") return acc + 2;
-        if (nota === "C") return acc + 1;
-        return acc;
-      }, 0);
-      const valor = Math.round(sumaNotas / notas.length);
-      promedio = valor === 3 ? "A" : valor === 2 ? "B" : "C";
+      const suma = notas.reduce((acc, n) => acc + (n === "A" ? 3 : n === "B" ? 2 : 1), 0);
+      const media = Math.round(suma / notas.length);
+      promedio = media === 3 ? "A" : media === 2 ? "B" : "C";
     }
 
     const porcentaje = Math.round((desbloqueados / total) * 100);
@@ -48,13 +50,20 @@ function mostrarResumenCategorias() {
         <div class="progreso-barra" style="width: ${porcentaje}%;"></div>
       </div>
     `;
-
-    card.addEventListener("click", () => {
-      mostrarPersonajes(categoria);
-    });
-
+    card.addEventListener("click", () => mostrarPersonajes(categoria));
     resumen.appendChild(card);
   }
+
+  // Agregar la tarjeta de Temporadas
+  const card = document.createElement("div");
+  card.className = "card-categoria";
+  card.innerHTML = `
+    <h2>Temporadas</h2>
+    <p>Coleccionables especiales por evento</p>
+    <div class="progreso"><div class="progreso-barra" style="width:100%"></div></div>
+  `;
+  card.addEventListener("click", () => mostrarPersonajes("Temporadas"));
+  resumen.appendChild(card);
 }
 
 function mostrarPersonajes(categoriaActual) {
@@ -66,7 +75,6 @@ function mostrarPersonajes(categoriaActual) {
   resumenCategorias.classList.add("oculto");
   vistaPersonajes.classList.remove("oculto");
 
-  // Fade out
   contenedor.classList.remove("fade-in");
   contenedor.classList.add("fade-out");
 
@@ -74,57 +82,90 @@ function mostrarPersonajes(categoriaActual) {
     contenedor.innerHTML = "";
     titulo.textContent = categoriaActual;
 
-    const temasDisponibles = coleccionablesData[categoriaActual] || {};
-    const progresoTemas = (JSON.parse(localStorage.getItem("progreso"))?.categorias?.[categoriaActual]) || {};
+    if (categoriaActual === "Temporadas") {
+      const progreso = JSON.parse(localStorage.getItem("progreso")) || {};
+      const progresoTemporadas = progreso.temporadas || {};
 
-    for (const tema in temasDisponibles) {
-      const info = temasDisponibles[tema];
-      const nota = progresoTemas[tema]?.nota || "F";
+      temporadasData.forEach(temp => {
+        const nota = progresoTemporadas[temp.id]?.nota || "F";
+        const col = temp.coleccionable;
 
-      let ruta = "assets/img/coleccionables/bloqueado.png";
-      if (nota === "A") ruta = info.img_a;
-      else if (nota === "B") ruta = info.img_b;
-      else if (nota === "C") ruta = info.img_c;
+        let ruta = "assets/img/coleccionables/bloqueado.png";
+        if (nota === "A") ruta = col.imagen_a;
+        else if (nota === "B") ruta = col.imagen_b;
+        else if (nota === "C") ruta = col.imagen_c;
 
-      const card = document.createElement("div");
-      card.className = "card-personaje";
-      card.innerHTML = `
-        <img src="${ruta}" alt="${tema}" />
-        <h3>${tema}</h3>
-        <p class="nota">Nota: ${nota}</p>
-      `;
+        const card = document.createElement("div");
+        card.className = "card-personaje";
+        card.innerHTML = `
+          <img src="${ruta}" alt="${col.nombre}" />
+          <h3>${col.nombre}</h3>
+          <p class="nota">Nota: ${nota}</p>
+        `;
 
-      card.addEventListener("click", () => {
-        mostrarModal({
-          tema,
-          nota,
-          rutaImagen: ruta,
-          descripcion: info.descripcion || ""
+        card.addEventListener("click", () => {
+          mostrarModal({
+            tema: col.nombre,
+            nota,
+            rutaImagen: ruta,
+            descripcion: temp.descripcion || ""
+          });
         });
+
+        contenedor.appendChild(card);
       });
 
-      contenedor.appendChild(card);
+    } else {
+      const temas = coleccionablesData[categoriaActual] || {};
+      const progresoTemas = (JSON.parse(localStorage.getItem("progreso"))?.categorias?.[categoriaActual]) || {};
+
+      for (const tema in temas) {
+        const info = temas[tema];
+        const nota = progresoTemas[tema]?.nota || "F";
+
+        let ruta = "assets/img/coleccionables/bloqueado.png";
+        if (nota === "A") ruta = info.img_a;
+        else if (nota === "B") ruta = info.img_b;
+        else if (nota === "C") ruta = info.img_c;
+
+        const card = document.createElement("div");
+        card.className = "card-personaje";
+        card.innerHTML = `
+          <img src="${ruta}" alt="${tema}" />
+          <h3>${tema}</h3>
+          <p class="nota">Nota: ${nota}</p>
+        `;
+
+        card.addEventListener("click", () => {
+          mostrarModal({
+            tema,
+            nota,
+            rutaImagen: ruta,
+            descripcion: info.descripcion || ""
+          });
+        });
+
+        contenedor.appendChild(card);
+      }
     }
 
-    // Fade in
     contenedor.classList.remove("fade-out");
     contenedor.classList.add("fade-in");
 
-  }, 200); // Tiempo de fade-out (ms)
+  }, 150);
 
-  // Navegación vertical con scroll
-  const todasCategorias = Object.keys(coleccionablesData);
-  const indexActual = todasCategorias.indexOf(categoriaActual);
+  // Navegación entre categorías con scroll
+  const todas = [...Object.keys(coleccionablesData), "Temporadas"];
+  const i = todas.indexOf(categoriaActual);
 
   vistaPersonajes.onwheel = (e) => {
-    if (e.deltaY > 30 && indexActual < todasCategorias.length - 1) {
-      mostrarPersonajes(todasCategorias[indexActual + 1]);
-    } else if (e.deltaY < -30 && indexActual > 0) {
-      mostrarPersonajes(todasCategorias[indexActual - 1]);
+    if (e.deltaY > 30 && i < todas.length - 1) {
+      mostrarPersonajes(todas[i + 1]);
+    } else if (e.deltaY < -30 && i > 0) {
+      mostrarPersonajes(todas[i - 1]);
     }
   };
 }
-
 
 document.getElementById("volver-resumen").addEventListener("click", () => {
   document.getElementById("vista-personajes").classList.add("oculto");
@@ -137,12 +178,12 @@ function mostrarModal({ tema, nota, rutaImagen, descripcion = "" }) {
   document.getElementById("modal-nota").textContent = `Nota obtenida: ${nota}`;
   document.getElementById("modal-info").textContent = descripcion;
 
-  const descargarBtn = document.getElementById("descargar-img");
+  const btn = document.getElementById("descargar-img");
   if (nota === "A") {
-    descargarBtn.style.display = "inline-block";
-    descargarBtn.href = rutaImagen;
+    btn.style.display = "inline-block";
+    btn.href = rutaImagen;
   } else {
-    descargarBtn.style.display = "none";
+    btn.style.display = "none";
   }
 
   document.getElementById("modal-detalle").classList.remove("oculto");
