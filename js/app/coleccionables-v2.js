@@ -1,5 +1,3 @@
-// js/app/coleccionables-v2.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const resumen = document.getElementById("resumen-categorias");
 
@@ -41,12 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     card.addEventListener("click", () => {
-      alert(`Entrar a categoría: ${categoria}`);
+      mostrarPersonajes(categoria, temas);
     });
 
     resumen.appendChild(card);
   }
-}); // 👈 ESTA llave y paréntesis cierran todo
+});
+
 function mostrarPersonajes(categoriaNombre, temas) {
   document.getElementById("resumen-categorias").classList.add("oculto");
   document.getElementById("vista-personajes").classList.remove("oculto");
@@ -76,17 +75,36 @@ function mostrarPersonajes(categoriaNombre, temas) {
       <p class="nota">Nota: ${nota}</p>
     `;
 
-    // Aquí luego abrimos el modal
     card.addEventListener("click", () => {
-      alert(`Mostrar detalle de ${tema}`);
+      mostrarModal({ tema, nota, rutaImagen: ruta });
     });
 
     contenedor.appendChild(card);
   }
 }
 
-// botón volver
 document.getElementById("volver-resumen").addEventListener("click", () => {
   document.getElementById("vista-personajes").classList.add("oculto");
   document.getElementById("resumen-categorias").classList.remove("oculto");
+});
+
+function mostrarModal({ tema, nota, rutaImagen }) {
+  document.getElementById("modal-imagen").src = rutaImagen;
+  document.getElementById("modal-nombre").textContent = tema;
+  document.getElementById("modal-nota").textContent = `Nota obtenida: ${nota}`;
+  document.getElementById("modal-info").textContent = ""; // opcional: texto explicativo
+
+  const descargarBtn = document.getElementById("descargar-img");
+  if (nota === "A") {
+    descargarBtn.style.display = "inline-block";
+    descargarBtn.href = rutaImagen;
+  } else {
+    descargarBtn.style.display = "none";
+  }
+
+  document.getElementById("modal-detalle").classList.remove("oculto");
+}
+
+document.getElementById("cerrar-modal").addEventListener("click", () => {
+  document.getElementById("modal-detalle").classList.add("oculto");
 });
