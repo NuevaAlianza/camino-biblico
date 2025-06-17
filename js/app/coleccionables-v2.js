@@ -66,14 +66,38 @@ function mostrarPersonajes(categoriaNombre, temas) {
   for (const tema in temas) {
     const datos = temas[tema];
     const nota = datos.nota || "F";
-    const infoTema = coleccionablesData[categoriaNombre]?.[tema];
-let ruta = "assets/img/coleccionables/bloqueado.png";
 
-if (infoTema) {
-  if (nota === "A") ruta = infoTema.img_a;
-  else if (nota === "B") ruta = infoTema.img_b;
-  else if (nota === "C") ruta = infoTema.img_c;
+    // Buscar info desde coleccionables.json ya cargado
+    const infoTema = coleccionablesData?.[categoriaNombre]?.[tema];
+    let ruta = "assets/img/coleccionables/bloqueado.png";
+
+    if (infoTema) {
+      if (nota === "A") ruta = infoTema.img_a;
+      else if (nota === "B") ruta = infoTema.img_b;
+      else if (nota === "C") ruta = infoTema.img_c;
+    }
+
+    const card = document.createElement("div");
+    card.className = "card-personaje";
+    card.innerHTML = `
+      <img src="${ruta}" alt="${tema}" />
+      <h3>${tema}</h3>
+      <p class="nota">Nota: ${nota}</p>
+    `;
+
+    card.addEventListener("click", () => {
+      mostrarModal({
+        tema,
+        nota,
+        rutaImagen: ruta,
+        descripcion: infoTema?.descripcion || ""
+      });
+    });
+
+    contenedor.appendChild(card);
+  }
 }
+
 
 
     const card = document.createElement("div");
