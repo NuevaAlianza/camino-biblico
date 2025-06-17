@@ -42,3 +42,37 @@
   background: #5cb85c;
   transition: width 0.3s ease;
 }
+.oculto {
+  display: none;
+}
+
+#vista-personajes {
+  padding: 1rem 0;
+}
+
+#personajes-categoria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card-personaje {
+  width: 140px;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: var(--sombra, 0 2px 4px rgba(0, 0, 0, 0.1));
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card-personaje img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.card-personaje h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
