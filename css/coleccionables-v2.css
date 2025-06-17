@@ -1,0 +1,44 @@
+/* css/coleccionables-v2.css */
+.coleccionables-v2 {
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#resumen-categorias {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-categoria {
+  background: #fffefc;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card-categoria:hover {
+  transform: scale(1.02);
+}
+
+.card-categoria h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-categoria .progreso {
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.card-categoria .progreso-barra {
+  height: 100%;
+  background: #5cb85c;
+  transition: width 0.3s ease;
+}
