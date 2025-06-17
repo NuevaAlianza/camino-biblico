@@ -1,3 +1,12 @@
+let coleccionablesData = {};
+fetch('./datos/coleccionables.json')
+  .then(res => res.json())
+  .then(data => {
+    coleccionablesData = data;
+  });
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const resumen = document.getElementById("resumen-categorias");
 
