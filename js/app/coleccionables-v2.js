@@ -1,5 +1,5 @@
  let coleccionablesData = {};
-let temporadasData = [];
+ let temporadasData = [];
 
 Promise.all([
   fetch('./datos/coleccionables.json').then(res => res.json()),
