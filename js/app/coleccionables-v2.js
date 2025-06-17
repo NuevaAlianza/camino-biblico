@@ -47,3 +47,46 @@ document.addEventListener("DOMContentLoaded", () => {
     resumen.appendChild(card);
   }
 }); // 👈 ESTA llave y paréntesis cierran todo
+function mostrarPersonajes(categoriaNombre, temas) {
+  document.getElementById("resumen-categorias").classList.add("oculto");
+  document.getElementById("vista-personajes").classList.remove("oculto");
+  document.getElementById("titulo-categoria").textContent = categoriaNombre;
+
+  const contenedor = document.getElementById("personajes-categoria");
+  contenedor.innerHTML = "";
+
+  for (const tema in temas) {
+    const datos = temas[tema];
+    const nota = datos.nota || "F";
+    const imagenNombre = nota === "A"
+      ? `${tema.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.png`
+      : nota === "B"
+      ? "generica_b.png"
+      : nota === "C"
+      ? "generica_c.png"
+      : "bloqueado.png";
+
+    const ruta = `assets/img/coleccionables/${imagenNombre}`;
+
+    const card = document.createElement("div");
+    card.className = "card-personaje";
+    card.innerHTML = `
+      <img src="${ruta}" alt="${tema}" />
+      <h3>${tema}</h3>
+      <p class="nota">Nota: ${nota}</p>
+    `;
+
+    // Aquí luego abrimos el modal
+    card.addEventListener("click", () => {
+      alert(`Mostrar detalle de ${tema}`);
+    });
+
+    contenedor.appendChild(card);
+  }
+}
+
+// botón volver
+document.getElementById("volver-resumen").addEventListener("click", () => {
+  document.getElementById("vista-personajes").classList.add("oculto");
+  document.getElementById("resumen-categorias").classList.remove("oculto");
+});
