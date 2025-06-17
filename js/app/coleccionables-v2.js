@@ -101,7 +101,7 @@ function mostrarPersonajes(categoriaNombre, temas) {
 
 
     
-  }
+  
 }
 
 document.getElementById("volver-resumen").addEventListener("click", () => {
