@@ -113,3 +113,37 @@
   font-size: 1.2rem;
   cursor: pointer;
 }
+.modal-contenido h2 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.modal-contenido p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+#descargar-img {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-primario, #f4a261);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+.modal-contenido img {
+  width: 100%;
+  max-width: 260px;
+  margin-bottom: 1rem;
+}
+#modal-detalle {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.modal-contenido {
+  max-height: 90vh;
+  overflow-y: auto;
+  margin-top: 2rem;
+}
