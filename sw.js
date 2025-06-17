@@ -1,4 +1,4 @@
-const CACHE_NAME = 'app-static-v9.13';
+const CACHE_NAME = 'app-static-v9.14';
 const URLS_TO_CACHE = [
   './',
   './index.html',
@@ -9,7 +9,7 @@ const URLS_TO_CACHE = [
   './reflexion.html',
   './css/estilos.css',
   './manifest.json',
-  './coleccionables.html',
+  './coleccionables-v2.html',
 
   // JS
   './js/app/citas.js',
@@ -19,7 +19,7 @@ const URLS_TO_CACHE = [
   './js/app/coleccionables.js',
 
   // Imágenes
-  './assets/img/icon-192.png',
+  './assets/img/icon2-192.png',
   './assets/img/icon2-512.png',
 
   // Sonidos
