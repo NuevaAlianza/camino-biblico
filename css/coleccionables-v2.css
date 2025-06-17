@@ -192,12 +192,18 @@ body {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+
   color: var(--color-primario);
   font-size: 1.8rem;
-  padding: 0.6rem 0.8rem;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-decoration: none;
