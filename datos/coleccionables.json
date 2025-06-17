@@ -19,8 +19,8 @@
       "categoria": "Apóstoles",
       "img_a": "assets/img/coleccionables/juan_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
-      "descripcion": "Juan, el discípulo amado, testigo de la cruz y autor del Evangelio de Juan."
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Juan, el discípulo amado, testigo de la cruz y autor del Evangelio de Juan.""
     },
     "Mateo": {
       "nombre": "Mateo",
@@ -115,7 +115,7 @@
       "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/rut_a.png",
      "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
       "descripcion": "Rut, mujer moabita que con su fidelidad y fe formó parte de la genealogía de Jesús."
     },
     "Sara": {
