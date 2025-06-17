@@ -121,11 +121,12 @@ document.getElementById("volver-resumen").addEventListener("click", () => {
   document.getElementById("resumen-categorias").classList.remove("oculto");
 });
 
-function mostrarModal({ tema, nota, rutaImagen }) {
+function mostrarModal({ tema, nota, rutaImagen, descripcion = "" }) {
   document.getElementById("modal-imagen").src = rutaImagen;
   document.getElementById("modal-nombre").textContent = tema;
   document.getElementById("modal-nota").textContent = `Nota obtenida: ${nota}`;
-  document.getElementById("modal-info").textContent = ""; // opcional: texto explicativo
+  document.getElementById("modal-info").textContent = descripcion || "";
+ // opcional: texto explicativo
 
   const descargarBtn = document.getElementById("descargar-img");
   if (nota === "A") {
