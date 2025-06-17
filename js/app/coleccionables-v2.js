@@ -1,25 +1,27 @@
 let coleccionablesData = {};
+
 fetch('./datos/coleccionables.json')
   .then(res => res.json())
   .then(data => {
     coleccionablesData = data;
+    mostrarResumenCategorias(); // <- esperar a que cargue el JSON
   });
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
+function mostrarResumenCategorias() {
   const resumen = document.getElementById("resumen-categorias");
 
   const progreso = JSON.parse(localStorage.getItem("progreso")) || { categorias: {} };
-  const categorias = progreso.categorias;
+  const categoriasDisponibles = Object.keys(coleccionablesData);
 
-  for (const categoria in categorias) {
-    const temas = categorias[categoria];
+  for (const categoria of categoriasDisponibles) {
+    const temas = coleccionablesData[categoria];
+    const progresoCategoria = progreso.categorias?.[categoria] || {};
+
     const total = Object.keys(temas).length;
-    const desbloqueados = Object.values(temas).filter(t => t.estado === "completado").length;
+    const desbloqueados = Object.values(progresoCategoria).filter(t => t.estado === "completado").length;
 
     // Calcular nota promedio
-    const notas = Object.values(temas)
+    const notas = Object.values(progresoCategoria)
       .map(t => t.nota)
       .filter(nota => ["A", "B", "C"].includes(nota));
 
@@ -47,16 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
-   card.addEventListener("click", () => {
-  mostrarPersonajes(categoria, categorias);
-});
-
+    card.addEventListener("click", () => {
+      mostrarPersonajes(categoria);
+    });
 
     resumen.appendChild(card);
   }
-});
+}
 
-function mostrarPersonajes(categoriaActual, todasCategorias) {
+function mostrarPersonajes(categoriaActual) {
   const vistaPersonajes = document.getElementById("vista-personajes");
   const resumenCategorias = document.getElementById("resumen-categorias");
   const titulo = document.getElementById("titulo-categoria");
@@ -101,18 +102,17 @@ function mostrarPersonajes(categoriaActual, todasCategorias) {
   }
 
   // Navegación vertical entre categorías
-  const categorias = Object.keys(todasCategorias);
-  const indexActual = categorias.indexOf(categoriaActual);
+  const todasCategorias = Object.keys(coleccionablesData);
+  const indexActual = todasCategorias.indexOf(categoriaActual);
 
   vistaPersonajes.onwheel = (e) => {
-    if (e.deltaY > 30 && indexActual < categorias.length - 1) {
-      mostrarPersonajes(categorias[indexActual + 1], todasCategorias);
+    if (e.deltaY > 30 && indexActual < todasCategorias.length - 1) {
+      mostrarPersonajes(todasCategorias[indexActual + 1]);
     } else if (e.deltaY < -30 && indexActual > 0) {
-      mostrarPersonajes(categorias[indexActual - 1], todasCategorias);
+      mostrarPersonajes(todasCategorias[indexActual - 1]);
     }
   };
 }
-
 
 document.getElementById("volver-resumen").addEventListener("click", () => {
   document.getElementById("vista-personajes").classList.add("oculto");
@@ -123,8 +123,7 @@ function mostrarModal({ tema, nota, rutaImagen, descripcion = "" }) {
   document.getElementById("modal-imagen").src = rutaImagen;
   document.getElementById("modal-nombre").textContent = tema;
   document.getElementById("modal-nota").textContent = `Nota obtenida: ${nota}`;
-  document.getElementById("modal-info").textContent = descripcion || "";
- // opcional: texto explicativo
+  document.getElementById("modal-info").textContent = descripcion;
 
   const descargarBtn = document.getElementById("descargar-img");
   if (nota === "A") {
