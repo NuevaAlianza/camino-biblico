@@ -47,35 +47,38 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
-    card.addEventListener("click", () => {
-      mostrarPersonajes(categoria, temas);
-    });
+   card.addEventListener("click", () => {
+  mostrarPersonajes(categoria, categorias);
+});
+
 
     resumen.appendChild(card);
   }
 });
 
-function mostrarPersonajes(categoriaNombre, temas) {
-  document.getElementById("resumen-categorias").classList.add("oculto");
-  document.getElementById("vista-personajes").classList.remove("oculto");
-  document.getElementById("titulo-categoria").textContent = categoriaNombre;
-
+function mostrarPersonajes(categoriaActual, todasCategorias) {
+  const vistaPersonajes = document.getElementById("vista-personajes");
+  const resumenCategorias = document.getElementById("resumen-categorias");
+  const titulo = document.getElementById("titulo-categoria");
   const contenedor = document.getElementById("personajes-categoria");
+
+  resumenCategorias.classList.add("oculto");
+  vistaPersonajes.classList.remove("oculto");
   contenedor.innerHTML = "";
 
-  for (const tema in temas) {
-    const datos = temas[tema];
-    const nota = datos.nota || "F";
+  titulo.textContent = categoriaActual;
 
-    // Buscar info desde coleccionables.json ya cargado
-    const infoTema = coleccionablesData?.[categoriaNombre]?.[tema];
+  const temasDisponibles = coleccionablesData[categoriaActual] || {};
+  const progresoTemas = (JSON.parse(localStorage.getItem("progreso"))?.categorias?.[categoriaActual]) || {};
+
+  for (const tema in temasDisponibles) {
+    const info = temasDisponibles[tema];
+    const nota = progresoTemas[tema]?.nota || "F";
+
     let ruta = "assets/img/coleccionables/bloqueado.png";
-
-    if (infoTema) {
-      if (nota === "A") ruta = infoTema.img_a;
-      else if (nota === "B") ruta = infoTema.img_b;
-      else if (nota === "C") ruta = infoTema.img_c;
-    }
+    if (nota === "A") ruta = info.img_a;
+    else if (nota === "B") ruta = info.img_b;
+    else if (nota === "C") ruta = info.img_c;
 
     const card = document.createElement("div");
     card.className = "card-personaje";
@@ -90,12 +93,25 @@ function mostrarPersonajes(categoriaNombre, temas) {
         tema,
         nota,
         rutaImagen: ruta,
-        descripcion: infoTema?.descripcion || ""
+        descripcion: info.descripcion || ""
       });
     });
 
     contenedor.appendChild(card);
   }
+
+  // Navegación vertical entre categorías
+  const categorias = Object.keys(todasCategorias);
+  const indexActual = categorias.indexOf(categoriaActual);
+
+  vistaPersonajes.onwheel = (e) => {
+    if (e.deltaY > 30 && indexActual < categorias.length - 1) {
+      mostrarPersonajes(categorias[indexActual + 1], todasCategorias);
+    } else if (e.deltaY < -30 && indexActual > 0) {
+      mostrarPersonajes(categorias[indexActual - 1], todasCategorias);
+    }
+  };
+}
 }
 
 
