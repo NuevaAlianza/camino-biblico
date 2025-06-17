@@ -66,15 +66,15 @@ function mostrarPersonajes(categoriaNombre, temas) {
   for (const tema in temas) {
     const datos = temas[tema];
     const nota = datos.nota || "F";
-    const imagenNombre = nota === "A"
-      ? `${tema.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.png`
-      : nota === "B"
-      ? "generica_b.png"
-      : nota === "C"
-      ? "generica_c.png"
-      : "bloqueado.png";
+    const infoTema = coleccionablesData[categoriaNombre]?.[tema];
+let ruta = "assets/img/coleccionables/bloqueado.png";
 
-    const ruta = `assets/img/coleccionables/${imagenNombre}`;
+if (infoTema) {
+  if (nota === "A") ruta = infoTema.img_a;
+  else if (nota === "B") ruta = infoTema.img_b;
+  else if (nota === "C") ruta = infoTema.img_c;
+}
+
 
     const card = document.createElement("div");
     card.className = "card-personaje";
