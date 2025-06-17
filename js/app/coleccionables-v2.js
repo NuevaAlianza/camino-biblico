@@ -65,43 +65,54 @@ function mostrarPersonajes(categoriaActual) {
 
   resumenCategorias.classList.add("oculto");
   vistaPersonajes.classList.remove("oculto");
-  contenedor.innerHTML = "";
 
-  titulo.textContent = categoriaActual;
+  // Fade out
+  contenedor.classList.remove("fade-in");
+  contenedor.classList.add("fade-out");
 
-  const temasDisponibles = coleccionablesData[categoriaActual] || {};
-  const progresoTemas = (JSON.parse(localStorage.getItem("progreso"))?.categorias?.[categoriaActual]) || {};
+  setTimeout(() => {
+    contenedor.innerHTML = "";
+    titulo.textContent = categoriaActual;
 
-  for (const tema in temasDisponibles) {
-    const info = temasDisponibles[tema];
-    const nota = progresoTemas[tema]?.nota || "F";
+    const temasDisponibles = coleccionablesData[categoriaActual] || {};
+    const progresoTemas = (JSON.parse(localStorage.getItem("progreso"))?.categorias?.[categoriaActual]) || {};
 
-    let ruta = "assets/img/coleccionables/bloqueado.png";
-    if (nota === "A") ruta = info.img_a;
-    else if (nota === "B") ruta = info.img_b;
-    else if (nota === "C") ruta = info.img_c;
+    for (const tema in temasDisponibles) {
+      const info = temasDisponibles[tema];
+      const nota = progresoTemas[tema]?.nota || "F";
 
-    const card = document.createElement("div");
-    card.className = "card-personaje";
-    card.innerHTML = `
-      <img src="${ruta}" alt="${tema}" />
-      <h3>${tema}</h3>
-      <p class="nota">Nota: ${nota}</p>
-    `;
+      let ruta = "assets/img/coleccionables/bloqueado.png";
+      if (nota === "A") ruta = info.img_a;
+      else if (nota === "B") ruta = info.img_b;
+      else if (nota === "C") ruta = info.img_c;
 
-    card.addEventListener("click", () => {
-      mostrarModal({
-        tema,
-        nota,
-        rutaImagen: ruta,
-        descripcion: info.descripcion || ""
+      const card = document.createElement("div");
+      card.className = "card-personaje";
+      card.innerHTML = `
+        <img src="${ruta}" alt="${tema}" />
+        <h3>${tema}</h3>
+        <p class="nota">Nota: ${nota}</p>
+      `;
+
+      card.addEventListener("click", () => {
+        mostrarModal({
+          tema,
+          nota,
+          rutaImagen: ruta,
+          descripcion: info.descripcion || ""
+        });
       });
-    });
 
-    contenedor.appendChild(card);
-  }
+      contenedor.appendChild(card);
+    }
 
-  // Navegación vertical entre categorías
+    // Fade in
+    contenedor.classList.remove("fade-out");
+    contenedor.classList.add("fade-in");
+
+  }, 200); // Tiempo de fade-out (ms)
+
+  // Navegación vertical con scroll
   const todasCategorias = Object.keys(coleccionablesData);
   const indexActual = todasCategorias.indexOf(categoriaActual);
 
@@ -113,6 +124,7 @@ function mostrarPersonajes(categoriaActual) {
     }
   };
 }
+
 
 document.getElementById("volver-resumen").addEventListener("click", () => {
   document.getElementById("vista-personajes").classList.add("oculto");
