@@ -100,19 +100,7 @@ function mostrarPersonajes(categoriaNombre, temas) {
 
 
 
-    const card = document.createElement("div");
-    card.className = "card-personaje";
-    card.innerHTML = `
-      <img src="${ruta}" alt="${tema}" />
-      <h3>${tema}</h3>
-      <p class="nota">Nota: ${nota}</p>
-    `;
-
-    card.addEventListener("click", () => {
-      mostrarModal({ tema, nota, rutaImagen: ruta });
-    });
-
-    contenedor.appendChild(card);
+    
   }
 }
 
