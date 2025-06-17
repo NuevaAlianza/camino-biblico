@@ -112,13 +112,7 @@ function mostrarPersonajes(categoriaActual, todasCategorias) {
     }
   };
 }
-}
 
-
-
-    
-  
-}
 
 document.getElementById("volver-resumen").addEventListener("click", () => {
   document.getElementById("vista-personajes").classList.add("oculto");
