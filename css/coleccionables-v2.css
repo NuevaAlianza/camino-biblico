@@ -209,3 +209,19 @@ body {
   text-decoration: none;
   z-index: 999;
 }
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Scroll fluido en iOS */
+}
+
+body {
+  padding: 0; /* ya tienes padding dentro del contenedor */
+}
+
+.coleccionables-v2 {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1rem 1rem 6rem; /* espacio inferior para que el botón flotante no tape */
+  box-sizing: border-box;
+}
