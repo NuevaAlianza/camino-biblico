@@ -1,4 +1,4 @@
-let coleccionablesData = {};
+ let coleccionablesData = {};
 let temporadasData = [];
 
 Promise.all([
