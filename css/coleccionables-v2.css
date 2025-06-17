@@ -210,18 +210,20 @@ body {
   z-index: 999;
 }
 html, body {
-  height: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch; /* Scroll fluido en iOS */
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
 }
 
 body {
-  padding: 0; /* ya tienes padding dentro del contenedor */
+  overflow-x: hidden;
 }
 
 .coleccionables-v2 {
   max-width: 640px;
   margin: 0 auto;
-  padding: 1rem 1rem 6rem; /* espacio inferior para que el botón flotante no tape */
+  padding: 1rem; /* restauramos padding simple */
   box-sizing: border-box;
 }
