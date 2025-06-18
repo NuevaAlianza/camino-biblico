@@ -116,38 +116,40 @@ function mostrarPersonajes(categoriaActual) {
       });
 
     } else {
-      const temas = coleccionablesData[categoriaActual] || {};
-      const progresoTemas = (JSON.parse(localStorage.getItem("progreso"))?.categorias?.[categoriaActual]) || {};
+  const temas = coleccionablesData[categoriaActual] || {};
+  const progresoCategorias = JSON.parse(localStorage.getItem("progreso"))?.categorias || {};
+  const progresoTemas = progresoCategorias[categoriaActual] || {};
 
-      for (const tema in temas) {
-        const info = temas[tema];
-        const nota = progresoTemas[tema]?.nota || "F";
+  for (const tema in temas) {
+    const info = temas[tema];
+    const nota = progresoTemas[tema]?.nota || "F";
 
-        let ruta = "assets/img/coleccionables/bloqueado.png";
-        if (nota === "A") ruta = info.img_a;
-        else if (nota === "B") ruta = info.img_b;
-        else if (nota === "C") ruta = info.img_c;
+    let ruta = "assets/img/coleccionables/bloqueado.png";
+    if (nota === "A") ruta = info.img_a;
+    else if (nota === "B") ruta = info.img_b;
+    else if (nota === "C") ruta = info.img_c;
 
-        const card = document.createElement("div");
-        card.className = "card-personaje";
-        card.innerHTML = `
-          <img src="${ruta}" alt="${tema}" />
-          <h3>${tema}</h3>
-          <p class="nota">Nota: ${nota}</p>
-        `;
+    const card = document.createElement("div");
+    card.className = "card-personaje";
+    card.innerHTML = `
+      <img src="${ruta}" alt="${tema}" />
+      <h3>${tema}</h3>
+      <p class="nota">Nota: ${nota}</p>
+    `;
 
-        card.addEventListener("click", () => {
-          mostrarModal({
-            tema,
-            nota,
-            rutaImagen: ruta,
-            descripcion: info.descripcion || ""
-          });
-        });
+    card.addEventListener("click", () => {
+      mostrarModal({
+        tema,
+        nota,
+        rutaImagen: ruta,
+        descripcion: info.descripcion || ""
+      });
+    });
 
-        contenedor.appendChild(card);
-      }
-    }
+    contenedor.appendChild(card);
+  }
+}
+
 
     contenedor.classList.remove("fade-out");
     contenedor.classList.add("fade-in");
