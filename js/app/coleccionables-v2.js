@@ -151,6 +151,7 @@ function mostrarPersonajes(categoriaActual) {
 }
 
 
+
     contenedor.classList.remove("fade-out");
     contenedor.classList.add("fade-in");
 
