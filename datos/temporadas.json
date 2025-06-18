@@ -26,7 +26,7 @@
   {
     "id": "T2",
     "titulo": "Nueva Alianza",
-    "descripcion": "Una Comunidad, que tanto conoces de ella, Animo.",
+    "descripcion": "Una Comunidad, que tanto conoces de ella, Ánimo.",
     "fecha_inicio": "2025-06-15",
     "fecha_fin": "2025-06-30",
     "puntaje_maximo": 10,
@@ -39,28 +39,28 @@
     },
     "preguntas": [
       {
-        "pregunta": "¿En que año se fundo Nueva Alianza?",
+        "pregunta": "¿En qué año se fundó Nueva Alianza?",
         "respuesta": "26/6/1991",
         "opcion_1": "26/7/1991",
         "opcion_2": "26/6/1992",
         "opcion_3": "27/6/1991"
       },
       {
-        "pregunta": "¿Dias en que se celebro El Grupo de Oración?",
+        "pregunta": "¿Días en que se celebró el Grupo de Oración?",
         "respuesta": "Miércoles",
         "opcion_1": "Martes",
         "opcion_2": "Lunes",
         "opcion_3": "Jueves"
       },
       {
-        "pregunta": "¿Servidor Encargado Mas Antiguo?",
+        "pregunta": "¿Servidor Encargado Más Antiguo?",
         "respuesta": "Ignacio",
         "opcion_1": "Peter",
         "opcion_2": "Cesariana",
         "opcion_3": "Benjamín"
       },
       {
-        "pregunta": "¿Quien fue Servidor 1ro?",
+        "pregunta": "¿Quién fue Servidor 1ro?",
         "respuesta": "Harold",
         "opcion_1": "Alexandra",
         "opcion_2": "Kelvin",
@@ -74,42 +74,72 @@
         "opcion_3": "Benjamín"
       },
       {
-        "pregunta": "¿Cuantos Servidores  Encargado a tenido N.A En su Historia?",
+        "pregunta": "¿Cuántos Servidores Encargados ha tenido N.A en su historia?",
         "respuesta": "8",
         "opcion_1": "7",
         "opcion_2": "9",
         "opcion_3": "11"
       },
       {
-        "pregunta": "¿ Del total de Servidores Encargados Cuantos Fueron Mujeres?",
+        "pregunta": "¿Del total de Servidores Encargados cuántos fueron mujeres?",
         "respuesta": "2",
         "opcion_1": "3",
         "opcion_2": "4",
         "opcion_3": "5"
       },
       {
-        "pregunta": "¿En cual de estos salones se realizo  El Grupo N.A?",
+        "pregunta": "¿En cuál de estos salones se realizó el Grupo N.A?",
         "respuesta": "Salón Santa María",
         "opcion_1": "Salón San Antonio de Padua",
         "opcion_2": "Salón San Francisco De Borja",
         "opcion_3": "Salón San Francisco de Sales"
       },
       {
-        "pregunta": "¿Encuentra El servidor Encargado?",
+        "pregunta": "¿Encuentra el Servidor Encargado?",
         "respuesta": "Harold",
         "opcion_1": "Rinerson",
         "opcion_2": "Kelvin",
         "opcion_3": "Angelica"
       },
       {
-        "pregunta": "¿Cita Bíblica Que Inspira El Nombre Del Grupo?",
+        "pregunta": "¿Cita bíblica que inspira el nombre del grupo?",
         "respuesta": "Lucas 22,20",
         "opcion_1": "Isaías 41,10",
         "opcion_2": "1 Corintios 11,25",
         "opcion_3": "Hebreos 8,6-13"
       }
     ]
+  },
+  {
+    "id": "T3",
+    "titulo": "Elementos del Altar",
+    "descripcion": "Descubre el significado de los objetos sagrados que se usan en la misa.",
+    "fecha_inicio": "2025-07-05",
+    "fecha_fin": "2025-07-15",
+    "puntaje_maximo": 10,
+    "umbral_coleccionable": 9,
+    "coleccionable": {
+      "nombre": "Temporada 3 – Utensilios Litúrgicos",
+      "imagen_a": "assets/img/coleccionables/temporada3_a.png",
+      "imagen_b": "assets/img/coleccionables/generica_b.png",
+      "imagen_c": "assets/img/coleccionables/generica_c.png"
+    },
+    "preguntas": []
+  },
+  {
+    "id": "T4",
+    "titulo": "Santo Cura de Ars",
+    "descripcion": "Conoce la vida y enseñanzas del patrono de los sacerdotes.",
+    "fecha_inicio": "2025-08-01",
+    "fecha_fin": "2025-08-10",
+    "puntaje_maximo": 10,
+    "umbral_coleccionable": 9,
+    "coleccionable": {
+      "nombre": "Temporada 4 – Cura de Ars",
+      "imagen_a": "assets/img/coleccionables/temporada4_a.png",
+      "imagen_b": "assets/img/coleccionables/generica_b.png",
+      "imagen_c": "assets/img/coleccionables/generica_c.png"
+    },
+    "preguntas": []
   }
 ]
-
-
