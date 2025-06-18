@@ -22,15 +22,12 @@ function mostrarResumenCategorias() {
     const temas = coleccionablesData[categoria];
     const total = Object.keys(temas).length;
 
-    const desbloqueados = Object.entries(temas).filter(([tema]) => {
-  const nota = progresoCategorias[categoria]?.[tema]?.nota;
-  return ["A", "B", "C"].includes(nota);
-}).length;
-
-
-    const notas = completados
-      .map(([tema]) => progresoCategorias[categoria][tema]?.nota)
+    // Obtener notas válidas A, B o C
+    const notas = Object.entries(temas)
+      .map(([tema]) => progresoCategorias[categoria]?.[tema]?.nota)
       .filter(n => ["A", "B", "C"].includes(n));
+
+    const desbloqueados = notas.length;
 
     let promedio = "-";
     if (notas.length > 0) {
@@ -65,6 +62,7 @@ function mostrarResumenCategorias() {
   card.addEventListener("click", () => mostrarPersonajes("Temporadas"));
   resumen.appendChild(card);
 }
+
 
 function mostrarPersonajes(categoriaActual) {
   const vistaPersonajes = document.getElementById("vista-personajes");
