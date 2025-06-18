@@ -22,11 +22,11 @@ function mostrarResumenCategorias() {
     const temas = coleccionablesData[categoria];
     const total = Object.keys(temas).length;
 
-    const completados = Object.entries(temas).filter(([tema]) => {
-      return progresoCategorias[categoria]?.[tema]?.estado === "completado";
-    });
+    const desbloqueados = Object.entries(temas).filter(([tema]) => {
+  const nota = progresoCategorias[categoria]?.[tema]?.nota;
+  return ["A", "B", "C"].includes(nota);
+}).length;
 
-    const desbloqueados = completados.length;
 
     const notas = completados
       .map(([tema]) => progresoCategorias[categoria][tema]?.nota)
