@@ -5,14 +5,16 @@
       "categoria": "Apóstoles",
       "img_a": "assets/img/coleccionables/pablo_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Pablo, apóstol de los gentiles, incansable misionero y autor de numerosas cartas del Nuevo Testamento."
     },
     "Pedro": {
       "nombre": "Pedro",
       "categoria": "Apóstoles",
       "img_a": "assets/img/coleccionables/pedro_a.png",
      "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Pedro, pescador de Galilea y primer líder visible de la Iglesia, elegido por Jesús.."
     },
     "Juan": {
       "nombre": "Juan",
@@ -27,7 +29,8 @@
       "categoria": "Apóstoles",
       "img_a": "assets/img/coleccionables/mateo_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Mateo, apóstol y evangelista, testigo del llamado a dejarlo todo para seguir a Jesús.."
     }
   },
   "misa": {
@@ -123,42 +126,48 @@
       "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/sara_a.png",
      "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Sara, esposa de Abraham, madre de Isaac, ejemplo de fe en la promesa de Dios."
     },
     "Rebeca": {
       "nombre": "Rebeca",
       "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/rebeca_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Rebeca, esposa de Isaac, clave en la continuidad de la promesa de Dios a su pueblo."
     },
     "Raquel": {
       "nombre": "Raquel",
       "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/raquel_a.png",
      "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Raquel, esposa de Jacob, madre de José y Benjamín, símbolo de ternura y amor."
       },
     "Lea": {
       "nombre": "Lea",
       "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/lea_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Lea, esposa de Jacob, madre de seis tribus de Israel, mujer firme en medio de pruebas."
       },
     "Ester": {
       "nombre": "Ester",
       "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/ester_a.png",
      "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Ester, reina valiente que salvó a su pueblo, ejemplo de fe y determinación."
 },
     "Débora": {
       "nombre": "Débora",
       "categoria": "Mujeres",
       "img_a": "assets/img/coleccionables/debora_a.png",
      "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Débora, profetisa y jueza de Israel, lideró con sabiduría y coraje en tiempos difíciles."
     }
   },
   "patriarcas": {
@@ -167,35 +176,40 @@
       "categoria": "Patriarcas",
       "img_a": "assets/img/coleccionables/jose_hijo_jacob_a.png",
     "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "José, hijo de Jacob, vendido por sus hermanos y luego salvador de Egipto y su familia."
     },
     "Noé": {
       "nombre": "Noé",
       "categoria": "Patriarcas",
       "img_a": "assets/img/coleccionables/noe_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Noé, justo entre generaciones, salvó a la creación obedeciendo a Dios en el diluvio."
     },
     "Abraham": {
       "nombre": "Abraham",
       "categoria": "Patriarcas",
       "img_a": "assets/img/coleccionables/abraham_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Abraham, padre de la fe, dejó su tierra confiando en la promesa de Dios."
     },
     "Isaac": {
       "nombre": "Isaac",
       "categoria": "Patriarcas",
       "img_a": "assets/img/coleccionables/isaac_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Isaac, heredero de la promesa, testimonio de la fidelidad de Dios con su pueblo."
     },
     "Jacob": {
       "nombre": "Jacob",
       "categoria": "Patriarcas",
       "img_a": "assets/img/coleccionables/jacob_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Jacob, patriarca de las doce tribus de Israel, luchó con Dios y venció."
     }
   },
   "profetas": {
@@ -204,35 +218,40 @@
       "categoria": "Profetas",
       "img_a": "assets/img/coleccionables/elias_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Elías, profeta ardiente que defendió al Dios verdadero frente a los falsos ídolos."
     },
     "Daniel": {
       "nombre": "Daniel",
       "categoria": "Profetas",
       "img_a": "assets/img/coleccionables/daniel_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Daniel, fiel en tierra extranjera, valiente en la prueba, testigo de la fidelidad de Dios."
     },
     "Eliseo": {
       "nombre": "Eliseo",
       "categoria": "Profetas",
       "img_a": "assets/img/coleccionables/eliseo_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Eliseo, discípulo de Elías, realizó signos de vida, sanación y esperanza."
     },
     "Isaías": {
       "nombre": "Isaías",
       "categoria": "Profetas",
       "img_a": "assets/img/coleccionables/isaias_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Isaías, gran profeta del Mesías, anunció la venida del Siervo sufriente."
     },
     "Jeremías": {
       "nombre": "Jeremías",
       "categoria": "Profetas",
       "img_a": "assets/img/coleccionables/jeremias_a.png",
      "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Jeremías, llamado desde el vientre, profeta del lamento y la esperanza."
     }
   },
   "reyes": {
@@ -241,35 +260,40 @@
       "categoria": "Reyes",
       "img_a": "assets/img/coleccionables/david_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "David, pastor y rey, poeta de los salmos y hombre según el corazón de Dios."
     },
     "Salomón": {
       "nombre": "Salomón",
       "categoria": "Reyes",
       "img_a": "assets/img/coleccionables/salomon_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Salomón, hijo de David, sabio rey constructor del Templo de Jerusalén."
     },
     "Saúl": {
       "nombre": "Saúl",
       "categoria": "Reyes",
       "img_a": "assets/img/coleccionables/saul_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Saúl, primer rey de Israel, ungido pero caído por desobedecer la voluntad de Dios."
     },
     "Ezequías": {
       "nombre": "Ezequías",
       "categoria": "Reyes",
       "img_a": "assets/img/coleccionables/ezequias_a.png",
     "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Ezequías, rey justo que confió en Dios y restauró el culto verdadero."
     },
     "Josías": {
       "nombre": "Josías",
       "categoria": "Reyes",
       "img_a": "assets/img/coleccionables/josias_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Josías, joven rey reformador que devolvió al pueblo la ley del Señor."
     }
   },
   "testigos de jesús": {
@@ -278,56 +302,64 @@
       "categoria": "Testigos de Jesús",
       "img_a": "assets/img/coleccionables/jose_arimatea_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "José de Arimatea, discípulo valiente que ofreció su sepulcro para el cuerpo de Jesús."
     },
     "Juan el Bautista": {
       "nombre": "Juan el Bautista",
       "categoria": "Testigos de Jesús",
       "img_a": "assets/img/coleccionables/juan_bautista_a.png",
      "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Juan el Bautista, voz que clama en el desierto, preparó el camino al Señor."
     },
     "La hemorroísa": {
       "nombre": "La hemorroísa",
       "categoria": "Testigos de Jesús",
       "img_a": "assets/img/coleccionables/hemorroisa_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Mujer enferma que tocó con fe el manto de Jesús y fue sanada por su confianza."
     },
     "La mujer adúltera": {
       "nombre": "La mujer adúltera",
       "categoria": "Testigos de Jesús",
       "img_a": "assets/img/coleccionables/mujer_adultera_a.png",
      "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Jesús defendió su dignidad y le mostró misericordia: "Yo tampoco te condeno"."
     },
     "María Magdalena": {
       "nombre": "María Magdalena",
       "categoria": "Testigos de Jesús",
       "img_a": "assets/img/coleccionables/maria_magdalena_a.png",
      "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "María Magdalena, testigo de la Resurrección, primera enviada del Evangelio."
     },
     "Mujer samaritana": {
       "nombre": "Mujer samaritana",
       "categoria": "Testigos de Jesús",
       "img_a": "assets/img/coleccionables/samaritana_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "La samaritana, buscadora de verdad, encontró en Jesús el agua viva."
     },
     "Nicodemo": {
       "nombre": "Nicodemo",
       "categoria": "Testigos de Jesús",
       "img_a": "assets/img/coleccionables/nicodemo_a.png",
       "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Nicodemo, fariseo honesto que buscó a Jesús de noche y creyó en su luz."
     },
     "Zaqueo": {
       "nombre": "Zaqueo",
       "categoria": "Testigos de Jesús",
       "img_a": "assets/img/coleccionables/zaqueo_a.png",
      "img_b": "assets/img/coleccionables/generica_b.png",
-      "img_c": "assets/img/coleccionables/generica_c.png"
+      "img_c": "assets/img/coleccionables/generica_c.png",
+      "descripcion": "Zaqueo, recaudador transformado por la visita de Jesús a su casa y corazón."
     }
   }
 }
