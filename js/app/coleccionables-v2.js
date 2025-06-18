@@ -118,7 +118,11 @@ function mostrarPersonajes(categoriaActual) {
     } else {
   const temas = coleccionablesData[categoriaActual] || {};
   const progresoCategorias = JSON.parse(localStorage.getItem("progreso"))?.categorias || {};
-  const progresoTemas = progresoCategorias[categoriaActual] || {};
+ const progresoCategoriaKey = Object.keys(progresoCategorias).find(
+  cat => cat.toLowerCase() === categoriaActual.toLowerCase()
+);
+const progresoTemas = progresoCategoriaKey ? progresoCategorias[progresoCategoriaKey] : {};
+
 
   for (const tema in temas) {
     const info = temas[tema];
