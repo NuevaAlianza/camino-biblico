@@ -114,32 +114,245 @@
     "id": "T3",
     "titulo": "Elementos del Altar",
     "descripcion": "Descubre el significado de los objetos sagrados que se usan en la misa.",
-    "fecha_inicio": "2025-07-05",
-    "fecha_fin": "2025-07-15",
-    "puntaje_maximo": 10,
-    "umbral_coleccionable": 9,
+    "fecha_inicio": "2025-07-12",
+    "fecha_fin": "2025-07-19",
+    "puntaje_maximo": 15,
+    "umbral_coleccionable": 14,
     "coleccionable": {
       "nombre": "Temporada 3 – Utensilios Litúrgicos",
       "imagen_a": "assets/img/coleccionables/temporada3_a.png",
       "imagen_b": "assets/img/coleccionables/generica_b.png",
       "imagen_c": "assets/img/coleccionables/generica_c.png"
     },
-    "preguntas": []
+  "preguntas": [
+  {
+    "pregunta": "¿Qué es el cáliz?",
+    "respuesta": "Un vaso sagrado donde se consagra el vino",
+    "opcion_1": "Un recipiente para el agua bendita",
+    "opcion_2": "Una bandeja para hostias",
+    "opcion_3": "Un portavelas litúrgico"
+  },
+  {
+    "pregunta": "¿Para qué sirve la patena?",
+    "respuesta": "Para colocar la hostia durante la consagración",
+    "opcion_1": "Para guardar las reliquias",
+    "opcion_2": "Para sostener el cirio pascual",
+    "opcion_3": "Para recoger las ofrendas"
+  },
+  {
+    "pregunta": "¿Qué nombre recibe la tela que cubre el altar?",
+    "respuesta": "Mantel",
+    "opcion_1": "Palio",
+    "opcion_2": "Estola",
+    "opcion_3": "Casulla"
+  },
+  {
+    "pregunta": "¿Qué es el corporal?",
+    "respuesta": "Un lienzo cuadrado donde se coloca el cáliz y la hostia",
+    "opcion_1": "Una prenda del sacerdote",
+    "opcion_2": "Una alfombra sagrada",
+    "opcion_3": "Una vela consagrada"
+  },
+  {
+    "pregunta": "¿Qué contiene el sagrario?",
+    "respuesta": "Las hostias consagradas",
+    "opcion_1": "El vino para la misa",
+    "opcion_2": "Las reliquias de los santos",
+    "opcion_3": "El incienso y el carbón"
+  },
+  {
+    "pregunta": "¿Qué es el incensario?",
+    "respuesta": "Un recipiente para quemar incienso",
+    "opcion_1": "Un soporte para velas",
+    "opcion_2": "Un vaso de vino",
+    "opcion_3": "Un estuche de rosarios"
+  },
+  {
+    "pregunta": "¿Qué se coloca en la credencia?",
+    "respuesta": "Los utensilios litúrgicos para la misa",
+    "opcion_1": "Las ofrendas de los fieles",
+    "opcion_2": "Imágenes religiosas",
+    "opcion_3": "Vestiduras sacerdotales"
+  },
+  {
+    "pregunta": "¿Qué es la hostia?",
+    "respuesta": "El pan consagrado que se convierte en el Cuerpo de Cristo",
+    "opcion_1": "Un símbolo decorativo",
+    "opcion_2": "Una oración litúrgica",
+    "opcion_3": "Un libro sagrado"
+  },
+  {
+    "pregunta": "¿Qué es la píxide?",
+    "respuesta": "Un recipiente pequeño para llevar hostias consagradas",
+    "opcion_1": "Un libro litúrgico",
+    "opcion_2": "Una vela especial",
+    "opcion_3": "Una campana ceremonial"
+  },
+  {
+    "pregunta": "¿Cuál es el uso de la campanilla durante la misa?",
+    "respuesta": "Anunciar momentos importantes como la consagración",
+    "opcion_1": "Marcar el inicio del ofertorio",
+    "opcion_2": "Recordar el silencio",
+    "opcion_3": "Acompañar el canto"
+  },
+  {
+    "pregunta": "Es un lienzo pequeño que se usa para limpiar el cáliz después de la comunión. ¿Cómo se llama?",
+    "respuesta": "Purificador",
+    "opcion_1": "Corporal",
+    "opcion_2": "Manutergio",
+    "opcion_3": "Velo"
+  },
+  {
+    "pregunta": "Se usa para cubrir el cáliz antes y después de la misa. ¿Cómo se llama?",
+    "respuesta": "Velo del cáliz",
+    "opcion_1": "Purificador",
+    "opcion_2": "Estola",
+    "opcion_3": "Palia"
+  },
+  {
+    "pregunta": "¿Dónde se guarda el Santísimo Sacramento en el templo?",
+    "respuesta": "En el sagrario",
+    "opcion_1": "En el ambón",
+    "opcion_2": "En el cáliz",
+    "opcion_3": "En la custodia"
+  },
+  {
+    "pregunta": "¿Qué representa simbólicamente el altar durante la celebración eucarística?",
+    "respuesta": "A Cristo, piedra viva y sacrificio",
+    "opcion_1": "Al pueblo reunido",
+    "opcion_2": "A los apóstoles",
+    "opcion_3": "A la cruz"
+  },
+  {
+    "pregunta": "Recipiente donde el sacerdote lleva la comunión a los enfermos. ¿Cuál es?",
+    "respuesta": "Píxide",
+    "opcion_1": "Vinajera",
+    "opcion_2": "Cáliz",
+    "opcion_3": "Copón"
+ }
+    ]
   },
   {
     "id": "T4",
     "titulo": "Santo Cura de Ars",
     "descripcion": "Conoce la vida y enseñanzas del patrono de los sacerdotes.",
-    "fecha_inicio": "2025-08-01",
-    "fecha_fin": "2025-08-10",
-    "puntaje_maximo": 10,
-    "umbral_coleccionable": 9,
+    "fecha_inicio": "2025-07-27",
+    "fecha_fin": "2025-08-04",
+    "puntaje_maximo": 15,
+    "umbral_coleccionable": 14,
     "coleccionable": {
       "nombre": "Temporada 4 – Cura de Ars",
       "imagen_a": "assets/img/coleccionables/temporada4_a.png",
       "imagen_b": "assets/img/coleccionables/generica_b.png",
       "imagen_c": "assets/img/coleccionables/generica_c.png"
     },
-    "preguntas": []
+   "preguntas": [
+  {
+    "pregunta": "¿Cuál era el nombre completo del Santo Cura de Ars?",
+    "respuesta": "Juan María Vianney",
+    "opcion_1": "Juan Pablo Vianney",
+    "opcion_2": "Juan Bautista María",
+    "opcion_3": "Mariano Vianney"
+  },
+  {
+    "pregunta": "¿En qué país nació el Santo Cura de Ars?",
+    "respuesta": "Francia",
+    "opcion_1": "España",
+    "opcion_2": "Italia",
+    "opcion_3": "Portugal"
+  },
+  {
+    "pregunta": "¿Qué gran dificultad enfrentó Juan María Vianney en el seminario?",
+    "respuesta": "Las materias académicas, especialmente el latín",
+    "opcion_1": "Falta de fe",
+    "opcion_2": "Problemas de salud",
+    "opcion_3": "Persecución política"
+  },
+  {
+    "pregunta": "¿Cómo fue considerado su nombramiento como párroco en Ars?",
+    "respuesta": "Fue enviado a un pueblo pequeño y espiritualmente decaído",
+    "opcion_1": "Fue asignado como obispo",
+    "opcion_2": "Lo rechazó al principio",
+    "opcion_3": "Fue elegido por votación popular"
+  },
+  {
+    "pregunta": "¿Qué sacramento promovía especialmente el Cura de Ars?",
+    "respuesta": "La confesión",
+    "opcion_1": "La confirmación",
+    "opcion_2": "El matrimonio",
+    "opcion_3": "La unción de los enfermos"
+  },
+  {
+    "pregunta": "¿Cuántas horas al día podía pasar confesando?",
+    "respuesta": "Hasta 16 horas",
+    "opcion_1": "6 horas",
+    "opcion_2": "8 horas",
+    "opcion_3": "10 horas"
+  },
+  {
+    "pregunta": "¿Cómo vivía el Santo Cura de Ars?",
+    "respuesta": "Con gran sencillez y austeridad",
+    "opcion_1": "Con apoyo económico del gobierno",
+    "opcion_2": "En una casa cómoda y moderna",
+    "opcion_3": "En comunidad religiosa"
+  },
+  {
+    "pregunta": "¿Qué hizo el Cura de Ars para renovar la fe de su parroquia?",
+    "respuesta": "Predicaba con fuerza, oraba y se sacrificaba por sus fieles",
+    "opcion_1": "Reformó los edificios",
+    "opcion_2": "Escribió una encíclica",
+    "opcion_3": "Cerró las puertas del templo"
+  },
+  {
+    "pregunta": "¿Qué lo hizo famoso fuera de su parroquia?",
+    "respuesta": "Miles de peregrinos acudían a confesarse con él",
+    "opcion_1": "Escribió muchos libros",
+    "opcion_2": "Fundó una orden religiosa",
+    "opcion_3": "Viajó por toda Europa predicando"
+  },
+  {
+    "pregunta": "¿A qué santo acudía con frecuencia en oración el Cura de Ars?",
+    "respuesta": "San Francisco de Asís",
+    "opcion_1": "San Benito",
+    "opcion_2": "San Ignacio de Loyola",
+    "opcion_3": "San Agustín"
+  },
+  {
+    "pregunta": "¿Qué batalla espiritual constante enfrentó en Ars?",
+    "respuesta": "Ataques del demonio",
+    "opcion_1": "Desacuerdos con el obispo",
+    "opcion_2": "Falta de vocaciones",
+    "opcion_3": "Enfermedades graves"
+  },
+  {
+    "pregunta": "¿Qué obra de caridad fundó el Santo Cura de Ars?",
+    "respuesta": "La Providencia, un hogar para niñas pobres",
+    "opcion_1": "Un hospital para ancianos",
+    "opcion_2": "Una escuela para sacerdotes",
+    "opcion_3": "Un refugio para peregrinos"
+  },
+  {
+    "pregunta": "¿Cuál era su mayor anhelo en los últimos años de vida?",
+    "respuesta": "Retirarse a la oración y penitencia",
+    "opcion_1": "Ser nombrado obispo",
+    "opcion_2": "Viajar a Tierra Santa",
+    "opcion_3": "Fundar un nuevo santuario"
+  },
+  {
+    "pregunta": "¿Qué lo detuvo de abandonar Ars varias veces?",
+    "respuesta": "El amor a sus fieles y su sentido del deber",
+    "opcion_1": "Una orden directa del Papa",
+    "opcion_2": "Su enfermedad",
+    "opcion_3": "El miedo al escándalo"
+  },
+  {
+    "pregunta": "¿Cuál es su título dentro de la Iglesia?",
+    "respuesta": "Patrono de los párrocos",
+    "opcion_1": "Doctor de la Iglesia",
+    "opcion_2": "Padre de la caridad",
+    "opcion_3": "Apóstol del Rosario"
   }
 ]
+]
+
+
