@@ -159,24 +159,31 @@ function seleccionarOpcion(opcion, actual) {
 function mostrarResultado() {
   juego.classList.add("oculto");
   resultadoEl.classList.remove("oculto");
-
-  const porcentaje = (puntaje / preguntas.length) * 100;
   detalleResultado.textContent = `Respondiste correctamente ${puntaje} de ${preguntas.length} preguntas.`;
 
   guardarProgreso("quiz comentado", temaSelect.value, puntaje, preguntas.length);
 
-  // Si obtuvo nota A, mostrar botón hacia coleccionables
-  if (porcentaje >= 90) {
-    const btnColeccionable = document.createElement("button");
-    btnColeccionable.id = "btn-coleccionable";
-    btnColeccionable.className = "btn-coleccionable";
-    btnColeccionable.innerHTML = `🎉 Ver mi coleccionable <span class="brillo">✨</span>`;
+  // Obtener nota final para este intento
+  const porcentaje = (puntaje / preguntas.length) * 100;
+  let nota = "F";
+  if (porcentaje >= 90) nota = "A";
+  else if (porcentaje >= 75) nota = "B";
+  else if (porcentaje >= 60) nota = "C";
+  else if (porcentaje >= 40) nota = "D";
+
+  const btnColeccionable = document.getElementById("ver-coleccionables");
+  if (["A", "B", "C"].includes(nota)) {
+    btnColeccionable.classList.remove("oculto");
     btnColeccionable.addEventListener("click", () => {
+      reproducirSonido(sonidoClick);
+      if (navigator.vibrate) navigator.vibrate(100);
       window.location.href = "coleccionables-v2.html";
     });
-    resultadoEl.appendChild(btnColeccionable);
+  } else {
+    btnColeccionable.classList.add("oculto");
   }
 }
+
 
 
 function resetearEstado() {
