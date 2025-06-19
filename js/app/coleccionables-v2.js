@@ -1,5 +1,5 @@
- let coleccionablesData = {};
- let temporadasData = [];
+let coleccionablesData = {};
+let temporadasData = [];
 
 Promise.all([
   fetch('./datos/coleccionables.json').then(res => res.json()),
@@ -17,29 +17,24 @@ function mostrarResumenCategorias() {
   const progreso = JSON.parse(localStorage.getItem("progreso")) || { categorias: {}, temporadas: {} };
   const progresoCategorias = progreso.categorias || {};
 
-  // Mostrar todas las categorías presentes en coleccionablesData
   for (const categoria in coleccionablesData) {
     const temas = coleccionablesData[categoria];
     const total = Object.keys(temas).length;
 
- // Obtener notas válidas A, B o C (sin importar mayúsculas en nombres de tema)
-// Buscar la categoría en progreso ignorando mayúsculas
-const progresoCategoriaKey = Object.keys(progresoCategorias).find(
-  cat => cat.toLowerCase() === categoria.toLowerCase()
-);
-const progresoTemas = progresoCategoriaKey ? progresoCategorias[progresoCategoriaKey] : {};
-
-// Buscar temas y notas ignorando mayúsculas
-const notas = Object.entries(temas)
-  .map(([tema]) => {
-    const temaProgresoKey = Object.keys(progresoTemas).find(
-      t => t.toLowerCase() === tema.toLowerCase()
+    const progresoCategoriaKey = Object.keys(progresoCategorias).find(
+      cat => cat.toLowerCase() === categoria.toLowerCase()
     );
-    const nota = temaProgresoKey ? progresoTemas[temaProgresoKey]?.nota : "";
-    return (nota || "").toUpperCase();
-  })
-  .filter(n => ["A", "B", "C"].includes(n));
+    const progresoTemas = progresoCategoriaKey ? progresoCategorias[progresoCategoriaKey] : {};
 
+    const notas = Object.entries(temas)
+      .map(([tema]) => {
+        const temaProgresoKey = Object.keys(progresoTemas).find(
+          t => t.toLowerCase() === tema.toLowerCase()
+        );
+        const nota = temaProgresoKey ? progresoTemas[temaProgresoKey]?.nota : "";
+        return (nota || "").toUpperCase();
+      })
+      .filter(n => ["A", "B", "C"].includes(n));
 
     const desbloqueados = notas.length;
 
@@ -65,7 +60,7 @@ const notas = Object.entries(temas)
     resumen.appendChild(card);
   }
 
-  // Agregar la tarjeta de Temporadas
+  // Tarjeta de temporadas
   const card = document.createElement("div");
   card.className = "card-categoria";
   card.innerHTML = `
@@ -76,7 +71,6 @@ const notas = Object.entries(temas)
   card.addEventListener("click", () => mostrarPersonajes("Temporadas"));
   resumen.appendChild(card);
 }
-
 
 function mostrarPersonajes(categoriaActual) {
   const vistaPersonajes = document.getElementById("vista-personajes");
@@ -116,64 +110,86 @@ function mostrarPersonajes(categoriaActual) {
         `;
 
         card.addEventListener("click", () => {
-          mostrarModal({
-            tema: col.nombre,
-            nota,
-            rutaImagen: ruta,
-            descripcion: temp.descripcion || ""
-          });
+          if (nota === "A") {
+            mostrarModal({
+              tema: col.nombre,
+              nota,
+              rutaImagen: ruta,
+              descripcion: temp.descripcion || ""
+            });
+          } else {
+            let mensaje = `¡Aún no has comenzado "${col.nombre}"! ¿Te animas a intentarlo?`;
+            if (nota === "B") mensaje = `¡Buen intento en "${col.nombre}", pero puedes hacerlo aún mejor! ¿Repetimos?`;
+            else if (nota === "C") mensaje = `Vamos a superar esa nota en "${col.nombre}". ¿Listo para mejorar?`;
+            else if (nota === "F") mensaje = `Todavía puedes mejorar tu resultado en "${col.nombre}". ¿Quieres intentarlo ahora?`;
+
+            if (confirm(mensaje)) {
+              const bloqueURL = encodeURIComponent(temp.id);
+              window.location.href = `citas.html?bloque=${bloqueURL}`;
+            }
+          }
         });
 
         contenedor.appendChild(card);
       });
 
     } else {
-  const temas = coleccionablesData[categoriaActual] || {};
-  const progresoCategorias = JSON.parse(localStorage.getItem("progreso"))?.categorias || {};
- const progresoCategoriaKey = Object.keys(progresoCategorias).find(
-  cat => cat.toLowerCase() === categoriaActual.toLowerCase()
-);
-const progresoTemas = progresoCategoriaKey ? progresoCategorias[progresoCategoriaKey] : {};
+      const temas = coleccionablesData[categoriaActual] || {};
+      const progresoCategorias = JSON.parse(localStorage.getItem("progreso"))?.categorias || {};
+      const progresoCategoriaKey = Object.keys(progresoCategorias).find(
+        cat => cat.toLowerCase() === categoriaActual.toLowerCase()
+      );
+      const progresoTemas = progresoCategoriaKey ? progresoCategorias[progresoCategoriaKey] : {};
 
+      for (const tema in temas) {
+        const info = temas[tema];
+        const nota = progresoTemas[tema]?.nota || "F";
 
-  for (const tema in temas) {
-    const info = temas[tema];
-    const nota = progresoTemas[tema]?.nota || "F";
+        let ruta = "assets/img/coleccionables/bloqueado.png";
+        if (nota === "A") ruta = info.img_a;
+        else if (nota === "B") ruta = info.img_b;
+        else if (nota === "C") ruta = info.img_c;
 
-    let ruta = "assets/img/coleccionables/bloqueado.png";
-    if (nota === "A") ruta = info.img_a;
-    else if (nota === "B") ruta = info.img_b;
-    else if (nota === "C") ruta = info.img_c;
+        const card = document.createElement("div");
+        card.className = "card-personaje";
+        card.innerHTML = `
+          <img src="${ruta}" alt="${tema}" />
+          <h3>${tema}</h3>
+          <p class="nota">Nota: ${nota}</p>
+        `;
 
-    const card = document.createElement("div");
-    card.className = "card-personaje";
-    card.innerHTML = `
-      <img src="${ruta}" alt="${tema}" />
-      <h3>${tema}</h3>
-      <p class="nota">Nota: ${nota}</p>
-    `;
+        card.addEventListener("click", () => {
+          if (nota === "A") {
+            mostrarModal({
+              tema,
+              nota,
+              rutaImagen: ruta,
+              descripcion: info.descripcion || ""
+            });
+          } else {
+            let mensaje = `¡Aún no has comenzado "${tema}"! ¿Te animas a intentarlo?`;
+            if (nota === "B") mensaje = `¡Buen intento en "${tema}", pero puedes hacerlo aún mejor! ¿Repetimos?`;
+            else if (nota === "C") mensaje = `Vamos a superar esa nota en "${tema}". ¿Listo para mejorar?`;
+            else if (nota === "F") mensaje = `Todavía puedes mejorar tu resultado en "${tema}". ¿Quieres intentarlo ahora?`;
 
-    card.addEventListener("click", () => {
-      mostrarModal({
-        tema,
-        nota,
-        rutaImagen: ruta,
-        descripcion: info.descripcion || ""
-      });
-    });
+            if (confirm(mensaje)) {
+              const temaURL = encodeURIComponent(tema);
+              const categoriaURL = encodeURIComponent(categoriaActual);
+              window.location.href = `quiz.html?categoria=${categoriaURL}&tema=${temaURL}`;
+            }
+          }
+        });
 
-    contenedor.appendChild(card);
-  }
-}
-
-
+        contenedor.appendChild(card);
+      }
+    }
 
     contenedor.classList.remove("fade-out");
     contenedor.classList.add("fade-in");
 
   }, 150);
 
-  // Navegación entre categorías con scroll
+  // Scroll entre categorías
   const todas = [...Object.keys(coleccionablesData), "Temporadas"];
   const i = todas.indexOf(categoriaActual);
 
@@ -211,3 +227,4 @@ function mostrarModal({ tema, nota, rutaImagen, descripcion = "" }) {
 document.getElementById("cerrar-modal").addEventListener("click", () => {
   document.getElementById("modal-detalle").classList.add("oculto");
 });
+
