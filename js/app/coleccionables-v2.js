@@ -22,10 +22,17 @@ function mostrarResumenCategorias() {
     const temas = coleccionablesData[categoria];
     const total = Object.keys(temas).length;
 
-    // Obtener notas válidas A, B o C
-    const notas = Object.entries(temas)
-      .map(([tema]) => progresoCategorias[categoria]?.[tema]?.nota)
-      .filter(n => ["A", "B", "C"].includes(n));
+ // Obtener notas válidas A, B o C (sin importar mayúsculas en nombres de tema)
+const notas = Object.entries(temas)
+  .map(([tema]) => {
+    const temaProgresoKey = Object.keys(progresoCategorias[categoria] || {}).find(
+      t => t.toLowerCase() === tema.toLowerCase()
+    );
+    const nota = temaProgresoKey ? progresoCategorias[categoria][temaProgresoKey]?.nota : "";
+    return (nota || "").toUpperCase();
+  })
+  .filter(n => ["A", "B", "C"].includes(n));
+
 
     const desbloqueados = notas.length;
 
