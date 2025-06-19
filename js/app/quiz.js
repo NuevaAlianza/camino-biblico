@@ -159,9 +159,25 @@ function seleccionarOpcion(opcion, actual) {
 function mostrarResultado() {
   juego.classList.add("oculto");
   resultadoEl.classList.remove("oculto");
+
+  const porcentaje = (puntaje / preguntas.length) * 100;
   detalleResultado.textContent = `Respondiste correctamente ${puntaje} de ${preguntas.length} preguntas.`;
+
   guardarProgreso("quiz comentado", temaSelect.value, puntaje, preguntas.length);
+
+  // Si obtuvo nota A, mostrar botón hacia coleccionables
+  if (porcentaje >= 90) {
+    const btnColeccionable = document.createElement("button");
+    btnColeccionable.id = "btn-coleccionable";
+    btnColeccionable.className = "btn-coleccionable";
+    btnColeccionable.innerHTML = `🎉 Ver mi coleccionable <span class="brillo">✨</span>`;
+    btnColeccionable.addEventListener("click", () => {
+      window.location.href = "coleccionables-v2.html";
+    });
+    resultadoEl.appendChild(btnColeccionable);
+  }
 }
+
 
 function resetearEstado() {
   opcionesEl.innerHTML = "";
