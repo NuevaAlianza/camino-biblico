@@ -1065,3 +1065,39 @@ display: inline-block;
     font-size: 0.8rem;
   }
 }
+#btn-coleccionable {
+  margin-top: 1rem;
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: bold;
+}
+
+#btn-coleccionable:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+}
+
+#btn-coleccionable .brillo {
+  animation: destello 1.2s infinite alternate;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+@keyframes destello {
+  from {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
