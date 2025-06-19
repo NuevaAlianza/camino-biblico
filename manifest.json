@@ -24,5 +24,20 @@
       "type": "image/png",
       "purpose": "any"
     }
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "screenshots": [
+    {
+      "src": "assets/img/captura1.png",
+      "sizes": "640x480",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/captura2.png",
+      "sizes": "640x480",
+      "type": "image/png"
+    }
   ]
 }
