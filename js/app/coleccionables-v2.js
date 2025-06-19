@@ -23,12 +23,19 @@ function mostrarResumenCategorias() {
     const total = Object.keys(temas).length;
 
  // Obtener notas válidas A, B o C (sin importar mayúsculas en nombres de tema)
+// Buscar la categoría en progreso ignorando mayúsculas
+const progresoCategoriaKey = Object.keys(progresoCategorias).find(
+  cat => cat.toLowerCase() === categoria.toLowerCase()
+);
+const progresoTemas = progresoCategoriaKey ? progresoCategorias[progresoCategoriaKey] : {};
+
+// Buscar temas y notas ignorando mayúsculas
 const notas = Object.entries(temas)
   .map(([tema]) => {
-    const temaProgresoKey = Object.keys(progresoCategorias[categoria] || {}).find(
+    const temaProgresoKey = Object.keys(progresoTemas).find(
       t => t.toLowerCase() === tema.toLowerCase()
     );
-    const nota = temaProgresoKey ? progresoCategorias[categoria][temaProgresoKey]?.nota : "";
+    const nota = temaProgresoKey ? progresoTemas[temaProgresoKey]?.nota : "";
     return (nota || "").toUpperCase();
   })
   .filter(n => ["A", "B", "C"].includes(n));
