@@ -77,26 +77,34 @@ function mostrarResumenCategorias() {
 }
 
 function mostrarPersonajes(categoriaActual) {
+  // Referencias a los elementos principales de la vista
   const vistaPersonajes = document.getElementById("vista-personajes");
   const resumenCategorias = document.getElementById("resumen-categorias");
   const titulo = document.getElementById("titulo-categoria");
   const contenedor = document.getElementById("personajes-categoria");
 
+  // Oculta el resumen de categorías y muestra la vista de personajes
   resumenCategorias.classList.add("oculto");
   vistaPersonajes.classList.remove("oculto");
 
+  // Aplica animación de salida al contenedor
   contenedor.classList.remove("fade-in");
   contenedor.classList.add("fade-out");
 
+  // Espera 150ms antes de cargar el contenido (para transición)
   setTimeout(() => {
-    contenedor.innerHTML = "";
-    titulo.textContent = categoriaActual;
+    contenedor.innerHTML = ""; // Limpia el contenido anterior
+    titulo.textContent = categoriaActual; // Actualiza el título de la sección
 
     let temas;
+
+    // Si es categoría especial "Temporadas", genera manualmente los datos
     if (categoriaActual === "Temporadas") {
       temas = {};
       const progreso = JSON.parse(localStorage.getItem("progreso")) || {};
       const progresoTemporadas = progreso.temporadas || {};
+
+      // Recorre las temporadas y asigna info a cada una
       temporadasData.forEach(temp => {
         const nota = progresoTemporadas[temp.id]?.nota || "F";
         temas[temp.coleccionable.nombre] = {
@@ -108,25 +116,45 @@ function mostrarPersonajes(categoriaActual) {
         };
       });
     } else {
+      // Para el resto de categorías, toma los temas directamente del JSON
       temas = coleccionablesData[categoriaActual] || {};
     }
 
+    // Carga el progreso general del usuario
     const progreso = JSON.parse(localStorage.getItem("progreso")) || { categorias: {}, temporadas: {} };
     const progresoCategorias = progreso.categorias || {};
+
+    // Busca coincidencia real del nombre de la categoría ignorando mayúsculas
     const progresoCategoriaKey = Object.keys(progresoCategorias).find(
       cat => cat.toLowerCase() === categoriaActual.toLowerCase()
     );
-    const progresoTemas = categoriaActual === "Temporadas" ? progreso.temporadas : (progresoCategoriaKey ? progresoCategorias[progresoCategoriaKey] : {});
 
+    // Define el progreso específico para los temas de esta categoría
+    const progresoTemas = categoriaActual === "Temporadas"
+      ? progreso.temporadas
+      : (progresoCategoriaKey ? progresoCategorias[progresoCategoriaKey] : {});
+
+    // Recorre cada tema (personaje, misa, temporada o logro)
     for (const tema in temas) {
       const info = temas[tema];
-      const nota = categoriaActual === "Temporadas" ? info.nota : (progresoTemas[tema]?.nota || "F");
+      let nota;
 
+      // Se asigna la nota según el tipo de categoría
+      if (categoriaActual === "Temporadas") {
+        nota = info.nota;
+      } else if (categoriaActual === "Logros") {
+        nota = info.nota; // Ya viene calculada previamente
+      } else {
+        nota = progresoTemas[tema]?.nota || "F";
+      }
+
+      // Selecciona la imagen adecuada según la nota obtenida
       let ruta = "assets/img/coleccionables/bloqueado.png";
       if (nota === "A") ruta = info.img_a;
       else if (nota === "B") ruta = info.img_b;
       else if (nota === "C") ruta = info.img_c;
 
+      // Crea la tarjeta visual del personaje o logro
       const card = document.createElement("div");
       card.className = "card-personaje";
       card.innerHTML = `
@@ -135,19 +163,22 @@ function mostrarPersonajes(categoriaActual) {
         <p class="nota">Nota: ${nota}</p>
       `;
 
+      // Permite abrir el modal con detalles solo si se obtuvo una A
       card.addEventListener("click", () => {
         if (nota === "A") {
           mostrarModal({ tema, nota, rutaImagen: ruta, descripcion: info.descripcion || "" });
         }
       });
 
-      contenedor.appendChild(card);
+      contenedor.appendChild(card); // Agrega la tarjeta al DOM
     }
 
+    // Aplica animación de entrada una vez renderizadas las tarjetas
     contenedor.classList.remove("fade-out");
     contenedor.classList.add("fade-in");
   }, 150);
 
+  // Permite cambiar de categoría usando la rueda del mouse (efecto scroll horizontal)
   const todas = [...Object.keys(coleccionablesData), "Temporadas"];
   const i = todas.indexOf(categoriaActual);
 
@@ -156,6 +187,7 @@ function mostrarPersonajes(categoriaActual) {
     else if (e.deltaY < -30 && i > 0) mostrarPersonajes(todas[i - 1]);
   };
 }
+
 
 document.getElementById("volver-resumen").addEventListener("click", () => {
   document.getElementById("vista-personajes").classList.add("oculto");
