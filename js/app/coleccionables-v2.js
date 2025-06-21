@@ -8,7 +8,7 @@ Promise.all([
   coleccionablesData = coleccionables;
   temporadasData = temporadas;
  mostrarResumenCategorias();     // muestra las 7 categorías + temporadas
-  mostrarResumenLogros();        // muestra logros especiales por aparte
+  
   
 });
 
