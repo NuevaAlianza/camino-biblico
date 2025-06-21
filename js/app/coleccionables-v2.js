@@ -244,56 +244,57 @@ function mostrarResumenLogros() {
   let totalA = 0;
   let completados = [];
 
+  // Calcular total de A y categorías completas
   for (const categoria in coleccionablesData) {
     if (!completosPorCategoria[categoria]) continue;
     const temas = coleccionablesData[categoria];
     const progresoTemas = progresoCategorias[categoria] || {};
 
     const todosA = Object.keys(temas).every(t => (progresoTemas[t]?.nota || "") === "A");
-    if (todosA) completados.push({ categoria, ruta: completosPorCategoria[categoria] });
+    if (todosA) completados.push(categoria);
 
     totalA += Object.values(progresoTemas).filter(p => p.nota === "A").length;
   }
 
-  const desbloqueosPorA = Object.keys(totalesPorA)
-    .map(num => parseInt(num))
-    .filter(n => totalA >= n)
-    .map(n => ({ nombre: `Logro ${n} A`, ruta: totalesPorA[n.toString()] }));
-
-  if (completados.length === 0 && desbloqueosPorA.length === 0) return;
-
+  // Crear tarjeta "Logros especiales" siempre visible
   const card = document.createElement("div");
   card.className = "card-categoria";
   card.innerHTML = `
-    <h2>🏅 Logros especiales</h2>
+    <h2>🏅 Logros especiales (${completados.length + Object.keys(totalesPorA).filter(k => totalA >= parseInt(k)).length})</h2>
     <p>Coleccionables por rendimiento destacado</p>
     <div class="progreso"><div class="progreso-barra" style="width:100%"></div></div>
   `;
   card.addEventListener("click", () => mostrarPersonajes("Logros"));
   resumen.appendChild(card);
 
-  // Guardar logros para mostrarPersonajes
+  // Preparar "coleccionablesData['Logros']" con todos los posibles logros
   coleccionablesData["Logros"] = {};
 
-  completados.forEach(item => {
-    coleccionablesData["Logros"][item.categoria] = {
-      img_a: item.ruta,
+  for (const categoria in completosPorCategoria) {
+    const logrado = completados.includes(categoria);
+    coleccionablesData["Logros"][categoria] = {
+      img_a: logrado ? completosPorCategoria[categoria] : "assets/img/coleccionables/bloqueado.png",
       img_b: "assets/img/coleccionables/generica_b.png",
       img_c: "assets/img/coleccionables/generica_c.png",
-      descripcion: `Completaste todos los temas de "${item.categoria}" con nota A.`
+      descripcion: logrado
+        ? `Completaste todos los temas de "${categoria}" con nota A.`
+        : `Logro bloqueado. Completa todos los temas de "${categoria}" con nota A para desbloquearlo.`,
+      nota: logrado ? "A" : "F"
     };
-  });
+  }
 
-  desbloqueosPorA.forEach(item => {
-    coleccionablesData["Logros"][item.nombre] = {
-      img_a: item.ruta,
+  for (const nStr in totalesPorA) {
+    const n = parseInt(nStr);
+    const logrado = totalA >= n;
+    const nombre = `Logro ${n} A`;
+    coleccionablesData["Logros"][nombre] = {
+      img_a: logrado ? totalesPorA[nStr] : "assets/img/coleccionables/bloqueado.png",
       img_b: "assets/img/coleccionables/generica_b.png",
       img_c: "assets/img/coleccionables/generica_c.png",
-      descripcion: `¡Has alcanzado ${item.nombre.split(" ")[1]} temas con nota A!`
-
-     
+      descripcion: logrado
+        ? `¡Has alcanzado ${n} temas con nota A!`
+        : `Logro bloqueado. Alcanzar ${n} temas con nota A para desbloquearlo.`,
+      nota: logrado ? "A" : "F"
     };
-  });
+  }
 }
-
-
