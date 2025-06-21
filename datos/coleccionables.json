@@ -371,12 +371,13 @@
     "Misa": "assets/img/coleccionables/misa_completo.png",
     "Citas Bíblicas": "assets/img/coleccionables/citas_completo.png"
   },
-  "totales_por_a": {
-    "5": "assets/img/coleccionables/logro_5a.png",
-    "10": "assets/img/coleccionables/logro_10a.png",
-    "15": "assets/img/coleccionables/logro_15a.png",
-    "20": "assets/img/coleccionables/logro_20a.png",
-    "25": "assets/img/coleccionables/logro_25a.png",
-    "30": "assets/img/coleccionables/logro_30a.png"
+ "totales_por_a": {
+      "5": "assets/img/coleccionables/logro_5a.png",
+      "10": "assets/img/coleccionables/logro_10a.png",
+      "15": "assets/img/coleccionables/logro_15a.png",
+      "20": "assets/img/coleccionables/logro_20a.png",
+      "25": "assets/img/coleccionables/logro_25a.png",
+      "30": "assets/img/coleccionables/logro_30a.png"
+    }
   }
-}}}
+}
