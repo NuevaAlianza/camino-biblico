@@ -1,3 +1,5 @@
+// js/app/coleccionables-v2.js
+
 let coleccionablesData = {};
 let temporadasData = [];
 
@@ -7,9 +9,7 @@ Promise.all([
 ]).then(([coleccionables, temporadas]) => {
   coleccionablesData = coleccionables;
   temporadasData = temporadas;
- mostrarResumenCategorias();     // muestra las 7 categorías + temporadas
-  
-  
+  mostrarResumenCategorias();
 });
 
 function mostrarResumenCategorias() {
@@ -20,6 +20,7 @@ function mostrarResumenCategorias() {
   const progresoCategorias = progreso.categorias || {};
 
   for (const categoria in coleccionablesData) {
+    if (categoria === "logros") continue;
     const temas = coleccionablesData[categoria];
     const total = Object.keys(temas).length;
 
@@ -55,14 +56,13 @@ function mostrarResumenCategorias() {
       <h2>${categoria} (${desbloqueados}/${total})</h2>
       <p>Nota promedio: ${promedio}</p>
       <div class="progreso">
-        <div class="progreso-barra" style="width: ${porcentaje}%;"></div>
+        <div class="progreso-barra" style="width: ${porcentaje}%"></div>
       </div>
     `;
     card.addEventListener("click", () => mostrarPersonajes(categoria));
     resumen.appendChild(card);
   }
 
-  // Tarjeta de temporadas
   const card = document.createElement("div");
   card.className = "card-categoria";
   card.innerHTML = `
@@ -72,7 +72,7 @@ function mostrarResumenCategorias() {
   `;
   card.addEventListener("click", () => mostrarPersonajes("Temporadas"));
   resumen.appendChild(card);
-  // ✅ Llama a los logros después de renderizar las categorías
+
   mostrarResumenLogros();
 }
 
@@ -92,138 +92,70 @@ function mostrarPersonajes(categoriaActual) {
     contenedor.innerHTML = "";
     titulo.textContent = categoriaActual;
 
+    let temas;
     if (categoriaActual === "Temporadas") {
+      temas = {};
       const progreso = JSON.parse(localStorage.getItem("progreso")) || {};
       const progresoTemporadas = progreso.temporadas || {};
-
       temporadasData.forEach(temp => {
         const nota = progresoTemporadas[temp.id]?.nota || "F";
-        const col = temp.coleccionable;
-
-        let ruta = "assets/img/coleccionables/bloqueado.png";
-        if (nota === "A") ruta = col.imagen_a;
-        else if (nota === "B") ruta = col.imagen_b;
-        else if (nota === "C") ruta = col.imagen_c;
-
-        const card = document.createElement("div");
-        card.className = "card-personaje";
-        card.innerHTML = `
-          <img src="${ruta}" alt="${col.nombre}" />
-          <h3>${col.nombre}</h3>
-          <p class="nota">Nota: ${nota}</p>
-        `;
-
-        card.addEventListener("click", () => {
-          if (nota === "A") {
-            mostrarModal({
-              tema: col.nombre,
-              nota,
-              rutaImagen: ruta,
-              descripcion: temp.descripcion || ""
-            });
-          }
-        });
-
-        contenedor.appendChild(card);
+        temas[temp.coleccionable.nombre] = {
+          img_a: temp.coleccionable.imagen_a,
+          img_b: temp.coleccionable.imagen_b,
+          img_c: temp.coleccionable.imagen_c,
+          descripcion: temp.descripcion || "",
+          nota: nota
+        };
       });
-
-    } else if (categoriaActual === "Logros") {
-      const logros = coleccionablesData["Logros"] || {};
-      for (const clave in logros) {
-        const info = logros[clave];
-        const nota = info.nota || "F";
-        const ruta = nota === "A" ? info.img_a : "assets/img/coleccionables/bloqueado.png";
-
-        const card = document.createElement("div");
-        card.className = "card-personaje";
-        card.innerHTML = `
-          <img src="${ruta}" alt="${clave}" />
-          <h3>${clave}</h3>
-          <p class="nota">Nota: ${nota}</p>
-        `;
-
-        card.addEventListener("click", () => {
-          if (nota === "A") {
-            mostrarModal({
-              tema: clave,
-              nota,
-              rutaImagen: ruta,
-              descripcion: info.descripcion || ""
-            });
-          }
-        });
-
-        contenedor.appendChild(card);
-      });
-
     } else {
-      const temas = coleccionablesData[categoriaActual] || {};
-      const progresoCategorias = JSON.parse(localStorage.getItem("progreso"))?.categorias || {};
-      const progresoCategoriaKey = Object.keys(progresoCategorias).find(
-        cat => cat.toLowerCase() === categoriaActual.toLowerCase()
-      );
-      const progresoTemas = progresoCategoriaKey ? progresoCategorias[progresoCategoriaKey] : {};
+      temas = coleccionablesData[categoriaActual] || {};
+    }
 
-      for (const tema in temas) {
-        const info = temas[tema];
-        const nota = progresoTemas[tema]?.nota || "F";
+    const progreso = JSON.parse(localStorage.getItem("progreso")) || { categorias: {}, temporadas: {} };
+    const progresoCategorias = progreso.categorias || {};
+    const progresoCategoriaKey = Object.keys(progresoCategorias).find(
+      cat => cat.toLowerCase() === categoriaActual.toLowerCase()
+    );
+    const progresoTemas = categoriaActual === "Temporadas" ? progreso.temporadas : (progresoCategoriaKey ? progresoCategorias[progresoCategoriaKey] : {});
 
-        let ruta = "assets/img/coleccionables/bloqueado.png";
-        if (nota === "A") ruta = info.img_a;
-        else if (nota === "B") ruta = info.img_b;
-        else if (nota === "C") ruta = info.img_c;
+    for (const tema in temas) {
+      const info = temas[tema];
+      const nota = categoriaActual === "Temporadas" ? info.nota : (progresoTemas[tema]?.nota || "F");
 
-        const card = document.createElement("div");
-        card.className = "card-personaje";
-        card.innerHTML = `
-          <img src="${ruta}" alt="${tema}" />
-          <h3>${tema}</h3>
-          <p class="nota">Nota: ${nota}</p>
-        `;
+      let ruta = "assets/img/coleccionables/bloqueado.png";
+      if (nota === "A") ruta = info.img_a;
+      else if (nota === "B") ruta = info.img_b;
+      else if (nota === "C") ruta = info.img_c;
 
-        card.addEventListener("click", () => {
-          if (nota === "A") {
-            mostrarModal({
-              tema,
-              nota,
-              rutaImagen: ruta,
-              descripcion: info.descripcion || ""
-            });
-          } else {
-            let mensaje = `¡Aún no has comenzado "${tema}"! ¿Te animas a intentarlo?`;
-            if (nota === "B") mensaje = `¡Buen intento en "${tema}", pero puedes hacerlo aún mejor! ¿Repetimos?`;
-            else if (nota === "C") mensaje = `Vamos a superar esa nota en "${tema}". ¿Listo para mejorar?`;
-            else if (nota === "F") mensaje = `Todavía puedes mejorar tu resultado en "${tema}". ¿Quieres intentarlo ahora?`;
+      const card = document.createElement("div");
+      card.className = "card-personaje";
+      card.innerHTML = `
+        <img src="${ruta}" alt="${tema}" />
+        <h3>${tema}</h3>
+        <p class="nota">Nota: ${nota}</p>
+      `;
 
-            if (confirm(mensaje)) {
-              const temaURL = encodeURIComponent(tema);
-              const categoriaURL = encodeURIComponent(categoriaActual);
-              window.location.href = `quiz.html?categoria=${categoriaURL}&tema=${temaURL}`;
-            }
-          }
-        });
+      card.addEventListener("click", () => {
+        if (nota === "A") {
+          mostrarModal({ tema, nota, rutaImagen: ruta, descripcion: info.descripcion || "" });
+        }
+      });
 
-        contenedor.appendChild(card);
-      }
+      contenedor.appendChild(card);
     }
 
     contenedor.classList.remove("fade-out");
     contenedor.classList.add("fade-in");
-
   }, 150);
 
   const todas = [...Object.keys(coleccionablesData), "Temporadas"];
   const i = todas.indexOf(categoriaActual);
 
   vistaPersonajes.onwheel = (e) => {
-    if (e.deltaY > 30 && i < todas.length - 1) {
-      mostrarPersonajes(todas[i + 1]);
-    } else if (e.deltaY < -30 && i > 0) {
-      mostrarPersonajes(todas[i - 1]);
-    }
+    if (e.deltaY > 30 && i < todas.length - 1) mostrarPersonajes(todas[i + 1]);
+    else if (e.deltaY < -30 && i > 0) mostrarPersonajes(todas[i - 1]);
   };
 }
-
 
 document.getElementById("volver-resumen").addEventListener("click", () => {
   document.getElementById("vista-personajes").classList.add("oculto");
@@ -263,7 +195,6 @@ function mostrarResumenLogros() {
   let totalA = 0;
   let completados = [];
 
-  // Calcular cuántos temas A y qué categorías completas con A
   for (const categoria in coleccionablesData) {
     if (!completosPorCategoria[categoria]) continue;
     const temas = coleccionablesData[categoria];
@@ -275,7 +206,6 @@ function mostrarResumenLogros() {
     totalA += Object.values(progresoTemas).filter(p => p.nota === "A").length;
   }
 
-  // Agregar logros al objeto global
   coleccionablesData["Logros"] = {};
 
   for (const categoria in completosPorCategoria) {
@@ -302,7 +232,6 @@ function mostrarResumenLogros() {
     };
   }
 
-  // Tarjeta resumen para mostrar como una categoría más
   const cantidadDesbloqueados = Object.values(coleccionablesData["Logros"]).filter(l => l.nota === "A").length;
   const cantidadTotal = Object.keys(coleccionablesData["Logros"]).length;
 
@@ -311,9 +240,8 @@ function mostrarResumenLogros() {
   card.innerHTML = `
     <h2>🏅 Logros especiales (${cantidadDesbloqueados}/${cantidadTotal})</h2>
     <p>Coleccionables por rendimiento destacado</p>
-    <div class="progreso"><div class="progreso-barra" style="width: 100%;"></div></div>
+    <div class="progreso"><div class="progreso-barra" style="width: 100%"></div></div>
   `;
   card.addEventListener("click", () => mostrarPersonajes("Logros"));
   resumen.appendChild(card);
 }
-
