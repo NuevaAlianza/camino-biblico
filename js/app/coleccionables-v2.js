@@ -121,16 +121,35 @@ function mostrarPersonajes(categoriaActual) {
               rutaImagen: ruta,
               descripcion: temp.descripcion || ""
             });
-          } else {
-            let mensaje = `¡Aún no has comenzado "${col.nombre}"! ¿Te animas a intentarlo?`;
-            if (nota === "B") mensaje = `¡Buen intento en "${col.nombre}", pero puedes hacerlo aún mejor! ¿Repetimos?`;
-            else if (nota === "C") mensaje = `Vamos a superar esa nota en "${col.nombre}". ¿Listo para mejorar?`;
-            else if (nota === "F") mensaje = `Todavía puedes mejorar tu resultado en "${col.nombre}". ¿Quieres intentarlo ahora?`;
+          }
+        });
 
-            if (confirm(mensaje)) {
-              const bloqueURL = encodeURIComponent(temp.id);
-              window.location.href = `citas.html?bloque=${bloqueURL}`;
-            }
+        contenedor.appendChild(card);
+      });
+
+    } else if (categoriaActual === "Logros") {
+      const logros = coleccionablesData["Logros"] || {};
+      for (const clave in logros) {
+        const info = logros[clave];
+        const nota = info.nota || "F";
+        const ruta = nota === "A" ? info.img_a : "assets/img/coleccionables/bloqueado.png";
+
+        const card = document.createElement("div");
+        card.className = "card-personaje";
+        card.innerHTML = `
+          <img src="${ruta}" alt="${clave}" />
+          <h3>${clave}</h3>
+          <p class="nota">Nota: ${nota}</p>
+        `;
+
+        card.addEventListener("click", () => {
+          if (nota === "A") {
+            mostrarModal({
+              tema: clave,
+              nota,
+              rutaImagen: ruta,
+              descripcion: info.descripcion || ""
+            });
           }
         });
 
@@ -193,7 +212,6 @@ function mostrarPersonajes(categoriaActual) {
 
   }, 150);
 
-  // Scroll entre categorías
   const todas = [...Object.keys(coleccionablesData), "Temporadas"];
   const i = todas.indexOf(categoriaActual);
 
@@ -205,6 +223,7 @@ function mostrarPersonajes(categoriaActual) {
     }
   };
 }
+
 
 document.getElementById("volver-resumen").addEventListener("click", () => {
   document.getElementById("vista-personajes").classList.add("oculto");
