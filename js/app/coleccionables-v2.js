@@ -195,17 +195,23 @@ function mostrarResumenLogros() {
   let totalA = 0;
   let completados = [];
 
-  for (const categoria in coleccionablesData) {
-    if (!completosPorCategoria[categoria]) continue;
-    const temas = coleccionablesData[categoria];
-    const progresoTemas = progresoCategorias[categoria] || {};
+  // Buscar coincidencias reales de categoría (ignorando mayúsculas)
+  for (const categoriaLogro in completosPorCategoria) {
+    const categoriaReal = Object.keys(coleccionablesData).find(
+      c => c.toLowerCase() === categoriaLogro.toLowerCase()
+    );
+    if (!categoriaReal) continue;
+
+    const temas = coleccionablesData[categoriaReal];
+    const progresoTemas = progresoCategorias[categoriaReal] || {};
 
     const todosA = Object.keys(temas).every(t => (progresoTemas[t]?.nota || "") === "A");
-    if (todosA) completados.push(categoria);
+    if (todosA) completados.push(categoriaLogro);
 
     totalA += Object.values(progresoTemas).filter(p => p.nota === "A").length;
   }
 
+  // Preparar estructura de Logros
   coleccionablesData["Logros"] = {};
 
   for (const categoria in completosPorCategoria) {
