@@ -227,3 +227,40 @@ body {
   padding: 1rem; /* restauramos padding simple */
   box-sizing: border-box;
 }
+/* -------------------- Logros Especiales -------------------- */
+#logros-especiales {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#logros-especiales .tarjeta {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: var(--sombra);
+  padding: 0.6rem;
+  width: 140px;
+  text-align: center;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+#logros-especiales .tarjeta:hover {
+  transform: scale(1.03);
+}
+
+#logros-especiales .tarjeta img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+#logros-especiales .tarjeta h3 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1rem;
+}
+
+#logros-especiales .tarjeta p {
+  font-size: 0.9rem;
+  color: #666;
+}
