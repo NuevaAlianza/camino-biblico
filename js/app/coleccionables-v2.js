@@ -8,6 +8,7 @@ Promise.all([
   coleccionablesData = coleccionables;
   temporadasData = temporadas;
   mostrarResumenCategorias();
+  
 });
 
 function mostrarResumenCategorias() {
@@ -70,6 +71,8 @@ function mostrarResumenCategorias() {
   `;
   card.addEventListener("click", () => mostrarPersonajes("Temporadas"));
   resumen.appendChild(card);
+  // ✅ Llama a los logros después de renderizar las categorías
+  mostrarResumenLogros();
 }
 
 function mostrarPersonajes(categoriaActual) {
@@ -227,4 +230,70 @@ function mostrarModal({ tema, nota, rutaImagen, descripcion = "" }) {
 document.getElementById("cerrar-modal").addEventListener("click", () => {
   document.getElementById("modal-detalle").classList.add("oculto");
 });
+
+function mostrarResumenLogros() {
+  const resumen = document.getElementById("resumen-categorias");
+
+  const progreso = JSON.parse(localStorage.getItem("progreso")) || { categorias: {} };
+  const progresoCategorias = progreso.categorias || {};
+
+  const logros = coleccionablesData.logros || {};
+  const completosPorCategoria = logros.completos_por_categoria || {};
+  const totalesPorA = logros.totales_por_a || {};
+
+  let totalA = 0;
+  let completados = [];
+
+  for (const categoria in coleccionablesData) {
+    if (!completosPorCategoria[categoria]) continue;
+    const temas = coleccionablesData[categoria];
+    const progresoTemas = progresoCategorias[categoria] || {};
+
+    const todosA = Object.keys(temas).every(t => (progresoTemas[t]?.nota || "") === "A");
+    if (todosA) completados.push({ categoria, ruta: completosPorCategoria[categoria] });
+
+    totalA += Object.values(progresoTemas).filter(p => p.nota === "A").length;
+  }
+
+  const desbloqueosPorA = Object.keys(totalesPorA)
+    .map(num => parseInt(num))
+    .filter(n => totalA >= n)
+    .map(n => ({ nombre: `Logro ${n} A`, ruta: totalesPorA[n.toString()] }));
+
+  if (completados.length === 0 && desbloqueosPorA.length === 0) return;
+
+  const card = document.createElement("div");
+  card.className = "card-categoria";
+  card.innerHTML = `
+    <h2>🏅 Logros especiales</h2>
+    <p>Coleccionables por rendimiento destacado</p>
+    <div class="progreso"><div class="progreso-barra" style="width:100%"></div></div>
+  `;
+  card.addEventListener("click", () => mostrarPersonajes("Logros"));
+  resumen.appendChild(card);
+
+  // Guardar logros para mostrarPersonajes
+  coleccionablesData["Logros"] = {};
+
+  completados.forEach(item => {
+    coleccionablesData["Logros"][item.categoria] = {
+      img_a: item.ruta,
+      img_b: "assets/img/coleccionables/generica_b.png",
+      img_c: "assets/img/coleccionables/generica_c.png",
+      descripcion: `Completaste todos los temas de "${item.categoria}" con nota A.`
+    };
+  });
+
+  desbloqueosPorA.forEach(item => {
+    coleccionablesData["Logros"][item.nombre] = {
+      img_a: item.ruta,
+      img_b: "assets/img/coleccionables/generica_b.png",
+      img_c: "assets/img/coleccionables/generica_c.png",
+      descripcion: `¡Has alcanzado ${item.nombre.split(" ")[1]} temas con nota A!`
+
+     
+    };
+  });
+}
+
 
