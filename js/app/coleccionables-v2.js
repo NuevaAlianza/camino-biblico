@@ -7,7 +7,8 @@ Promise.all([
 ]).then(([coleccionables, temporadas]) => {
   coleccionablesData = coleccionables;
   temporadasData = temporadas;
-  mostrarResumenCategorias();
+ mostrarResumenCategorias();     // muestra las 7 categorías + temporadas
+  mostrarResumenLogros();        // muestra logros especiales por aparte
   
 });
 
@@ -232,9 +233,10 @@ document.getElementById("cerrar-modal").addEventListener("click", () => {
 });
 
 function mostrarResumenLogros() {
-  const resumen = document.getElementById("resumen-categorias");
+  const contenedor = document.getElementById("logros-especiales");
+  contenedor.innerHTML = "";
 
-  const progreso = JSON.parse(localStorage.getItem("progreso")) || { categorias: {} };
+  const progreso = JSON.parse(localStorage.getItem("progreso")) || { categorias: {}, historial: [] };
   const progresoCategorias = progreso.categorias || {};
 
   const logros = coleccionablesData.logros || {};
@@ -244,7 +246,7 @@ function mostrarResumenLogros() {
   let totalA = 0;
   let completados = [];
 
-  // Calcular total de A y categorías completas
+  // Total de temas con nota A y categorías completas con A
   for (const categoria in coleccionablesData) {
     if (!completosPorCategoria[categoria]) continue;
     const temas = coleccionablesData[categoria];
@@ -256,31 +258,25 @@ function mostrarResumenLogros() {
     totalA += Object.values(progresoTemas).filter(p => p.nota === "A").length;
   }
 
-  // Crear tarjeta "Logros especiales" siempre visible
-  const card = document.createElement("div");
-  card.className = "card-categoria";
-  card.innerHTML = `
-    <h2>🏅 Logros especiales (${completados.length + Object.keys(totalesPorA).filter(k => totalA >= parseInt(k)).length})</h2>
-    <p>Coleccionables por rendimiento destacado</p>
-    <div class="progreso"><div class="progreso-barra" style="width:100%"></div></div>
-  `;
-  card.addEventListener("click", () => mostrarPersonajes("Logros"));
-  resumen.appendChild(card);
-
-  // Preparar "coleccionablesData['Logros']" con todos los posibles logros
+  // Prepara la data para Logros
   coleccionablesData["Logros"] = {};
 
   for (const categoria in completosPorCategoria) {
     const logrado = completados.includes(categoria);
     coleccionablesData["Logros"][categoria] = {
       img_a: logrado ? completosPorCategoria[categoria] : "assets/img/coleccionables/bloqueado.png",
-      img_b: "assets/img/coleccionables/generica_b.png",
-      img_c: "assets/img/coleccionables/generica_c.png",
       descripcion: logrado
         ? `Completaste todos los temas de "${categoria}" con nota A.`
-        : `Logro bloqueado. Completa todos los temas de "${categoria}" con nota A para desbloquearlo.`,
+        : `Completa todos los temas de "${categoria}" con nota A para desbloquear.`,
       nota: logrado ? "A" : "F"
     };
+
+    contenedor.innerHTML += generarTarjetaLogro({
+      nombre: `Categoría completa: ${categoria}`,
+      imagen: coleccionablesData["Logros"][categoria].img_a,
+      descripcion: coleccionablesData["Logros"][categoria].descripcion,
+      desbloqueado: logrado
+    });
   }
 
   for (const nStr in totalesPorA) {
@@ -289,12 +285,26 @@ function mostrarResumenLogros() {
     const nombre = `Logro ${n} A`;
     coleccionablesData["Logros"][nombre] = {
       img_a: logrado ? totalesPorA[nStr] : "assets/img/coleccionables/bloqueado.png",
-      img_b: "assets/img/coleccionables/generica_b.png",
-      img_c: "assets/img/coleccionables/generica_c.png",
       descripcion: logrado
         ? `¡Has alcanzado ${n} temas con nota A!`
-        : `Logro bloqueado. Alcanzar ${n} temas con nota A para desbloquearlo.`,
+        : `Logro bloqueado. Alcanzar ${n} temas con nota A para desbloquear.`,
       nota: logrado ? "A" : "F"
     };
+
+    contenedor.innerHTML += generarTarjetaLogro({
+      nombre,
+      imagen: coleccionablesData["Logros"][nombre].img_a,
+      descripcion: coleccionablesData["Logros"][nombre].descripcion,
+      desbloqueado: logrado
+    });
   }
+}
+function generarTarjetaLogro({ nombre, imagen, descripcion, desbloqueado }) {
+  return `
+    <div class="tarjeta" style="opacity:${desbloqueado ? 1 : 0.5}">
+      <img src="${imagen}" alt="${nombre}" />
+      <h3>${nombre}</h3>
+      <p>${descripcion}</p>
+    </div>
+  `;
 }
