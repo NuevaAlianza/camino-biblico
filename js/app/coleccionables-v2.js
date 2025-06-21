@@ -233,9 +233,7 @@ document.getElementById("cerrar-modal").addEventListener("click", () => {
 });
 
 function mostrarResumenLogros() {
-  const contenedor = document.getElementById("logros-especiales");
-  contenedor.innerHTML = "";
-
+  const resumen = document.getElementById("resumen-categorias");
   const progreso = JSON.parse(localStorage.getItem("progreso")) || { categorias: {}, historial: [] };
   const progresoCategorias = progreso.categorias || {};
 
@@ -246,7 +244,7 @@ function mostrarResumenLogros() {
   let totalA = 0;
   let completados = [];
 
-  // Total de temas con nota A y categorías completas con A
+  // Calcular cuántos temas A y qué categorías completas con A
   for (const categoria in coleccionablesData) {
     if (!completosPorCategoria[categoria]) continue;
     const temas = coleccionablesData[categoria];
@@ -258,7 +256,7 @@ function mostrarResumenLogros() {
     totalA += Object.values(progresoTemas).filter(p => p.nota === "A").length;
   }
 
-  // Prepara la data para Logros
+  // Agregar logros al objeto global
   coleccionablesData["Logros"] = {};
 
   for (const categoria in completosPorCategoria) {
@@ -270,13 +268,6 @@ function mostrarResumenLogros() {
         : `Completa todos los temas de "${categoria}" con nota A para desbloquear.`,
       nota: logrado ? "A" : "F"
     };
-
-    contenedor.innerHTML += generarTarjetaLogro({
-      nombre: `Categoría completa: ${categoria}`,
-      imagen: coleccionablesData["Logros"][categoria].img_a,
-      descripcion: coleccionablesData["Logros"][categoria].descripcion,
-      desbloqueado: logrado
-    });
   }
 
   for (const nStr in totalesPorA) {
@@ -287,24 +278,23 @@ function mostrarResumenLogros() {
       img_a: logrado ? totalesPorA[nStr] : "assets/img/coleccionables/bloqueado.png",
       descripcion: logrado
         ? `¡Has alcanzado ${n} temas con nota A!`
-        : `Logro bloqueado. Alcanzar ${n} temas con nota A para desbloquear.`,
+        : `Alcanza ${n} temas con nota A para desbloquear.`,
       nota: logrado ? "A" : "F"
     };
-
-    contenedor.innerHTML += generarTarjetaLogro({
-      nombre,
-      imagen: coleccionablesData["Logros"][nombre].img_a,
-      descripcion: coleccionablesData["Logros"][nombre].descripcion,
-      desbloqueado: logrado
-    });
   }
-}
-function generarTarjetaLogro({ nombre, imagen, descripcion, desbloqueado }) {
-  return `
-    <div class="tarjeta" style="opacity:${desbloqueado ? 1 : 0.5}">
-      <img src="${imagen}" alt="${nombre}" />
-      <h3>${nombre}</h3>
-      <p>${descripcion}</p>
-    </div>
+
+  // Tarjeta resumen para mostrar como una categoría más
+  const cantidadDesbloqueados = Object.values(coleccionablesData["Logros"]).filter(l => l.nota === "A").length;
+  const cantidadTotal = Object.keys(coleccionablesData["Logros"]).length;
+
+  const card = document.createElement("div");
+  card.className = "card-categoria";
+  card.innerHTML = `
+    <h2>🏅 Logros especiales (${cantidadDesbloqueados}/${cantidadTotal})</h2>
+    <p>Coleccionables por rendimiento destacado</p>
+    <div class="progreso"><div class="progreso-barra" style="width: 100%;"></div></div>
   `;
+  card.addEventListener("click", () => mostrarPersonajes("Logros"));
+  resumen.appendChild(card);
 }
+
