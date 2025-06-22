@@ -189,6 +189,67 @@ document.addEventListener("DOMContentLoaded", cargarTemporadas);
 <script>
   document.addEventListener("DOMContentLoaded", mostrarBotonTemporada);
 </script>
+<!-- 🔔 Banner de instalación para Android -->
+<div id="instalar-app" style="display:none; align-items: center; justify-content: center; gap: 1rem; padding: 1rem; background: #fff3cd; color: #856404; position: fixed; bottom: 1rem; left: 1rem; right: 1rem; z-index: 999; border-radius: 0.5rem; box-shadow: 0 0 8px rgba(0,0,0,0.2);" class="instalar-banner">
+  <span>¿Deseas instalar la app?</span>
+  <button id="btn-instalar" style="background: #856404; color: white; padding: 0.4em 1em; border: none; border-radius: 4px; cursor: pointer;">Instalar</button>
+</div>
+
+<!-- 🍎 Guía para instalación en iOS con ícono y botón de cerrar -->
+<div id="ios-guide" style="display:none; align-items: center; gap: 0.8rem; padding: 1rem; background: #e0f7fa; color: #00796b; position: fixed; bottom: 1rem; left: 1rem; right: 1rem; z-index: 998; border-radius: 0.5rem; font-size: 0.95rem; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IOS_Share_icon.png/40px-IOS_Share_icon.png" alt="Icono compartir" width="24" height="24" style="flex-shrink: 0;" />
+  <span>En iPhone: pulsa <strong>Compartir</strong> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IOS_Share_icon.png/20px-IOS_Share_icon.png" alt="icono compartir" width="16" style="vertical-align: middle;" /> y luego <strong>“Agregar a pantalla de inicio”</strong>.</span>
+  <button onclick="document.getElementById('ios-guide').style.display='none'" style="margin-left:auto; background: none; border: none; font-size: 1.2rem; color: #00796b; cursor: pointer;">✖</button>
+</div>
+<script>
+  let deferredPrompt;
+
+  const esStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+
+  if (esStandalone) {
+    document.getElementById('instalar-app').style.display = 'none';
+    document.getElementById('ios-guide').style.display = 'none';
+  }
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+
+    const installBtn = document.getElementById('btn-instalar');
+    const banner = document.getElementById('instalar-app');
+
+    if (banner) banner.style.display = 'flex';
+
+    installBtn.addEventListener('click', () => {
+      banner.style.display = 'none';
+      deferredPrompt.prompt();
+
+      deferredPrompt.userChoice.then((choiceResult) => {
+        console.log(choiceResult.outcome === 'accepted'
+          ? '✅ Usuario aceptó la instalación'
+          : '❌ Usuario canceló la instalación');
+        deferredPrompt = null;
+      });
+    });
+  });
+
+  window.addEventListener('appinstalled', () => {
+    console.log('📦 App instalada');
+    document.getElementById('instalar-app').style.display = 'none';
+    document.getElementById('ios-guide').style.display = 'none';
+  });
+
+  const isIos = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
+  const isInStandaloneMode = ('standalone' in window.navigator) && window.navigator.standalone;
+
+  if (isIos && !isInStandaloneMode) {
+    const iosGuide = document.getElementById('ios-guide');
+    iosGuide.style.display = 'flex';
+    setTimeout(() => {
+      iosGuide.style.display = 'none';
+    }, 15000);
+  }
+</script>
 
 </body>
 </html>
