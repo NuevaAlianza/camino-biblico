@@ -107,6 +107,7 @@ function mostrarPersonajes(categoriaActual) {
       // Recorre las temporadas y asigna info a cada una
       temporadasData.forEach(temp => {
         const nota = progresoTemporadas[temp.id]?.nota || "F";
+
         temas[temp.coleccionable.nombre] = {
           img_a: temp.coleccionable.imagen_a,
           img_b: temp.coleccionable.imagen_b,
@@ -140,9 +141,7 @@ function mostrarPersonajes(categoriaActual) {
       let nota;
 
       // Se asigna la nota según el tipo de categoría
-      if (categoriaActual === "Temporadas") {
-        nota = info.nota;
-      } else if (categoriaActual === "Logros") {
+      if (categoriaActual === "Temporadas" || categoriaActual === "Logros") {
         nota = info.nota; // Ya viene calculada previamente
       } else {
         nota = progresoTemas[tema]?.nota || "F";
@@ -187,6 +186,7 @@ function mostrarPersonajes(categoriaActual) {
     else if (e.deltaY < -30 && i > 0) mostrarPersonajes(todas[i - 1]);
   };
 }
+
 
 
 document.getElementById("volver-resumen").addEventListener("click", () => {
